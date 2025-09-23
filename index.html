@@ -1,0 +1,1009 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance365 - Educação Financeira</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header scrolled">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <svg
+              class="logo-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+            </svg>
+            <span class="logo-text">Finance365</span>
+          </div>
+
+          <nav class="nav-desktop">
+            <a href="#home" class="nav-link">Início</a>
+            <a href="#services" class="nav-link">Cursos</a>
+            <a href="#about" class="nav-link">Sobre</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link">Contato</a>
+          </nav>
+
+          <button class="cta-button" onclick="scrollToSection('services')">
+            Ver Conteúdos
+          </button>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </button>
+        </div>
+
+        <nav class="nav-mobile" id="mobileNav">
+          <a href="#home" class="mobile-nav-link">Início</a>
+          <a href="#services" class="mobile-nav-link">Serviços</a>
+          <a href="#about" class="mobile-nav-link">Sobre</a>
+          <a href="#faq" class="mobile-nav-link">FAQ</a>
+          <a href="#contact" class="mobile-nav-link">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="floating-shapes">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title animate-fade-in">
+              Transforme suas
+              <span class="gradient-text">Finanças</span>
+            </h1>
+            <p class="hero-description animate-fade-in">
+              Gerencie, invista e conquiste seus objetivos financeiros com nossa
+              plataforma completa de gestão financeira.
+            </p>
+            <div class="hero-buttons animate-fade-in">
+              <button class="btn-primary" onclick="scrollToSection('services')">
+                Ver Cursos
+                <svg
+                  class="btn-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12,5 19,12 12,19"></polyline>
+                </svg>
+              </button>
+              <button class="btn-secondary" onclick="scrollToSection('about')">
+                Sobre Nós
+              </button>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-number">50k+</div>
+                <div class="stat-label">Usuários</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">R$ 1B+</div>
+                <div class="stat-label">Gerenciados</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Satisfação</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual animate-slide-in">
+            <div class="dashboard-card">
+              <div class="dashboard-header">
+                <h3>Dashboard Financeiro</h3>
+                <svg
+                  class="dashboard-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                </svg>
+              </div>
+
+              <div class="dashboard-content">
+                <div class="dashboard-item">
+                  <span>Receitas</span>
+                  <span class="value-positive">+R$ 12.500</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-1"></div>
+                </div>
+
+                <div class="dashboard-item">
+                  <span>Investimentos</span>
+                  <span class="value-blue">+R$ 8.300</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-2"></div>
+                </div>
+
+                <div class="dashboard-item">
+                  <span>Economias</span>
+                  <span class="value-positive">+R$ 4.700</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--SESSÃO DE ARTIGOS -->
+
+    <section class="articles-section">
+      <h2>Artigos em Destaque</h2>
+
+      <div class="preview-container">
+        <!-- Exemplo de artigo em destaque -->
+        <div class="article-preview">
+          <h3>Planejamento Financeiro Pessoal</h3>
+          <p>
+            Aprenda a organizar suas finanças, controlar gastos e alcançar seus
+            objetivos financeiros com eficiência.
+          </p>
+        </div>
+
+        <div class="article-preview">
+          <h3>Como Economizar Dinheiro</h3>
+          <p>
+            Descubra estratégias inteligentes para reduzir despesas sem abrir
+            mão do que você gosta.
+          </p>
+        </div>
+
+        <div class="article-preview">
+          <h3>Investimentos para Iniciantes</h3>
+          <p>
+            Guia completo para começar a investir e construir patrimônio de
+            forma segura e consistente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Botão Ver Todos -->
+      <a href="artigos.html" class="see-all">
+        Ver Todos Artigos
+        <span>→</span>
+      </a>
+    </section>
+
+    <section class="video-section">
+      <h2>Assista e Descubra</h2>
+      <p>Veja como a Finance365 pode mudar sua forma de lidar com dinheiro.</p>
+      <div class="video-container">
+        <iframe
+          src="asset/Vídeo do WhatsApp de 2025-09-23 à(s) 18.20.33_264772ed.mp4"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header scroll-animate animate-in">
+          <h2 class="section-title">
+            Nossos <span class="text-emerald">Cursos</span>
+          </h2>
+          <p class="section-description">
+            Aprenda de forma prática e objetiva com conteúdos pensados para o
+            seu crescimento. Oferecemos cursos atualizados, focados no mercado e
+            voltados para quem deseja aprender e aplicar no dia a dia.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div
+            class="service-card scroll-animate animate-in"
+            onclick="openArticle('planejamento-financeiro')"
+          >
+            <div class="service-icon emerald">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                ></path>
+              </svg>
+            </div>
+
+            <h3 class="service-title">Planejamento Financeiro</h3>
+            <p class="service-description">
+              Crie metas e acompanhe seu progresso com ferramentas intuitivas de
+              planejamento.
+            </p>
+            <div class="service-link">Ler Artigo Completo →</div>
+            <a
+              class="ancoras"
+              href="https://kiwify.app/Hcexo0J?afid=MnuS9RUg"
+              target="_blank"
+              >Ver Curso →</a
+            >
+          </div>
+
+          <div
+            class="service-card scroll-animate animate-in"
+            onclick="openArticle('analise-investimentos')"
+          >
+            <div class="service-icon blue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Análise de Investimentos</h3>
+            <p class="service-description">
+              Analise e otimize seus investimentos com relatórios detalhados e
+              insights.
+            </p>
+            <div class="service-link">Ler artigo completo →</div>
+
+            <a
+              class="ancoras"
+              href="https://go.hotmart.com/J102005415I"
+              target="_blank"
+              >Ver Curso →</a
+            >
+          </div>
+
+          <div
+            class="service-card scroll-animate animate-in"
+            onclick="openArticle('seguranca-financeira')"
+          >
+            <div class="service-icon emerald">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Segurança Total</h3>
+            <p class="service-description">
+              "Proteção bancária completa com criptografia de ponta e
+              autenticação totalmente segura."
+            </p>
+            <div class="service-link">Ler artigo completo →</div>
+            <a
+              class="ancoras"
+              href="https://go.hotmart.com/O101651455X"
+              target="_blank"
+              >Ver Curso →</a
+            >
+          </div>
+
+          <div
+            class="service-card scroll-animate animate-in"
+            onclick="openArticle('gestao-cartoes')"
+          >
+            <div class="service-icon blue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Gestão de Cartões</h3>
+            <p class="service-description">
+              Controle todos seus cartões e faturas em um só lugar.
+            </p>
+            <div class="service-link">Ler artigo completo →</div>
+            <a class="ancoras" target="_blank">Ver Artigo →</a>
+          </div>
+
+          <div
+            class="service-card scroll-animate animate-in"
+            onclick="openArticle('relatorios-financeiros')"
+          >
+            <div class="service-icon emerald">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Metas Inteligentes</h3>
+            <p class="service-description">
+              Defina e alcance seus objetivos financeiros com acompanhamento
+              automático.
+            </p>
+            <div class="service-link">Ler artigo completo →</div>
+            <a
+              class="ancoras"
+              href="https://go.hotmart.com/R101651662Y"
+              target="_blank"
+              >Ver Curso →</a
+            >
+          </div>
+
+          <div
+            class="service-card scroll-animate animate-in"
+            onclick="openArticle('metas-financeiras')"
+          >
+            <div class="service-icon blue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">Relatórios Avançados</h3>
+            <p class="service-description">
+              Relatórios personalizados com gráficos e análises detalhadas.
+            </p>
+            <div class="service-link">Ler artigo completo →</div>
+            <a class="ancoras" target="_blank">Ver Artigo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sdafasdfsfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff -->
+
+    <section id="depoimentos">
+      <iframe
+        src="dep.html"
+        width="100%"
+        height="1200px"
+        style="border: none"
+      ></iframe>
+    </section>
+
+    <!-- sdfdsafasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff -->
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text scroll-animate animate-in">
+            <h2>Sobre a Finance<span class="finance365">365</span></h2>
+            <!-- <h2 class="section-title">Sobre a Finance<span>365</span></h2> -->
+            <p class="about-subtitle">
+              <!-- Somos uma fintech inovadora dedicada a democratizar o acesso a
+              serviços financeiros de qualidade. -->
+              <i>
+                Bem-vindo ao nosso espaço! Aqui, acreditamos que conhecimento é
+                o primeiro passo para transformar sonhos em realidade.
+              </i>
+            </p>
+            <p class="about-description">
+              <!-- Nossa missão é empoderar pessoas e empresas com ferramentas
+              intuitivas que tornam a gestão financeira simples, segura e
+              eficiente. Com mais de 5 anos de experiência no mercado, já
+              ajudamos milhares de clientes a alcançar seus objetivos
+              financeiros.
+            </p> -->
+
+              Nosso propósito é ajudar pessoas como você a entenderem o mundo
+              das finanças de forma simples, prática e eficiente, para que
+              possam tomar decisões inteligentes e seguras em cada etapa da
+              vida. Sabemos que falar de investimentos, planejamento financeiro
+              e controle de gastos pode parecer complicado ou até assustador.
+              Mas a nossa missão é justamente descomplicar esse universo. Com
+              conteúdos claros, explicativos e sempre atualizados, mostramos que
+              qualquer pessoa pode aprender a organizar suas finanças,
+              multiplicar sua renda e conquistar mais tranquilidade para o
+              futuro. <br />
+
+              <i>
+                Se você busca um lugar onde possa aprender, se inspirar e
+                crescer financeiramente, você está no lugar certo.
+              </i>
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-item scroll-animate animate-in">
+                <svg
+                  class="stat-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path
+                    d="m22 21-3-3m0 0a5.5 5.5 0 1 0-7.78-7.78 5.5 5.5 0 0 0 7.78 7.78Z"
+                  ></path>
+                </svg>
+                <div class="stat-number">50,000+</div>
+                <div class="stat-label">Clientes Ativos</div>
+              </div>
+
+              <div class="stat-item scroll-animate animate-in">
+                <svg
+                  class="stat-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m4.93 4.93 4.24 4.24"></path>
+                  <path d="m14.83 9.17 4.24-4.24"></path>
+                  <path d="m14.83 14.83 4.24 4.24"></path>
+                  <path d="m9.17 14.83-4.24 4.24"></path>
+                </svg>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Países</div>
+              </div>
+
+              <div class="stat-item scroll-animate animate-in">
+                <svg
+                  class="stat-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path
+                    d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+                  ></path>
+                  <path
+                    d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+                  ></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Prêmios</div>
+              </div>
+
+              <div class="stat-item scroll-animate animate-in">
+                <svg
+                  class="stat-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+                  ></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual scroll-animate animate-in">
+            <div class="about-card">
+              <div class="certification-item">
+                <div class="cert-icon emerald">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                    <path d="M4 22h16"></path>
+                    <path
+                      d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+                    ></path>
+                    <path
+                      d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+                    ></path>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Certificações</h4>
+                  <p>ISO 27001, PCI DSS</p>
+                </div>
+              </div>
+
+              <div class="certification-item">
+                <div class="cert-icon blue">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.93 4.93 4.24 4.24"></path>
+                    <path d="m14.83 9.17 4.24-4.24"></path>
+                    <path d="m14.83 14.83 4.24 4.24"></path>
+                    <path d="m9.17 14.83-4.24 4.24"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Presença Global</h4>
+                  <p>Operação em 15 países</p>
+                </div>
+              </div>
+
+              <div class="certification-item">
+                <div class="cert-icon emerald">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+                    ></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Performance</h4>
+                  <p>99.9% de disponibilidade</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="section-header scroll-animate animate-in">
+          <h2 class="section-title">
+            Perguntas <span class="text-emerald">Frequentes</span>
+          </h2>
+          <p class="section-description">
+            Tire suas dúvidas sobre nosso curso de finanças
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div
+            class="faq-item scroll-animate animate-in"
+            onclick="toggleFAQ(0)"
+          >
+            <div class="faq-question">
+              <span>Tenho direito a reembolso?</span>
+              <svg
+                class="faq-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! Você pode solicitar o reembolso dentro de 7 dias após a
+                compra, conforme o Código de Defesa do Consumidor.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item scroll-animate animate-in"
+            onclick="toggleFAQ(1)"
+          >
+            <div class="faq-question">
+              <span>Como recebo acesso ao curso?</span>
+              <svg
+                class="faq-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Após a confirmação do pagamento, você receberá um e-mail com
+                login e senha para acessar nossa plataforma exclusiva de
+                estudos.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item scroll-animate animate-in"
+            onclick="toggleFAQ(2)"
+          >
+            <div class="faq-question">
+              <span>O curso oferece certificado?</span>
+              <svg
+                class="faq-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! Ao concluir todas as aulas e atividades, você receberá um
+                certificado digital de conclusão válido em todo o Brasil.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item scroll-animate animate-in"
+            onclick="toggleFAQ(3)"
+          >
+            <div class="faq-question">
+              <span>Por quanto tempo terei acesso ao curso?</span>
+              <svg
+                class="faq-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O acesso é vitalício, ou seja, você poderá estudar e revisar o
+                conteúdo sempre que quiser.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item scroll-animate animate-in"
+            onclick="toggleFAQ(4)"
+          >
+            <div class="faq-question">
+              <span>O curso é indicado para iniciantes?</span>
+              <svg
+                class="faq-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! O conteúdo foi desenvolvido para quem está começando do
+                zero, mas também ajuda quem já tem alguma experiência a se
+                aprofundar.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item scroll-animate animate-in"
+            onclick="toggleFAQ(5)"
+          >
+            <div class="faq-question">
+              <span>Terei suporte durante o curso?</span>
+              <svg
+                class="faq-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O curso não conta com uma equipe de suporte individual. No
+                entanto, você terá acesso a todo o material atualizado e poderá
+                rever as aulas sempre que quiser.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <svg
+                class="logo-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+              </svg>
+              <span class="logo-text-footer">Finance365</span>
+            </div>
+            <p class="footer-description">
+              Transformando a gestão financeira com tecnologia inovadora e
+              segurança de ponta.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- Moldura arredondada -->
+                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                  <!-- Lente -->
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <!-- Pontinho (flash) -->
+                  <circle cx="17" cy="7" r="1.5"></circle>
+                </svg>
+              </a>
+              <a href="#" class="social-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="social-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="m2 3 10 11L22 3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Links Rápidos</h3>
+            <ul>
+              <li><a href="#about" class="footer-link">Sobre Nós</a></li>
+              <li><a href="#services" class="footer-link">Cursos</a></li>
+              <li><a href="carreira.html" class="footer-link">Carreiras</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Suporte</h3>
+            <ul>
+              <li>
+                <a href="https://wa.me/+5594992143104" class="footer-link"
+                  >Central de Ajuda</a
+                >
+              </li>
+
+              <li>
+                <a href="politica.html" class="footer-link"
+                  >Política de Privacidade</a
+                >
+              </li>
+              <li>
+                <a href="termos.html" class="footer-link">Termos de Uso</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contato</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <svg
+                  class="contact-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>contatofinance365@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <svg
+                  class="contact-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  role="img"
+                >
+                  <!-- Balão de conversa circular -->
+                  <path
+                    d="M21 12a9 9 0 0 1-12.8 8L4 21l1-4.2A9 9 0 1 1 21 12z"
+                  ></path>
+                  <!-- Fone dentro do balão -->
+                  <path
+                    d="M15.6 14.8c-1 .7-1.8.9-2.2.8-1-.3-3-2-3.7-3.3-.5-1-.6-1.7-.3-2.1.2-.3.6-.7 1.1-1l.2-.2c.2-.2.5-.1.6.1l.7 1.5c.1.2 0 .5-.2.6l-.3.3c-.2.2-.2.5 0 .8.3.6 1.1 1.3 1.7 1.7.3.2.6.2.8 0l.3-.3c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.4.2.6l-.2.2c-.3.5-.7.9-1.1 1.2z"
+                  ></path>
+                </svg>
+                <span>+55 (94) 992143104</span>
+              </div>
+              <div class="contact-item">
+                <svg
+                  class="contact-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <pin x="12" y="2" r="3"></pin>
+                  <path d="m12 21.7-4.3-4.3a7 7 0 1 1 8.6 0L12 21.7z"></path>
+                </svg>
+                <span>Jacundá, PÁ - Brasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Finance365. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Article Modal -->
+    <div id="articleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="back-btn" onclick="closeArticle()">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12,19 5,12 12,5"></polyline>
+            </svg>
+            Voltar aos serviços
+          </button>
+        </div>
+        <div id="articleContent" class="article-content"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <div style="all: unset">
+      <template shadowrootmode="open"
+        ><style>
+          :host {
+            all: initial;
+          }
+        </style>
+        <div></div>
+        <div></div
+      ></template>
+    </div>
+  </body>
+</html>

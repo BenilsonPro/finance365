@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como Investir no Exterior: Guia Completo</title>
+  <meta name="description" content="Guia completo e detalhado sobre como investir no exterior — tipos de ativos, corretoras, impostos, estratégias, gestão de risco e passos práticos." />
+  <style>
+    :root{
+      --blue-1: #0b63d4;
+      --blue-2: #005bb5;
+      --green-1:#18a062;
+      --green-2:#0f8f58;
+      --white:#ffffff;
+      --bg:linear-gradient(180deg,var(--blue-1) 0%, rgba(11,99,212,0.05) 50%, var(--green-1) 100%);
+      --card-bg: rgba(255,255,255,0.96);
+      --max-width:1100px;
+      --radius:14px;
+      --transition:0.45s cubic-bezier(.2,.9,.3,1);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b2738}
+    a{color:var(--blue-2)}
+    header{
+      background: linear-gradient(90deg, rgba(11,99,212,0.95), rgba(15,143,88,0.9));
+      color:var(--white);
+      padding:28px 16px;
+      position:sticky;top:0;z-index:40;backdrop-filter: blur(6px);
+      box-shadow:0 6px 18px rgba(3,10,24,0.15);
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:18px}
+    .nav{display:flex;align-items:center;gap:12px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--white), rgba(255,255,255,0.6));display:flex;align-items:center;justify-content:center;color:var(--blue-2);font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,0.12)}
+    .title{font-size:18px;font-weight:700}
+    .subtitle{font-size:13px;opacity:0.9}
+
+    main{padding:30px 16px}
+    .hero{display:grid;grid-template-columns:1fr;gap:22px;align-items:center}
+    .hero-inner{background:var(--card-bg);border-radius:var(--radius);padding:24px;box-shadow:0 8px 30px rgba(3,10,24,0.08)}
+    .hero h1{margin:0;font-size:28px;color:var(--blue-2)}
+    .hero p.lead{margin:12px 0 0;font-size:16px;color:#234;line-height:1.5}
+
+    .grid{display:grid;grid-template-columns: 1fr 360px;gap:22px;margin-top:20px}
+    .content{background:var(--card-bg);border-radius:12px;padding:22px}
+    .toc{position:sticky;top:86px;height:calc(100vh - 120px);overflow:auto;padding:18px;background:rgba(255,255,255,0.95);border-radius:12px;box-shadow:0 6px 20px rgba(3,10,24,0.06)}
+
+    h2{color:var(--green-2);margin-top:26px}
+    h3{margin-top:18px;color:var(--blue-2)}
+    p{color:#0b2738;line-height:1.65;text-align:justify}
+    ul{margin-left:18px}
+
+    .card{padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(11,99,212,0.02), rgba(15,143,88,0.02));margin:10px 0}
+
+    .back-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--white),rgba(255,255,255,0.9));border:1px solid rgba(8,50,90,0.06);cursor:pointer;transition:var(--transition)}
+    .back-btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(18,45,76,0.12)}
+
+    footer{padding:20px;text-align:center;color:#05314b;opacity:0.95}
+
+    /* responsive */
+    @media(min-width:900px){
+      .hero{grid-template-columns: 1fr 420px}
+      .hero .hero-card{padding:28px}
+    }
+    @media(max-width:899px){
+      .grid{grid-template-columns:1fr}
+      .toc{position:relative;height:auto}
+    }
+
+    /* Animations */
+    .fade-in{opacity:0;transform:translateY(18px);transition:all 0.8s cubic-bezier(.2,.9,.3,1)}
+    .fade-in.visible{opacity:1;transform:none}
+    .scale-up{transform:scale(.98);opacity:0;transition:all 0.6s var(--transition)}
+    .scale-up.visible{transform:scale(1);opacity:1}
+
+    /* code sample style */
+    pre{background:#0b2b3c;color:#fff;padding:12px;border-radius:8px;overflow:auto}
+    code{font-family:monospace}
+
+    /* table */
+    table{width:100%;border-collapse:collapse;margin:14px 0}
+    table th, table td{padding:10px;border:1px solid rgba(6,30,45,0.06);text-align:left}
+
+    /* small screens */
+    @media(max-width:520px){
+      header{padding:16px}
+      .title{font-size:16px}
+      .hero h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">INV</div>
+        <div>
+          <div class="title">Como Investir no Exterior</div>
+          <div class="subtitle">Guia completo, passo a passo</div>
+        </div>
+      </div>
+      <div>
+        <button class="back-btn" id="backBtn" aria-label="Voltar à tela anterior">⟵ Voltar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner fade-in">
+        <h1>Como Investir no Exterior: Guia Completo</h1>
+        <p class="lead">Este guia destina-se a investidores que desejam entender e executar investimentos fora do seu país — cobrindo corretoras internacionais, tipos de ativos, tributação, estratégias de proteção cambial, custos, e passos práticos para começar com segurança. Longo, detalhado e prático: leia com calma ou use o índice à direita para navegar.</p>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card" style="flex:1;min-width:220px">Cores: azul, verde e branco — design responsivo</div>
+          <div class="card" style="flex:1;min-width:220px">Animações suaves e melhorias de leitura</div>
+        </div>
+      </div>
+      <aside class="hero-card hero-inner scale-up">
+        <h3>Resumo Rápido</h3>
+        <p>Investir no exterior permite diversificar risco, acessar empresas e ativos não disponíveis localmente, e explorar oportunidades em moedas fortes. Este guia cobre desde conceitos básicos até passos detalhados de como abrir conta, transferir recursos e declarar impostos.</p>
+      </aside>
+    </section>
+
+    <div class="grid">
+      <article class="content">
+
+        <!-- START CONTENT: Long article goes here -->
+
+        <section id="introducao" class="fade-in">
+          <h2>Introdução</h2>
+          <p>
+            Investir no exterior não é apenas uma estratégia para investidores ricos — com a globalização das plataformas financeiras, muitos investidores individuais têm hoje acesso a mercados internacionais. Diversificação geográfica ajuda a reduzir o risco concentrado em uma única economia; permite exposição a setores que podem não existir localmente (por exemplo, semicondutores, tecnologia avançada, saúde especializada) e dá acesso a classes de ativos como REITs internacionais, ETFs temáticos, ADRs e mercados emergentes com alto potencial de crescimento.
+          </p>
+          <p>
+            Porém existe complexidade: câmbio, impostos, regulamentação, e diferenças entre corretoras. Por isso este guia foca em dar um mapa completo — conceitos, vocabulário, plataformas, custos, riscos e um passo a passo para começar com segurança.
+          </p>
+        </section>
+
+        <section id="por-que" class="fade-in">
+          <h2>Por que investir no exterior?</h2>
+          <p>
+            As razões variam entre investidores, mas entre as mais comuns estão:
+          </p>
+          <ul>
+            <li><strong>Diversificação:</strong> reduz a dependência da economia local e de um único conjunto de ativos.</li>
+            <li><strong>Acesso a empresas líderes globais:</strong> muitas empresas de tecnologia, consumo e saúde estão listadas apenas no exterior.</li>
+            <li><strong>Proteção cambial:</strong> manter parte do patrimônio em moedas estrangeiras pode proteger contra desvalorizações da moeda local.</li>
+            <li><strong>Oportunidades de retorno:</strong> mercados em ciclos distintos podem oferecer melhores oportunidades em diferentes momentos.</li>
+            <li><strong>Instrumentos e produtos:</strong> certos ETFs, fundos e produtos estruturados só existem em mercados estrangeiros.</li>
+          </ul>
+          <p>
+            Esses benefícios vêm com contrapartidas: impostos, volatilidade cambial, custo de transferências, e eventualmente regras mais rígidas de compliance/KYC (conheça seu cliente). Avaliar a motivação pessoal e horizonte de investimento é essencial antes de começar.
+          </p>
+        </section>
+
+        <section id="principais-mercados" class="fade-in">
+          <h2>Principais mercados e instrumentos</h2>
+          <p>
+            Ao investir no exterior você poderá acessar diferentes mercados e instrumentos. Veja os mais relevantes:
+          </p>
+          <h3>Ações e ADRs</h3>
+          <p>
+            Ações listadas diretamente em bolsas estrangeiras (NYSE, NASDAQ, LSE, Euronext, TSE, etc) e ADRs (American Depositary Receipts) — certificados que representam ações estrangeiras negociadas nos EUA — são formas diretas de exposição a empresas. ADRs facilitam o acesso sem precisar abrir conta em bolsas locais.
+          </p>
+
+          <h3>ETFs (Exchange Traded Funds)</h3>
+          <p>
+            ETFs negociados em bolsas internacionais são um dos meios mais populares: oferecem exposição a índices, setores, regiões ou estratégias específicas com custos relativamente baixos. Há ETFs de dividendos, de crescimento, de fatores (value, momentum), e temáticos (IA, energia renovável, saúde).
+          </p>
+
+          <h3>Fundos mútuos e fundos domiciliados no exterior</h3>
+          <p>
+            Fundos abertos que podem oferecer gestão ativa com acesso a alocações globais. Verifique a taxa de administração, o regulatorio e o domicílio do fundo — alguns fundos possuem vantagens fiscais dependendo do país de residência do investidor.
+          </p>
+
+          <h3>REITs e imóveis internacionais</h3>
+          <p>
+            REITs (Real Estate Investment Trusts) são veículos cotados que investem em imóveis. Investir em REITs internacionais dá exposição ao mercado imobiliário global sem precisar comprar propriedades diretamente.
+          </p>
+
+          <h3>Títulos e renda fixa</h3>
+          <p>
+            Títulos soberanos e corporativos estrangeiros, incluindo bonds em dólar/euro/yen, podem ser adquiridos através de corretoras ou fundos. Atenção ao risco de crédito e ao duration (sensibilidade à taxa de juros).
+          </p>
+
+          <h3>Criptomoedas e ativos digitais</h3>
+          <p>
+            Exchanges internacionais oferecem diversas criptomoedas. Esse é um mercado separado do sistema financeiro tradicional, com riscos regulatórios e de custódia. Proteja chaves privadas e prefira carteiras seguras ou custodians confiáveis.</p>
+        </section>
+
+        <section id="como-abrir-conta" class="fade-in">
+          <h2>Como abrir conta em corretoras internacionais</h2>
+          <p>
+            Existem duas rotas comuns:
+          </p>
+          <ol>
+            <li><strong>Corretoras locais com acesso a mercados estrangeiros:</strong> corretoras no país do investidor que permitem comprar ativos no exterior (por exemplo, através de BDRs, ETFs negociados localmente, ou corretoras locais parceiras).</li>
+            <li><strong>Corretoras internacionais:</strong> abrir conta diretamente em uma corretora estrangeira (ex.: Interactive Brokers, Charles Schwab, TD Ameritrade, eToro, Revolut, entre outras). Essa opção dá maior flexibilidade e acesso direto, mas exige processos de KYC, envio de documentos e possivelmente prova de residência e impostos.</li>
+          </ol>
+          <p>
+            Passos típicos para abrir conta:
+          </p>
+          <ul>
+            <li>Escolha da corretora: compare taxas, mercado de atuação, plataforma, e reviews.</li>
+            <li>Documentação: CPF, identidade (RG ou passaporte), comprovante de residência, e às vezes comprovante de renda/emprego.</li>
+            <li>KYC/AML: responda perguntas sobre experiência com investimentos e origem dos recursos.</li>
+            <li>Verificação: fazer upload de documentos, autenticação por foto e assinatura digital.</li>
+            <li>Depósito inicial: transferir recursos via wire transfer, transferência internacional ou intermediários que fazem câmbio.</li>
+          </ul>
+          <p>
+            Dica: pesquise se a corretora aceita clientes do seu país e quais serviços estão disponíveis (algumas corretoras limitam produtos para residentes estrangeiros).
+          </p>
+        </section>
+
+        <section id="custos-e-taxas" class="fade-in">
+          <h2>Custos, taxas e spreads</h2>
+          <p>
+            Entender todos os custos é crucial para não ter surpresas. Entre os principais custos estão:
+          </p>
+          <ul>
+            <li><strong>Taxas de corretagem:</strong> por operação. Algumas corretoras oferecem corretagem zero para certos mercados/ativos.</li>
+            <li><strong>Taxas de custódia:</strong> cobrança periódica por manter ativos na conta ou por serviços administrativos.</li>
+            <li><strong>Spreads e taxas de conversão cambial:</strong> ao converter moeda local para dólar/euro/etc, há spreads aplicados pelo banco ou corretora de câmbio.</li>
+            <li><strong>Taxas de transferência internacional (wire fees):</strong> cobradas por bancos intermediários.</li>
+            <li><strong>Taxas de administração de fundos/ETFs:</strong> expense ratio que reduz o retorno líquido.</li>
+            <li><strong>Impostos:</strong> variam por país e tipo de renda — dividendos, juros, ganho de capital.</li>
+          </ul>
+          <p>
+            Compare o custo total: taxa fixa por operação + percentual sobre o volume + custos de câmbio. Para pequenos aportes frequentes, spreads podem corroer retornos; considerar soluções de corretoras que oferecem conversão com baixo spread ou contas multi-moeda.
+          </p>
+        </section>
+
+        <section id="tributacao" class="fade-in">
+          <h2>Tributação — o que você precisa saber</h2>
+          <p>
+            Tributos são um dos pontos mais importantes ao investir no exterior. As regras dependem do país do investidor e dos ativos. Aqui trazemos um panorama geral, mas consulte um contador especialista em tributação internacional para seu caso.
+          </p>
+
+          <h3>Imposto sobre ganho de capital</h3>
+          <p>
+            Em muitos países (incluindo o Brasil), ganhos de capital obtidos com a venda de ações e ativos no exterior são tributáveis. Normalmente, o investidor deve calcular o ganho em moeda local e recolher o imposto segundo a alíquota aplicável — que pode variar conforme o tipo de ativo e o tempo de permanência.
+          </p>
+
+          <h3>Dividendos e rendimentos</h3>
+          <p>
+            Dividendos pagos por empresas estrangeiras podem sofrer retenção na fonte no país de origem (por exemplo, 15% nos EUA para investidores estrangeiros que não tenham tratado diferente). Esse imposto retido pode, em alguns casos, ser compensado no imposto devido no país de residência, conforme acordos de bitributação.
+          </p>
+
+          <h3>Declaração de bens no exterior</h3>
+          <p>
+            Muitos países exigem a declaração de ativos detidos no exterior (por exemplo, no Brasil a declaração no Imposto de Renda inclui bens e direitos no exterior). Mantenha registros de compra, preço de aquisição em moeda estrangeira e data de compra para fins de cálculo de ganho de capital.
+          </p>
+
+          <h3>Recomendações fiscais</h3>
+          <ul>
+            <li>Guarde comprovantes de câmbio e notas de corretagem.</li>
+            <li>Use planilhas ou softwares de contabilidade para rastrear custos e base de cálculo.</li>
+            <li>Consulte um contador para preencher corretamente a declaração de imposto de renda e evitar multas.</li>
+          </ul>
+        </section>
+
+        <section id="gestao-risco" class="fade-in">
+          <h2>Gerenciamento de risco e proteção cambial</h2>
+          <p>
+            Investir no exterior adiciona risco cambial: mesmo que o ativo em si tenha desempenho positivo, a perda de valor da moeda local frente à moeda do investimento pode reduzir ou aumentar seu retorno quando convertido. Estratégias para gerenciar risco cambial incluem:
+          </p>
+          <ul>
+            <li><strong>Hedge cambial:</strong> usar contratos futuros, opções ou ETFs hedged que protegem contra variação da moeda.</li>
+            <li><strong>Diversificação de moedas:</strong> manter ativos denominados em várias moedas para reduzir exposição a uma só moeda.</li>
+            <li><strong>Alocação por horizonte:</strong> para objetivos de curto prazo, considerar investimentos hedged; para longo prazo, aceitar parte da exposição cambial como um risco natural.</li>
+          </ul>
+          <p>
+            Além do câmbio, avalie riscos de contraparte (corretora), risco regulatório e liquidez do ativo. Sempre defina stops, limites de perda e tamanhos de posição compatíveis com seu perfil.
+          </p>
+        </section>
+
+        <section id="estrategias" class="fade-in">
+          <h2>Estratégias práticas para começar</h2>
+          <p>
+            Abaixo seguem estratégias e passos práticos que funcionam para muitos investidores:
+          </p>
+          <h3>1. Comece com ETFs globais</h3>
+          <p>
+            ETFs são uma excelente porta de entrada para diversificação com custos baixos. ETFs que replicam S&P 500, MSCI World, ou índices de mercados emergentes são opções iniciais.
+          </p>
+
+          <h3>2. Alocação por objetivos</h3>
+          <p>
+            Defina objetivos (aposentadoria, proteção patrimonial, crescimento agressivo) e aloque ativos internacionalmente conforme horizonte e tolerância ao risco. Ex.: aposentadoria (60% global equities, 30% renda fixa global, 10% caixa/alternativos).
+          </p>
+
+          <h3>3. DCA (Dollar Cost Averaging)</h3>
+          <p>
+            Aporte regular em intervalos (mensal ou trimestral) reduz o timing risk e suaviza o custo médio em dólar/euro.
+          </p>
+
+          <h3>4. Rebalanceamento periódico</h3>
+          <p>
+            Rebalanceie a carteira para manter a alocação-alvo, vendendo os que valorizaram excessivamente e comprando os que foram deixados para trás.
+          </p>
+
+          <h3>5. Aprenda sobre impostos antes de vender</h3>
+          <p>
+            Antes de realizar vendas que gerem ganho de capital, confirme o impacto fiscal para evitar surpresas no imposto anual.
+          </p>
+        </section>
+
+        <section id="custodia-seguranca" class="fade-in">
+          <h2>Custódia e segurança: como proteger seus ativos</h2>
+          <p>
+            Segurança envolve dois vetores: a segurança jurídica da corretora e a proteção dos acessos:
+          </p>
+          <ul>
+            <li><strong>Escolha corretoras reguladas:</strong> prefira corretoras reguladas por autoridades reconhecidas (SEC, FCA, ASIC, etc.).</li>
+            <li><strong>Autenticação de dois fatores (2FA):</strong> habilite sempre.</li>
+            <li><strong>Cold storage para cripto:</strong> para grandes volumes de cripto, prefira carteiras offline (hardware wallets).</li>
+            <li><strong>Segurança de senhas:</strong> use senhas fortes e um gestor de senhas confiável.</li>
+            <li><strong>Verificação periódica:</strong> reveja movimentações e extratos.</li>
+          </ul>
+        </section>
+
+        <section id="transferir-dinheiro" class="fade-in">
+          <h2>Como transferir dinheiro para o exterior</h2>
+          <p>
+            Formas comuns de transferir fundos:
+          </p>
+          <ul>
+            <li><strong>Wire transfer:</strong> transferência bancária internacional direta. Confiável mas pode ter taxas altas e intermediários.</li>
+            <li><strong>Plataformas de câmbio e corretoras que fazem conversão:</strong> Wise, Remessa Online, TransferWise, e outros fornecedores especializados frequentemente oferecem spreads menores que bancos tradicionais.</li>
+            <li><strong>Corretoras com conta multi-moeda:</strong> permitem conversão dentro da própria corretora com spreads competitivos.</li>
+          </ul>
+          <p>
+            Dica: compare o custo total (taxas fixas + spread) e o tempo de liquidação. Para grandes aportes, negociar condições com a corretora ou usar serviços com tarifas menores costuma ser vantajoso.
+          </p>
+        </section>
+
+        <section id="roadmap" class="fade-in">
+          <h2>Roadmap prático (passo a passo)</h2>
+          <p>
+            1. Defina objetivos e horizonte. 2. Estude alocação alvo. 3. Escolha corretora (local com acesso ou internacional). 4. Abra conta e complete KYC. 5. Transfira recursos testando com valores pequenos. 6. Invista em ETFs ou ações escolhidas. 7. Mantenha registros para impostos. 8. Reavalie anualmente.
+          </p>
+          <p>
+            Um checklist rápido: documentos para abrir conta, comprovante de residência, estratégia de alocação, plano de aporte (DCA), e backup de segurança (2FA e gestor de senhas).
+          </p>
+        </section>
+
+        <section id="erros-comuns" class="fade-in">
+          <h2>Erros comuns e como evitá-los</h2>
+          <ul>
+            <li>Ignorar custo cambial: calcule o impacto do spread em aportes frequentes.</li>
+            <li>Não declarar ativos no exterior: pode gerar multas e problemas fiscais.</li>
+            <li>Buscar o "melhor timing": tentar acertar o mercado frequentemente leva a perdas de oportunidade.</li>
+            <li>Escolher corretora apenas por marketing: verifique reputação, regulação e suporte.</li>
+            <li>Deixar tudo em cripto sem proteção: cripto exige disciplina e segurança adicional.</li>
+          </ul>
+        </section>
+
+        <section id="estudos-caso" class="fade-in">
+          <h2>Estudos de caso e exemplos</h2>
+          <p>
+            Exemplo 1 — Investidor conservador: alocação 30% ações globais via ETFs, 60% bonds internacionais, 10% caixa em dólar. Exemplo 2 — Investidor agressivo: 80% ações (com exposição a tech e emerging markets) e 20% alternativos. Esses são apenas esquemas; personalize conforme tolerância ao risco.
+          </p>
+        </section>
+
+        <section id="recursos" class="fade-in">
+          <h2>Recursos e leitura adicional</h2>
+          <p>
+            Procure materiais oficiais das corretoras, whitepapers de ETFs, e legislação fiscal do seu país. Cursos de finanças comportamentais e gestão de portfólio ajudam a manter disciplina.
+          </p>
+        </section>
+
+        <section id="conclusao" class="fade-in">
+          <h2>Conclusão</h2>
+          <p>
+            Investir no exterior é uma das formas mais eficientes de diversificar e acessar oportunidades globais, mas exige preparo: estudar custos, impostos e escolher plataformas confiáveis. Comece pequeno, priorize segurança e mantenha registros. Com disciplina, é uma poderosa ferramenta para construir patrimônio.
+          </p>
+          <p>
+            Se quiser, eu posso adaptar este guia para um artigo longo em linguagem mais técnica, um checklist imprimível (sem downloads incorporados) ou um roteiro de vídeos para seu canal — diga qual formato prefere.
+          </p>
+        </section>
+
+        <!-- END CONTENT -->
+
+      </article>
+
+      <aside class="toc">
+        <h3>Índice</h3>
+        <nav>
+          <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#por-que">Por que investir no exterior?</a></li>
+            <li><a href="#principais-mercados">Principais mercados e instrumentos</a></li>
+            <li><a href="#como-abrir-conta">Como abrir conta</a></li>
+            <li><a href="#custos-e-taxas">Custos e taxas</a></li>
+            <li><a href="#tributacao">Tributação</a></li>
+            <li><a href="#gestao-risco">Gestão de risco</a></li>
+            <li><a href="#estrategias">Estratégias práticas</a></li>
+            <li><a href="#custodia-seguranca">Custódia e segurança</a></li>
+            <li><a href="#transferir-dinheiro">Transferir dinheiro</a></li>
+            <li><a href="#roadmap">Roadmap prático</a></li>
+            <li><a href="#erros-comuns">Erros comuns</a></li>
+            <li><a href="#estudos-caso">Estudos de caso</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+          </ul>
+        </nav>
+
+        <div style="margin-top:12px">
+          <button class="back-btn" id="backBtnAside">⟵ Voltar</button>
+        </div>
+
+        <hr style="margin:14px 0" />
+        <div style="font-size:13px;color:#08324a;opacity:0.9">
+          <strong>Dicas rápidas:</strong>
+          <ul>
+            <li>Comece por ETFs para reduzir complexidade.</li>
+            <li>Mantenha registro de todas as operações.</li>
+            <li>Consulte um especialista fiscal antes de operações grandes.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>Guia não substitui consultoria financeira ou fiscal profissional. Conteúdos e exemplos são meramente educacionais.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Back buttons
+    document.getElementById('backBtn').addEventListener('click', function(){
+      if(window.history.length > 1) window.history.back(); else window.location.href = 'about:blank';
+    });
+    document.getElementById('backBtnAside').addEventListener('click', function(){
+      if(window.history.length > 1) window.history.back(); else window.location.href = 'about:blank';
+    });
+
+    // Scroll reveal animations
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    },{threshold:0.12});
+
+    document.querySelectorAll('.fade-in, .scale-up').forEach(el=>observer.observe(el));
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Small enhancement: remember last reading position
+    const key = 'invest-exterior-scroll';
+    window.addEventListener('beforeunload', ()=>{
+      localStorage.setItem(key, window.scrollY);
+    });
+    window.addEventListener('load', ()=>{
+      const v = localStorage.getItem(key);
+      if(v) window.scrollTo(0, parseInt(v,10));
+    });
+  </script>
+</body>
+</html>

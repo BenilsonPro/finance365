@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Investir em Renda Fixa: Tesouro, CDB e Mais</title>
+  <meta name="description" content="Guia completo e detalhado sobre como investir em renda fixa, incluindo Tesouro Direto, CDBs, LCIs, LCAs e outros investimentos seguros. Aprenda passo a passo.">
+  <style>
+    :root {
+      --azul: #1e3a8a;
+      --verde: #059669;
+      --branco: #ffffff;
+      --cinza: #f3f4f6;
+      --maxw: 1200px;
+      --radius: 12px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.7;
+      color: #111;
+      background: var(--cinza);
+    }
+    header {
+      background: linear-gradient(90deg, var(--azul), var(--verde));
+      color: var(--branco);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: .5rem;
+      font-size: 1.2rem;
+    }
+    main {
+      max-width: var(--maxw);
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 2rem;
+    }
+    nav.toc {
+      background: var(--branco);
+      padding: 1rem;
+      border-radius: var(--radius);
+      position: sticky;
+      top: 1rem;
+      height: fit-content;
+    }
+    nav.toc h2 {
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
+      color: var(--azul);
+    }
+    nav.toc a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: .3rem 0;
+      font-size: .95rem;
+    }
+    nav.toc a[aria-current="true"] {
+      font-weight: bold;
+      color: var(--verde);
+    }
+    article {
+      background: var(--branco);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      color: var(--azul);
+      margin-top: 2rem;
+    }
+    article h3 {
+      color: var(--verde);
+      margin-top: 1.5rem;
+    }
+    ul.checklist {
+      list-style: none;
+      padding: 0;
+    }
+    ul.checklist li::before {
+      content: "✔ ";
+      color: var(--verde);
+      font-weight: bold;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--cinza);
+      padding: 1rem;
+      border-radius: var(--radius);
+    }
+    .cta-box {
+      background: linear-gradient(90deg, var(--azul), var(--verde));
+      color: var(--branco);
+      padding: 2rem;
+      border-radius: var(--radius);
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .btn-primary {
+      display: inline-block;
+      padding: .6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition-duration: 0.3s;
+    }
+    .btn-primary {
+      background: var(--branco);
+      color: var(--azul);
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+    }
+   
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--azul);
+      color: var(--branco);
+      margin-top: 2rem;
+    }
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      background: var(--verde);
+      width: 0;
+      z-index: 1000;
+    }
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      nav.toc {
+        position: relative;
+      }
+    }
+    /* Animações fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="progress"></div>
+  <header>
+    <h1>Como Investir em Renda Fixa: Tesouro, CDB e Mais</h1>
+    <p>Um guia completo e detalhado para quem deseja começar a investir de forma segura e inteligente.</p>
+  </header>
+
+  <main>
+    <nav class="toc">
+      <h2>Sumário</h2>
+      <a href="#introducao">Introdução</a>
+      <a href="#oque">O que é Renda Fixa?</a>
+      <a href="#tesouro">Tesouro Direto</a>
+      <a href="#cdb">CDB</a>
+      <a href="#lci-lca">LCI e LCA</a>
+      <a href="#debentures">Debêntures</a>
+      <a href="#comparativo">Comparando opções</a>
+      <a href="#passoapasso">Passo a passo para investir</a>
+      <a href="#erros">Erros comuns a evitar</a>
+      <a href="#estrategias">Estratégias avançadas</a>
+      <a href="#conclusao">Conclusão</a>
+    </nav>
+
+    <article>
+      <section id="introducao" class="fade-in">
+        <h2>Introdução</h2>
+        <p>A renda fixa é o ponto de partida para a maioria dos investidores. Ela oferece previsibilidade, segurança e rendimentos estáveis, sendo ideal tanto para quem está começando quanto para quem busca diversificar sua carteira. Neste artigo, você vai aprender em detalhes o que é a renda fixa, quais são os principais produtos disponíveis no mercado brasileiro — como Tesouro Direto, CDBs, LCIs, LCAs e debêntures — além de estratégias, erros a evitar e um passo a passo completo para investir com confiança.</p>
+      </section>
+
+      <section id="oque" class="fade-in">
+        <h2>O que é Renda Fixa?</h2>
+        <p>Investimentos de renda fixa são aqueles em que as regras de remuneração são definidas no momento da aplicação. Isso significa que você já sabe como será calculado o rendimento do seu dinheiro, seja uma taxa prefixada, um percentual de algum índice (como CDI ou Selic) ou um valor corrigido pela inflação.</p>
+        <p>Diferente da renda variável (ações, fundos imobiliários, etc.), na renda fixa a volatilidade é menor, e o investidor tem uma ideia mais clara do retorno esperado. Ela pode ser usada para diferentes objetivos:</p>
+        <ul class="checklist">
+          <li>Reserva de emergência</li>
+          <li>Objetivos de curto e médio prazo</li>
+          <li>Diversificação de carteira</li>
+          <li>Proteção contra inflação</li>
+        </ul>
+      </section>
+
+      <section id="tesouro" class="fade-in">
+        <h2>Tesouro Direto</h2>
+        <p>O Tesouro Direto é um programa do governo federal que permite a pessoas físicas investir em títulos públicos. É considerado o investimento mais seguro do país, pois é garantido pelo Tesouro Nacional.</p>
+        <h3>Tipos de títulos</h3>
+        <ul class="checklist">
+          <li><strong>Tesouro Selic:</strong> ideal para reserva de emergência, acompanha a taxa Selic.</li>
+          <li><strong>Tesouro Prefixado:</strong> paga uma taxa fixa definida no momento da compra.</li>
+          <li><strong>Tesouro IPCA+:</strong> protege contra inflação, rendendo uma taxa fixa + IPCA.</li>
+        </ul>
+        <h3>Vantagens</h3>
+        <p>Alta segurança, acessível a partir de valores baixos, liquidez diária (exceto IPCA+ e Prefixado antes do vencimento, que podem oscilar se vendidos antes).</p>
+      </section>
+
+      <section id="cdb" class="fade-in">
+        <h2>CDB</h2>
+        <p>O Certificado de Depósito Bancário (CDB) é um título emitido por bancos para captar recursos. Em troca, o investidor recebe juros sobre o valor investido.</p>
+        <h3>Tipos</h3>
+        <ul class="checklist">
+          <li><strong>Prefixado:</strong> rendimento fixo definido na aplicação.</li>
+          <li><strong>Pós-fixado:</strong> atrelado ao CDI.</li>
+          <li><strong>Híbrido:</strong> atrelado ao IPCA + taxa fixa.</li>
+        </ul>
+        <p>CDBs têm garantia do FGC (Fundo Garantidor de Créditos) até R$ 250 mil por CPF por instituição.</p>
+      </section>
+
+      <section id="lci-lca" class="fade-in">
+        <h2>LCI e LCA</h2>
+        <p>LCI (Letra de Crédito Imobiliário) e LCA (Letra de Crédito do Agronegócio) são títulos de renda fixa isentos de Imposto de Renda para pessoas físicas. Eles também são garantidos pelo FGC.</p>
+        <p>Por serem isentos, muitas vezes rendem mais do que CDBs equivalentes, especialmente para quem está em faixas maiores de tributação.</p>
+      </section>
+
+      <section id="debentures" class="fade-in">
+        <h2>Debêntures</h2>
+        <p>Debêntures são títulos de dívida emitidos por empresas para financiar projetos. Diferente dos anteriores, não têm cobertura do FGC. Algumas debêntures incentivadas são isentas de IR.</p>
+        <p>São indicadas para investidores com perfil mais moderado a arrojado.</p>
+      </section>
+
+      <section id="comparativo" class="fade-in">
+        <h2>Comparando as opções de renda fixa</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Tesouro Direto</h3>
+            <p>Maior segurança, liquidez diária, ideal para iniciantes.</p>
+          </div>
+          <div class="card">
+            <h3>CDB</h3>
+            <p>Boa rentabilidade, garantia do FGC, variedade de prazos.</p>
+          </div>
+          <div class="card">
+            <h3>LCI/LCA</h3>
+            <p>Isenção de IR, garantia do FGC, prazos médios e longos.</p>
+          </div>
+          <div class="card">
+            <h3>Debêntures</h3>
+            <p>Maior risco, sem FGC, mas possibilidade de rendimentos mais altos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="passoapasso" class="fade-in">
+        <h2>Passo a passo para investir</h2>
+        <ol>
+          <li><strong>Defina seus objetivos:</strong> curto, médio ou longo prazo.</li>
+          <li><strong>Monte sua reserva de emergência:</strong> priorize Tesouro Selic ou CDB de liquidez diária.</li>
+          <li><strong>Abra conta em uma corretora:</strong> escolha uma plataforma confiável.</li>
+          <li><strong>Analise prazos e rentabilidade:</strong> alinhe ao seu perfil e metas.</li>
+          <li><strong>Faça aplicações regulares:</strong> crie hábito de investir mensalmente.</li>
+        </ol>
+      </section>
+
+      <section id="erros" class="fade-in">
+        <h2>Erros comuns a evitar</h2>
+        <ul class="checklist">
+          <li>Não montar reserva de emergência antes de buscar rentabilidade.</li>
+          <li>Ignorar impostos e taxas.</li>
+          <li>Investir em prazos longos sem considerar liquidez.</li>
+          <li>Não diversificar os investimentos.</li>
+        </ul>
+      </section>
+
+      <section id="estrategias" class="fade-in">
+        <h2>Estratégias avançadas</h2>
+        <p>Investidores experientes podem combinar diferentes títulos para equilibrar segurança, liquidez e rentabilidade. Por exemplo:</p>
+        <ul>
+          <li>Usar Tesouro Selic como caixa de liquidez.</li>
+          <li>Combinar CDBs e LCIs/LCA para rentabilidade maior.</li>
+          <li>Alocar parte em debêntures para diversificar.</li>
+        </ul>
+      </section>
+
+      <section id="conclusao" class="fade-in">
+        <h2>Conclusão</h2>
+        <p>A renda fixa é uma base sólida para qualquer investidor. Tesouro Direto, CDB, LCI, LCA e debêntures oferecem oportunidades para todos os perfis e objetivos. Seguindo este guia, você estará pronto para dar os primeiros passos no mundo dos investimentos, com segurança e estratégia.</p>
+      </section>
+
+      <div class="cta-box fade-in">
+        <div>
+          <h3>Quer continuar aprendendo sobre investimentos?</h3>
+          <p>Sim? Então você já está no lugar certo para aprender e aplicar na vida real.
+            Com informação certa e planejamento, qualquer pessoa pode conquistar a liberdade financeira.
+          </p>
+        </div>
+        <div>
+          <a href="#" class="btn-primary">⬆ Voltar ao topo</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Finance365. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Animações scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => fadeObserver.observe(el));
+
+    // Barra de progresso
+    const progress = document.querySelector('.progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / docHeight) * 100;
+      progress.style.width = scrolled + '%';
+    });
+
+    // TOC ativo
+    const tocLinks = document.querySelectorAll('.toc a');
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 100;
+      tocLinks.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop){
+          link.setAttribute('aria-current', 'true');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Controlar Gastos com Cartão e Evitar Juros Altos</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(90deg, #00796b, #00bfa5);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Botão voltar à página anterior */
+    #backPage {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      /* background-color: #ffd700; */
+      color: #ffff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    #backPage:hover {
+      background-color: #06b19d;
+      color: white;
+    }
+
+    nav {
+      background: #00bfa5;
+      padding: 12px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+      border-left: 6px solid #ffd700;
+      padding-left: 12px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    section p {
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      text-align: justify;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .tip {
+      background-color: #e0f2f1;
+      padding: 22px;
+      margin: 20px 0;
+      border-left: 6px solid #ffd700;
+      border-radius: 5px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tip:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    /* Botão Voltar ao Topo */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ffd700;
+      color: #00796b;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #00796b;
+      color: white;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+      header h1 { font-size: 2rem; }
+      section h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão voltar à página anterior -->
+  <a id="backPage" href="javascript:history.back()">&#8592; Voltar</a>
+
+  <header>
+    <h1>Como Controlar Gastos com Cartão e Evitar Juros Altos</h1>
+    <p>Aprenda estratégias práticas para controlar seus gastos, evitar dívidas e manter sua saúde financeira.</p>
+  </header>
+
+  <nav>
+    <a href="#entendendo">Entendendo o Cartão</a>
+    <a href="#controle">Controle de Gastos</a>
+    <a href="#juros">Evitar Juros Altos</a>
+    <a href="#estrategias">Estratégias Práticas</a>
+  </nav>
+
+  <!-- Seção Entendendo o Cartão -->
+  <section id="entendendo">
+    <h2>Entendendo Como Funciona o Cartão de Crédito</h2>
+    <p>Antes de controlar seus gastos, é essencial compreender o funcionamento do cartão de crédito e os principais custos envolvidos.</p>
+
+    <div class="tip">
+      <h3>1. Faturas e prazos</h3>
+      <p>O cartão permite comprar agora e pagar depois, mas o não pagamento total da fatura gera juros altos. Entender datas de fechamento e vencimento é essencial.</p>
+    </div>
+
+    <div class="tip">
+      <h3>2. Juros e tarifas</h3>
+      <p>Os juros do cartão podem ultrapassar 300% ao ano. Taxas de anuidade e saques também impactam suas finanças.</p>
+    </div>
+
+    <div class="tip">
+      <h3>3. Limite disponível</h3>
+      <p>O limite deve ser usado com planejamento. Ultrapassá-lo pode gerar tarifas e comprometer seu score de crédito.</p>
+    </div>
+  </section>
+
+  <!-- Seção Controle de Gastos -->
+  <section id="controle">
+    <h2>Como Controlar Gastos com Cartão</h2>
+    <p>O controle rigoroso do cartão evita surpresas na fatura e ajuda a manter o equilíbrio financeiro.</p>
+
+    <div class="tip">
+      <h3>1. Planeje suas compras</h3>
+      <p>Liste despesas mensais e defina quanto pode gastar sem comprometer o orçamento.</p>
+    </div>
+
+    <div class="tip">
+      <h3>2. Utilize aplicativos de controle</h3>
+      <p>Aplicativos ajudam a acompanhar gastos em tempo real, categorizando compras e alertando sobre limites.</p>
+    </div>
+
+    <div class="tip">
+      <h3>3. Evite compras por impulso</h3>
+      <p>Antes de usar o cartão, pergunte-se se a compra é realmente necessária.</p>
+    </div>
+
+    <div class="tip">
+      <h3>4. Pague faturas integralmente</h3>
+      <p>Evitar pagar apenas o mínimo impede que os juros compostos consumam seu dinheiro.</p>
+    </div>
+  </section>
+
+  <!-- Seção Evitar Juros Altos -->
+  <section id="juros">
+    <h2>Como Evitar Juros Altos</h2>
+    <p>Pagar juros altos pode comprometer seriamente suas finanças. Siga estas dicas:</p>
+
+    <div class="tip">
+      <h3>1. Antecipe pagamentos</h3>
+      <p>Pagar compras à vista ou antes do vencimento evita cobrança de juros.</p>
+    </div>
+
+    <div class="tip">
+      <h3>2. Evite saques com cartão</h3>
+      <p>Saques possuem juros imediatos, muito maiores que compras normais.</p>
+    </div>
+
+    <div class="tip">
+      <h3>3. Negocie dívidas</h3>
+      <p>Em caso de atraso, negocie com o banco antes que os juros aumentem ainda mais.</p>
+    </div>
+
+    <div class="tip">
+      <h3>4. Priorize faturas do cartão</h3>
+      <p>Outras dívidas podem ter juros menores; priorize sempre o cartão de crédito.</p>
+    </div>
+  </section>
+
+  <!-- Seção Estratégias Práticas -->
+  <section id="estrategias">
+    <h2>Estratégias Práticas para Controlar Gastos</h2>
+    <p>Além do básico, algumas estratégias tornam o controle mais eficiente e sua vida financeira mais segura:</p>
+
+    <div class="tip">
+      <h3>1. Crie categorias de gastos</h3>
+      <p>Separe compras em alimentação, lazer, transporte, contas e emergências para visualizar melhor os gastos.</p>
+    </div>
+
+    <div class="tip">
+      <h3>2. Estabeleça limites por categoria</h3>
+      <p>Defina quanto gastar em cada categoria por mês e respeite esses limites.</p>
+    </div>
+
+    <div class="tip">
+      <h3>3. Use apenas um cartão principal</h3>
+      <p>Ter muitos cartões dificulta o controle. Um único cartão bem monitorado é suficiente.</p>
+    </div>
+
+    <div class="tip">
+      <h3>4. Ative alertas de fatura</h3>
+      <p>Notificações via aplicativo ajudam a acompanhar cada compra e não se perder nos gastos.</p>
+    </div>
+
+    <div class="tip">
+      <h3>5. Recompensas não substituem planejamento</h3>
+      <p>Programas de pontos e cashback são bons, mas não justifiquem gastar além do orçamento.</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Controle de Gastos. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <div id="backToTop">&#8679;</div>
+
+  <script>
+    // Botão voltar ao topo
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Hover animado nos cards
+    const tips = document.querySelectorAll('.tip');
+    tips.forEach((card) => {
+      card.addEventListener('mouseenter', () => {
+        card.style.backgroundColor = '#b2dfdb';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.backgroundColor = '#e0f2f1';
+      });
+    });
+  </script>
+
+</body>
+</html>

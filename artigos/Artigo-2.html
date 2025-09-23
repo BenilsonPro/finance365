@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como Economizar Dinheiro de Forma Inteligente</title>
+    <meta
+      name="description"
+      content="Um guia completo e prático para economizar dinheiro com estratégias inteligentes: orçamento, metas, fundos de emergência e investimentos, passo a passo."
+    />
+    <meta name="theme-color" content="#0077b6" />
+    <meta
+      property="og:title"
+      content="Como Economizar Dinheiro de Forma Inteligente"
+    />
+    <meta
+      property="og:description"
+      content="Guia completo, prático e moderno para dominar suas finanças pessoais e economizar de forma inteligente."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <style>
+      :root {
+        --blue: #0077b6;
+        --green: #00a86b;
+        --blue-600: #0a6aa3;
+        --green-700: #007f57;
+        --bg: #f6fafb;
+        --card: #ffffff;
+        --text: #24323f;
+        --muted: #5b728a;
+        --ring: rgba(0, 119, 182, 0.2);
+        --shadow: 0 6px 20px rgba(10, 106, 163, 0.12);
+        --radius: 16px;
+        --radius-sm: 12px;
+        --maxw: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      /* Header */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: linear-gradient(120deg, var(--blue), var(--green));
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+      .progress {
+        height: 4px;
+        background: rgba(255, 255, 255, 0.35);
+        position: relative;
+        overflow: hidden;
+      }
+      .progress__bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: #fff;
+        transition: width 0.15s linear;
+      }
+      header {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 22px 16px 18px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: space-between;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+      .brand__logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+        display: grid;
+        place-items: center;
+        color: var(--blue);
+        font-weight: 800;
+        box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.6);
+      }
+      .meta {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.95rem;
+        opacity: 0.95;
+      }
+      .meta__pill {
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+      .btn-back {
+        background: #fff;
+        color: var(--blue);
+        border: none;
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+      }
+
+      /* Layout */
+      .wrap {
+        max-width: var(--maxw);
+        margin: 28px auto;
+        padding: 0 16px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 26px;
+      }
+      @media (max-width: 1000px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        aside {
+          order: 2;
+        }
+      }
+
+      /* Card / Aside */
+      aside {
+        position: sticky;
+        top: 86px;
+        align-self: start;
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+        border: 1px solid #e9eef3;
+      }
+      .toc__title {
+        font-weight: 800;
+        color: var(--blue);
+        margin: 4px 0 10px;
+      }
+      .toc {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+      .toc li {
+        margin: 8px 0;
+      }
+      .toc a {
+        display: block;
+        text-decoration: none;
+        color: var(--text);
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 0.98rem;
+        border: 1px dashed transparent;
+      }
+      .toc a.active {
+        background: rgba(0, 168, 107, 0.08);
+        border-color: rgba(0, 168, 107, 0.25);
+        color: var(--blue);
+      }
+
+      /* Article */
+      article {
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid #e9eef3;
+        overflow: hidden;
+      }
+      .hero {
+        padding: 28px 24px;
+        background: radial-gradient(
+            1200px 400px at 10% -10%,
+            rgba(255, 255, 255, 0.35) 0,
+            transparent 40%
+          ),
+          linear-gradient(
+            120deg,
+            rgba(0, 119, 182, 0.12),
+            rgba(0, 168, 107, 0.08)
+          );
+      }
+      .hero h1 {
+        margin: 4px 0 10px;
+        font-size: clamp(1.6rem, 2.4vw + 1rem, 2.35rem);
+        color: var(--blue);
+        line-height: 1.15;
+      }
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0, 119, 182, 0.1);
+        color: var(--blue);
+        border: 1px solid rgba(0, 119, 182, 0.25);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .content {
+        padding: 10px 24px 28px;
+      }
+      section.block {
+        margin: 22px 0;
+        padding: 18px;
+        border-radius: var(--radius-sm);
+        border: 1px solid #eef3f6;
+        background: linear-gradient(180deg, #fff, #fdfefe);
+      }
+      section.block h2 {
+        margin: 0 0 8px;
+        font-size: clamp(1.15rem, 1.2vw + 0.8rem, 1.45rem);
+        color: var(--blue);
+        border-left: 6px solid var(--green);
+        padding-left: 12px;
+      }
+      section.block p {
+        margin: 10px 0;
+      }
+      ul.check {
+        padding-left: 0;
+        list-style: none;
+        margin: 10px 0 0;
+      }
+      ul.check li {
+        margin: 10px 0;
+        padding-left: 30px;
+        position: relative;
+      }
+      ul.check li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(2px);
+        width: 22px;
+        height: 22px;
+        display: grid;
+        place-items: center;
+        border-radius: 6px;
+        background: rgba(0, 168, 107, 0.1);
+        color: var(--green);
+        font-weight: 800;
+      }
+
+      .callout {
+        margin: 18px 0 6px;
+        padding: 16px;
+        border-radius: 12px;
+        background: linear-gradient(
+          120deg,
+          rgba(0, 168, 107, 0.09),
+          rgba(0, 119, 182, 0.09)
+        );
+        border: 1px dashed rgba(0, 168, 107, 0.35);
+      }
+      .callout strong {
+        color: var(--green);
+      }
+
+      .cta {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        padding: 12px 16px;
+        border-radius: 12px;
+        transition: 0.2s transform, 0.2s background, 0.2s box-shadow;
+        box-shadow: var(--shadow);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+      }
+      .btn--primary {
+        background: var(--green);
+        color: #fff;
+      }
+      .btn--primary:hover {
+        background: var(--green-700);
+        transform: translateY(-1px);
+      }
+      .btn--ghost {
+        background: #fff;
+        color: var(--blue);
+        border: 1px solid rgba(10, 106, 163, 0.25);
+      }
+      .btn--ghost:hover {
+        background: rgba(10, 106, 163, 0.06);
+      }
+      .share {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .footer {
+        max-width: var(--maxw);
+        margin: 26px auto 50px;
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      /* Code-friendly anchors */
+      .anchor {
+        color: inherit;
+        text-decoration: none;
+        position: relative;
+      }
+      .anchor:hover::after {
+        content: "#";
+        position: absolute;
+        left: -16px;
+        color: var(--green);
+      }
+
+      /* Accessibility focus */
+      :focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 3px;
+      }
+    </style>
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Como Economizar Dinheiro de Forma Inteligente",
+        "about": "Finanças pessoais e economia doméstica",
+        "inLanguage": "pt-BR",
+        "datePublished": "2025-09-01",
+        "author": { "@type": "Person", "name": "Equipe do Site" },
+        "publisher": { "@type": "Organization", "name": "Seu Site Financeiro" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://exemplo.com/artigos/como-economizar-dinheiro-inteligente"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="topbar" role="banner">
+      <div class="progress" aria-hidden="true">
+        <div class="progress__bar" id="progressBar"></div>
+      </div>
+      <header>
+        <div class="brand" aria-label="Marca">
+          <div class="brand__logo" aria-hidden="true">F$</div>
+          <div>
+            <div style="font-size: 1.05rem">Finance365</div>
+            <small class="meta">
+              <span class="meta__pill" id="readingTime"
+                >~ tempo de leitura</span
+              >
+              <span class="meta__pill">Atualizado: 19/09/2025</span>
+            </small>
+          </div>
+        </div>
+        <button class="btn-back" onclick="window.history.back()">
+          ← Voltar
+        </button>
+
+        <!-- <button class="action__btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">Voltar ao topo ↑</button> -->
+      </header>
+    </div>
+
+    <div class="wrap">
+      <div class="grid" role="presentation">
+        <!-- Sumário -->
+        <aside aria-label="Sumário do artigo">
+          <h3 class="toc__title">Sumário</h3>
+          <ol class="toc" id="toc">
+            <li><a href="#intro" class="toc__link">Introdução</a></li>
+            <li>
+              <a href="#orcamento" class="toc__link"
+                >Orçamento Mensal Inteligente</a
+              >
+            </li>
+            <li><a href="#metas" class="toc__link">Metas Claras e Prazo</a></li>
+            <li><a href="#pague-se" class="toc__link">Pague-se Primeiro</a></li>
+            <li>
+              <a href="#cortes" class="toc__link"
+                >Cortes Eficientes de Gastos</a
+              >
+            </li>
+            <li>
+              <a href="#negociar" class="toc__link"
+                >Negociar e Reduzir Contas</a
+              >
+            </li>
+            <li><a href="#fundo" class="toc__link">Fundo de Emergência</a></li>
+            <li>
+              <a href="#investir" class="toc__link">Investir com Segurança</a>
+            </li>
+            <li>
+              <a href="#habitos" class="toc__link"
+                >Hábitos e Psicologia do Consumo</a
+              >
+            </li>
+            <li><a href="#erro" class="toc__link">Erros Comuns a Evitar</a></li>
+            <li><a href="#faq" class="toc__link">Perguntas Frequentes</a></li>
+            <li>
+              <a href="#conclusao" class="toc__link"
+                >Conclusão + Próximo Passo</a
+              >
+            </li>
+          </ol>
+        </aside>
+
+        <!-- Artigo -->
+        <article id="article" role="article">
+          <div class="hero">
+            <span class="badge" aria-label="Categoria"
+              >💡 Finanças Pessoais</span
+            >
+            <h1>Como Economizar Dinheiro de Forma Inteligente</h1>
+            <p>
+              Um guia prático, moderno e testado para reduzir gastos, organizar
+              suas finanças e começar a investir com confiança.
+            </p>
+          </div>
+
+          <div class="content" id="content">
+            <section id="intro" class="block" aria-labelledby="intro-title">
+              <h2 id="intro-title">
+                <a class="anchor" href="#intro">Introdução</a>
+              </h2>
+              <p>
+                Economizar dinheiro de forma inteligente não é sobre viver no
+                extremo, e sim sobre
+                <strong>tomar boas decisões com consistência</strong>. Com um
+                plano claro, você reduz desperdícios, prepara-se para
+                imprevistos e <em>acelera</em> seus objetivos — seja quitar
+                dívidas, ter mais liberdade ou investir melhor.
+              </p>
+              <div class="callout">
+                <strong>Resumo rápido:</strong> você vai aprender a montar um
+                orçamento eficaz, definir metas, aplicar a regra “pague-se
+                primeiro”, cortar gastos com estratégia, negociar contas,
+                construir um fundo de emergência e dar os primeiros passos nos
+                investimentos.
+              </div>
+            </section>
+
+            <section id="orcamento" class="block">
+              <h2>
+                <a class="anchor" href="#orcamento"
+                  >1) Orçamento Mensal Inteligente</a
+                >
+              </h2>
+              <p>
+                O orçamento é o mapa do seu dinheiro. Registre
+                <strong>todas</strong> as entradas e saídas. Priorize gastos
+                essenciais, planeje variáveis (lazer, transporte) e acompanhe
+                semanalmente.
+              </p>
+              <ul class="check">
+                <li>
+                  Separe por categorias: moradia, alimentação, transporte,
+                  saúde, lazer, dívidas e investimentos.
+                </li>
+                <li>
+                  Use a regra 50-30-20 (necessidades-desejos-futuro) como ponto
+                  de partida.
+                </li>
+                <li>
+                  Crie “envelopes” de gastos para evitar estourar limites.
+                </li>
+              </ul>
+              <div class="callout">
+                <strong>Dica pro:</strong> defina um “limite anti-impulso” (ex.:
+                R$ 150). Qualquer compra acima disso deve esperar 24 horas.
+              </div>
+            </section>
+
+            <section id="metas" class="block">
+              <h2>
+                <a class="anchor" href="#metas">2) Metas Claras e Prazo</a>
+              </h2>
+              <p>
+                Metas específicas geram ação. Use a estrutura
+                <strong>SMART</strong> (específica, mensurável, atingível,
+                relevante e temporal).
+              </p>
+              <ul class="check">
+                <li>
+                  Curto prazo (até 12 meses): quitar cartão, montar reserva.
+                </li>
+                <li>Médio prazo (1–3 anos): viagem, carro, cursos.</li>
+                <li>
+                  Longo prazo (3–10+ anos): casa, aposentadoria, independência.
+                </li>
+              </ul>
+              <div class="callout">
+                <strong>Ferramenta:</strong> transforme metas em valores
+                mensais. Ex.: viajar em 12 meses com R$ 3.600 → guardar R$
+                300/mês.
+              </div>
+            </section>
+
+            <section id="pague-se" class="block">
+              <h2>
+                <a class="anchor" href="#pague-se">3) Pague-se Primeiro</a>
+              </h2>
+              <p>
+                Automatize um aporte assim que o salário cair. Comece com 10% a
+                20% da renda (ajuste conforme sua realidade).
+              </p>
+              <ul class="check">
+                <li>Use débito automático para a conta de investimento.</li>
+                <li>
+                  Trate o aporte como <em>conta obrigatória</em>, não opcional.
+                </li>
+                <li>Reinvista rendimentos para efeito bola de neve.</li>
+              </ul>
+            </section>
+
+            <section id="cortes" class="block">
+              <h2>
+                <a class="anchor" href="#cortes"
+                  >4) Cortes Eficientes de Gastos</a
+                >
+              </h2>
+              <p>
+                Cortar sem dor é focar no que rende muito por pouco esforço.
+              </p>
+              <ul class="check">
+                <li>Cancele assinaturas subutilizadas e renegocie pacotes.</li>
+                <li>Planeje compras (lista + comparar preços).</li>
+                <li>
+                  Troque hábitos caros por versões inteligentes (refeições
+                  planejadas, transporte compartilhado).
+                </li>
+              </ul>
+              <div class="callout">
+                <strong>Técnica 80/20:</strong> 20% dos seus hábitos geram 80%
+                dos gastos desnecessários. Ataque esses 20% primeiro.
+              </div>
+            </section>
+
+            <section id="negociar" class="block">
+              <h2>
+                <a class="anchor" href="#negociar"
+                  >5) Negociar e Reduzir Contas</a
+                >
+              </h2>
+              <p>
+                Contas fixas têm espaço para redução quando você negocia com
+                dados.
+              </p>
+              <ul class="check">
+                <li>
+                  Energia/Internet/Telefonia: solicite revisão, compare planos,
+                  leve ofertas da concorrência.
+                </li>
+                <li>
+                  Banco: peça isenção/redução de tarifas e juros, migre para
+                  opções mais baratas quando fizer sentido.
+                </li>
+                <li>
+                  Seguros: ajuste coberturas ao seu perfil real e renove com
+                  cotação.
+                </li>
+              </ul>
+            </section>
+
+            <section id="fundo" class="block">
+              <h2>
+                <a class="anchor" href="#fundo">6) Fundo de Emergência</a>
+              </h2>
+              <p>
+                Objetivo: 3 a 6 meses de despesas essenciais em
+                <strong>ativo seguro e líquido</strong> (rende diariamente e
+                permite resgate rápido).
+              </p>
+              <ul class="check">
+                <li>
+                  Defina a meta (ex.: gasto essencial R$ 2.000 → fundo entre R$
+                  6.000 e R$ 12.000).
+                </li>
+                <li>Construa com aportes mensais automáticos.</li>
+                <li>
+                  Use somente para imprevistos reais (saúde, perda de renda,
+                  reparos críticos).
+                </li>
+              </ul>
+            </section>
+
+            <section id="investir" class="block">
+              <h2>
+                <a class="anchor" href="#investir">7) Investir com Segurança</a>
+              </h2>
+              <p>
+                Depois da reserva, invista para multiplicar o capital. Comece
+                pelo básico e evolua com estudo.
+              </p>
+              <ul class="check">
+                <li>
+                  Perfil conservador: títulos públicos, CDBs garantidos, fundos
+                  conservadores.
+                </li>
+                <li>
+                  Perfil moderado: debêntures incentivadas, fundos multimercado
+                  prudentes.
+                </li>
+                <li>
+                  Perfil arrojado: ações/ETFs com visão de longo prazo e
+                  diversificação.
+                </li>
+              </ul>
+              <div class="callout">
+                <strong>Regra de ouro:</strong> diversifique e evite “tudo ou
+                nada”. Consistência vence timing.
+              </div>
+            </section>
+
+            <section id="habitos" class="block">
+              <h2>
+                <a class="anchor" href="#habitos"
+                  >8) Hábitos e Psicologia do Consumo</a
+                >
+              </h2>
+              <p>Seu comportamento define seus resultados financeiros.</p>
+              <ul class="check">
+                <li>
+                  <strong>Regra dos 30 dias:</strong> para compras não urgentes,
+                  espere 30 dias. O desejo costuma passar.
+                </li>
+                <li>
+                  <strong>Ambiente:</strong> tire apps que geram impulso e
+                  desative notificações de promoções.
+                </li>
+                <li>
+                  <strong>Reforço positivo:</strong> acompanhe progresso mensal
+                  e celebre metas alcançadas.
+                </li>
+              </ul>
+            </section>
+
+            <section id="erro" class="block">
+              <h2>
+                <a class="anchor" href="#erro">9) Erros Comuns a Evitar</a>
+              </h2>
+              <ul class="check">
+                <li>Não medir gastos “pequenos” (cafés, taxas, apps).</li>
+                <li>Depender de crédito rotativo e parcelamentos longos.</li>
+                <li>Começar a investir antes da reserva de emergência.</li>
+                <li>Falta de seguros básicos para riscos relevantes.</li>
+              </ul>
+            </section>
+
+            <section id="faq" class="block" aria-labelledby="faq-title">
+              <h2 id="faq-title">
+                <a class="anchor" href="#faq">Perguntas Frequentes</a>
+              </h2>
+              <details>
+                <summary>Quanto devo economizar por mês?</summary>
+                <p>
+                  Como base, entre 10% e 20% da renda. Ajuste ao seu momento e
+                  aumente progressivamente.
+                </p>
+              </details>
+              <details>
+                <summary>Onde guardar o fundo de emergência?</summary>
+                <p>
+                  Em produtos de <em>alta liquidez</em> e <em>baixo risco</em>,
+                  que permitam resgate rápido.
+                </p>
+              </details>
+              <details>
+                <summary>Tenho dívidas. Economizo ou quito?</summary>
+                <p>
+                  Priorize quitar dívidas caras (ex.: cartão) e comece um
+                  pequeno fundo para não voltar a se endividar.
+                </p>
+              </details>
+            </section>
+
+            <section id="conclusao" class="block">
+              <h2>
+                <a class="anchor" href="#conclusao"
+                  >Conclusão + Próximo Passo</a
+                >
+              </h2>
+              <p>
+                Economizar com inteligência é uma soma de
+                <strong>clareza</strong> + <strong>sistema</strong> +
+                <strong>constância</strong>. Comece hoje montando seu orçamento
+                e automatizando um pequeno aporte. Daqui a alguns meses, você
+                vai agradecer por ter começado.
+              </p>
+              <div class="cta">
+                <!-- <a class="btn btn--primary" href="#" id="btnPlanilha">Baixar planilha de orçamento</a> -->
+              </div>
+              <div class="share" id="shareLinks" hidden>
+                <!-- <a class="btn btn--ghost" target="_blank" rel="noopener" id="shareWhats">WhatsApp</a> -->
+                <!-- <a class="btn btn--ghost" target="_blank" rel="noopener" id="shareTelegram">Telegram</a> -->
+                <!-- <a class="btn btn--ghost" target="_blank" rel="noopener" id="shareCopy">Copiar link</a> -->
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+      <div>© 2025 Finance365. Todos os direitos reservados.</div>
+    </div>
+
+    <script>
+      // ===== Utilidades =====
+      const $ = (sel, scope = document) => scope.querySelector(sel);
+      const $$ = (sel, scope = document) =>
+        Array.from(scope.querySelectorAll(sel));
+
+      // ===== Barra de Progresso =====
+      const progressBar = $("#progressBar");
+      const onScrollProgress = () => {
+        const h = document.documentElement;
+        const scrolled =
+          (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        progressBar.style.width = Math.min(100, scrolled) + "%";
+      };
+      document.addEventListener("scroll", onScrollProgress, { passive: true });
+      onScrollProgress();
+
+      // ===== Tempo de Leitura =====
+      const readingTimeEl = $("#readingTime");
+      const wordsPerMin = 210;
+      const text = $("#content").innerText || "";
+      const words = text.trim().split(/\s+/).length;
+      const minutes = Math.max(1, Math.round(words / wordsPerMin));
+      readingTimeEl.textContent = `~ ${minutes} min de leitura`;
+
+      // ===== Scroll Spy (Sumário ativo) =====
+      const tocLinks = $$("#toc a");
+      const sections = $$("#content section.block");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            const link = $(`#toc a[href="#${id}"]`);
+            if (entry.isIntersecting) {
+              tocLinks.forEach((a) => a.classList.remove("active"));
+              if (link) link.classList.add("active");
+              history.replaceState(null, "", `#${id}`);
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0.02 }
+      );
+      sections.forEach((s) => io.observe(s));
+
+      // ===== Compartilhar =====
+      const btnShare = $("#btnShare");
+      const shareLinks = $("#shareLinks");
+      const shareUrl = location.href;
+      btnShare.addEventListener("click", async () => {
+        const data = {
+          title: document.title,
+          text: "Veja este guia completo sobre como economizar com inteligência.",
+          url: shareUrl,
+        };
+        if (navigator.share) {
+          try {
+            await navigator.share(data);
+          } catch (e) {}
+        } else {
+          shareLinks.hidden = false;
+        }
+      });
+      $(
+        "#shareWhats"
+      ).href = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        document.title + " " + shareUrl
+      )}`;
+      $(
+        "#shareTelegram"
+      ).href = `https://t.me/share/url?url=${encodeURIComponent(
+        shareUrl
+      )}&text=${encodeURIComponent(document.title)}`;
+      $("#shareCopy").addEventListener("click", async (e) => {
+        e.preventDefault();
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          alert("Link copiado!");
+        } catch (err) {
+          prompt("Copie o link:", shareUrl);
+        }
+      });
+
+      // ===== CTA (substitua o href pelo seu link real) =====
+      $("#btnPlanilha").addEventListener("click", (e) => {
+        // Coloque aqui o link da sua planilha ou gere via backend
+        // e.g., e.currentTarget.href = 'https://seusite.com/planilha.xlsx'
+        // Mantemos preventDefault para exemplo:
+        e.preventDefault();
+        alert(
+          "Configure o link da sua planilha de orçamento no atributo href do botão."
+        );
+      });
+
+      // ===== Acessibilidade: focar conteúdo ao entrar por âncora =====
+      window.addEventListener("hashchange", () => {
+        const el = document.getElementById(location.hash.replace("#", ""));
+        if (el) {
+          el.setAttribute("tabindex", "-1");
+          el.focus({ preventScroll: true });
+        }
+      });
+    </script>
+  </body>
+</html>

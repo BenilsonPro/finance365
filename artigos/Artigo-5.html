@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fundos Imobiliários: Como Investir e Lucrar</title>
+    <meta
+      name="description"
+      content="Guia completo sobre Fundos Imobiliários (FIIs): tipos, métricas, como comprar, impostos, riscos e estratégias para montar uma carteira rentável."
+    />
+    <style>
+      :root {
+        --azul: #0d47a1;
+        --azul-2: #1565c0;
+        --verde: #2e7d32;
+        --verde-2: #43a047;
+        --branco: #ffffff;
+        --bg: #f7fbff;
+        --text: #0b1320;
+        --muted: #556877;
+        --radius: 14px;
+        --maxw: 1100px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background: var(--branco);
+        box-shadow: 0 6px 18px rgba(13, 71, 161, 0.06);
+        z-index: 40;
+      }
+      .header-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 2px solid rgba(13, 71, 161, 0.12);
+        color: var(--azul);
+        background: transparent;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.12s ease, background 0.12s ease;
+      }
+      .back-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .back-btn:hover {
+        background: rgba(13, 71, 161, 0.06);
+        transform: translateX(-3px);
+      }
+      .brand {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-finance {
+        color: white;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--azul), var(--verde));
+        box-shadow: var(--shadow);
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, var(--azul), var(--verde));
+      }
+      .hero {
+        max-width: var(--maxw);
+        margin: 18px auto;
+        padding: 26px;
+        background: linear-gradient(180deg, #e8f1ff, #eef9f0);
+        border-radius: 18px;
+        display: grid;
+        grid-template-columns: 1fr 0.7fr;
+        gap: 20px;
+      }
+      .hero h1 {
+        margin: 0;
+        color: var(--azul);
+        font-size: clamp(24px, 4vw, 36px);
+      }
+      .hero p {
+        margin: 8px 0;
+        color: var(--muted);
+      }
+      .hero .kpis {
+        background: var(--branco);
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(13, 71, 161, 0.06);
+      }
+      main {
+        max-width: var(--maxw);
+        margin: 26px auto;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 24px;
+        padding: 0 16px;
+      }
+      nav.toc {
+        position: sticky;
+        top: 88px;
+        background: var(--branco);
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(13, 71, 161, 0.06);
+      }
+      nav.toc h3 {
+        margin: 0 0 8px;
+        color: var(--azul);
+      }
+      nav.toc a {
+        display: block;
+        text-decoration: none;
+        color: var(--muted);
+        padding: 6px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      nav.toc a:hover,
+      nav.toc a[aria-current="true"] {
+        color: var(--azul);
+        background: rgba(13, 71, 161, 0.06);
+      }
+      article {
+        background: var(--branco);
+        padding: 26px;
+        border-radius: 16px;
+        border: 1px solid rgba(13, 71, 161, 0.06);
+      }
+      article h2 {
+        color: var(--azul);
+        margin-top: 28px;
+      }
+      article h3 {
+        color: var(--verde);
+        margin-top: 20px;
+      }
+      .callout {
+        border-left: 6px solid var(--verde);
+        background: #f1fbf2;
+        padding: 12px 14px;
+        border-radius: 10px;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .card {
+        background: linear-gradient(180deg, var(--branco), #fbfeff);
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(13, 71, 161, 0.04);
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      .table th,
+      .table td {
+        padding: 8px;
+        border-bottom: 1px solid #eef4fb;
+        text-align: left;
+      }
+      .faq .q {
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 10px;
+        background: #f3f8ff;
+        border: 1px solid rgba(13, 71, 161, 0.04);
+        margin-bottom: 8px;
+      }
+      .footer {
+        max-width: var(--maxw);
+        margin: 26px auto 50px;
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        text-align: center;
+      }
+      footer {
+        max-width: var(--maxw);
+        margin: 22px auto;
+        padding: 16px;
+        text-align: center;
+        color: var(--muted);
+      }
+      @media (max-width: 1000px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+        nav.toc {
+          position: static;
+          margin-bottom: 12px;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="back-btn" id="btnVoltar" href="#" aria-label="Voltar">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Voltar</span>
+        </a>
+        <div class="brand" aria-hidden="true">
+          <div class="logo-finance">F$</div>
+          <div style="font-weight: 700; color: var(--azul)">
+            Seu Guia de FIIs
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Fundos Imobiliários: Como Investir e Lucrar</h1>
+        <p>
+          Um guia detalhado para entender o universo dos FIIs, avaliar
+          oportunidades, montar uma carteira equilibrada e gerar renda passiva
+          com consistência. Ideal para iniciantes e investidores que querem
+          profissionalizar a alocação em imóveis através da bolsa.
+        </p>
+        <div style="margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap">
+          <div class="kpis card">
+            <strong>Renda passiva</strong>
+            <div style="color: var(--muted); font-size: 14px">
+              Recebimento mensal via rendimentos
+            </div>
+          </div>
+          <div class="kpis card">
+            <strong>Diversificação</strong>
+            <div style="color: var(--muted); font-size: 14px">
+              Exposição a imóveis sem comprar unidades físicas
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="card">
+        <strong style="color: var(--azul)">O que você vai aprender</strong>
+        <ul style="margin: 8px 0 0; padding-left: 18px; color: var(--muted)">
+          <li>Tipos de FIIs</li>
+          <li>Métricas essenciais (DY, P/VP, Vacância)</li>
+          <li>Como comprar e custos</li>
+          <li>Riscos e diversificação</li>
+          <li>Estratégias de longo prazo</li>
+        </ul>
+      </aside>
+    </section>
+
+    <main>
+      <nav class="toc" aria-label="Sumário do artigo">
+        <h3>Sumário</h3>
+        <a href="#intro">Introdução</a>
+        <a href="#o-que-sao">O que são FIIs</a>
+        <a href="#tipos">Tipos de Fundos</a>
+        <a href="#metrica">Métricas Essenciais</a>
+        <a href="#como-comprar">Como Comprar</a>
+        <a href="#impostos">Impostos</a>
+        <a href="#estrategias">Estratégias</a>
+        <a href="#riscos">Riscos</a>
+        <a href="#montar-carteira">Montando uma Carteira</a>
+        <a href="#plano">Plano de Ação</a>
+        <a href="#faq">FAQ</a>
+        <a href="#conclusao">Conclusão</a>
+      </nav>
+
+      <article>
+        <section id="intro">
+          <h2>Introdução</h2>
+          <p>
+            Fundos Imobiliários (FIIs) são veículos de investimento que reúnem
+            recursos de investidores para aplicar em ativos imobiliários — como
+            edifícios comerciais, shopping centers, galpões logísticos, agências
+            bancárias e títulos ligados ao mercado imobiliário. Ao comprar cotas
+            de um FII na bolsa, o investidor passa a ter uma fração desses
+            imóveis e pode receber rendimentos periódicos (geralmente mensais),
+            além de se expor à valorização das cotas.
+          </p>
+          <p>
+            O objetivo deste guia é oferecer uma visão prática e detalhada de
+            como identificar bons fundos, como medir a atratividade dos
+            rendimentos, como comprar cotas com consciência dos custos e
+            impostos, e como montar uma carteira que busque rendimento
+            consistente e proteção do capital.
+          </p>
+        </section>
+
+        <section id="o-que-sao">
+          <h2>O que são FIIs e como funcionam</h2>
+          <p>
+            Na prática, um FII capta recursos e compra ou desenvolve ativos
+            imobiliários. A gestão pode ser ativa (compra e venda de imóveis) ou
+            passiva (administrar contratos e distribuir renda). Os resultados do
+            fundo (aluguéis recebidos, ganhos na venda de imóveis, receitas de
+            gestão) são distribuídos aos cotistas proporcionalmente às cotas —
+            desde que o regulamento e a estratégia do fundo autorizem essas
+            distribuições.
+          </p>
+          <p>
+            Há fundos que investem diretamente em imóveis físicos e outros que
+            investem em títulos ligados ao crédito imobiliário (como CRI) ou em
+            cotas de outros fundos. Entender a estratégia do FII é o primeiro
+            passo para avaliar risco e potencial de retorno.
+          </p>
+        </section>
+
+        <section id="tipos">
+          <h2>Tipos de Fundos Imobiliários</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Fundos de Tijolo</h3>
+              <p>
+                Investem diretamente em imóveis físicos: lajes corporativas,
+                galpões, shoppings, hospitais, hotéis. Os rendimentos vêm dos
+                aluguéis e contratos de longo prazo.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Fundos de Papel</h3>
+              <p>
+                Investem em títulos de crédito imobiliário (CRI, LCI, entre
+                outros). O rendimento vem dos juros desses títulos e costuma ser
+                sensível a taxas de juros do mercado.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Fundos Híbridos</h3>
+              <p>
+                Mesclam imóveis físicos e títulos, buscando equilibrar renda e
+                potencial de ganho.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Fundos de Fundos (FoF)</h3>
+              <p>
+                Investem em cotas de outros FIIs para diversificação; útil para
+                exposição ampla, mas com custo adicional de gestão.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="metrica">
+          <h2>Métricas essenciais para avaliar FIIs</h2>
+          <p>
+            Ao analisar um fundo, foque em métricas que mostram capacidade de
+            geração de renda, qualidade dos ativos e valuation. As principais
+            são:
+          </p>
+          <h3>Dividend Yield (DY) — rendimento</h3>
+          <p>
+            DY é a relação entre o rendimento distribuído e o preço da cota.
+            Indica quanto você recebe em rendimentos no período. Compare DY com
+            a média do setor, mas tome cuidado: um DY muito alto pode indicar
+            risco ou pagamento extraordinário (não recorrente).
+          </p>
+          <h3>Preço sobre Valor Patrimonial (P/VP)</h3>
+          <p>
+            P/VP indica se a cota está sendo negociada perto, acima ou abaixo do
+            valor patrimonial dos ativos. P/VP abaixo de 1 pode sinalizar
+            desconto, mas deve ser analisado com cautela (possíveis problemas
+            nos ativos).
+          </p>
+          <h3>Vacância e qualidade dos contratos</h3>
+          <p>
+            Vacância física e financeira (inadimplência) afetam diretamente a
+            renda. Prefira fundos com contratos de longo prazo e inquilinos de
+            boa qualidade para maior previsibilidade de renda.
+          </p>
+          <h3>Liquidez</h3>
+          <p>
+            Verifique o volume médio diário de negociação. Fundos com baixa
+            liquidez podem ter maior spread e dificuldade para vender cotas em
+            momentos de estresse.
+          </p>
+          <h3>Gestão</h3>
+          <p>
+            Analise o histórico da gestora, transparência nas informações,
+            políticas de distribuição e desempenho em ciclos diferentes de
+            mercado.
+          </p>
+        </section>
+
+        <section id="como-comprar">
+          <h2>Como comprar cotas de FIIs</h2>
+          <p>
+            As cotas de FIIs são negociadas na bolsa (B3) como ações. Para
+            comprar, você precisa:
+          </p>
+          <ol>
+            <li>Abrir conta em uma corretora habilitada.</li>
+            <li>Transferir recursos para a conta.</li>
+            <li>
+              Acessar o home broker ou plataforma da corretora e buscar o ticker
+              do FII.
+            </li>
+            <li>
+              Colocar ordem de compra (a mercado ou limitada) e acompanhar a
+              execução.
+            </li>
+          </ol>
+          <p>
+            Considere custos como taxa de corretagem (algumas corretoras
+            oferecem isenção) e emolumentos da bolsa. Ordene compras por lote
+            mínimo (cada FII tem lote padrão) e evite comprar muitos fragmentos
+            que gerem dispersão de custos.
+          </p>
+        </section>
+
+        <section id="impostos">
+          <h2>Impostos e aspectos fiscais</h2>
+          <p>No Brasil, a regra geral é:</p>
+          <ul>
+            <li>
+              Rendimentos distribuídos por FIIs a pessoa física são isentos de
+              IR quando o fundo atende a requisitos legais (como número mínimo
+              de cotistas e negociação em bolsa) — confirme sempre se o
+              rendimento é isento no extrato do fundo.
+            </li>
+            <li>
+              Ganhos de capital (lucro na venda de cotas) são tributados: a
+              alíquota é de 20% sobre o ganho líquido (aplicam-se regras de
+              apuração e compensação de prejuízos).
+            </li>
+          </ul>
+          <p>
+            Mantenha controle de compras e vendas para apurar corretamente o
+            ganho de capital no mês da venda. Consulte um contador para casos
+            complexos.
+          </p>
+        </section>
+
+        <section id="estrategias">
+          <h2>Estratégias para investir em FIIs</h2>
+          <p>
+            Existem diversas estratégias, dependentes do seu objetivo — renda,
+            valor ou proteção contra inflação:
+          </p>
+          <h3>Foco em renda</h3>
+          <p>
+            Seleção de FIIs com histórico estável de distribuição e contratos
+            atípicos (aluguéis corrigidos por inflação) para gerar fluxo mensal.
+          </p>
+          <h3>Foco em valorização</h3>
+          <p>
+            Buscar ativos com potencial de revalorização (renegociações,
+            melhorias nos imóveis, crescimento de receita). Requer timing de
+            mercado.
+          </p>
+          <h3>Diversificação por segmento</h3>
+          <p>
+            Combinar logística, lajes corporativas, shoppings, fundos de papel e
+            FoFs reduz exposição a riscos específicos de um segmento.
+          </p>
+        </section>
+
+        <section id="riscos">
+          <h2>Riscos dos fundos imobiliários</h2>
+          <p>Como qualquer investimento, FIIs têm riscos:</p>
+          <ul>
+            <li>
+              <strong>Risco de mercado:</strong> variação no preço das cotas.
+            </li>
+            <li>
+              <strong>Risco de vacância:</strong> perda de inquilinos e redução
+              de renda.
+            </li>
+            <li>
+              <strong>Risco de crédito:</strong> inadimplência ou deterioração
+              dos contratos.
+            </li>
+            <li>
+              <strong>Risco de liquidez:</strong> dificuldade para vender cotas
+              em momentos de estresse.
+            </li>
+          </ul>
+          <p>
+            A mitigação passa por diversificação, análise da qualidade dos
+            contratos e acompanhamento frequente da gestão e dos relatórios do
+            fundo.
+          </p>
+        </section>
+
+        <section id="montar-carteira">
+          <h2>Como montar uma carteira de FIIs</h2>
+          <p>
+            Ao construir uma carteira, pense em: objetivo (renda x crescimento),
+            horizonte (curto x longo prazo) e tolerância a risco. Uma carteira
+            inicial equilibrada pode ter:
+          </p>
+          <ul>
+            <li>
+              40% em fundos de tijolo (lajes e logística) para renda estável.
+            </li>
+            <li>
+              30% em fundos de papel para proteção com juros e recebíveis.
+            </li>
+            <li>
+              20% em fundos de shoppings e segmentados (maior risco e
+              potencial).
+            </li>
+            <li>10% em FoFs ou posições oportunísticas.</li>
+          </ul>
+          <p>
+            A alocação deve ser revisada anualmente e após eventos relevantes
+            (alta vacância, mudança na gestão, crise setorial).
+          </p>
+        </section>
+
+        <section id="plano">
+          <h2>Plano de ação em 12 passos para começar hoje</h2>
+          <ol>
+            <li>Estude os conceitos básicos (DY, P/VP, vacância).</li>
+            <li>
+              Abra conta em uma corretora e faça simulações sem dinheiro real.
+            </li>
+            <li>Defina quanto alocar em FIIs (ex.: 10–30% do portfólio).</li>
+            <li>Escolha 5–10 fundos para observação por 30 dias.</li>
+            <li>
+              Monte ordens pequenas e escalonadas (dollar-cost averaging).
+            </li>
+            <li>
+              Priorize fundos com boa governança e histórico de distribuição.
+            </li>
+            <li>
+              Use planilha para controlar compras, rendimentos e impostos.
+            </li>
+            <li>
+              Reinvista parte dos rendimentos enquanto constrói a posição.
+            </li>
+            <li>Evite alavancagem ou empréstimos para comprar cotas.</li>
+            <li>
+              Revise a carteira trimestralmente e rebalanceie se necessário.
+            </li>
+            <li>
+              Tenha caixa para aproveitar oportunidades em quedas de mercado.
+            </li>
+            <li>
+              Busque educação contínua: relatórios da gestora, laudos de
+              avaliação e notícias do setor.
+            </li>
+          </ol>
+        </section>
+
+        <section id="faq" class="faq">
+          <h2>FAQ — Perguntas frequentes</h2>
+          <div class="q" onclick="toggleFAQ(this)">
+            Os rendimentos de FIIs são garantidos?
+          </div>
+          <div style="display: none; margin-bottom: 12px">
+            Não. Rendimentos dependem da receita do fundo. Contratos longos
+            reduzem a volatilidade, mas não há garantia absoluta.
+          </div>
+
+          <div class="q" onclick="toggleFAQ(this)">
+            Qual valor mínimo para começar?
+          </div>
+          <div style="display: none; margin-bottom: 12px">
+            Tecnicamente não há mínimo além do preço de uma cota e custos de
+            corretagem. Comece pequeno e aumente gradualmente.
+          </div>
+
+          <div class="q" onclick="toggleFAQ(this)">
+            FIIs ou imóveis físicos: qual é melhor?
+          </div>
+          <div style="display: none; margin-bottom: 12px">
+            Depende do objetivo. FIIs oferecem liquidez, diversificação e
+            menores custos operacionais. Imóveis físicos podem gerar ganhos na
+            venda e controle direto, mas exigem gestão ativa.
+          </div>
+        </section>
+
+        <section id="conclusao">
+          <h2>Conclusão</h2>
+          <p>
+            Fundos Imobiliários são ferramentas poderosas para construir renda
+            passiva e exposição ao mercado imobiliário sem os custos e fricções
+            de comprar imóveis físicos. Com análise de métricas, diversificação
+            e disciplina, é possível montar uma carteira que entregue rendimento
+            e proteção ao capital. Comece estudando, opere com ordens graduais e
+            mantenha foco no longo prazo.
+          </p>
+          <div class="callout">
+            <strong>Próximo passo:</strong> escolha três FIIs, acompanhe
+            relatórios trimestrais por seis meses e só então aumente a posição
+            com base em dados e convicção.
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <div class="footer" role="contentinfo">
+      <div>© 2025 Finance365. Todos os direitos reservados.</div>
+    </div>
+
+    <script>
+      // Botão voltar
+      document
+        .getElementById("btnVoltar")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            window.location.href = "/";
+          }
+        });
+      // TOC highlight (simples)
+      document.querySelectorAll("nav.toc a").forEach((a) => {
+        a.addEventListener("click", () => {
+          document
+            .querySelectorAll("nav.toc a")
+            .forEach((x) => x.removeAttribute("aria-current"));
+          a.setAttribute("aria-current", "true");
+        });
+      });
+      // FAQ toggle
+      function toggleFAQ(el) {
+        var next = el.nextElementSibling;
+        if (next.style.display === "none") {
+          next.style.display = "block";
+          el.style.background = "#e8f1ff";
+        } else {
+          next.style.display = "none";
+          el.style.background = "";
+        }
+      }
+    </script>
+  </body>
+</html>

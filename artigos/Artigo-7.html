@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia Completo: Investimentos em Ações para Iniciantes</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      /* Reset e Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Styles */
+      .header {
+        background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo-icon {
+        font-size: 2rem;
+        margin-right: 0.5rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: #60f070;
+        transform: translateY(-2px);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #60f070;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 3px 0;
+        transition: 0.3s;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+        color: white;
+        padding: 150px 0 100px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="4"/></g></svg>');
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-meta {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .cta-button {
+        background: #10b981;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      }
+      .cta-button a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .cta-button:hover {
+        background: #059669;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(16, 185, 129, 0.6);
+      }
+
+      /* Main Content */
+      .main-content {
+        padding: 80px 0;
+        background: #f9fafb;
+      }
+
+      .article-wrapper {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Table of Contents */
+      .toc {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 120px;
+        height: fit-content;
+        border-left: 4px solid #10b981;
+      }
+
+      .toc h3 {
+        color: #1e40af;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+      }
+
+      .toc ul {
+        list-style: none;
+      }
+
+      .toc li {
+        margin-bottom: 0.8rem;
+      }
+
+      .toc a {
+        color: #4b5563;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 0.5rem;
+        border-radius: 8px;
+      }
+
+      .toc a:hover {
+        color: #10b981;
+        background: #f0fdf4;
+        transform: translateX(10px);
+      }
+
+      /* Article Styles */
+      .article {
+        background: white;
+        border-radius: 15px;
+        padding: 3rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .section {
+        margin-bottom: 4rem;
+      }
+
+      .section h2 {
+        color: #1e40af;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .section h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, #1e40af, #10b981);
+        border-radius: 2px;
+      }
+
+      .section h3 {
+        color: #059669;
+        font-size: 1.6rem;
+        margin: 2rem 0 1rem 0;
+      }
+
+      .section h4 {
+        color: #1e40af;
+        font-size: 1.3rem;
+        margin: 1.5rem 0 1rem 0;
+      }
+
+      .section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        color: #374151;
+      }
+
+      .section ul,
+      .section ol {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+      }
+
+      .section li {
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+        color: #374151;
+      }
+
+      /* Special Boxes */
+      .highlight-box {
+        background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+        border-left: 4px solid #10b981;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .highlight-box h4 {
+        color: #059669;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .risk-warning {
+        background: linear-gradient(135deg, #fef2f2 0%, #fffbeb 100%);
+        border-left: 4px solid #ef4444;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .risk-warning h4 {
+        color: #dc2626;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .example-box {
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+
+      .example-box h4 {
+        color: #1e40af;
+        margin-bottom: 1rem;
+      }
+
+      .tip-box {
+        background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+        border: 2px solid #10b981;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        position: relative;
+      }
+
+      .tip-box::before {
+        content: "💡";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        background: #10b981;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+
+      /* Grid Layouts */
+      .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .advantage-card {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .advantage-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #1e40af, #10b981);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .advantage-card:hover {
+        border-color: #10b981;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .advantage-card:hover::before {
+        transform: translateX(0);
+      }
+
+      .advantage-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .advantage-card h4 {
+        color: #1e40af;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      /* Steps */
+      .steps-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        border: 2px solid #e5e7eb;
+        transition: all 0.3s ease;
+      }
+
+      .step:hover {
+        border-color: #10b981;
+        transform: translateX(10px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .step-number {
+        background: linear-gradient(135deg, #1e40af, #10b981);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .step-content h4 {
+        color: #1e40af;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Strategy Cards */
+      .strategy-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .strategy-card {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .strategy-card:hover {
+        border-color: #10b981;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .strategy-card h4 {
+        color: #1e40af;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .strategy-pros-cons {
+        margin-top: 1.5rem;
+      }
+
+      .pros,
+      .cons {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .pros {
+        background: #f0fdf4;
+        border-left: 4px solid #10b981;
+      }
+
+      .cons {
+        background: #fef2f2;
+        border-left: 4px solid #ef4444;
+      }
+
+      .pros strong {
+        color: #059669;
+      }
+
+      .cons strong {
+        color: #dc2626;
+      }
+
+      /* Analysis Types */
+      .analysis-comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin: 2rem 0;
+      }
+
+      .analysis-type {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .analysis-type:hover {
+        border-color: #10b981;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .analysis-type h3 {
+        color: #1e40af;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Diversification Grid */
+      .diversification-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .diversification-card {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .diversification-card:hover {
+        border-color: #10b981;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .diversification-card h4 {
+        color: #1e40af;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      /* Tips Grid */
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .tip-card {
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .tip-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #1e40af, #10b981);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .tip-card:hover {
+        border-color: #10b981;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .tip-card:hover::before {
+        transform: translateX(0);
+      }
+
+      .tip-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .tip-card h4 {
+        color: #1e40af;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      /* Conclusion Section */
+      .conclusion-highlights {
+        background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-left: 4px solid #10b981;
+      }
+
+      .highlight h4 {
+        color: #059669;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .final-cta {
+        background: white;
+        border: 2px solid #10b981;
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+      }
+
+      .final-cta h3 {
+        color: #1e40af;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      .final-cta ol {
+        text-align: left;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .final-cta li {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: #374151;
+      }
+
+      .voltar-topo {
+        display: inline-block;
+        /* margin-top: 2rem; */
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #028202, #01769d);
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .voltar-topo:hover {
+        transform: scale(1.03);
+      }
+      /* Footer */
+      .footer {
+        background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+        color: white;
+        padding: 0rem 0 2rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        color: #60f070;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-section a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: #60f070;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2rem;
+        text-align: center;
+      }
+
+      .disclaimer {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        margin-top: 0.5rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .article-wrapper {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .toc {
+          position: relative;
+          top: 0;
+        }
+
+        .analysis-comparison {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: flex;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-meta {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .article {
+          padding: 2rem;
+        }
+
+        .section h2 {
+          font-size: 1.8rem;
+        }
+
+        .advantages-grid,
+        .strategy-cards,
+        .tips-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .step {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .step-number {
+          margin: 0 auto 1rem auto;
+        }
+
+        .diversification-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 15px;
+        }
+
+        .hero {
+          padding: 120px 0 60px;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .article {
+          padding: 1.5rem;
+        }
+
+        .toc {
+          padding: 1.5rem;
+        }
+
+        .advantage-card,
+        .strategy-card,
+        .tip-card {
+          padding: 1.5rem;
+        }
+
+        .final-cta {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Loading Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section {
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      /* Accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        .header,
+        .footer,
+        .toc,
+        .mobile-menu-btn,
+        .cta-button {
+          display: none;
+        }
+
+        .article-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .article {
+          box-shadow: none;
+          border: 1px solid #ccc;
+        }
+
+        .section {
+          page-break-inside: avoid;
+        }
+
+        .hero {
+          background: none;
+          color: #333;
+          page-break-after: always;
+        }
+      }
+    </style>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <span class="logo-icon">📈</span>
+            <span class="logo-text">Finance365</span>
+          </div>
+          <div class="nav-links">
+            <a href="#introducao" class="nav-link">Introdução</a>
+            <a href="#vantagens" class="nav-link">Vantagens</a>
+            <a href="#como-comecar" class="nav-link">Como Começar</a>
+            <a href="#estrategias" class="nav-link">Estratégias</a>
+            <a href="#analises" class="nav-link">Análises</a>
+          </div>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Guia Completo: Investimentos em Ações para Iniciantes
+          </h1>
+          <p class="hero-subtitle">
+            Descubra como começar a investir em ações de forma segura e
+            inteligente, construindo seu patrimônio para o futuro.
+          </p>
+          <div class="hero-meta">
+            <span class="author">Por João Silva</span>
+            <span class="date">15 de Janeiro, 2025</span>
+            <span class="reading-time">⏱️ 12 min de leitura</span>
+          </div>
+          <button class="cta-button" onclick="scrollToSection('introducao')">
+            <a href="#introducao"> ⬇ Começar a Ler</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="article-wrapper">
+          <!-- Table of Contents -->
+          <aside class="toc">
+            <h3>Índice</h3>
+            <ul>
+              <li>
+                <a href="#introducao" onclick="scrollToSection('introducao')"
+                  >1. Introdução ao Mercado de Ações</a
+                >
+              </li>
+              <li>
+                <a href="#vantagens" onclick="scrollToSection('vantagens')"
+                  >2. Vantagens dos Investimentos em Ações</a
+                >
+              </li>
+              <li>
+                <a href="#riscos" onclick="scrollToSection('riscos')"
+                  >3. Entendendo os Riscos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#como-comecar"
+                  onclick="scrollToSection('como-comecar')"
+                  >4. Como Começar a Investir</a
+                >
+              </li>
+              <li>
+                <a href="#estrategias" onclick="scrollToSection('estrategias')"
+                  >5. Estratégias de Investimento</a
+                >
+              </li>
+              <li>
+                <a href="#analises" onclick="scrollToSection('analises')"
+                  >6. Tipos de Análise</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#diversificacao"
+                  onclick="scrollToSection('diversificacao')"
+                  >7. Importância da Diversificação</a
+                >
+              </li>
+              <li>
+                <a href="#dicas" onclick="scrollToSection('dicas')"
+                  >8. Dicas Práticas</a
+                >
+              </li>
+              <li>
+                <a href="#conclusao" onclick="scrollToSection('conclusao')"
+                  >9. Conclusão</a
+                >
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Article -->
+          <article class="article">
+            <section id="introducao" class="section">
+              <h2>1. Introdução ao Mercado de Ações</h2>
+              <p>
+                O mercado de ações representa uma das formas mais tradicionais e
+                eficazes de construir riqueza ao longo do tempo. Quando você
+                compra uma ação, está essencialmente adquirindo uma pequena
+                participação em uma empresa, tornando-se um acionista e tendo
+                direito a uma parcela dos lucros e crescimento futuro dessa
+                organização.
+              </p>
+
+              <p>
+                No Brasil, o principal mercado de ações é a B3 (Brasil, Bolsa,
+                Balcão), onde são negociadas as ações das principais empresas do
+                país. Gigantes como Vale, Petrobras, Itaú, Ambev e muitas outras
+                têm suas ações negociadas diariamente por milhões de
+                investidores.
+              </p>
+
+              <div class="highlight-box">
+                <h4>💡 Conceito Fundamental</h4>
+                <p>
+                  Uma ação representa uma fração do capital social de uma
+                  empresa. Ao comprar ações, você se torna sócio da empresa e
+                  tem direito a participar dos resultados proporcionalmente à
+                  sua participação.
+                </p>
+              </div>
+
+              <p>
+                O mercado de ações funciona como um leilão eletrônico, onde
+                compradores e vendedores se encontram para negociar. Os preços
+                das ações flutuam constantemente com base na oferta e demanda,
+                que por sua vez são influenciadas por fatores como desempenho da
+                empresa, condições econômicas, notícias do setor e sentimento do
+                mercado.
+              </p>
+
+              <p>
+                É importante entender que investir em ações não é um esquema
+                para enriquecer rapidamente. É uma estratégia de longo prazo que
+                requer paciência, disciplina e conhecimento. Os melhores
+                investidores do mundo, como Warren Buffett, construíram suas
+                fortunas mantendo ações de empresas sólidas por décadas.
+              </p>
+            </section>
+
+            <section id="vantagens" class="section">
+              <h2>2. Vantagens dos Investimentos em Ações</h2>
+              <p>
+                Investir em ações oferece diversas vantagens que tornam essa
+                classe de ativos atrativa para investidores de todos os perfis:
+              </p>
+
+              <div class="advantages-grid">
+                <div class="advantage-card">
+                  <div class="advantage-icon">📈</div>
+                  <h4>Potencial de Crescimento</h4>
+                  <p>
+                    Historicamente, as ações têm oferecido os melhores retornos
+                    de longo prazo entre todas as classes de ativos, superando a
+                    inflação e preservando o poder de compra.
+                  </p>
+                </div>
+                <div class="advantage-card">
+                  <div class="advantage-icon">💰</div>
+                  <h4>Dividendos</h4>
+                  <p>
+                    Muitas empresas distribuem parte de seus lucros aos
+                    acionistas na forma de dividendos, proporcionando renda
+                    passiva regular.
+                  </p>
+                </div>
+                <div class="advantage-card">
+                  <div class="advantage-icon">🏢</div>
+                  <h4>Participação nos Lucros</h4>
+                  <p>
+                    Como acionista, você participa do crescimento e sucesso da
+                    empresa, beneficiando-se diretamente de sua expansão e
+                    lucratividade.
+                  </p>
+                </div>
+                <div class="advantage-card">
+                  <div class="advantage-icon">🌍</div>
+                  <h4>Diversificação</h4>
+                  <p>
+                    É possível investir em diferentes setores e geografias,
+                    reduzindo riscos através da diversificação do portfólio.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                Uma das principais vantagens das ações é sua
+                <strong>liquidez</strong>. Diferentemente de investimentos como
+                imóveis, você pode comprar e vender ações rapidamente durante o
+                horário de funcionamento da bolsa. Essa flexibilidade é crucial
+                para ajustar sua estratégia conforme as circunstâncias mudam.
+              </p>
+
+              <p>
+                Além disso, os custos de transação são relativamente baixos. As
+                corretoras modernas cobram taxas mínimas ou até zero para
+                negociação de ações, tornando o investimento acessível mesmo
+                para pequenos valores. Isso democratiza o acesso ao mercado de
+                capitais, permitindo que qualquer pessoa com alguns poucos reais
+                possa começar a investir.
+              </p>
+
+              <p>
+                Outra vantagem significativa é a <strong>transparência</strong>.
+                Empresas listadas na bolsa são obrigadas a divulgar suas
+                demonstrações financeiras trimestralmente, relatórios anuais e
+                informações relevantes que possam afetar o preço das ações. Essa
+                transparência permite que os investidores tomem decisões mais
+                informadas.
+              </p>
+            </section>
+
+            <section id="riscos" class="section">
+              <h2>3. Entendendo os Riscos</h2>
+              <p>
+                Embora investir em ações possa ser altamente recompensador, é
+                crucial entender e aceitar os riscos envolvidos. Todo
+                investimento carrega algum nível de risco, e as ações não são
+                exceção:
+              </p>
+
+              <div class="risk-warning">
+                <h4>⚠️ Aviso Importante</h4>
+                <p>
+                  O valor das ações pode subir ou descer, e você pode perder
+                  dinheiro. Rentabilidade passada não garante resultados
+                  futuros.
+                </p>
+              </div>
+
+              <h3>Principais Tipos de Risco:</h3>
+
+              <h4>Risco de Mercado</h4>
+              <p>
+                As ações estão sujeitas às flutuações do mercado como um todo.
+                Crises econômicas, mudanças políticas ou eventos globais podem
+                afetar negativamente os preços das ações, independentemente do
+                desempenho individual das empresas.
+              </p>
+
+              <h4>Risco Específico da Empresa</h4>
+              <p>
+                Cada empresa enfrenta seus próprios desafios. Mudanças na
+                gestão, perda de competitividade, problemas regulatórios ou
+                escândalos podem afetar dramaticamente o preço das ações de uma
+                empresa específica.
+              </p>
+
+              <h4>Risco de Liquidez</h4>
+              <p>
+                Embora as ações de grandes empresas sejam geralmente líquidas,
+                ações de empresas menores podem ter menor volume de negociação,
+                dificultando a venda rápida quando necessário.
+              </p>
+
+              <h4>Risco de Inflação</h4>
+              <p>
+                Se os retornos das ações não superarem a inflação, o poder de
+                compra real do investidor pode diminuir ao longo do tempo.
+              </p>
+
+              <p>
+                Para mitigar esses riscos, é fundamental desenvolver uma
+                estratégia sólida baseada em diversificação, pesquisa adequada e
+                uma perspectiva de longo prazo. Nunca invista dinheiro que você
+                não pode perder, e sempre mantenha uma reserva de emergência
+                antes de começar a investir em ações.
+              </p>
+            </section>
+
+            <section id="como-comecar" class="section">
+              <h2>4. Como Começar a Investir</h2>
+              <p>
+                Dar os primeiros passos no mundo dos investimentos em ações pode
+                parecer intimidante, mas com a preparação adequada, o processo
+                se torna muito mais simples e seguro:
+              </p>
+
+              <div class="steps-container">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Educação Financeira</h4>
+                    <p>
+                      Antes de investir qualquer quantia, dedique tempo para
+                      aprender sobre o mercado de ações, terminologias básicas e
+                      princípios de investimento. Leia livros, assista vídeos
+                      educativos e acompanhe análises de especialistas.
+                    </p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Defina seus Objetivos</h4>
+                    <p>
+                      Estabeleça objetivos claros: você está investindo para a
+                      aposentadoria, para comprar uma casa ou para crescimento
+                      geral do patrimônio? Seus objetivos determinarão sua
+                      estratégia de investimento.
+                    </p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Avalie seu Perfil de Risco</h4>
+                    <p>
+                      Seja honesto sobre sua tolerância ao risco. Você consegue
+                      dormir tranquilo sabendo que seus investimentos podem
+                      perder valor no curto prazo? Sua resposta influenciará as
+                      ações que deve escolher.
+                    </p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h4>Escolha uma Corretora</h4>
+                    <p>
+                      Pesquise e compare diferentes corretoras, considerando
+                      fatores como taxas, plataforma de investimento, suporte ao
+                      cliente e recursos educacionais disponíveis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Documentação Necessária</h3>
+              <p>
+                Para abrir uma conta em uma corretora, você precisará dos
+                seguintes documentos:
+              </p>
+              <ul>
+                <li>CPF e RG (ou CNH)</li>
+                <li>Comprovante de residência atualizado</li>
+                <li>Comprovante de renda</li>
+                <li>Dados bancários para transferências</li>
+              </ul>
+
+              <h3>Primeiro Investimento</h3>
+              <p>
+                Comece pequeno. Não há valor mínimo obrigatório para investir em
+                ações, mas muitas corretoras recomendam começar com pelo menos
+                R$ 100 a R$ 500. Isso permite comprar ações de diferentes
+                empresas e começar a aprender na prática, sem expor muito
+                capital ao risco.
+              </p>
+
+              <p>
+                Considere começar com ações de empresas que você conhece e
+                entende o negócio. Se você usa produtos de uma empresa e
+                acredita em seu futuro, pode ser uma boa candidata para seu
+                primeiro investimento. Empresas como Magazine Luiza, Itaú, Vale
+                ou Petrobras são exemplos de negócios que a maioria das pessoas
+                consegue entender.
+              </p>
+            </section>
+
+            <section id="estrategias" class="section">
+              <h2>5. Estratégias de Investimento</h2>
+              <p>
+                Existem diversas abordagens para investir em ações, cada uma com
+                suas próprias vantagens e adequada a diferentes perfis de
+                investidores:
+              </p>
+
+              <div class="strategy-cards">
+                <div class="strategy-card">
+                  <h4>Buy and Hold</h4>
+                  <p>
+                    Estratégia de longo prazo onde você compra ações de empresas
+                    sólidas e as mantém por anos ou décadas. É a abordagem
+                    preferida de Warren Buffett e ideal para investidores que
+                    buscam crescimento consistente ao longo do tempo.
+                  </p>
+                  <div class="strategy-pros-cons">
+                    <div class="pros">
+                      <strong>Vantagens:</strong> Menores custos de transação,
+                      menos tempo dedicado ao acompanhamento, potencial de
+                      grandes ganhos de longo prazo.
+                    </div>
+                    <div class="cons">
+                      <strong>Desvantagens:</strong> Requer paciência, pode ser
+                      difícil manter durante crises de mercado.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="strategy-card">
+                  <h4>Value Investing</h4>
+                  <p>
+                    Busca por ações que estão sendo negociadas abaixo do seu
+                    valor intrínseco. Investidores value procuram empresas
+                    fundamentalmente sólidas que estão temporariamente
+                    subvalorizadas pelo mercado.
+                  </p>
+                  <div class="strategy-pros-cons">
+                    <div class="pros">
+                      <strong>Vantagens:</strong> Potencial de grandes retornos
+                      quando o mercado reconhece o valor, menor risco de perda
+                      permanente.
+                    </div>
+                    <div class="cons">
+                      <strong>Desvantagens:</strong> Requer análise aprofundada,
+                      pode levar muito tempo para o valor ser reconhecido.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="strategy-card">
+                  <h4>Growth Investing</h4>
+                  <p>
+                    Foca em empresas com potencial de crescimento acima da
+                    média, mesmo que suas ações pareçam caras pelos indicadores
+                    tradicionais. Ideal para quem acredita no potencial de
+                    expansão de certas empresas ou setores.
+                  </p>
+                  <div class="strategy-pros-cons">
+                    <div class="pros">
+                      <strong>Vantagens:</strong> Potencial de retornos
+                      extraordinários, participação em empresas inovadoras.
+                    </div>
+                    <div class="cons">
+                      <strong>Desvantagens:</strong> Maior volatilidade, risco
+                      de pagar caro demais por crescimento futuro.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="strategy-card">
+                  <h4>Dividend Investing</h4>
+                  <p>
+                    Concentra-se em ações que pagam dividendos consistentes e
+                    crescentes. É uma estratégia popular para quem busca renda
+                    passiva regular além da valorização das ações.
+                  </p>
+                  <div class="strategy-pros-cons">
+                    <div class="pros">
+                      <strong>Vantagens:</strong> Renda passiva regular,
+                      empresas maduras e estáveis, reinvestimento de dividendos
+                      acelera o crescimento.
+                    </div>
+                    <div class="cons">
+                      <strong>Desvantagens:</strong> Menor potencial de
+                      crescimento, dividendos podem ser cortados em crises.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Dollar Cost Averaging (Média de Custo)</h3>
+              <p>
+                Independentemente da estratégia escolhida, uma técnica muito
+                útil é o <em>dollar cost averaging</em> ou média de custo. Isso
+                envolve investir uma quantia fixa regularmente,
+                independentemente do preço das ações. Por exemplo, investir R$
+                500 mensalmente em determinadas ações.
+              </p>
+
+              <p>
+                Essa abordagem tem várias vantagens: reduz o impacto da
+                volatilidade de curto prazo, elimina a necessidade de tentar
+                cronometrar o mercado (algo extremamente difícil) e cria
+                disciplina de investimento regular. Ao longo do tempo, você
+                comprará mais ações quando os preços estiverem baixos e menos
+                quando estiverem altos, resultando em um preço médio mais
+                favorável.
+              </p>
+            </section>
+
+            <section id="analises" class="section">
+              <h2>6. Tipos de Análise</h2>
+              <p>
+                Para tomar decisões de investimento informadas, é essencial
+                entender os dois principais métodos de análise de ações:
+              </p>
+
+              <div class="analysis-comparison">
+                <div class="analysis-type">
+                  <h3>Análise Fundamentalista</h3>
+                  <p>
+                    A análise fundamentalista examina a saúde financeira real da
+                    empresa, seus fundamentos de negócio e seu potencial futuro.
+                    É como avaliar a qualidade de uma casa antes de comprá-la.
+                  </p>
+
+                  <h4>Principais Indicadores:</h4>
+                  <ul>
+                    <li>
+                      <strong>P/L (Preço/Lucro):</strong> Indica quantos anos
+                      seriam necessários para recuperar o investimento baseado
+                      no lucro atual
+                    </li>
+                    <li>
+                      <strong>ROE (Return on Equity):</strong> Mede a eficiência
+                      da empresa em gerar lucro com o capital dos acionistas
+                    </li>
+                    <li>
+                      <strong>Dividend Yield:</strong> Percentual de dividendos
+                      pagos em relação ao preço da ação
+                    </li>
+                    <li>
+                      <strong>Dívida Líquida/EBITDA:</strong> Avalia o
+                      endividamento da empresa
+                    </li>
+                    <li>
+                      <strong>Margem Líquida:</strong> Porcentagem do
+                      faturamento que se converte em lucro
+                    </li>
+                  </ul>
+
+                  <div class="example-box">
+                    <h4>Exemplo Prático</h4>
+                    <p>
+                      Se uma empresa tem P/L de 15, significa que, mantendo o
+                      lucro atual, levaria 15 anos para recuperar seu
+                      investimento apenas com os lucros. Empresas em crescimento
+                      podem justificar P/L mais alto.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="analysis-type">
+                  <h3>Análise Técnica</h3>
+                  <p>
+                    A análise técnica estuda os padrões de movimento dos preços
+                    e volume de negociação das ações. Baseia-se na premissa de
+                    que toda informação relevante já está refletida no preço.
+                  </p>
+
+                  <h4>Ferramentas Principais:</h4>
+                  <ul>
+                    <li>
+                      <strong>Gráficos de Candlestick:</strong> Mostram
+                      abertura, fechamento, máxima e mínima de cada período
+                    </li>
+                    <li>
+                      <strong>Médias Móveis:</strong> Ajudam a identificar
+                      tendências de longo prazo
+                    </li>
+                    <li>
+                      <strong>RSI (Índice de Força Relativa):</strong> Indica se
+                      uma ação está sobrecomprada ou sobrevendida
+                    </li>
+                    <li>
+                      <strong>MACD:</strong> Sinal de mudança de tendência
+                    </li>
+                    <li>
+                      <strong>Suporte e Resistência:</strong> Níveis de preço
+                      onde há tendência de reversão
+                    </li>
+                  </ul>
+
+                  <div class="example-box">
+                    <h4>Exemplo Prático</h4>
+                    <p>
+                      Se uma ação sempre tem dificuldade para superar R$ 50
+                      (resistência), pode ser um bom ponto de venda. Se sempre
+                      encontra suporte em R$ 40, pode ser um bom ponto de
+                      compra.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Qual Análise Usar?</h3>
+              <p>
+                Muitos investidores bem-sucedidos combinam ambas as análises. A
+                análise fundamentalista ajuda a escolher empresas de qualidade,
+                enquanto a análise técnica pode ajudar a encontrar melhores
+                pontos de entrada e saída. Para investidores de longo prazo, a
+                análise fundamentalista tende a ser mais importante, enquanto
+                traders de curto prazo podem dar mais ênfase à análise técnica.
+              </p>
+            </section>
+
+            <section id="diversificacao" class="section">
+              <h2>7. A Importância da Diversificação</h2>
+              <p>
+                O ditado "não coloque todos os ovos na mesma cesta" é
+                especialmente relevante para investimentos em ações. A
+                diversificação é uma das ferramentas mais poderosas para reduzir
+                riscos sem necessariamente sacrificar retornos.
+              </p>
+
+              <div class="diversification-grid">
+                <div class="diversification-card">
+                  <h4>🏭 Por Setor</h4>
+                  <p>
+                    Invista em diferentes setores da economia: bancos, varejo,
+                    tecnologia, saúde, energia. Quando um setor está mal, outro
+                    pode estar bem.
+                  </p>
+                </div>
+                <div class="diversification-card">
+                  <h4>🏢 Por Tamanho de Empresa</h4>
+                  <p>
+                    Combine blue chips (grandes empresas) com small caps
+                    (empresas menores). Grandes empresas oferecem estabilidade,
+                    pequenas oferecem potencial de crescimento.
+                  </p>
+                </div>
+                <div class="diversification-card">
+                  <h4>🌎 Por Geografia</h4>
+                  <p>
+                    Considere investir em mercados internacionais através de
+                    BDRs ou ETFs. Isso reduz sua dependência da economia
+                    brasileira.
+                  </p>
+                </div>
+                <div class="diversification-card">
+                  <h4>⏰ Por Tempo</h4>
+                  <p>
+                    Use dollar cost averaging para diversificar no tempo,
+                    comprando em diferentes momentos do mercado.
+                  </p>
+                </div>
+              </div>
+
+              <h3>Quantas Ações Ter?</h3>
+              <p>
+                Estudos mostram que a maior parte dos benefícios da
+                diversificação pode ser obtida com 15-20 ações bem escolhidas de
+                diferentes setores. Com menos de 10 ações, você assume riscos
+                desnecessários. Com mais de 30, pode ser difícil acompanhar
+                adequadamente cada investimento.
+              </p>
+
+              <div class="tip-box">
+                <h4>💡 Dica de Portfólio</h4>
+                <p>
+                  Uma estratégia simples para iniciantes: 40% em ações de
+                  grandes bancos e empresas consolidadas, 30% em empresas de
+                  crescimento, 20% em ações que pagam bons dividendos, e 10% em
+                  investimentos mais arriscados/inovadores.
+                </p>
+              </div>
+
+              <h3>ETFs: Diversificação Instantânea</h3>
+              <p>
+                Para quem está começando, os ETFs (Exchange Traded Funds) podem
+                ser uma excelente opção. Um único ETF pode dar exposição a
+                dezenas ou centenas de empresas. O BOVA11, por exemplo, replica
+                o Ibovespa e oferece diversificação instantânea entre as
+                principais empresas brasileiras.
+              </p>
+
+              <p>
+                Os ETFs combinam as vantagens das ações (liquidez, baixas taxas)
+                com a diversificação de fundos de investimento. São
+                especialmente úteis para quem tem pouco capital inicial ou tempo
+                limitado para pesquisar empresas individuais.
+              </p>
+            </section>
+
+            <section id="dicas" class="section">
+              <h2>8. Dicas Práticas para Investidores</h2>
+              <p>
+                Após anos no mercado, investidores experientes aprenderam lições
+                valiosas. Aqui estão algumas dicas práticas que podem acelerar
+                sua curva de aprendizado:
+              </p>
+
+              <div class="tips-grid">
+                <div class="tip-card">
+                  <div class="tip-icon">🧘</div>
+                  <h4>Mantenha a Calma</h4>
+                  <p>
+                    O mercado é volátil por natureza. Crises são oportunidades
+                    disfarçadas. Os melhores retornos vêm para quem consegue
+                    manter a cabeça fria durante turbulências.
+                  </p>
+                </div>
+                <div class="tip-card">
+                  <div class="tip-icon">📚</div>
+                  <h4>Continue Aprendendo</h4>
+                  <p>
+                    O mercado está sempre evoluindo. Leia relatórios, acompanhe
+                    notícias econômicas, participe de cursos. Conhecimento é seu
+                    melhor investimento.
+                  </p>
+                </div>
+                <div class="tip-card">
+                  <div class="tip-icon">⏰</div>
+                  <h4>Tempo no Mercado > Timing do Mercado</h4>
+                  <p>
+                    É melhor estar investido por muito tempo do que tentar
+                    acertar o momento perfeito. Ninguém consegue prever
+                    consistentemente os movimentos de curto prazo.
+                  </p>
+                </div>
+                <div class="tip-card">
+                  <div class="tip-icon">💰</div>
+                  <h4>Reinvista os Dividendos</h4>
+                  <p>
+                    Use os dividendos recebidos para comprar mais ações. O poder
+                    dos juros compostos é uma das forças mais poderosas do
+                    universo financeiro.
+                  </p>
+                </div>
+                <div class="tip-card">
+                  <div class="tip-icon">🎯</div>
+                  <h4>Tenha um Plano</h4>
+                  <p>
+                    Defina seus objetivos, estratégia e critérios de
+                    compra/venda antes de investir. Emoções são inimigas dos
+                    bons investimentos.
+                  </p>
+                </div>
+                <div class="tip-card">
+                  <div class="tip-icon">📊</div>
+                  <h4>Acompanhe seus Investimentos</h4>
+                  <p>
+                    Revise seu portfólio regularmente, mas não obsessivamente.
+                    Uma revisão mensal ou trimestral é suficiente para a maioria
+                    dos investidores.
+                  </p>
+                </div>
+              </div>
+
+              <h3>Erros Comuns a Evitar</h3>
+              <ul>
+                <li>
+                  <strong
+                    >Investir dinheiro que você pode precisar no curto
+                    prazo:</strong
+                  >
+                  Ações são para o longo prazo
+                </li>
+                <li>
+                  <strong>Seguir dicas de "gurus" sem pesquisar:</strong> Faça
+                  sua própria análise
+                </li>
+                <li>
+                  <strong>Vender no pânico durante quedas:</strong> Crises
+                  passam, empresas boas se recuperam
+                </li>
+                <li>
+                  <strong>Não diversificar adequadamente:</strong> Concentração
+                  excessiva aumenta riscos desnecessariamente
+                </li>
+                <li>
+                  <strong>Tentar timing do mercado:</strong> Foque em tempo no
+                  mercado, não timing
+                </li>
+                <li>
+                  <strong>Ignorar as taxas:</strong> Custos altos podem corroer
+                  significativamente seus retornos
+                </li>
+              </ul>
+
+              <h3>Ferramentas Úteis</h3>
+              <p>
+                Aproveite as ferramentas disponíveis para melhorar seus
+                investimentos:
+              </p>
+              <ul>
+                <li>
+                  <strong>Sites de análise:</strong> Fundamentus, Status Invest,
+                  Tradingview
+                </li>
+                <li>
+                  <strong>Apps de corretoras:</strong> Acompanhe seus
+                  investimentos em tempo real
+                </li>
+                <li>
+                  <strong>Planilhas de controle:</strong> Monitore performance e
+                  diversificação
+                </li>
+                <li>
+                  <strong>Relatórios de empresas:</strong> Leia os relatórios
+                  trimestrais e anuais
+                </li>
+                <li>
+                  <strong>Podcasts e canais especializados:</strong> Mantenha-se
+                  informado sobre o mercado
+                </li>
+              </ul>
+            </section>
+
+            <section id="conclusao" class="section">
+              <h2>9. Conclusão</h2>
+              <p>
+                Investir em ações é uma jornada que pode transformar sua vida
+                financeira, mas requer preparação, paciência e disciplina. Não
+                existe fórmula mágica ou caminho para enriquecimento rápido, mas
+                existe um método comprovado para construir riqueza ao longo do
+                tempo através do mercado de ações.
+              </p>
+
+              <p>
+                Os princípios fundamentais que abordamos neste guia -
+                diversificação, foco no longo prazo, educação contínua, controle
+                emocional e investimento regular - são atemporais e têm
+                funcionado para milhões de investidores ao redor do mundo.
+              </p>
+
+              <div class="conclusion-highlights">
+                <div class="highlight">
+                  <h4>🎯 Lembre-se</h4>
+                  <ul>
+                    <li>Comece pequeno e aprenda gradualmente</li>
+                    <li>Diversifique adequadamente seus investimentos</li>
+                    <li>Mantenha uma perspectiva de longo prazo</li>
+                    <li>Continue estudando e se informando</li>
+                    <li>Controle suas emoções e mantenha a disciplina</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>
+                O mercado de ações brasileiro oferece excelentes oportunidades
+                para investidores de todos os tamanhos. Com empresas sólidas,
+                transparência regulatória e custos baixos, nunca foi tão
+                acessível começar a investir.
+              </p>
+
+              <p>
+                Lembre-se de que todo expert já foi um iniciante. Warren Buffett
+                comprou sua primeira ação aos 11 anos e sempre disse que seu
+                maior arrependimento foi não ter começado ainda mais cedo. O
+                melhor momento para começar a investir é agora - o segundo
+                melhor momento foi há 10 anos.
+              </p>
+
+              <p>
+                Comece sua jornada de investimentos hoje mesmo. Abra uma conta
+                em uma corretora de sua escolha, faça seu primeiro investimento
+                pequeno e, mais importante, continue aprendendo. O futuro do seu
+                patrimônio agradecerá pelas decisões que você tomar hoje.
+              </p>
+
+              <div class="final-cta">
+                <h3>Próximos Passos</h3>
+                <ol>
+                  <li>Escolha uma corretora confiável</li>
+                  <li>Abra sua conta e transfira um valor inicial</li>
+                  <li>Faça seu primeiro investimento em uma ação ou ETF</li>
+                  <li>Configure um aporte mensal regular</li>
+                  <li>Continue estudando e expandindo seu conhecimento</li>
+                </ol>
+              </div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p>&copy; 2025 finance365. Todos os direitos reservados.</p>
+        <p class="disclaimer">
+          Este conteúdo é apenas para fins educacionais. Não constitui
+          recomendação de investimento.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js">
+            // Mobile Menu Toggle
+      function toggleMobileMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          const menuBtn = document.querySelector('.mobile-menu-btn');
+
+          navLinks.classList.toggle('mobile-active');
+          menuBtn.classList.toggle('active');
+      }
+
+      // Smooth Scrolling for Navigation Links
+      function scrollToSection(sectionId) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+              const headerHeight = document.querySelector('.header').offsetHeight;
+              const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition - headerHeight - 20;
+
+              window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+              });
+          }
+      }
+
+      // Highlight Active Section in TOC
+      function highlightActiveSection() {
+          const sections = document.querySelectorAll('.section');
+          const tocLinks = document.querySelectorAll('.toc a');
+          const headerHeight = document.querySelector('.header').offsetHeight;
+
+          let currentSection = '';
+
+          sections.forEach(section => {
+              const sectionTop = section.getBoundingClientRect().top;
+              if (sectionTop <= headerHeight + 100) {
+                  currentSection = section.getAttribute('id');
+              }
+          });
+
+          tocLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${currentSection}`) {
+                  link.classList.add('active');
+              }
+          });
+      }
+
+      // Reading Progress Bar
+      function createProgressBar() {
+          const progressBar = document.createElement('div');
+          progressBar.className = 'reading-progress';
+          progressBar.innerHTML = '<div class="progress-fill"></div>';
+          document.body.appendChild(progressBar);
+
+          // Add CSS for progress bar
+          const style = document.createElement('style');
+          style.textContent = `
+              .reading-progress {
+                  position: fixed;
+                  top: 80px;
+                  left: 0;
+                  width: 100%;
+                  height: 4px;
+                  background: rgba(255, 255, 255, 0.2);
+                  z-index: 999;
+              }
+              .progress-fill {
+                  height: 100%;
+                  background: linear-gradient(135deg, #10b981, #60f070);
+                  width: 0%;
+                  transition: width 0.1s ease;
+              }
+          `;
+          document.head.appendChild(style);
+      }
+
+      function updateReadingProgress() {
+          const article = document.querySelector('.article');
+          const progressFill = document.querySelector('.progress-fill');
+
+          if (article && progressFill) {
+              const articleTop = article.getBoundingClientRect().top + window.pageYOffset;
+              const articleHeight = article.offsetHeight;
+              const windowHeight = window.innerHeight;
+              const scrollTop = window.pageYOffset;
+
+              const articleStart = articleTop - windowHeight;
+              const articleEnd = articleTop + articleHeight;
+
+              if (scrollTop >= articleStart && scrollTop <= articleEnd) {
+                  const progress = ((scrollTop - articleStart) / (articleEnd - articleStart)) * 100;
+                  progressFill.style.width = Math.min(Math.max(progress, 0), 100) + '%';
+              }
+          }
+      }
+
+      // Animate elements on scroll
+      function animateOnScroll() {
+          const observerOptions = {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px'
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.style.opacity = '1';
+                      entry.target.style.transform = 'translateY(0)';
+                  }
+              });
+          }, observerOptions);
+
+          // Observe cards and special elements
+          const elementsToAnimate = document.querySelectorAll(`
+              .advantage-card,
+              .strategy-card,
+              .tip-card,
+              .step,
+              .diversification-card,
+              .highlight-box,
+              .example-box,
+              .tip-box
+          `);
+
+          elementsToAnimate.forEach(element => {
+              element.style.opacity = '0';
+              element.style.transform = 'translateY(30px)';
+              element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+              observer.observe(element);
+          });
+      }
+
+      // Copy link to section
+      function copyLinkToSection(sectionId) {
+          const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+
+          if (navigator.clipboard) {
+              navigator.clipboard.writeText(url).then(() => {
+                  showToast('Link copiado para a área de transferência!');
+              });
+          } else {
+              // Fallback for older browsers
+              const tempInput = document.createElement('input');
+              tempInput.value = url;
+              document.body.appendChild(tempInput);
+              tempInput.select();
+              document.execCommand('copy');
+              document.body.removeChild(tempInput);
+              showToast('Link copiado para a área de transferência!');
+          }
+      }
+
+      // Show toast notification
+      function showToast(message) {
+          const toast = document.createElement('div');
+          toast.className = 'toast';
+          toast.textContent = message;
+
+          // Add CSS for toast
+          const style = document.createElement('style');
+          style.textContent = `
+              .toast {
+                  position: fixed;
+                  bottom: 30px;
+                  right: 30px;
+                  background: #10b981;
+                  color: white;
+                  padding: 1rem 2rem;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                  z-index: 9999;
+                  opacity: 0;
+                  transform: translateY(20px);
+                  transition: all 0.3s ease;
+              }
+              .toast.show {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          `;
+          document.head.appendChild(style);
+
+          document.body.appendChild(toast);
+
+          // Show toast
+          setTimeout(() => {
+              toast.classList.add('show');
+          }, 100);
+
+          // Remove toast
+          setTimeout(() => {
+              toast.classList.remove('show');
+              setTimeout(() => {
+                  document.body.removeChild(toast);
+              }, 300);
+          }, 3000);
+      }
+
+      // Add copy buttons to section headers
+      function addCopyButtons() {
+          const sectionHeaders = document.querySelectorAll('.section h2');
+
+          sectionHeaders.forEach(header => {
+              const copyBtn = document.createElement('button');
+              copyBtn.innerHTML = '🔗';
+              copyBtn.className = 'copy-link-btn';
+              copyBtn.title = 'Copiar link desta seção';
+              copyBtn.onclick = (e) => {
+                  e.preventDefault();
+                  const sectionId = header.parentElement.getAttribute('id');
+                  if (sectionId) {
+                      copyLinkToSection(sectionId);
+                  }
+              };
+
+              header.style.position = 'relative';
+              header.appendChild(copyBtn);
+          });
+
+          // Add CSS for copy buttons
+          const style = document.createElement('style');
+          style.textContent = `
+              .copy-link-btn {
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: none;
+                  border: none;
+                  font-size: 1.2rem;
+                  cursor: pointer;
+                  opacity: 0;
+                  transition: opacity 0.3s ease;
+                  padding: 0.5rem;
+                  border-radius: 4px;
+              }
+              .copy-link-btn:hover {
+                  background: rgba(16, 185, 129, 0.1);
+              }
+              .section h2:hover .copy-link-btn {
+                  opacity: 1;
+              }
+          `;
+          document.head.appendChild(style);
+      }
+
+      // Scroll to top functionality
+      function createScrollToTop() {
+          const scrollBtn = document.createElement('button');
+          scrollBtn.innerHTML = '↑';
+          scrollBtn.className = 'scroll-to-top';
+          scrollBtn.title = 'Voltar ao topo';
+          scrollBtn.onclick = () => {
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+          };
+
+          document.body.appendChild(scrollBtn);
+
+          // Add CSS for scroll to top button
+          const style = document.createElement('style');
+          style.textContent = `
+              .scroll-to-top {
+                  position: fixed;
+                  bottom: 30px;
+                  left: 30px;
+                  width: 50px;
+                  height: 50px;
+                  background: #10b981;
+                  color: white;
+                  border: none;
+                  border-radius: 50%;
+                  font-size: 1.5rem;
+                  cursor: pointer;
+                  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                  opacity: 0;
+                  transform: translateY(20px);
+                  transition: all 0.3s ease;
+                  z-index: 1000;
+              }
+              .scroll-to-top:hover {
+                  background: #059669;
+                  transform: translateY(15px);
+              }
+              .scroll-to-top.show {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          `;
+          document.head.appendChild(style);
+
+          // Show/hide scroll to top button
+          window.addEventListener('scroll', () => {
+              if (window.pageYOffset > 500) {
+                  scrollBtn.classList.add('show');
+              } else {
+                  scrollBtn.classList.remove('show');
+              }
+          });
+      }
+
+      // Search functionality
+      function createSearchFunction() {
+          const searchContainer = document.createElement('div');
+          searchContainer.className = 'search-container';
+          searchContainer.innerHTML = `
+              <input type="text" class="search-input" placeholder="Pesquisar no artigo...">
+              <div class="search-results"></div>
+          `;
+
+          const toc = document.querySelector('.toc');
+          toc.insertBefore(searchContainer, toc.firstChild);
+
+          // Add CSS for search
+          const style = document.createElement('style');
+          style.textContent = `
+              .search-container {
+                  margin-bottom: 2rem;
+              }
+              .search-input {
+                  width: 100%;
+                  padding: 0.8rem;
+                  border: 2px solid #e5e7eb;
+                  border-radius: 8px;
+                  font-size: 0.9rem;
+                  transition: border-color 0.3s ease;
+              }
+              .search-input:focus {
+                  outline: none;
+                  border-color: #10b981;
+              }
+              .search-results {
+                  max-height: 200px;
+                  overflow-y: auto;
+                  background: white;
+                  border-radius: 8px;
+                  margin-top: 0.5rem;
+                  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+              }
+              .search-result {
+                  padding: 0.8rem;
+                  cursor: pointer;
+                  border-bottom: 1px solid #f3f4f6;
+                  transition: background 0.2s ease;
+              }
+              .search-result:hover {
+                  background: #f9fafb;
+              }
+              .search-result:last-child {
+                  border-bottom: none;
+              }
+              .search-highlight {
+                  background: #fef3c7;
+                  padding: 0.2rem 0.4rem;
+                  border-radius: 4px;
+              }
+          `;
+          document.head.appendChild(style);
+
+          const searchInput = document.querySelector('.search-input');
+          const searchResults = document.querySelector('.search-results');
+
+          searchInput.addEventListener('input', (e) => {
+              const query = e.target.value.toLowerCase().trim();
+
+              if (query.length < 3) {
+                  searchResults.innerHTML = '';
+                  return;
+              }
+
+              const sections = document.querySelectorAll('.section');
+              const results = [];
+
+              sections.forEach(section => {
+                  const heading = section.querySelector('h2');
+                  const content = section.textContent.toLowerCase();
+
+                  if (content.includes(query)) {
+                      const preview = content.substring(
+                          Math.max(0, content.indexOf(query) - 50),
+                          content.indexOf(query) + query.length + 50
+                      );
+
+                      results.push({
+                          title: heading ? heading.textContent : 'Seção',
+                          preview: preview,
+                          sectionId: section.getAttribute('id')
+                      });
+                  }
+              });
+
+              searchResults.innerHTML = results.map(result => `
+                  <div class="search-result" onclick="scrollToSection('${result.sectionId}')">
+                      <strong>${result.title}</strong><br>
+                      <small>${result.preview}...</small>
+                  </div>
+              `).join('');
+          });
+      }
+
+      // Initialize all functions when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+          // Create and initialize features
+          createProgressBar();
+          createScrollToTop();
+          addCopyButtons();
+          createSearchFunction();
+
+          // Setup scroll event listeners
+          window.addEventListener('scroll', () => {
+              highlightActiveSection();
+              updateReadingProgress();
+          }, { passive: true });
+
+          // Initialize animations
+          animateOnScroll();
+
+          // Handle URL hash on load
+          if (window.location.hash) {
+              setTimeout(() => {
+                  const sectionId = window.location.hash.substring(1);
+                  scrollToSection(sectionId);
+              }, 100);
+          }
+
+          // Add keyboard navigation
+          document.addEventListener('keydown', (e) => {
+              if (e.ctrlKey && e.key === 'f') {
+                  e.preventDefault();
+                  document.querySelector('.search-input').focus();
+              }
+
+              if (e.key === 'Escape') {
+                  document.querySelector('.search-input').value = '';
+                  document.querySelector('.search-results').innerHTML = '';
+              }
+          });
+
+          // Lazy load images (if any are added later)
+          const images = document.querySelectorAll('img[data-src]');
+          const imageObserver = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      const img = entry.target;
+                      img.src = img.dataset.src;
+                      img.removeAttribute('data-src');
+                      imageObserver.unobserve(img);
+                  }
+              });
+          });
+
+          images.forEach(img => imageObserver.observe(img));
+
+          console.log('✅ Artigo sobre investimentos carregado com sucesso!');
+      });
+
+      // Handle mobile menu for smaller screens
+      document.addEventListener('click', (e) => {
+          const navLinks = document.querySelector('.nav-links');
+          const menuBtn = document.querySelector('.mobile-menu-btn');
+
+          if (navLinks && navLinks.classList.contains('mobile-active')) {
+              if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+                  navLinks.classList.remove('mobile-active');
+                  menuBtn.classList.remove('active');
+              }
+          }
+      });
+
+      // Add mobile menu styles dynamically
+      const mobileMenuStyles = document.createElement('style');
+      mobileMenuStyles.textContent = `
+          @media (max-width: 768px) {
+              .nav-links {
+                  position: fixed;
+                  top: 80px;
+                  left: -100%;
+                  width: 100%;
+                  height: calc(100vh - 80px);
+                  background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: flex-start;
+                  padding-top: 2rem;
+                  transition: left 0.3s ease;
+                  z-index: 999;
+              }
+
+              .nav-links.mobile-active {
+                  left: 0;
+              }
+
+              .nav-link {
+                  font-size: 1.2rem;
+                  margin: 1rem 0;
+                  padding: 1rem 2rem;
+                  border-radius: 8px;
+                  transition: all 0.3s ease;
+              }
+
+              .nav-link:hover {
+                  background: rgba(255, 255, 255, 0.1);
+              }
+
+              .mobile-menu-btn.active span:nth-child(1) {
+                  transform: rotate(-45deg) translate(-5px, 6px);
+              }
+
+              .mobile-menu-btn.active span:nth-child(2) {
+                  opacity: 0;
+              }
+
+              .mobile-menu-btn.active span:nth-child(3) {
+                  transform: rotate(45deg) translate(-5px, -6px);
+              }
+          }
+      `;
+      document.head.appendChild(mobileMenuStyles);
+    </script>
+  </body>
+</html>

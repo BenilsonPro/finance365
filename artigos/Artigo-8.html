@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como Aposentar Mais Cedo: Planejamento e Investimentos</title>
+    <meta
+      name="description"
+      content="Guia completo e prático para aposentar mais cedo: planejamento financeiro, investimentos, orçamento, renda passiva, estratégia de retirada e checklist de ação."
+    />
+    <meta
+      name="keywords"
+      content="aposentar cedo, independência financeira, planejamento financeiro, investimentos, renda passiva, orçamento"
+    />
+    <meta name="author" content="Wanderley Cabelo" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <style>
+      :root {
+        --blue: #0d6efd;
+        --green: #20c997;
+        --white: #ffffff;
+        --bg-gradient: linear-gradient(
+          135deg,
+          var(--blue),
+          #2196f3 40%,
+          var(--green)
+        );
+        --card-bg: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(250, 250, 250, 0.9)
+        );
+        --max-width: 1100px;
+        --accent: #0b5ed7;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #07314b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(180deg, #f6fbff 0%, #f0fff7 100%);
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      header.header {
+        position: sticky;
+        top: 0;
+        z-index: 120;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 6px 18px rgba(9, 30, 63, 0.06);
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.6rem 0;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.45rem 0.7rem;
+        border-radius: 10px;
+        border: 1px solid rgba(11, 94, 215, 0.08);
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.06),
+          rgba(32, 201, 151, 0.03)
+        );
+        cursor: pointer;
+      }
+      .back-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .brand {
+        display: flex;
+        flex-direction: column;
+      }
+      .brand h1 {
+        font-size: 1rem;
+        margin: 0;
+        color: var(--blue);
+      }
+      .brand p {
+        font-size: 0.75rem;
+        margin: 0;
+        color: rgba(7, 49, 75, 0.6);
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 2rem;
+        padding: 1rem 0;
+      }
+      @media (max-width: 980px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+        .toc {
+          order: 2;
+        }
+      }
+
+      article.card {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 14px;
+        box-shadow: 0 8px 30px rgba(11, 94, 215, 0.06);
+      }
+      .eyebrow {
+        display: inline-block;
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+        background: rgba(32, 201, 151, 0.12);
+        color: var(--green);
+        font-weight: 600;
+        font-size: 0.8rem;
+      }
+      h2 {
+        color: var(--blue);
+        margin-top: 1.25rem;
+      }
+      h3 {
+        color: #114360;
+        margin-top: 1rem;
+      }
+      p {
+        line-height: 1.7;
+        margin: 0.8rem 0;
+        color: #13303f;
+      }
+
+      .hero {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+      }
+      .hero .meta {
+        flex: 1;
+      }
+      .hero .hero-ill {
+        width: 140px;
+        height: 120px;
+        border-radius: 12px;
+        background: var(--bg-gradient);
+        box-shadow: 0 10px 30px rgba(13, 110, 253, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 700;
+      }
+
+      .toc {
+        position: sticky;
+        top: 88px;
+        height: calc(100vh - 100px);
+        padding: 1rem;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(13, 110, 253, 0.03),
+          rgba(32, 201, 151, 0.02)
+        );
+        border: 1px solid rgba(13, 110, 253, 0.04);
+      }
+      .toc h4 {
+        margin: 0 0 0.5rem 0;
+        color: var(--blue);
+      }
+      .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .toc li {
+        margin: 0.4rem 0;
+      }
+      .toc a {
+        font-size: 0.95rem;
+        color: rgba(7, 49, 75, 0.85);
+      }
+
+      .progress-wrap {
+        height: 6px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 999px;
+        margin-top: 0.6rem;
+      }
+      .progress {
+        height: 6px;
+        border-radius: 999px;
+        width: 0;
+        background: linear-gradient(90deg, var(--blue), var(--green));
+      }
+
+      .cta-box {
+        margin-top: 1.2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.06),
+          rgba(32, 201, 151, 0.04)
+        );
+      }
+      .cta-box p {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .list-step {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .step {
+        padding: 1rem;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(11, 94, 215, 0.04);
+      }
+      .example {
+        padding: 1rem;
+        background: linear-gradient(
+          180deg,
+          rgba(13, 110, 253, 0.04),
+          rgba(32, 201, 151, 0.02)
+        );
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+
+      footer {
+        padding: 2rem 0;
+        text-align: center;
+        color: rgba(7, 49, 75, 0.6);
+      }
+
+      /* scroll reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: all 0.7s cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+      .reveal.revealed {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* small screens */
+      @media (max-width: 560px) {
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero .hero-ill {
+          width: 120px;
+          height: 90px;
+        }
+      }
+
+      /* code block */
+      pre {
+        background: #0b2a3a;
+        color: #e6f7ff;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow: auto;
+      }
+
+      /* minor touches */
+      .small {
+        font-size: 0.9rem;
+        color: rgba(7, 49, 75, 0.6);
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+        background: rgba(13, 110, 253, 0.08);
+        color: var(--blue);
+        font-weight: 700;
+      }
+      nav.toc-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container topbar">
+        <button class="back-btn" id="backBtn" aria-label="Voltar">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="#0b5ed7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="small" onclick="window.history.back()">Voltar</span>
+          <!-- <button class="btn-back" onclick="window.history.back()">
+            ← Voltar
+          </button> -->
+        </button>
+        <div class="brand">
+          <h1>Como Aposentar Mais Cedo</h1>
+          <p class="small">
+            Planejamento e investimentos — guia prático e acionável
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <article class="card" id="article">
+          <span class="eyebrow">Guia Completo</span>
+          <div class="hero">
+            <div class="meta">
+              <h2>Como Aposentar Mais Cedo: Planejamento e Investimentos</h2>
+              <p class="small">
+                Última atualização:
+                <time datetime="2025-09-08">08 de setembro de 2025</time> ·
+                <span id="readingTime" class="small">Leitura: 0 min</span>
+              </p>
+              <div class="progress-wrap" aria-hidden="true">
+                <div class="progress" id="progressBar"></div>
+              </div>
+            </div>
+            <div class="hero-ill">AF</div>
+          </div>
+
+          <section class="intro reveal">
+            <h3>Introdução</h3>
+            <p>
+              Este artigo foi escrito para você que sonha em reduzir a jornada
+              de trabalho, conquistar liberdade financeira e, acima de tudo,
+              viver com mais propósito — sem depender exclusivamente da
+              aposentadoria pública ou de um único salário. Ainda que "aposentar
+              cedo" tenha significados diferentes para cada pessoa, as
+              estratégias são amplas e combináveis: reduzir despesas, aumentar a
+              taxa de poupança, investir de forma inteligente e criar múltiplas
+              fontes de renda passiva.
+            </p>
+            <p>
+              Nesta leitura você encontrará um plano passo a passo, exemplos
+              práticos, alternativas de investimento (renda fixa, renda
+              variável, imóveis, dividendos), a lógica por trás da retirada
+              segura e um checklist final para começar hoje mesmo.
+            </p>
+          </section>
+
+          <section class="reasons reveal">
+            <h3>Por que planejar para aposentar mais cedo?</h3>
+            <p>
+              A ideia de aposentar cedo é atraente, porém exige disciplina. A
+              vantagem principal é tempo: tempo para projetos pessoais, família,
+              saúde e tarefas que enriquecem sua vida. Do ponto de vista
+              financeiro, aposentar cedo corta o tempo em que você depende de um
+              emprego ativo e, se bem planejado, reduz o risco de viver com
+              pouco no futuro.
+            </p>
+            <p>
+              Além disso, planejar cedo permite aproveitar o poder dos juros
+              compostos. Quanto mais cedo você começar a investir com
+              constância, menor será a necessidade de poupar percentuais enormes
+              da renda, pois os retornos ao longo do tempo trabalharão a seu
+              favor.
+            </p>
+          </section>
+
+          <section class="definir reveal">
+            <h3>O que significa "cedo" para você?</h3>
+            <p>
+              Para alguns, "cedo" é aos 50; para outros, aos 35. A definição
+              depende do estilo de vida desejado e do patrimônio necessário para
+              sustentá-lo. Antes de escolher um alvo cronológico, responda a
+              estas perguntas:
+            </p>
+            <ul>
+              <li>
+                Quanto dinheiro preciso por ano para manter o padrão de vida
+                desejado?
+              </li>
+              <li>Quais despesas são fixas e quais são opcionais?</li>
+              <li>
+                Quais riscos de saúde ou familiares podem exigir recursos
+                extras?
+              </li>
+            </ul>
+            <p>
+              Uma regra prática muito utilizada é a regra dos 25x: acumular 25
+              vezes sua despesa anual prevista (ou 100 vezes a despesa mensal)
+              para ter uma retirada sustentável de 4% ao ano — ainda que essa
+              regra precise ser adaptada ao contexto econômico e às taxas
+              históricas.
+            </p>
+          </section>
+
+          <section class="steps reveal">
+            <h3>Plano em 12 passos para aposentar mais cedo</h3>
+            <div class="list-step">
+              <div class="step">
+                <h4>1. Defina a meta financeira</h4>
+                <p>
+                  Calcule quanto será necessário anualmente para viver. Some
+                  moradia, alimentação, saúde, lazer e uma margem para
+                  imprevistos. Multiplique por 25 para obter um ponto de
+                  partida.
+                </p>
+              </div>
+              <div class="step">
+                <h4>2. Mapeie suas despesas</h4>
+                <p>
+                  Registre seus gastos por 3 meses. Identifique despesas
+                  recorrentes que podem ser reduzidas — assinatura não usada,
+                  planos duplicados, gastos por impulso.
+                </p>
+              </div>
+              <div class="step">
+                <h4>3. Crie um fundo de emergência</h4>
+                <p>
+                  Mantenha 3-6 meses de despesas em um instrumento de alta
+                  liquidez e baixo risco (conta remunerada, CDB com liquidez
+                  diária ou Tesouro Selic).
+                </p>
+              </div>
+              <div class="step">
+                <h4>4. Zere dívidas caras</h4>
+                <p>
+                  Priorize quitar dívidas com juros altos — cartão e cheque
+                  especial geralmente são as piores. Dívidas com juros baixos
+                  (e.g., financiamento com boa taxa) podem ser mantidas
+                  estrategicamente.
+                </p>
+              </div>
+              <div class="step">
+                <h4>5. Automatize a poupança</h4>
+                <p>
+                  Configure transferências automáticas para investimentos logo
+                  que receber a renda. A disciplina automática é muito mais
+                  eficiente que depender da vontade mensal.
+                </p>
+              </div>
+              <div class="step">
+                <h4>6. Diversifique investimentos</h4>
+                <p>
+                  Combine renda fixa, renda variável, fundos imobiliários e
+                  ativos reais. A diversificação reduz risco sem sacrificar
+                  potencial de retorno.
+                </p>
+              </div>
+              <div class="step">
+                <h4>7. Contribua para contas com vantagens fiscais</h4>
+                <p>
+                  Use plano de previdência privada (PGBL/VGBL), contas de
+                  aposentadoria ou outros veículos fiscais vantajosos quando
+                  fizerem sentido para sua estratégia.
+                </p>
+              </div>
+              <div class="step">
+                <h4>8. Monte uma fonte de renda passiva</h4>
+                <p>
+                  Dividendos, fundos imobiliários e aluguel são exemplos. O
+                  objetivo é que uma parte do seu patrimônio gere renda regular
+                  sem trabalho ativo.
+                </p>
+              </div>
+              <div class="step">
+                <h4>9. Busque aumento de renda</h4>
+                <p>
+                  Desenvolva habilidades vendáveis, freelancing, ou um negócio
+                  paralelo. Aumentar a receita acelera a jornada para a
+                  independência.
+                </p>
+              </div>
+              <div class="step">
+                <h4>10. Ajuste seu estilo de vida</h4>
+                <p>
+                  Avalie prioridades: reduzir moradia ou transporte pode liberar
+                  boa parte da economia necessária para aposentar mais cedo.
+                </p>
+              </div>
+              <div class="step">
+                <h4>11. Monte um plano de retirada</h4>
+                <p>
+                  Estabeleça regras de retirada (por exemplo, 3-4% ou uma
+                  combinação de renda fixa + vendas programadas) para evitar
+                  esgotar o patrimônio cedo demais.
+                </p>
+              </div>
+              <div class="step">
+                <h4>12. Revise e adapte anualmente</h4>
+                <p>
+                  Mercados mudam, objetivos mudam. Faça revisão anual do
+                  planejamento e ajuste alocações, com rebalanceamento quando
+                  necessário.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="investimentos reveal">
+            <h3>Onde investir — opções práticas</h3>
+            <p>
+              Não existe um único ativo perfeito. A escolha depende do seu
+              horizonte, perfil de risco e objetivos. Abaixo, uma visão objetiva
+              das principais categorias.
+            </p>
+
+            <h4>Renda fixa</h4>
+            <p>
+              Inclui Tesouro Direto, CDBs, LCIs/LCAs e fundos de renda fixa.
+              Importante para proteção do capital e como âncora em momentos de
+              queda do mercado. Use renda fixa para o fundo de emergência e
+              parte da reserva de curto prazo.
+            </p>
+
+            <h4>Renda variável (ações)</h4>
+            <p>
+              Ações oferecem potencial de crescimento superior no longo prazo,
+              mas com volatilidade. Uma carteira baseada em ETFs e empresas
+              sólidas, com rebalanceamento, costuma ser uma boa estratégia para
+              quem visa acumulação.
+            </p>
+
+            <h4>Fundos imobiliários (FIIs)</h4>
+            <p>
+              FIIs pagam rendimentos periódicos e são uma forma prática de ter
+              exposição a imóveis sem a gestão direta. Atenção aos prazos de
+              vacância e à saúde dos contratos.
+            </p>
+
+            <h4>Imóveis</h4>
+            <p>
+              Investir diretamente em imóveis exige capital e gestão. Pode gerar
+              renda de aluguel e potencial valorização, mas tem custos
+              (manutenção, gestão, impostos).
+            </p>
+
+            <h4>Ativos alternativos</h4>
+            <p>
+              Criptomoedas, commodities e investimentos em startups pertencem
+              aqui. Use com parcimônia e só se você compreender os riscos.
+            </p>
+          </section>
+
+          <section class="allocation reveal">
+            <h3>Alocação de ativos: exemplo prático</h3>
+            <p>
+              Uma alocação ilustrativa para um investidor com horizonte de 10+
+              anos e tolerância média ao risco:
+            </p>
+            <ul>
+              <li>40% em ações/ETFs (exposição doméstica + internacional)</li>
+              <li>
+                20% em renda fixa (títulos indexados ao CDI/Tesouro IPCA para
+                proteger contra inflação)
+              </li>
+              <li>20% em fundos imobiliários/real estate</li>
+              <li>10% em liquidez/fundo de emergência</li>
+              <li>
+                10% em ativos alternativos e oportunidades (criptos, private)
+              </li>
+            </ul>
+            <p>
+              Essa alocação varia por perfil: o conservador terá mais renda
+              fixa; o agressivo mais ações. Rebalanceie anualmente para manter a
+              disciplina.
+            </p>
+          </section>
+
+          <section class="retirada reveal">
+            <h3>Estrategias de retirada</h3>
+            <p>
+              Ao chegar no ponto de transição, avalie alternativas de retirada
+              para equilibrar segurança e flexibilidade:
+            </p>
+            <ol>
+              <li>
+                <strong>4% rule</strong> — retirar 4% do capital no primeiro ano
+                e ajustar pela inflação depois. Simples, mas precisa ser testada
+                por cenários de mercado.
+              </li>
+              <li>
+                <strong>Retirada baseada em renda</strong> — priorizar
+                rendimento gerado por dividendos e aluguéis; completar com
+                vendas programadas.
+              </li>
+              <li>
+                <strong>Abordagem híbrida</strong> — dividir o patrimônio: parte
+                em renda fixa para cobrir gastos fixos, parte em renda variável
+                para crescimento.
+              </li>
+            </ol>
+            <p>
+              Considere também um "cofre de segurança": reservas líquidas
+              equivalentes a 1-3 anos de despesas para reduzir a pressão de
+              vender ativos em queda.
+            </p>
+          </section>
+
+          <section class="impostos reveal">
+            <h3>Impostos e custos: o inimigo silencioso</h3>
+            <p>
+              Taxas de corretagem, taxas de administração e impostos corroem
+              retornos no longo prazo. Prefira ETFs e fundos com baixa taxa de
+              administração, escolha corretoras com custos competitivos e use
+              planejamento tributário quando possível.
+            </p>
+          </section>
+
+          <section class="health reveal">
+            <h3>Saúde e seguros</h3>
+            <p>
+              Aposentar não significa abdicar de cuidados. Planeje seguro saúde
+              ou uma reserva específica para despesas médicas. Em muitos países,
+              custos de saúde crescem com a idade — inclua isso nas estimativas.
+            </p>
+          </section>
+
+          <section class="sample reveal">
+            <h3>Plano de exemplo: calcular quanto investir por mês</h3>
+            <p>Exemplo rápido para explicar a matemática:</p>
+            <div class="example">
+              <p>
+                Meta: R$ 120.000/ano (ou R$ 10.000/mês). Usando a regra dos 25x,
+                o patrimônio alvo é R$ 3.000.000.
+              </p>
+              <p>
+                Suponha que você tenha hoje R$ 200.000 e quer atingir R$
+                3.000.000 em 15 anos, com retorno médio anual composto de 7%.
+              </p>
+              <pre>
+Fórmula básica (aplicação mensal): PMT = (FV - PV*(1+r)^n) * r / ((1+r)^n - 1)
+onde r = taxa mensal, n = meses.</pre
+              >
+              <p>
+                Com r ≈ 0,00565 (7% a.a. / 12) e n = 180, calculando você verá
+                que precisa investir uma quantia fixa por mês. Use calculadora
+                financeira para precisão. A ideia central é: quanto maior o
+                aporte mensal ou maior o retorno, menos tempo você precisa.
+              </p>
+            </div>
+          </section>
+
+          <section class="mindset reveal">
+            <h3>Mindset e hábitos</h3>
+            <p>
+              Riqueza de longo prazo é construída por hábitos: consistência,
+              aprendizado contínuo e controle emocional em mercados turbulentos.
+              Evite mudanças de estratégia baseadas em notícias de curto prazo.
+            </p>
+            <p>
+              Tenha metas claras, um plano reversível para emergências e uma
+              atitude orientada a ações (automatizar, revisar, ajustar).
+            </p>
+          </section>
+
+          <section class="checklist reveal">
+            <h3>Checklist prático — faça hoje</h3>
+            <ul>
+              <li>Definir objetivo de aposentadoria (valor e idade).</li>
+              <li>Registrar gastos de 3 meses.</li>
+              <li>Montar fundo de emergência (3-6 meses).</li>
+              <li>Quitar dívidas com juros altos.</li>
+              <li>Automatizar transferências para investimento.</li>
+              <li>
+                Escolher alocação inicial e abrir conta em corretora confiável.
+              </li>
+              <li>Rever plano anualmente e rebalancear.</li>
+            </ul>
+          </section>
+
+          <section class="risks reveal">
+            <h3>Riscos comuns e como mitigá-los</h3>
+            <p>
+              Os riscos mais frequentes são: retiradas agressivas em mercados
+              fracos, falta de diversificação, custos altos e eventos pessoais
+              (saúde, desemprego). Mitigue com planejamento, reservas de
+              liquidez e seguro emocional: regras claras ajudam a não tomar
+              decisões impulsivas.
+            </p>
+          </section>
+
+          <section class="final reveal">
+            <h3>Conclusão</h3>
+            <p>
+              A trajetória para aposentar mais cedo é um processo que combina
+              disciplina financeira, aprendizagem e ações constantes. Não há
+              fórmula mágica, mas há passos comprovados: controlar gastos,
+              automatizar economia, investir com disciplina e manter a
+              flexibilidade para adaptar o plano conforme a vida muda.
+            </p>
+            <p>
+              Se começar hoje, mesmo com aportes modestos, o tempo e a
+              consistência trabalham a seu favor. Use este guia como base,
+              ajuste às suas circunstâncias e dê o primeiro passo: defina sua
+              meta e automatize a poupança.
+            </p>
+          </section>
+        </article>
+
+        <aside class="toc" aria-label="Sumário e Recursos">
+          <h4>Sumário</h4>
+          <nav class="toc-list">
+            <a href="#article">Introdução</a>
+            <a href="#article">Por que planejar</a>
+            <a href="#article">Definir "cedo"</a>
+            <a href="#article">Passos</a>
+            <a href="#article">Investimentos</a>
+            <a href="#article">Alocação</a>
+            <a href="#article">Retirada</a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Comece hoje: defina sua meta e automatize o primeiro aporte.</p>
+          </div>
+
+          <div style="margin-top: 1rem">
+            <p class="small">
+              Tags: <span class="badge">aposentadoria</span>
+              <span class="badge">investimentos</span>
+              <span class="badge">planejamento</span>
+            </p>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="container">
+          <p class="small">
+            © 2025 • Conteúdo educacional — este artigo tem caráter informativo
+            e não constitui consultoria financeira personalizada.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Back button
+      document.getElementById("backBtn").addEventListener("click", function () {
+        if (document.referrer) window.history.back();
+        else window.location.href = "/";
+      });
+
+      // Progress bar
+      const progress = document.getElementById("progressBar");
+      const article = document.getElementById("article");
+      function updateProgress() {
+        const rect = article.getBoundingClientRect();
+        const h = article.offsetHeight - window.innerHeight;
+        const scrolled = Math.min(
+          Math.max(window.scrollY - (article.offsetTop - 60), 0),
+          h
+        );
+        const pct = h > 0 ? (scrolled / h) * 100 : 0;
+        progress.style.width = pct + "%";
+      }
+      window.addEventListener("scroll", updateProgress);
+      window.addEventListener("resize", updateProgress);
+      updateProgress();
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("revealed");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      reveals.forEach((r) => io.observe(r));
+
+      // Reading time estimation
+      (function () {
+        const text = article.innerText || article.textContent;
+        const words = text.trim().split(/\s+/).length;
+        const wpm = 200; // palavras por minuto
+        const minutes = Math.max(1, Math.round(words / wpm));
+        document.getElementById("readingTime").innerText =
+          "Leitura: " + minutes + " min";
+      })();
+
+      // Smooth anchors
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = a.getAttribute("href").slice(1);
+          const el = document.getElementById(id) || document.body;
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      // SEO friendly: set document title and meta description dynamically (optional)
+      // (already in head statically)
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // o navegador faz a animação automática
+        });
+      }
+    </script>
+  </body>
+</html>

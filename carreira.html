@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finance365 — Carreira</title>
+    <meta
+      name="description"
+      content="Carreira na Finance365 — missão, caminhos e oportunidades no mercado financeiro."
+    />
+    <style>
+      :root {
+        --blue: #0b63d3; /* azul principal */
+        --green: #14a76c; /* verde principal */
+        --white: #ffffff;
+        --bg: #f7fbff;
+        --radius: 14px;
+        --glass: rgba(255, 255, 255, 0.7);
+        --shadow: 0 8px 24px rgba(7, 20, 40, 0.08);
+        --maxwidth: 1100px;
+        --gap: 24px;
+        --transition: 600ms cubic-bezier(0.2, 0.9, 0.3, 1);
+      }
+      /* Reset simplificado */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: #0b2540;
+        background: var(--bg);
+      }
+
+      /* Page container */
+      .wrap {
+        max-width: var(--maxwidth);
+        margin: 0 auto;
+        padding: 36px 18px;
+      }
+
+      /* Fixed back-to-top button (canto superior esquerdo) */
+      .to-top {
+        position: fixed;
+        top: 18px;
+        left: 18px;
+        z-index: 9999;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(180deg, var(--white), #f2f8ff);
+        /* padding: 10px 12px; */
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        border: 2px solid rgba(11, 99, 211, 0.08);
+      }
+      .to-top:hover {
+        transform: translateY(-2px);
+        transition: transform 120ms;
+      }
+      .to-top svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--blue), var(--green));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 700;
+      }
+      nav a {
+        margin-left: 18px;
+        color: var(--blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 32px;
+        align-items: center;
+        padding: 28px 0;
+      }
+      .hero .eyebrow {
+        color: var(--green);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .hero h1 {
+        font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+        line-height: 1.05;
+        color: #042042;
+      }
+      .hero p {
+        color: #23425a;
+        margin-top: 12px;
+        font-size: 1rem;
+      }
+      .hero-card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9),
+          var(--white)
+        );
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(11, 99, 211, 0.05);
+      }
+
+      /* Sections */
+      section {
+        padding: 36px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap);
+      }
+      .card {
+        background: var(--white);
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(8, 24, 48, 0.06);
+        border: 1px solid rgba(2, 24, 52, 0.03);
+      }
+
+      .kpi {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .kpi .item {
+        flex: 1;
+        min-width: 150px;
+        padding: 12px;
+        border-radius: 10px;
+        background: linear-gradient(
+          180deg,
+          rgba(10, 99, 211, 0.04),
+          rgba(20, 167, 108, 0.02)
+        );
+      }
+      .kpi .value {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: var(--blue);
+      }
+
+      .cta {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .btn {
+        background: var(--blue);
+        color: var(--white);
+        padding: 12px 18px;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        transition-duration: 0.5s;
+      }
+      .btn.alt {
+        background: transparent;
+        color: var(--blue);
+        border: 2px solid rgba(11, 99, 211, 0.12);
+      }
+
+      .btn:hover {
+        color: rgb(0, 255, 98);
+        transform: scale(1.03);
+      }
+
+      footer {
+        padding: 28px 0;
+        color: #123;
+      }
+
+      /* Scroll reveal initial state */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity var(--transition), transform var(--transition);
+      }
+      .reveal.revealed {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* Simple timeline */
+      .timeline {
+        position: relative;
+        padding-left: 18px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(var(--green), var(--blue));
+        border-radius: 2px;
+      }
+      .timeline .step {
+        position: relative;
+        padding: 14px 12px;
+        margin-bottom: 12px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
+        border: 1px solid rgba(2, 24, 52, 0.03);
+      }
+      .timeline .step::before {
+        content: "";
+        position: absolute;
+        left: -16px;
+        top: 20px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 3px solid var(--blue);
+      }
+
+      /* Responsive */
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .to-top {
+          left: 12px;
+          top: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .wrap {
+          padding: 18px 12px;
+        }
+        .hero h1 {
+          font-size: 1.4rem;
+        }
+        .logo {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .voltar {
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        border-radius: 5px;
+        background: linear-gradient(#3e7bff, #4aad4a);
+      }
+      /* small helper */
+    </style>
+  </head>
+  <body>
+    <!-- botão fixo canto superior esquerdo -->
+    <button class="to-top" id="backTop" aria-label="Voltar ao início">
+      <a class="voltar" href="index.html"
+        >inicio
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="M12 19V6M5 12l7-7 7 7" />
+        </svg>
+      </a>
+    </button>
+
+    <main class="wrap" id="top">
+      <header>
+        <div class="brand">
+          <div class="logo" aria-hidden="true">F365</div>
+          <div>
+            <div style="font-weight: 800; color: #042042">Finance365</div>
+            <small class="muted"
+              >Construindo carreiras no mercado financeiro</small
+            >
+          </div>
+        </div>
+        <nav aria-label="Menu principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#caminhos">Caminhos</a>
+          <a href="#oportunidades">Oportunidades</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow reveal">Carreira • Finance365</div>
+          <h1 class="reveal">
+            Transforme sua paixão por finanças em uma carreira sustentável e
+            rentável
+          </h1>
+          <p class="reveal">
+            Na Finance365 mostramos rotas práticas: desde analista júnior,
+            planejador financeiro até empreendedor digital financeiro. Conteúdo
+            aplicado, mentorias e projetos reais para você ganhar experiência.
+          </p>
+          <div style="margin-top: 18px" class="reveal">
+            <a href="https://kiwify.app/lQrnvYE?afid=rlRug17v">
+              <button class="btn">Comece agora</button>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" aria-hidden="true">
+          <h3 style="margin-bottom: 8px">Nossa promessa</h3>
+          <p class="muted">
+            Formação prática com trilhas claras, feedback real e conexão com
+            vagas do mercado.
+          </p>
+          <div style="margin-top: 14px" class="kpi">
+            <div class="item">
+              <div class="value">85%</div>
+              <div class="muted">Alunos colocados no mercado</div>
+            </div>
+            <div class="item">
+              <div class="value">120+</div>
+              <div class="muted">Aulas práticas por trilha</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="sobre" class="reveal">
+        <div class="wrap">
+          <h2>Sobre a Carreira na Finance365</h2>
+          <p class="muted" style="margin-top: 8px">
+            A carreira na Finance365 é composta por trilhas de aprendizado
+            prático que alinham conhecimento técnico a projetos reais — ideal
+            para quem quer entrar ou crescer no mercado financeiro.
+          </p>
+        </div>
+      </section>
+
+      <section id="caminhos">
+        <div class="grid">
+          <div class="card reveal">
+            <h3>Trilha Analista</h3>
+            <p class="muted">
+              Foco em análise de investimentos, Excel avançado, interpretação de
+              balanços e produção de relatórios.
+            </p>
+            <div style="margin-top: 12px" class="timeline">
+              <div class="step">
+                <strong>Início — Fundamentos</strong>
+                <div class="muted">
+                  Noções de mercado, contabilidade básica e matemática
+                  financeira.
+                </div>
+              </div>
+              <div class="step">
+                <strong>Intermediário — Modelagem</strong>
+                <div class="muted">
+                  Modelagem financeira, valuation e relatórios.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Trilha Planejador</h3>
+            <p class="muted">
+              Foco em atendimento, planejamento financeiro pessoal e ferramentas
+              de gestão de carteira.
+            </p>
+            <ul style="margin-top: 12px" class="muted">
+              <li>Atendimento e comunicação</li>
+              <li>Construção de planilhas inteligentes</li>
+              <li>Metas e reequilíbrios</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="oportunidades" class="reveal">
+        <div class="wrap">
+          <h2>Oportunidades e como chegamos lá</h2>
+          <p class="muted">
+            Além de cursos, oferecemos mentorias, projetos práticos com empresas
+            parceiras e um canal de vagas para alumni.
+          </p>
+          <div style="margin-top: 18px" class="card reveal">
+            <h4>Como é o processo</h4>
+            <ol class="muted">
+              <li>Inscrição na trilha</li>
+              <li>Projetos práticos e feedback</li>
+              <li>Conexão com vagas e preparação para entrevistas</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid">
+          <div class="card reveal">
+            <h3>Mentorias</h3>
+            <p class="muted">
+              Mentores com experiência de mercado — encontros quinzenais,
+              análise de cases reais e revisão de projetos.
+            </p>
+          </div>
+          <div class="card reveal">
+            <h3>Projetos Reais</h3>
+            <p class="muted">
+              Você entrega resultados reais para empresas e portfólios que
+              impressionam recrutadores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+          "
+        >
+          <div>
+            <strong>Finance365</strong>
+            <div class="muted">© 2025 — Todos os direitos reservados</div>
+          </div>
+          <div class="muted">Contato: contato@finance365.com</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Smooth scroll for 'Início' button and nav anchors
+      document.getElementById("backTop").addEventListener("click", function () {
+        document.getElementById("top").scrollIntoView({ behavior: "smooth" });
+      });
+      // Nav anchors smooth behavior
+      document.querySelectorAll("nav a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target)
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      // IntersectionObserver to reveal elements on scroll (performant)
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("revealed");
+            }
+          });
+        },
+        { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
+      );
+
+      // Observe elements with class .reveal
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Accessibility: keyboard trigger for back-to-top
+      document.addEventListener("keydown", (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+          document.getElementById("backTop").click();
+        }
+      });
+
+      // Optional: show/hide top button on scroll (keeps it visible but subtle)
+      let lastScroll = 0;
+      const btn = document.getElementById("backTop");
+      window.addEventListener("scroll", () => {
+        const st = window.scrollY || document.documentElement.scrollTop;
+        if (st > 80) btn.style.opacity = "0.98";
+        else btn.style.opacity = "1";
+        lastScroll = st;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos de Uso - Finanças</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(#1f2937, #2e9aff);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 15px;
+        padding: 25px;
+        max-width: 700px;
+        width: 100%;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #29f387;
+      }
+
+      .termos {
+        max-height: 300px;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #f1f1f1;
+      }
+
+      .botoes {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        min-width: 120px;
+      }
+
+      .aceito {
+        background: #017b56;
+        color: #fff;
+      }
+
+      .aceito:hover {
+        background: #009966;
+      }
+
+      .nao-aceito {
+        background: #d62828;
+        color: #fff;
+      }
+
+      .nao-aceito:hover {
+        background: #b71c1c;
+      }
+
+      .voltar {
+        background: #0077b6;
+        color: #fff;
+      }
+
+      .voltar:hover {
+        background: #02b3ff;
+      }
+
+      /* ALTERAÇÃO - estilo da mensagem */
+      #resultado {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .ok {
+        color: #00ff77;
+      }
+
+      .erro {
+        color: #ff4444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Termos de Uso</h1>
+      <div class="termos">
+        <p>
+          Bem-vindo ao nosso site de Finanças. Ao utilizar nossos serviços, você
+          concorda em seguir os seguintes termos:
+        </p>
+        <ul>
+          <li>O conteúdo disponível tem caráter educativo e informativo.</li>
+          <li>
+            Não nos responsabilizamos por decisões financeiras tomadas com base
+            no conteúdo do site.
+          </li>
+          <li>
+            O usuário é responsável por manter seus dados de acesso seguros.
+          </li>
+          <li>
+            É proibido copiar, distribuir ou utilizar o conteúdo sem
+            autorização.
+          </li>
+          <li>
+            Reservamo-nos o direito de atualizar estes termos a qualquer
+            momento.
+          </li>
+        </ul>
+        <p>
+          Ao clicar em "Aceito os Termos", você concorda integralmente com as
+          condições apresentadas.
+        </p>
+      </div>
+      <div class="botoes">
+        <button class="aceito" onclick="aceitar()">Aceito os Termos</button>
+        <button class="nao-aceito" onclick="naoAceitar()">Não Aceito</button>
+        <a href="index.html">
+          <button class="voltar">Voltar</button>
+        </a>
+      </div>
+
+      <!-- ALTERAÇÃO - onde aparece o resultado -->
+      <div id="resultado"></div>
+    </div>
+
+    <script>
+      function aceitar() {
+        // Mostra mensagem
+        document.getElementById("resultado").innerHTML =
+          "<span class='ok'>✔ Você aceitou os termos</span>";
+
+        // Redireciona após 2 segundos
+        setTimeout(() => {
+          window.location.href = "index.html"; // 🔹 coloque aqui o link da página inicial do seu site
+        }, 2000);
+      }
+
+      function naoAceitar() {
+        // Mostra mensagem
+        document.getElementById("resultado").innerHTML =
+          "<span class='erro'>✘ Você não aceitou os termos. É necessário aceitar para continuar usando o site.</span>";
+
+        // Não redireciona
+      }
+
+      function voltar() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

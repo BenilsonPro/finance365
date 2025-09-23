@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como Usar Cartão de Crédito de Forma Inteligente</title>
+  <meta name="description" content="Guia completo e prático sobre uso inteligente do cartão de crédito: limites, juros, recompensas, gestão de faturas e estratégias para evitar endividamento." />
+  <style>
+    :root{
+      --blue-1:#0f5fc1;
+      --blue-2:#084fa3;
+      --green-1:#13a46b;
+      --green-2:#0c8e57;
+      --white:#ffffff;
+      --bg: linear-gradient(160deg, rgba(11,99,212,0.06), rgba(15,143,88,0.06));
+      --card-bg: rgba(255,255,255,0.98);
+      --accent: linear-gradient(90deg,var(--blue-1),var(--green-1));
+      --max-width:1120px;
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#042a3a}
+    a{color:var(--blue-2)}
+    header{background:linear-gradient(90deg, rgba(12,82,172,0.98), rgba(12,142,88,0.98));padding:20px 16px;color:var(--white);position:sticky;top:0;z-index:40}
+    .container{max-width:var(--max-width);margin:0 auto;padding:16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--blue-2);font-weight:800;box-shadow:0 8px 22px rgba(2,12,32,0.12)}
+    .title{font-size:18px;font-weight:700}
+    .subtitle{font-size:13px;opacity:0.95}
+
+    main{padding:28px 16px}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px}
+    .hero-card{background:var(--card-bg);border-radius:var(--radius);padding:22px;box-shadow:0 10px 30px rgba(2,12,32,0.06)}
+    .hero h1{margin:0;font-size:28px;color:var(--blue-2)}
+    .lead{margin-top:10px;color:#06324a;line-height:1.6}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:22px}
+    .content{background:var(--card-bg);border-radius:12px;padding:22px}
+    .toc{position:sticky;top:92px;height:calc(100vh - 140px);overflow:auto;padding:18px;background:rgba(255,255,255,0.97);border-radius:12px}
+
+    h2{color:var(--green-2);margin-top:20px}
+    h3{color:var(--blue-2);margin-top:16px}
+    p{color:#052f3f;line-height:1.7;text-align:justify}
+    ul{margin-left:18px}
+
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--accent);color:var(--white);font-weight:500}
+
+    .back-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.18);color:var(--white);cursor:pointer;transition:transform .28s}
+    .back-btn:hover{transform:translateY(-3px)}
+
+    footer{padding:18px;text-align:center;color:#05324a}
+
+    /* responsive adjustments */
+    @media(min-width:960px){.hero{grid-template-columns:1fr 420px}}
+    @media(max-width:959px){.grid{grid-template-columns:1fr}.toc{position:relative;height:auto}}
+    @media(max-width:520px){header{padding:12px}.title{font-size:15px}.hero h1{font-size:22px}}
+
+    /* simple reveal */
+    .reveal{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.9,.3,1)}
+    .reveal.in{opacity:1;transform:none}
+
+    pre{background:#0b2b3c;color:#fff;padding:12px;border-radius:8px;overflow:auto}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">CC</div>
+        <div>
+          <div class="title">Como Usar Cartão de Crédito</div>
+          <div class="subtitle">Guia prático e inteligente</div>
+        </div>
+      </div>
+      <div>
+        <button class="back-btn" id="backBtn">⟵ Voltar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card reveal">
+        <h1>Como Usar Cartão de Crédito de Forma Inteligente</h1>
+        <p class="lead">Este guia explica passo a passo como utilizar o cartão de crédito sem cair em armadilhas: como gerenciar limite, entender juros, controlar faturas, aproveitar recompensas e evitar endividamento. Inclui estratégias, exemplos práticos e checklist para aplicar imediatamente.</p>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <span class="pill">Aprendendo a Usar </span>
+          <span class="pill" style="background:linear-gradient(90deg,#0b63d4,#0f8f58)">Cartões</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <h3>Resumo</h3>
+        <p>Controle do cartão vem de hábito: pague a fatura integral, monitore gastos recorrentes, use recompensas estrategicamente e mantenha reserva para emergências. Aprenda a calcular juros reais e a negociar parcela se necessário.</p>
+      </aside>
+    </section>
+
+    <div class="grid">
+      <article class="content">
+
+        <!-- START ARTICLE CONTENT -->
+        <section id="intro" class="reveal">
+          <h2>Introdução</h2>
+          <p>Cartão de crédito é uma ferramenta poderosa quando usada com disciplina. Mal-utilizado, torna-se uma das principais fontes de endividamento devido a juros altos. Este guia visa transformar o leitor em um usuário estratégico — não apenas evitando dívidas, mas aproveitando vantagens como cashbacks, milhas e seguros embutidos.</p>
+        </section>
+
+        <section id="como-funciona" class="reveal">
+          <h2>Como funciona o cartão de crédito</h2>
+          <p>O cartão funciona como um empréstimo rotativo de curto prazo. Ao realizar compras, o emissor adianta o pagamento ao estabelecimento; o titular recebe a fatura mensal. Se pagar o total, não há cobrança de juros. Se optar pelo pagamento mínimo ou parcelamento, juros e encargos podem se aplicar, muitas vezes a taxas elevadas.</p>
+        </section>
+
+        <section id="principais-termos" class="reveal">
+          <h2>Principais termos que você precisa entender</h2>
+          <ul>
+            <li><strong>Limite:</strong> valor máximo disponível para compras.</li>
+            <li><strong>Fatura:</strong> cobrança mensal com o resumo de operações.</li>
+            <li><strong>Pagamento mínimo:</strong> valor mínimo exigido para ficar adimplente (mas que gera juros se pago e não quitado).</li>
+            <li><strong>Juros rotativos:</strong> aplicados quando a fatura não é paga integralmente.</li>
+            <li><strong>Parcelamento:</strong> divisão da fatura em parcelas com ou sem juros.</li>
+            <li><strong>Cashback/milhas:</strong> recompensas baseadas em gastos.</li>
+          </ul>
+        </section>
+
+        <section id="estrategias" class="reveal">
+          <h2>Estratégias para usar o cartão com inteligência</h2>
+          <h3>1. Pague sempre o total da fatura</h3>
+          <p>Essa é a regra de ouro: pagar integralmente evita juros e mantém o uso do cartão livre de custos extras.</p>
+
+          <h3>2. Use o cartão para gerenciar fluxo, não para financiar</h3>
+          <p>O cartão é ótimo para pagamentos recorrentes, reservas e compras que você planejou; não o use como linha de crédito para despesas que não foram planejadas.</p>
+
+          <h3>3. Controle recorrentes e assinaturas</h3>
+          <p>Revise mensalmente as assinaturas (streaming, nuvem, apps) e cancele o que não usa. Assinaturas esquecidas corroem seu orçamento.</p>
+
+          <h3>4. Aproveite recompensas de forma estratégica</h3>
+          <p>Calcule o valor real das recompensas e compare com possíveis custos. Milhas valem quando acompanhadas de menor custo por viagem; cashback pode ser direto e simples.</p>
+
+          <h3>5. Negocie juros e parcelas quando necessário</h3>
+          <p>Se cair em atraso, contate o emissor para negociar juros e parcelamento. Muitas instituições oferecem condições mais vantajosas do que entrar no rotativo.</p>
+        </section>
+
+        <section id="gestao-limite" class="reveal">
+          <h2>Gestão do limite e prevenção de abuso</h2>
+          <p>Não confunda limite com renda disponível. Reserve parte do limite para emergências; evite utilizar mais de 30% do limite total para manter score saudável.</p>
+        </section>
+
+        <section id="juros" class="reveal">
+          <h2>Como calcular juros e entender o impacto</h2>
+          <p>Juros de cartão são compostos e podem rapidamente elevar a dívida. Exemplo prático: se você deixa R$1.000 no rotativo com taxa de 10% ao mês, no segundo mês o juro incide sobre R$1.100, e assim por diante — o que torna a dívida exponencial.</p>
+        </section>
+
+        <section id="planejamento" class="reveal">
+          <h2>Planejamento e orçamento</h2>
+          <p>Use planilha ou aplicativo para categorizar gastos: alimentação, transporte, lazer, e dívida. Compare o total de gastos no cartão com seu caixa e ajuste limites e hábitos. Priorize faturas em atraso e corte gastos supérfluos se necessário.</p>
+        </section>
+
+        <section id="seguranca" class="reveal">
+          <h2>Segurança e proteção</h2>
+          <p>Ative alertas por transação, 2FA quando disponível no app e bloqueie transações internacionais se não planeja usá-las. Em caso de perda, bloqueie imediatamente e comunique a instituição.</p>
+        </section>
+
+        <section id="recompensas" class="reveal">
+          <h2>Recompensas, milhas e cashbacks</h2>
+          <p>Analise o custo-benefício: carteiras que oferecem benefícios podem ter anuidades altas; calcule se as vantagens gratuitas (seguro viagem, sala VIP, milhas) compensam o custo anual.</p>
+        </section>
+
+        <section id="erros" class="reveal">
+          <h2>Erros comuns</h2>
+          <ul>
+            <li>Usar o cartão para tudo sem planejar orçamento.</li>
+            <li>Pagar somente o mínimo e ignorar juros acumulados.</li>
+            <li>Não monitorar cobranças recorrentes.</li>
+            <li>Aceitar parcelamentos automáticos sem checar juros.</li>
+          </ul>
+        </section>
+
+        <section id="roadmap" class="reveal">
+          <h2>Checklist prático</h2>
+          <ol>
+            <li>Revise faturas dos últimos 3 meses.</li>
+            <li>Liste assinaturas e cancele as desnecessárias.</li>
+            <li>Defina um limite de uso mensal para o cartão.</li>
+            <li>Ative alertas e 2FA.</li>
+            <li>Planeje pagamento integral da próxima fatura.</li>
+          </ol>
+        </section>
+
+        <section id="conclusao" class="reveal">
+          <h2>Conclusão</h2>
+          <p>Cartão de crédito é uma ferramenta que, com disciplina e planejamento, traz conveniência e benefícios. O segredo é pagar a fatura integral, controlar gastos recorrentes, e usar recompensas com propósito. Se quiser, adapto este guia para formato de checklist impressível ou roteiro de vídeo para seu canal.</p>
+        </section>
+
+        <!-- END ARTICLE CONTENT -->
+
+      </article>
+
+      <aside class="toc">
+        <h3>Índice</h3>
+        <nav>
+          <ul>
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#principais-termos">Principais termos</a></li>
+            <li><a href="#estrategias">Estratégias</a></li>
+            <li><a href="#gestao-limite">Gestão do limite</a></li>
+            <li><a href="#juros">Juros</a></li>
+            <li><a href="#planejamento">Planejamento</a></li>
+            <li><a href="#seguranca">Segurança</a></li>
+            <li><a href="#recompensas">Recompensas</a></li>
+            <li><a href="#erros">Erros comuns</a></li>
+            <li><a href="#roadmap">Checklist prático</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+          </ul>
+        </nav>
+
+        <div style="margin-top:12px">
+          <button class="back-btn" id="backAside">⟵ Voltar</button>
+        </div>
+
+        <hr style="margin:14px 0" />
+        <div style="font-size:13px;color:#06324a">
+          <strong>Dicas rápidas:</strong>
+          <ul>
+            <li>Use 1 cartão principal para controle.</li>
+            <li>Prefira débito automático para pagar integralmente.</li>
+            <li>Negocie anuidade se não usar benefícios.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container"><small>Este guia é educacional e não substitui consultoria financeira personalizada.</small></div>
+  </footer>
+
+  <script>
+    // Back buttons
+    const backButtons = [document.getElementById('backBtn'), document.getElementById('backAside')];
+    backButtons.forEach(b=>{ if(b) b.addEventListener('click', ()=>{ if(window.history.length>1) window.history.back(); else window.location.href='about:blank'; }); });
+
+    // Reveal
+    const obs = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }); },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // Smooth anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', function(e){ e.preventDefault(); const t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como Avaliar Riscos e Retornos nos Investimentos</title>
+  <meta name="description" content="Guia completo sobre como avaliar riscos e retornos nos investimentos: conceitos, métricas, exemplos práticos e estratégias para equilibrar segurança e rentabilidade." />
+  <style>
+    :root{
+      --blue-1:#0a4fa5;
+      --blue-2:#073c7e;
+      --green-1:#19a873;
+      --green-2:#0d7a55;
+      --white:#ffffff;
+      --bg: linear-gradient(150deg, rgba(9,79,165,0.07), rgba(25,168,115,0.07));
+      --card-bg: rgba(255,255,255,0.97);
+      --accent: linear-gradient(90deg,var(--blue-1),var(--green-1));
+      --max-width:1140px;
+      --radius:14px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#052b3c}
+    a{color:var(--blue-2)}
+    header{background:linear-gradient(90deg, rgba(10,79,165,0.95), rgba(25,168,115,0.95));padding:20px 16px;color:var(--white);position:sticky;top:0;z-index:50}
+    .container{max-width:var(--max-width);margin:0 auto;padding:16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--green-1);font-weight:800;box-shadow:0 8px 24px rgba(2,12,32,0.15)}
+    .title{font-size:18px;font-weight:700}
+    .subtitle{font-size:13px;opacity:0.95}
+
+    main{padding:28px 16px}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px}
+    .hero-card{background:var(--card-bg);border-radius:var(--radius);padding:22px;box-shadow:0 10px 32px rgba(2,12,32,0.08)}
+    .hero h1{margin:0;font-size:28px;color:var(--blue-2)}
+    .lead{margin-top:10px;color:#06324a;line-height:1.6}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:22px}
+    .content{background:var(--card-bg);border-radius:14px;padding:22px}
+    .toc{position:sticky;top:92px;height:calc(100vh - 140px);overflow:auto;padding:18px;background:rgba(255,255,255,0.96);border-radius:14px}
+
+    h2{color:var(--green-2);margin-top:20px}
+    h3{color:var(--blue-2);margin-top:16px}
+    p{color:#06324a;line-height:1.7;text-align:justify}
+    ul{margin-left:18px}
+
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--accent);color:var(--white);font-weight:600}
+
+    .back-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:var(--white);cursor:pointer;transition:all .25s}
+    .back-btn:hover{background:rgba(255,255,255,0.08)}
+
+    footer{padding:18px;text-align:center;color:#05324a}
+
+    /* responsive */
+    @media(min-width:980px){.hero{grid-template-columns:1fr 420px}}
+    @media(max-width:979px){.grid{grid-template-columns:1fr}.toc{position:relative;height:auto}}
+    @media(max-width:520px){.hero h1{font-size:22px}.title{font-size:15px}}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:all .75s cubic-bezier(.2,.9,.3,1)}
+    .reveal.in{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">RR</div>
+        <div>
+          <div class="title">Riscos e Retornos</div>
+          <div class="subtitle">Guia completo de análise</div>
+        </div>
+      </div>
+      <div>
+        <button class="back-btn" id="backBtn">⟵ Voltar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card reveal">
+        <h1>Como Avaliar Riscos e Retornos nos Investimentos</h1>
+        <p class="lead">Aprenda a equilibrar risco e retorno, avaliando diferentes ativos, entendendo métricas essenciais e aplicando estratégias práticas para construir uma carteira sólida e alinhada com seus objetivos.</p>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <span class="pill">Análise Completa</span>
+          <span class="pill">Responsivo</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <h3>Resumo</h3>
+        <p>Investir envolve risco, mas é possível gerenciar. Este guia detalha conceitos de volatilidade, diversificação, liquidez e métricas como Sharpe e beta. Também apresenta exemplos práticos de avaliação em diferentes classes de ativos.</p>
+      </aside>
+    </section>
+
+    <div class="grid">
+      <article class="content">
+        <section id="intro" class="reveal">
+          <h2>Introdução</h2>
+          <p>Avaliar riscos e retornos é a base de qualquer decisão de investimento. Não existe retorno sem risco, mas o investidor inteligente sabe como identificar, mensurar e equilibrar esses elementos. Neste guia, exploramos os principais conceitos, ferramentas e estratégias para tomar decisões mais conscientes.</p>
+        </section>
+
+        <section id="conceitos" class="reveal">
+          <h2>Conceitos fundamentais</h2>
+          <ul>
+            <li><strong>Risco:</strong> possibilidade de perda ou variação negativa.</li>
+            <li><strong>Retorno:</strong> ganho obtido em relação ao investimento inicial.</li>
+            <li><strong>Volatilidade:</strong> variação dos preços ao longo do tempo.</li>
+            <li><strong>Liquidez:</strong> facilidade de converter em dinheiro.</li>
+            <li><strong>Horizonte de tempo:</strong> prazo de permanência no ativo.</li>
+          </ul>
+        </section>
+
+        <section id="metricas" class="reveal">
+          <h2>Métricas para avaliação</h2>
+          <h3>1. Retorno esperado</h3>
+          <p>Média ponderada dos retornos possíveis de um ativo, considerando suas probabilidades.</p>
+
+          <h3>2. Desvio-padrão</h3>
+          <p>Medida estatística da volatilidade de um ativo; quanto maior, maior o risco.</p>
+
+          <h3>3. Índice de Sharpe</h3>
+          <p>Compara o excesso de retorno de um ativo em relação ao risco assumido. Quanto maior o Sharpe, melhor a relação risco-retorno.</p>
+
+          <h3>4. Beta</h3>
+          <p>Indica a sensibilidade de um ativo em relação ao mercado. Beta &gt; 1 significa que o ativo é mais volátil que o mercado.</p>
+        </section>
+
+        <section id="estrategias" class="reveal">
+          <h2>Estratégias de equilíbrio</h2>
+          <h3>Diversificação</h3>
+          <p>Reduz o risco específico ao distribuir investimentos em diferentes ativos, setores e geografias.</p>
+
+          <h3>Alocação de ativos</h3>
+          <p>Definir percentuais entre renda fixa, variável e alternativas conforme perfil e objetivos.</p>
+
+          <h3>Rebalanceamento</h3>
+          <p>Ajustar a carteira periodicamente para manter a alocação desejada diante de mudanças de mercado.</p>
+        </section>
+
+        <section id="exemplos" class="reveal">
+          <h2>Exemplos práticos</h2>
+          <p>Um investidor conservador pode preferir 80% em renda fixa e 20% em renda variável, priorizando segurança. Já um investidor arrojado pode inverter essa proporção, assumindo mais risco em busca de retornos maiores.</p>
+        </section>
+
+        <section id="erros" class="reveal">
+          <h2>Erros comuns na avaliação</h2>
+          <ul>
+            <li>Ignorar o horizonte de tempo do investimento.</li>
+            <li>Superestimar retornos sem considerar riscos.</li>
+            <li>Confiar apenas em resultados passados.</li>
+            <li>Concentrar a carteira em poucos ativos.</li>
+          </ul>
+        </section>
+
+        <section id="checklist" class="reveal">
+          <h2>Checklist prático</h2>
+          <ol>
+            <li>Defina seu perfil de risco (conservador, moderado, arrojado).</li>
+            <li>Estabeleça objetivos claros (curto, médio, longo prazo).</li>
+            <li>Analise volatilidade e liquidez dos ativos.</li>
+            <li>Use métricas como Sharpe e beta para comparar opções.</li>
+            <li>Revise e rebalanceie sua carteira periodicamente.</li>
+          </ol>
+        </section>
+
+        <section id="conclusao" class="reveal">
+          <h2>Conclusão</h2>
+          <p>Investir é um exercício de equilíbrio entre risco e retorno. Com conhecimento, disciplina e ferramentas certas, você pode estruturar uma carteira resiliente e alinhada com seus objetivos pessoais. Este guia fornece as bases para que você avance com mais segurança no mercado financeiro.</p>
+        </section>
+      </article>
+
+      <aside class="toc">
+        <h3>Índice</h3>
+        <nav>
+          <ul>
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#conceitos">Conceitos fundamentais</a></li>
+            <li><a href="#metricas">Métricas</a></li>
+            <li><a href="#estrategias">Estratégias</a></li>
+            <li><a href="#exemplos">Exemplos</a></li>
+            <li><a href="#erros">Erros comuns</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+          </ul>
+        </nav>
+        <div style="margin-top:12px">
+          <button class="back-btn" id="backAside">⟵ Voltar</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container"><small>Este guia é educacional e não substitui consultoria financeira personalizada.</small></div>
+  </footer>
+
+  <script>
+    const backButtons = [document.getElementById('backBtn'), document.getElementById('backAside')];
+    backButtons.forEach(b=>{ if(b) b.addEventListener('click', ()=>{ if(window.history.length>1) window.history.back(); else window.location.href='about:blank'; }); });
+
+    const obs = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }); },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', function(e){ e.preventDefault(); const t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); }));
+  </script>
+</body>
+</html>

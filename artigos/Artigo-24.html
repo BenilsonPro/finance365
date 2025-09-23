@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Analisar Relatórios Financeiros de Empresas</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f0f5f9;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    nav {
+      background: #2a5298;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00c853;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #1e3c72;
+      margin-bottom: 20px;
+      border-left: 5px solid #00c853;
+      padding-left: 10px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    section p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      text-align: justify;
+      line-height: 1.8;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .indicator {
+      background-color: #e3f2fd;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 5px solid #00c853;
+      transition: transform 0.3s;
+    }
+
+    .indicator:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* BOTÃO VOLTAR AO TOPO */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #00c853;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #1e3c72;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+      header h1 { font-size: 2rem; }
+      section h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Como Analisar Relatórios Financeiros de Empresas</h1>
+    <p>Um guia completo para interpretar balanços, demonstrações de resultados e indicadores financeiros.</p>
+  </header>
+
+  <nav>
+    <a href="#balanco">Balanço Patrimonial</a>
+    <a href="#demonstracao">Demonstração de Resultados</a>
+    <a href="#indicadores">Indicadores Financeiros</a>
+  </nav>
+
+  <!-- Seção Balanço Patrimonial -->
+  <section id="balanco">
+    <h2>Balanço Patrimonial</h2>
+    <p>O balanço patrimonial é a base da análise financeira de uma empresa. Ele fornece uma visão detalhada da posição financeira em um dado momento, mostrando ativos, passivos e patrimônio líquido. Entender a composição e evolução desses itens permite avaliar a solidez da empresa e sua capacidade de honrar compromissos.</p>
+    
+    <p>Os ativos representam os bens e direitos da empresa, divididos em circulantes e não circulantes. Ativos circulantes incluem caixa, estoques e contas a receber, enquanto ativos não circulantes abrangem imóveis, equipamentos e investimentos de longo prazo. A análise detalhada de cada categoria ajuda a identificar a liquidez e a eficiência do uso de recursos.</p>
+
+    <p>Os passivos correspondem às obrigações da empresa. Passivos circulantes são dívidas e compromissos de curto prazo, enquanto passivos não circulantes incluem financiamentos e debêntures de longo prazo. Avaliar a relação entre ativos e passivos é essencial para entender a capacidade de pagamento e os riscos financeiros.</p>
+
+    <p>O patrimônio líquido representa o valor residual dos ativos após a dedução dos passivos. Ele indica a participação dos acionistas na empresa e reflete a capacidade de crescimento sustentável e reinvestimento. Um patrimônio líquido positivo e crescente é sinal de boa saúde financeira.</p>
+
+    <div class="indicator">
+      <h3>Exemplo de Análise de Ativos e Passivos</h3>
+      <p>Comparar ativos e passivos permite identificar desequilíbrios e oportunidades. Por exemplo, excesso de passivos circulantes pode indicar pressão de liquidez, enquanto aumento de ativos não circulantes pode mostrar investimento estratégico.</p>
+    </div>
+  </section>
+
+  <!-- Seção Demonstração de Resultados -->
+  <section id="demonstracao">
+    <h2>Demonstração de Resultados (DRE)</h2>
+    <p>A demonstração de resultados do exercício (DRE) detalha o desempenho operacional e financeiro da empresa ao longo de um período. Ela mostra receitas, custos, despesas, lucro bruto, lucro operacional e lucro líquido. Compreender cada linha da DRE ajuda a identificar tendências de rentabilidade e eficiência.</p>
+
+    <p>Receitas representam o valor total obtido pelas vendas de produtos ou serviços. Custos envolvem gastos diretamente relacionados à produção ou aquisição de produtos vendidos. A subtração de custos das receitas resulta no lucro bruto, que mede a eficiência operacional básica.</p>
+
+    <p>Despesas operacionais incluem marketing, administração e vendas. A análise detalhada dessas despesas ajuda a identificar áreas de desperdício e oportunidades de melhoria. O lucro operacional, resultado da receita menos custos e despesas operacionais, indica a capacidade da empresa de gerar lucro a partir de suas atividades principais.</p>
+
+    <p>O lucro líquido, após impostos e resultados financeiros, representa o retorno final para os acionistas. Comparar lucros ao longo do tempo ajuda a identificar consistência, crescimento e possíveis riscos de redução de rentabilidade.</p>
+
+    <div class="indicator">
+      <h3>Dica de Avaliação</h3>
+      <p>Analise margens de lucro (bruto, operacional e líquido) para identificar eficiência e sustentabilidade do negócio.</p>
+    </div>
+  </section>
+
+  <!-- Seção Indicadores Financeiros -->
+  <section id="indicadores">
+    <h2>Indicadores Financeiros</h2>
+    <p>Indicadores financeiros são ferramentas essenciais para medir a saúde financeira e a performance de uma empresa. Eles permitem comparar desempenho ao longo do tempo e com empresas do mesmo setor.</p>
+
+    <p>Principais indicadores:</p>
+    <ul>
+      <li><strong>Liquidez Corrente:</strong> Avalia a capacidade de pagar dívidas de curto prazo. Fórmula: Ativos Circulantes / Passivos Circulantes.</li>
+      <li><strong>Endividamento:</strong> Mede a proporção de recursos de terceiros. Fórmula: Passivos Totais / Ativos Totais.</li>
+      <li><strong>Margem de Lucro:</strong> Indica a eficiência em gerar lucro sobre vendas. Fórmula: Lucro Líquido / Receita Líquida.</li>
+      <li><strong>Retorno sobre Patrimônio (ROE):</strong> Mede rentabilidade do capital próprio. Fórmula: Lucro Líquido / Patrimônio Líquido.</li>
+    </ul>
+
+    <div class="indicator">
+      <h3>Exemplo de Análise de Indicadores</h3>
+      <p>Um aumento da liquidez corrente indica maior capacidade de pagamento. Um ROE elevado mostra bom retorno sobre o investimento dos acionistas.</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Guia Financeiro. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <div id="backToTop">&#8679;</div>
+
+  <script>
+    // Botão voltar ao topo
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300){
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Animação números indicadores (exemplo)
+    const indicators = document.querySelectorAll('.indicator p');
+    indicators.forEach((p) => {
+      p.addEventListener('mouseenter', () => {
+        p.style.color = '#1e3c72';
+      });
+      p.addEventListener('mouseleave', () => {
+        p.style.color = '#222';
+      });
+    });
+  </script>
+
+</body>
+</html>

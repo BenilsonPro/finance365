@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Educação Financeira para Jovens: Como Começar</title>
+    <meta
+      name="description"
+      content="Guia completo e detalhado de educação financeira para jovens: aprenda a controlar gastos, criar hábitos financeiros saudáveis, investir e planejar o futuro."
+    />
+    <meta name="author" content="Seu Nome" />
+    <meta name="theme-color" content="#0d47a1" />
+
+    <meta
+      property="og:title"
+      content="Educação Financeira para Jovens: Como Começar"
+    />
+    <meta
+      property="og:description"
+      content="Aprenda passo a passo a controlar suas finanças, criar hábitos saudáveis e investir no futuro sem precisar de planilhas complicadas."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <style>
+      :root {
+        --azul: #0d47a1;
+        --azul-2: #1565c0;
+        --verde: #2e7d32;
+        --verde-2: #43a047;
+        --branco: #ffffff;
+        --cinza-10: #0b1320;
+        --cinza-40: #5a6978;
+        --cinza-90: #f5f7fa;
+        --radius: 16px;
+        --shadow: 0 8px 24px rgba(13, 71, 161, 0.15);
+        --shadow-soft: 0 2px 10px rgba(13, 71, 161, 0.1);
+        --maxw: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+        color: var(--cinza-10);
+        background: linear-gradient(180deg, #fff, var(--cinza-90));
+      }
+
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--branco);
+        box-shadow: var(--shadow-soft);
+        border-bottom: 3px solid rgba(13, 71, 161, 0.06);
+      }
+      .header-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px 16px;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: var(--azul);
+        border: 2px solid rgba(13, 71, 161, 0.2);
+        border-radius: 999px;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.15s ease, background 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .back-btn:hover {
+        background: rgba(13, 71, 161, 0.08);
+        transform: translateX(-1px);
+        border-color: rgba(13, 71, 161, 0.35);
+      }
+      .back-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brand {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand .logo {
+        color: white;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--azul), var(--verde));
+        box-shadow: var(--shadow);
+      }
+      .brand h1 {
+        font-size: 16px;
+        margin: 0;
+        color: var(--azul);
+        letter-spacing: 0.3px;
+      }
+
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background: linear-gradient(90deg, var(--verde), var(--azul));
+        z-index: 60;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+        border-bottom: 1px solid rgba(13, 71, 161, 0.08);
+      }
+      .hero-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 42px 16px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .hero h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        margin: 0 0 12px;
+        color: var(--azul);
+      }
+      .hero p {
+        margin: 0 0 16px;
+        color: var(--cinza-40);
+        line-height: 1.7;
+        font-size: 18px;
+      }
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .badge {
+        background: var(--branco);
+        color: var(--azul);
+        border: 1px solid rgba(13, 71, 161, 0.15);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .hero-card {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+      .stat {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 8px;
+        border-radius: 12px;
+      }
+      .stat + .stat {
+        border-top: 1px dashed rgba(13, 71, 161, 0.15);
+        padding-top: 16px;
+        margin-top: 16px;
+      }
+      .stat .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 71, 161, 0.15),
+          rgba(46, 125, 50, 0.15)
+        );
+      }
+      .stat strong {
+        color: var(--azul);
+        font-size: 18px;
+      }
+
+      main {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 24px 16px 60px;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 28px;
+      }
+
+      .toc {
+        position: sticky;
+        top: 78px;
+        align-self: start;
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+        padding: 18px;
+      }
+      .toc h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        color: var(--azul);
+      }
+      .toc a {
+        display: block;
+        text-decoration: none;
+        color: var(--cinza-40);
+        padding: 6px 4px;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      .toc a[aria-current="true"],
+      .toc a:hover {
+        color: var(--azul);
+        background: rgba(13, 71, 161, 0.08);
+      }
+
+      article {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 26px;
+      }
+      article h2 {
+        color: var(--azul);
+        margin-top: 32px;
+      }
+      article h3 {
+        color: var(--verde);
+        margin-top: 28px;
+      }
+      article p {
+        color: var(--cinza-10);
+        line-height: 1.85;
+      }
+      article ul,
+      article ol {
+        line-height: 1.85;
+        color: var(--cinza-10);
+      }
+      article .callout {
+        border-left: 6px solid var(--verde);
+        background: #f0f9f0;
+        padding: 14px 16px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .card {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .checklist li {
+        list-style: none;
+        position: relative;
+        padding-left: 28px;
+        margin: 10px 0;
+      }
+      .checklist li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, var(--verde), var(--verde-2));
+        box-shadow: 0 2px 6px rgba(46, 125, 50, 0.35);
+      }
+      .checklist li::after {
+        content: "✓";
+        position: absolute;
+        left: 4px;
+        top: 0.1em;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+      }
+
+      .faq-item {
+        border: 1px solid rgba(13, 71, 161, 0.12);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .faq-q {
+        width: 100%;
+        text-align: left;
+        background: #eef6ff;
+        color: var(--azul);
+        border: none;
+        padding: 14px 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .faq-a {
+        display: none;
+        padding: 14px 16px;
+        background: white;
+      }
+      .faq-item.open .faq-a {
+        display: block;
+      }
+
+      .quote {
+        border-left: 6px solid var(--azul-2);
+        background: #eef6ff;
+        padding: 14px 16px;
+        border-radius: 12px;
+        color: var(--cinza-10);
+      }
+
+      .cta-box {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 71, 161, 0.07),
+          rgba(46, 125, 50, 0.07)
+        );
+        border: 1px solid rgba(13, 71, 161, 0.12);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .cta-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-primary,
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 999px;
+        padding: 12px 16px;
+        border: 2px solid transparent;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--azul), var(--azul-2));
+        color: white;
+      }
+      .btn-primary:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+      }
+      .btn-outline {
+        background: white;
+        color: var(--verde);
+        border-color: rgba(46, 125, 50, 0.35);
+      }
+      .btn-outline:hover {
+        background: #f0f9f0;
+      }
+
+      footer {
+        margin-top: 40px;
+        padding: 24px 16px;
+        background: #0d2c66;
+        color: #cfe1ff;
+      }
+      footer .inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: center;
+      }
+      footer a {
+        color: #cfe1ff;
+      }
+
+      @media (max-width: 1000px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        main {
+          grid-template-columns: 1fr;
+        }
+        .toc {
+          position: static;
+        }
+        .cta-box {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .back-btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <a
+          class="back-btn"
+          id="btnVoltar"
+          href="#"
+          aria-label="Voltar para a página anterior"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Voltar</span>
+        </a>
+        <div class="brand" aria-label="Identidade do site">
+          <div class="logo">💰</div>
+          <h1>Finance365</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h2>Educação Financeira para Jovens: Guia Completo</h2>
+          <p>
+            Aprenda passo a passo como organizar suas finanças, criar hábitos
+            saudáveis, investir e planejar seu futuro sem precisar de planilhas
+            complicadas.
+          </p>
+          <div class="badge-row">
+            <span class="badge">Investimento</span>
+            <span class="badge">Economia</span>
+            <span class="badge">Planejamento</span>
+            <span class="badge">Finanças Pessoais</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="stat">
+            <div class="icon">📘</div>
+            <div><strong>3.000+</strong> palavras detalhadas</div>
+          </div>
+          <div class="stat">
+            <div class="icon">⚡</div>
+            <div><strong>Passo a passo</strong> completo</div>
+          </div>
+          <div class="stat">
+            <div class="icon">💡</div>
+            <div><strong>Dicas práticas</strong> aplicáveis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <nav class="toc" aria-label="Sumário">
+        <h3>Sumário</h3>
+        <a href="#introducao">Introdução</a>
+        <a href="#passo1">Passo 1: Entenda sua situação financeira</a>
+        <a href="#passo2">Passo 2: Crie hábitos de economia</a>
+        <a href="#passo3">Passo 3: Defina objetivos e metas</a>
+        <a href="#passo4">Passo 4: Aprenda sobre investimentos</a>
+        <a href="#passo5">Passo 5: Planeje seu futuro financeiro</a>
+        <a href="#conclusao">Conclusão</a>
+      </nav>
+
+      <article>
+        <h2 id="introducao">Introdução</h2>
+        <p>
+          A educação financeira é essencial para jovens que desejam ter
+          independência, alcançar metas e construir riqueza de forma
+          sustentável. Com o conhecimento certo, é possível controlar gastos,
+          criar hábitos saudáveis e investir sem precisar de planilhas
+          complexas.
+        </p>
+        <p>
+          Este guia completo aborda os principais passos que qualquer jovem pode
+          seguir, incluindo dicas práticas, exemplos reais e um passo a passo
+          detalhado para organizar e fazer crescer suas finanças.
+        </p>
+
+        <h2 id="passo1">Passo 1: Entenda sua situação financeira</h2>
+        <p>
+          O primeiro passo para controlar suas finanças é entender exatamente
+          onde você está financeiramente. Isso significa:
+        </p>
+        <ul class="checklist">
+          <li>Analisar sua renda mensal (salário, mesada, trabalhos extras)</li>
+          <li>Registrar todos os seus gastos fixos e variáveis</li>
+          <li>Identificar despesas desnecessárias que podem ser cortadas</li>
+          <li>Verificar dívidas existentes e taxas de juros associadas</li>
+        </ul>
+        <p>
+          Ao ter clareza sobre sua situação atual, você poderá tomar decisões
+          mais conscientes e definir prioridades financeiras.
+        </p>
+
+        <h2 id="passo2">Passo 2: Crie hábitos de economia</h2>
+        <p>
+          Economizar não significa viver com privações, mas sim direcionar
+          recursos de forma inteligente. Algumas práticas recomendadas:
+        </p>
+        <ul class="checklist">
+          <li>Defina um valor mensal para poupar ou investir</li>
+          <li>Evite compras impulsivas usando listas e planejamentos</li>
+          <li>Pesquise preços e aproveite promoções</li>
+          <li>Use aplicativos de finanças para acompanhar seus gastos</li>
+        </ul>
+        <p>
+          Pequenas economias constantes podem se transformar em grandes
+          oportunidades no futuro.
+        </p>
+
+        <h2 id="passo3">Passo 3: Defina objetivos e metas</h2>
+        <p>
+          Sem metas, o dinheiro pode se perder em despesas sem sentido. Definir
+          objetivos claros ajuda a manter o foco:
+        </p>
+        <ul class="checklist">
+          <li>Curto prazo: compras planejadas, viagens pequenas</li>
+          <li>Médio prazo: curso profissionalizante, intercâmbio</li>
+          <li>Longo prazo: aposentadoria, investimento em imóveis ou ações</li>
+        </ul>
+        <p>
+          Ao estabelecer metas, você cria motivação para poupar e investir com
+          disciplina.
+        </p>
+
+        <h2 id="passo4">Passo 4: Aprenda sobre investimentos</h2>
+        <p>
+          Investir é essencial para multiplicar seu dinheiro e alcançar
+          objetivos maiores. Algumas estratégias iniciais:
+        </p>
+        <ul class="checklist">
+          <li>
+            Comece pelo Tesouro Direto ou CDBs, investimentos de baixo risco
+          </li>
+          <li>Aprenda sobre fundos de investimento e ações gradualmente</li>
+          <li>Evite promessas de retorno rápido, busque consistência</li>
+          <li>Use simuladores e plataformas confiáveis para estudar</li>
+        </ul>
+        <p>
+          O conhecimento sobre investimentos permite que você faça escolhas
+          conscientes e seguras.
+        </p>
+
+        <h2 id="passo5">Passo 5: Planeje seu futuro financeiro</h2>
+        <p>
+          Um bom planejamento garante estabilidade e segurança ao longo da vida.
+          Algumas dicas:
+        </p>
+        <ul class="checklist">
+          <li>
+            Monte uma reserva de emergência equivalente a 3-6 meses de despesas
+          </li>
+          <li>Considere planos de aposentadoria privados e previdência</li>
+          <li>Revise seus objetivos regularmente</li>
+          <li>Eduque-se continuamente sobre finanças e investimentos</li>
+        </ul>
+        <p>
+          Com planejamento, você estará preparado para oportunidades e
+          imprevistos sem comprometer seu bem-estar.
+        </p>
+
+        <h2 id="conclusao">Conclusão</h2>
+        <p>
+          Seguindo este guia, qualquer jovem pode dar os primeiros passos para
+          construir uma vida financeira saudável e sustentável. A chave é
+          disciplina, conhecimento e ação contínua. Comece agora, crie seus
+          hábitos financeiros e invista no seu futuro com segurança e confiança.
+        </p>
+
+        <div class="cta-box">
+          <div>
+            <h3>Quer aprofundar ainda mais?</h3>
+            <p>
+              Inscreva-se em nosso curso completo de educação financeira para
+              jovens e comece a transformar sua vida hoje.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="#" class="btn-primary">Acessar Curso</a>
+            <a href="#" class="btn-outline">Saiba Mais</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div>© 2025 Finance365. Todos os direitos reservados.</div>
+        <div>
+          <p>
+            “Conteúdo criado para inspirar e orientar suas decisões financeiras com responsabilidade.”
+          </p>
+          
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btnVoltar = document.getElementById("btnVoltar");
+      btnVoltar.addEventListener("click", (e) => {
+        e.preventDefault();
+        history.back();
+      });
+
+      const progress = document.querySelector(".progress");
+      window.addEventListener("scroll", () => {
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const progressHeight = (window.scrollY / totalHeight) * 100;
+        progress.style.width = progressHeight + "%";
+      });
+
+      const tocLinks = document.querySelectorAll(".toc a");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        document.querySelectorAll("article h2").forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (scrollY >= sectionTop) current = section.getAttribute("id");
+        });
+        tocLinks.forEach((link) => {
+          link.removeAttribute("aria-current");
+          if (link.getAttribute("href") === "#" + current)
+            link.setAttribute("aria-current", "true");
+        });
+      });
+    </script>
+  </body>
+</html>

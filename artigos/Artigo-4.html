@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como Sair das Dívidas e Recuperar o Controle Financeiro</title>
+    <meta
+      name="description"
+      content="Guia completo, prático e detalhado para sair das dívidas, negociar com credores, organizar o orçamento e recuperar o controle financeiro com passos simples."
+    />
+    <meta name="author" content="Seu Nome" />
+    <meta name="theme-color" content="#0d47a1" />
+
+    <!-- SEO básico -->
+    <meta
+      property="og:title"
+      content="Como Sair das Dívidas e Recuperar o Controle Financeiro"
+    />
+    <meta
+      property="og:description"
+      content="Um guia passo a passo com técnicas como Avalanche e Bola de Neve, estratégias de negociação e um plano de 30 dias para voltar ao azul."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <style>
+      :root {
+        --azul: #0d47a1; /* azul escuro principal */
+        --azul-2: #1565c0; /* azul secundário */
+        --verde: #2e7d32; /* verde principal */
+        --verde-2: #43a047; /* verde destaque */
+        --branco: #ffffff; /* branco base */
+        --cinza-10: #0b1320; /* cinza muito escuro para texto forte */
+        --cinza-40: #5a6978; /* cinza médio para textos */
+        --cinza-90: #f5f7fa; /* fundo suave */
+        --radius: 16px;
+        --shadow: 0 8px 24px rgba(13, 71, 161, 0.15);
+        --shadow-soft: 0 2px 10px rgba(13, 71, 161, 0.1);
+        --maxw: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--cinza-10);
+        background: linear-gradient(180deg, #fff, var(--cinza-90));
+      }
+
+      /* Header */
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--branco);
+        box-shadow: var(--shadow-soft);
+        border-bottom: 3px solid rgba(13, 71, 161, 0.06);
+      }
+      .header-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px 16px;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: var(--azul);
+        border: 2px solid rgba(13, 71, 161, 0.2);
+        border-radius: 999px;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.15s ease, background 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .back-btn:hover {
+        background: rgba(13, 71, 161, 0.08);
+        transform: translateX(-1px);
+        border-color: rgba(13, 71, 161, 0.35);
+      }
+      .back-btn:focus-visible {
+        outline: 3px solid rgba(67, 160, 71, 0.6);
+        outline-offset: 2px;
+      }
+      .back-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brand {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand .logo {
+        color: white;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--azul), var(--verde));
+        box-shadow: var(--shadow);
+      }
+      .brand h1 {
+        font-size: 16px;
+        margin: 0;
+        color: var(--azul);
+        letter-spacing: 0.3px;
+      }
+
+      /* Barra de progresso de leitura */
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background: linear-gradient(90deg, var(--verde), var(--azul));
+        z-index: 60;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+        border-bottom: 1px solid rgba(13, 71, 161, 0.08);
+      }
+      .hero-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 42px 16px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .hero h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        margin: 0 0 12px;
+        color: var(--azul);
+      }
+      .hero p {
+        margin: 0 0 16px;
+        color: var(--cinza-40);
+        line-height: 1.7;
+        font-size: 18px;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .badge {
+        background: var(--branco);
+        color: var(--azul);
+        border: 1px solid rgba(13, 71, 161, 0.15);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .hero-card {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+      .stat {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 8px;
+        border-radius: 12px;
+      }
+      .stat + .stat {
+        border-top: 1px dashed rgba(13, 71, 161, 0.15);
+        padding-top: 16px;
+        margin-top: 16px;
+      }
+      .stat .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 71, 161, 0.15),
+          rgba(46, 125, 50, 0.15)
+        );
+      }
+      .stat strong {
+        color: var(--azul);
+        font-size: 18px;
+      }
+
+      /* Conteúdo */
+      main {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 24px 16px 60px;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 28px;
+      }
+
+      /* Sumário lateral */
+      .toc {
+        position: sticky;
+        top: 78px;
+        align-self: start;
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+        padding: 18px;
+      }
+      .toc h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        color: var(--azul);
+      }
+      .toc a {
+        display: block;
+        text-decoration: none;
+        color: var(--cinza-40);
+        padding: 6px 4px;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      .toc a[aria-current="true"],
+      .toc a:hover {
+        color: var(--azul);
+        background: rgba(13, 71, 161, 0.08);
+      }
+
+      article {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 26px;
+      }
+      article h2 {
+        color: var(--azul);
+        margin-top: 32px;
+      }
+      article h3 {
+        color: var(--verde);
+        margin-top: 28px;
+      }
+      article p {
+        color: var(--cinza-10);
+        line-height: 1.85;
+      }
+      article ul,
+      article ol {
+        line-height: 1.85;
+        color: var(--cinza-10);
+      }
+      article .callout {
+        border-left: 6px solid var(--verde);
+        background: #f0f9f0;
+        padding: 14px 16px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .card {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .checklist li {
+        list-style: none;
+        position: relative;
+        padding-left: 28px;
+        margin: 10px 0;
+      }
+      .checklist li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, var(--verde), var(--verde-2));
+        box-shadow: 0 2px 6px rgba(46, 125, 50, 0.35);
+      }
+      .checklist li::after {
+        content: "✓";
+        position: absolute;
+        left: 4px;
+        top: 0.1em;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+      }
+
+      .faq-item {
+        border: 1px solid rgba(13, 71, 161, 0.12);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .faq-q {
+        width: 100%;
+        text-align: left;
+        background: #eef6ff;
+        color: var(--azul);
+        border: none;
+        padding: 14px 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .faq-a {
+        display: none;
+        padding: 14px 16px;
+        background: white;
+      }
+      .faq-item.open .faq-a {
+        display: block;
+      }
+
+      .quote {
+        border-left: 6px solid var(--azul-2);
+        background: #eef6ff;
+        padding: 14px 16px;
+        border-radius: 12px;
+        color: var(--cinza-10);
+      }
+
+      .cta-box {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 71, 161, 0.07),
+          rgba(46, 125, 50, 0.07)
+        );
+        border: 1px solid rgba(13, 71, 161, 0.12);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .cta-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-primary,
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 999px;
+        padding: 12px 16px;
+        border: 2px solid transparent;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--azul), var(--azul-2));
+        color: white;
+      }
+      .btn-primary:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+      }
+      .btn-outline {
+        background: white;
+        color: var(--verde);
+        border-color: rgba(46, 125, 50, 0.35);
+      }
+      .btn-outline:hover {
+        background: #f0f9f0;
+      }
+
+      /* Rodapé */
+      footer {
+        margin-top: 40px;
+        padding: 24px 16px;
+        background: #0d2c66;
+        color: #cfe1ff;
+      }
+      footer .inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: center;
+      }
+      footer a {
+        color: #cfe1ff;
+      }
+
+      /* Responsividade */
+      @media (max-width: 1000px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        main {
+          grid-template-columns: 1fr;
+        }
+        .toc {
+          position: static;
+        }
+        .cta-box {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .back-btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <a
+          class="back-btn"
+          id="btnVoltar"
+          href="#"
+          aria-label="Voltar para a página anterior"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Voltar</span>
+        </a>
+        <div class="brand" aria-label="Identidade do site">
+          <div class="logo" aria-hidden="true">F$</div>
+          <h1>Finanças Inteligentes</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h2>Como Sair das Dívidas e Recuperar o Controle Financeiro</h2>
+          <p>
+            Estar endividado não define quem você é, mas sim uma fase que pode
+            ser superada com método, clareza e constância. Neste guia
+            aprofundado você vai aprender a organizar suas contas, negociar com
+            credores, escolher a estratégia certa (Avalanche ou Bola de Neve),
+            construir um plano de 30 dias e evitar voltar para o vermelho. Tudo
+            em passos práticos.
+          </p>
+          <div class="badge-row">
+            <span class="badge">Passo a passo</span>
+            <span class="badge">Modelos práticos</span>
+            <span class="badge">Renegociação</span>
+            <span class="badge">Avalanche &amp; Bola de Neve</span>
+            <span class="badge">Plano 30 dias</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Destaques do guia">
+          <div class="stat">
+            <div class="icon" aria-hidden="true">💡</div>
+            <div>
+              <strong>Objetivo:</strong>
+              <div>
+                Quitar dívidas com método, liberar renda e formar reserva.
+              </div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="icon" aria-hidden="true">📊</div>
+            <div>
+              <strong>Ferramentas:</strong>
+              <div>
+                Orçamento 50-30-20, planilha de dívidas, checklist diário.
+              </div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <div>
+              <strong>Proteção:</strong>
+              <div>Hábitos antiendividamento e gatilhos de alerta.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <main role="main">
+      <nav class="toc" aria-label="Sumário do artigo">
+        <h3>Navegação</h3>
+        <a href="#intro">1. Ponto de Partida</a>
+        <a href="#diagnostico">2. Diagnóstico Financeiro</a>
+        <a href="#orcamento">3. Orçamento e Cortes</a>
+        <a href="#estrategias">4. Estratégias: Avalanche x Bola de Neve</a>
+        <a href="#negociacao">5. Renegociação Eficiente</a>
+        <a href="#renda">6. Aumente sua Renda</a>
+        <a href="#fundo">7. Fundo de Emergência</a>
+        <a href="#plano30">8. Plano de 30 Dias</a>
+        <a href="#habitos">9. Hábitos Antidívida</a>
+        <a href="#faq">10. Perguntas Frequentes</a>
+        <a href="#conclusao">11. Conclusão</a>
+      </nav>
+
+      <article>
+        <section id="intro">
+          <h2>1) Ponto de Partida: mude a relação com o dinheiro</h2>
+          <p>
+            Sair das dívidas é tanto uma tarefa matemática quanto
+            comportamental. Em números, você precisa gastar menos do que ganha e
+            direcionar a diferença para quitar o que deve. Em comportamento, é
+            vital criar rotinas simples que evitem novas pendências, como
+            registrar despesas, usar lembretes de vencimento e planejar compras.
+            A boa notícia: é totalmente possível reverter o cenário, mesmo
+            começando com pouco. O que importa é ter um plano e segui-lo com
+            consistência.
+          </p>
+          <div class="quote">
+            <strong>Ideia-chave:</strong> dívida é um <em>sintoma</em>. O
+            tratamento envolve organização, negociação e novas decisões no dia a
+            dia. O objetivo não é apenas zerar o saldo negativo, mas ganhar
+            <em>liberdade</em> para usar o seu dinheiro com propósito.
+          </div>
+        </section>
+
+        <section id="diagnostico">
+          <h2>2) Diagnóstico Financeiro: raio‑X das dívidas e da renda</h2>
+          <p>
+            Antes de agir, mapeie tudo. Liste cada dívida com:
+            <strong>valor total</strong>, <strong>taxa de juros</strong>,
+            <strong>parcela</strong>, <strong>vencimento</strong> e
+            <strong>consequência</strong> (ex.: restrição no CPF, corte de
+            serviço). Faça o mesmo com sua renda e despesas fixas/variáveis. O
+            objetivo é descobrir quanto pode sobrar por mês para acelerar os
+            pagamentos e quais contas exigem ação imediata.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Planilha simples de dívidas</h3>
+              <ul class="checklist">
+                <li>Credor (banco, cartão, loja).</li>
+                <li>Saldo devedor e número de parcelas restantes.</li>
+                <li>Taxa de juros mensal ou anual.</li>
+                <li>Vencimento e dias em atraso.</li>
+                <li>Consequências de não pagar agora.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Mapa de renda e despesas</h3>
+              <ul class="checklist">
+                <li>Renda líquida mensal (salário, comissões, freelas).</li>
+                <li>
+                  Despesas essenciais (moradia, alimentação, transporte, saúde).
+                </li>
+                <li>Despesas variáveis (lazer, assinaturas, extras).</li>
+                <li>Pagamentos recorrentes e taxas bancárias.</li>
+                <li>Potenciais cortes e renegociações de serviços.</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            Se possível, crie um <strong>índice de prioridade</strong>: dívidas
+            com juros altos e risco de corte de serviço tendem a vir primeiro.
+            As de menor juros podem aguardar enquanto você elimina as mais
+            caras. Em seguida, escolha a estratégia de quitação e defina metas
+            mensais realistas.
+          </p>
+        </section>
+
+        <section id="orcamento">
+          <h2>3) Orçamento e Cortes Inteligentes</h2>
+          <p>
+            O orçamento é seu comando central. Uma regra prática é o
+            <strong>50‑30‑20</strong>: 50% das suas entradas para necessidades,
+            30% para desejos e 20% para objetivos (quitar dívidas e formar
+            reserva). Quando há endividamento relevante, é comum ajustar
+            temporariamente para algo como <strong>60‑20‑20</strong> ou até
+            <strong>70‑15‑15</strong>, priorizando pagamentos.
+          </p>
+          <div class="callout">
+            <strong>Dica:</strong> renegocie planos de telefone/internet, corte
+            assinaturas pouco usadas, opte por marcas alternativas e planeje
+            compras de mercado com lista fechada. Pequenas economias recorrentes
+            viram uma enxurrada de recursos para quitar dívidas.
+          </div>
+          <h3>Onde cortar primeiro</h3>
+          <ul>
+            <li>
+              <strong>Assinaturas</strong>: streaming, apps e clubes. Mantenha
+              só o essencial.
+            </li>
+            <li>
+              <strong>Tarifas bancárias</strong>: busque contas digitais sem
+              custo.
+            </li>
+            <li>
+              <strong>Alimentação fora</strong>: cozinhe mais em casa e leve
+              marmita.
+            </li>
+            <li>
+              <strong>Transporte</strong>: combine caronas, use transporte
+              público quando possível.
+            </li>
+            <li>
+              <strong>Energia e água</strong>: consumo consciente reduz a conta
+              e ajuda o planeta.
+            </li>
+          </ul>
+        </section>
+
+        <section id="estrategias">
+          <h2>4) Estratégias de Quitação: Avalanche x Bola de Neve</h2>
+          <p>
+            Existem duas abordagens populares e eficazes para quitar dívidas.
+            Ambas funcionam — a melhor é a que você consegue manter até o fim.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>⚡ Avalanche (juros maiores primeiro)</h3>
+              <p>
+                Você direciona todo o extra para a dívida com
+                <strong>maior taxa de juros</strong>, pagando o mínimo nas
+                demais. Ao quitar a primeira, migra o extra para a próxima de
+                maior taxa. É matematicamente mais econômico, pois reduz o total
+                de juros pagos ao longo do tempo.
+              </p>
+              <ul>
+                <li>Vantagem: menor custo total.</li>
+                <li>Desafio: vitórias podem demorar um pouco mais.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>❄️ Bola de Neve (saldos menores primeiro)</h3>
+              <p>
+                Aqui, você foca em quitar a
+                <strong>dívida de menor saldo</strong>, independentemente do
+                juro. Ao eliminá-la, o valor liberado soma-se ao pagamento da
+                próxima menor, criando um efeito motivador de progresso rápido.
+              </p>
+              <ul>
+                <li>Vantagem: motivação e sensação de avanço.</li>
+                <li>Desafio: pode custar um pouco mais em juros.</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <strong>Como escolher?</strong> Se você precisa de estímulo
+            emocional para manter o plano, comece pela Bola de Neve. Se já está
+            determinado e quer economizar o máximo, opte pela Avalanche. Não há
+            problema em começar de um jeito e migrar depois, se necessário.
+          </p>
+        </section>
+
+        <section id="negociacao">
+          <h2>5) Renegociação Eficiente com Credores</h2>
+          <p>
+            Negociar não é vergonha; é estratégia. Os credores geralmente
+            preferem receber menos agora do que correr o risco de não receber
+            nada. Prepare‑se antes de entrar em contato:
+          </p>
+          <ul class="checklist">
+            <li>
+              Tenha o <strong>valor que pode pagar</strong> por mês e um
+              <strong>valor à vista</strong> (se houver) definidos.
+            </li>
+            <li>
+              Peça <strong>redução de juros</strong> e
+              <strong>descontos</strong> para quitação antecipada.
+            </li>
+            <li>
+              Prefira <strong>acordos por escrito</strong> e confira cláusulas
+              antes de assinar.
+            </li>
+            <li>
+              Fuja de propostas que <strong>aumentem o prazo</strong> sem
+              reduzir juros — podem sair mais caras.
+            </li>
+            <li>
+              Evite novas linhas de crédito para pagar dívidas antigas, exceto
+              se a taxa for <em>bem</em> menor e com prazo curto.
+            </li>
+          </ul>
+          <div class="callout">
+            <strong>Script rápido de negociação:</strong>
+            “Eu quero pagar e estou organizando minhas finanças. Consigo
+            destinar R$ X por mês (ou R$ Y à vista). Vocês oferecem
+            <em>redução de juros</em> e <em>desconto</em> para acordo? Preciso
+            do contrato por escrito.”
+          </div>
+        </section>
+
+        <section id="renda">
+          <h2>6) Aumente sua Renda: acelere o plano</h2>
+          <p>
+            Cortar gastos libera recursos; aumentar a renda acelera o processo.
+            Pense em habilidades que você já possui e podem virar dinheiro em
+            pouco tempo.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Ideias rápidas</h3>
+              <ul>
+                <li>
+                  Freelas pontuais (design, texto, manutenção, aula particular).
+                </li>
+                <li>Vendas online de itens parados em casa.</li>
+                <li>
+                  Serviços locais: passeios de pets, pequenos reparos,
+                  jardinagem.
+                </li>
+                <li>Cozinhar por encomenda para vizinhos/colegas.</li>
+                <li>
+                  Horas extras combinadas com o empregador, quando possível.
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Como usar a renda extra</h3>
+              <ul class="checklist">
+                <li>Direcione 80–100% para a dívida foco.</li>
+                <li>
+                  Separe 10% para um
+                  <strong>minifundo de emergência</strong> até ter R$ 500–1.000.
+                </li>
+                <li>
+                  Evite aumentar o padrão de consumo enquanto estiver no plano.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="fundo">
+          <h2>7) Fundo de Emergência: o para‑quedas do orçamento</h2>
+          <p>
+            Sem reserva, qualquer imprevisto empurra você de volta ao crédito
+            caro. O ideal é alcançar de <strong>3 a 6 meses</strong> de despesas
+            essenciais. Enquanto quita dívidas, monte um
+            <strong>minifundo</strong> inicial de R$ 500 a R$ 1.000 para segurar
+            emergências pequenas e evitar novas parcelas.
+          </p>
+          <p>
+            Guarde em um local <strong>seguro e líquido</strong> (como conta
+            remunerada ou CDB diário). Não confunda com investimento para lucro;
+            a função aqui é proteção e acesso rápido.
+          </p>
+        </section>
+
+        <section id="plano30">
+          <h2>8) Plano de 30 Dias para Virar o Jogo</h2>
+          <p>
+            Um mês focado pode criar um impulso enorme. Use este plano como guia
+            e ajuste à sua realidade.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Semanas 1 e 2 — Fundamentos</h3>
+              <ol>
+                <li>Raio‑X das dívidas e orçamento (50‑30‑20 adaptado).</li>
+                <li>Escolha da estratégia (Avalanche/Bola de Neve).</li>
+                <li>Contatos de negociação com credores prioritários.</li>
+                <li>
+                  Cortes imediatos de gastos e cancelamento de assinaturas.
+                </li>
+                <li>Definição de metas de pagamento e data de revisão.</li>
+              </ol>
+            </div>
+            <div class="card">
+              <h3>Semanas 3 e 4 — Execução e ajuste</h3>
+              <ol>
+                <li>Pagamento extra focado na dívida prioridade.</li>
+                <li>Renda extra direcionada 80–100% para a quitação.</li>
+                <li>Formação do minifundo (R$ 500–1.000).</li>
+                <li>Revisão semanal do orçamento e dos resultados.</li>
+                <li>Checklist de hábitos e gatilhos de alerta.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="callout">
+            <strong>Checklist diário:</strong> registrar despesas, conferir
+            saldo, olhar o calendário de vencimentos, evitar compras por impulso
+            (aguarde 24 horas) e revisar sua dívida foco.
+          </div>
+        </section>
+
+        <section id="habitos">
+          <h2>9) Hábitos Antidívida e Gatilhos de Alerta</h2>
+          <p>
+            Sair do endividamento é um processo contínuo. A manutenção é tão
+            importante quanto a quitação em si. Crie um ambiente que facilite
+            boas decisões.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Hábitos que funcionam</h3>
+              <ul class="checklist">
+                <li>
+                  Usar <strong>apenas um cartão</strong> (ou nenhum) até
+                  estabilizar.
+                </li>
+                <li>
+                  Definir <strong>limites de gasto semanais</strong> e revisar
+                  toda sexta‑feira.
+                </li>
+                <li>
+                  Programar <strong>débitos automáticos</strong> de contas
+                  essenciais.
+                </li>
+                <li>
+                  Ter um <strong>dia do dinheiro</strong> na semana para
+                  atualizar tudo.
+                </li>
+                <li>
+                  Praticar a <strong>regra das 24 horas</strong> para compras
+                  não planejadas.
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Gatilhos de alerta</h3>
+              <ul>
+                <li>
+                  Usar crédito rotativo ou cheque especial com frequência.
+                </li>
+                <li>Empurrar parcelas para frente sem reduzir juros.</li>
+                <li>Não saber quanto entra e sai por mês.</li>
+                <li>Comprar por estresse, tédio ou recompensa.</li>
+                <li>Atrasar contas básicas (energia, água, moradia).</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq">
+          <h2>10) Perguntas Frequentes</h2>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Devo fazer outro empréstimo para quitar uma dívida cara?
+            </button>
+            <div class="faq-a">
+              <p>
+                Só vale a pena se
+                <strong>a taxa do novo empréstimo for muito menor</strong> e o
+                prazo for curto, com parcelas que cabem no orçamento. Caso
+                contrário, você apenas troca um problema por outro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Qual estratégia é melhor: Avalanche ou Bola de Neve?
+            </button>
+            <div class="faq-a">
+              <p>
+                A Avalanche reduz o custo total por focar nos
+                <strong>juros maiores</strong>. A Bola de Neve dá mais motivação
+                por quitar <strong>saldos menores</strong> primeiro. Escolha a
+                que você consegue manter.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Como evitar voltar a se endividar depois de quitar tudo?
+            </button>
+            <div class="faq-a">
+              <p>
+                Mantenha um <strong>fundo de emergência</strong>, continue
+                registrando gastos e use o crédito com propósito. Reforce
+                limites semanais de despesas e faça revisões mensais do
+                orçamento.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="conclusao">
+          <h2>11) Conclusão: do vermelho ao propósito</h2>
+          <p>
+            Dívida é reversível. Com um diagnóstico claro, um orçamento realista
+            e uma estratégia de quitação, o resultado aparece. Ao somar
+            renegociação, aumento de renda e disciplina nos hábitos, você não
+            apenas sai do vermelho: conquista margem para investir no que
+            importa — formação, projetos, família e tempo de qualidade. Comece
+            hoje pelo primeiro passo e dê continuidade amanhã. O progresso se
+            acumula.
+          </p>
+          <div class="cta-box">
+            <div>
+              <h3 style="margin-top: 0; color: var(--azul)">
+                Pronto para iniciar agora?
+              </h3>
+              <p style="margin: 6px 0 12px; color: var(--cinza-40)">
+                siga o plano de 30 dias e marque uma revisão semanal. Seu futuro
+                financeiro agradece.
+              </p>
+            </div>
+            <!-- <div class="cta-actions">
+            <a class="btn-primary" href="#diagnostico">Usar a planilha do guia</a>
+            <a class="btn-outline" href="#plano30">Aplicar plano de 30 dias</a>
+          </div> -->
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="inner">
+        <small
+          >© <span id="ano"></span> Finanças Inteligentes — Conteúdo educativo.
+          Não é recomendação de investimento.</small
+        >
+        <small style="text-align: right"
+          >Feito com ❤ Para o Seu <strong>Futuro</strong>, Ser
+          <strong>Melhor!</strong>.</small
+        >
+      </div>
+    </footer>
+
+    <script>
+      // Botão de voltar: tenta voltar no histórico; se não houver, vai para a home '/'
+      document
+        .getElementById("btnVoltar")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            window.location.href = "/";
+          }
+        });
+
+      // Barra de progresso de leitura
+      const progress = document.querySelector(".progress");
+      const setProgress = () => {
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progress.style.width = pct + "%";
+      };
+      document.addEventListener("scroll", setProgress, { passive: true });
+      window.addEventListener("resize", setProgress);
+      setProgress();
+
+      // TOC: destacar seção ativa
+      const tocLinks = Array.from(document.querySelectorAll(".toc a"));
+      const sections = tocLinks
+        .map((a) => document.querySelector(a.getAttribute("href")))
+        .filter(Boolean);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const id = "#" + entry.target.id;
+            const link = tocLinks.find((a) => a.getAttribute("href") === id);
+            if (link)
+              link.setAttribute(
+                "aria-current",
+                entry.isIntersecting ? "true" : "false"
+              );
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 }
+      );
+      sections.forEach((sec) => observer.observe(sec));
+
+      // FAQ acordeão acessível
+      document.querySelectorAll(".faq-q").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.closest(".faq-item");
+          const open = item.classList.toggle("open");
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      });
+
+      // Ano atual no rodapé
+      document.getElementById("ano").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

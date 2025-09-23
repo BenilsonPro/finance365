@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artigos de Finanças</title>
+    <style>
+      /* RESET BÁSICO */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(#369af8a3);
+        color: #003366; /* azul escuro */
+      }
+      .header-articles {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 0px 50px;
+        background: linear-gradient(#1f2937,  #1f293735);
+      }
+
+      .bottom {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: linear-gradient(#5476a6, #168af746, #57cf2b69); */
+        border: none;
+        transition-duration: 0.5s;
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          /* font-weight: 600; */
+          text-decoration: none;
+          transition-duration: 0.05s;
+        }
+        a:hover {
+          /* color: rgb(161, 252, 3); */
+          transform: scale(1.05);
+        }
+      }
+
+      .bottom:hover {
+        /* background: linear-gradient(#5476a6, #0282faac, #51f0177b); */
+        transform: scale(1.05);
+      }
+
+      h2 {
+        width: 60%;
+        display: flex;
+        text-align: center;
+        margin: 40px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: linear-gradient(#028bfc, #00ff26);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .articles-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 0 20px 50px 20px;
+      }
+
+      article.article {
+        background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s forwards;
+      }
+
+      article.article:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      article h3 {
+        color: #003366;
+        margin-bottom: 10px;
+      }
+
+      article .category,
+      article .publish-date,
+      article .read-time {
+        font-size: 0.85rem;
+        color: #006400;
+        margin-bottom: 5px;
+      }
+
+      article .excerpt {
+        margin: 15px 0;
+        line-height: 1.6;
+        color: #003366;
+      }
+
+      .read-more {
+        /* background-color: #006400; */
+        background: linear-gradient(#1f2937, #2e9aff);
+
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .read-more:hover {
+        /* background-color: #004d00; */
+        background: linear-gradient(#043f7a, #239e01);
+      }
+
+      footer {
+        /* background-color: red; */
+        border: solid 1px rgb(145, 143, 143);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        color: rgb(254, 254, 254);
+      }
+
+      /* ANIMAÇÃO DE SCROLL */
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* RESPONSIVIDADE */
+      @media (max-width: 768px) {
+        h2 {
+          font-size: 2rem;
+        }
+        .articles-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="financial-articles" class="articles-section">
+      <div class="header-articles">
+        <bottom class="bottom">
+          <a href="index.html">← Voltar</a>
+        </bottom>
+        <h2>Artigos de Finanças</h2>
+      </div>
+      <div class="articles-container">
+        <!-- Artigo 1 -->
+        <article class="article">
+          <h3>Planejamento Financeiro Pessoal: Guia Completo</h3>
+          <p class="category">Categoria: Planejamento</p>
+          <p class="publish-date">Publicado em: 01 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Aprenda a criar um planejamento financeiro sólido, definir metas e
+            organizar suas finanças pessoais para alcançar estabilidade e
+            liberdade financeira.
+          </p>
+          <a href="artigos/Artigo-1.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 2 -->
+        <article class="article">
+          <h3>Como Economizar Dinheiro de Forma Inteligente</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 03 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 10 min</p>
+          <p class="excerpt">
+            Descubra estratégias eficazes para cortar gastos desnecessários,
+            organizar seu orçamento e economizar dinheiro sem abrir mão do que
+            você gosta.
+          </p>
+          <a href="artigos/Artigo-2.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 3 -->
+        <article class="article">
+          <h3>Investimentos para Iniciantes: Como Começar</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 05 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 15 min</p>
+          <p class="excerpt">
+            Guia completo para quem quer começar a investir: conheça os tipos de
+            investimentos, riscos, retorno esperado e como criar sua primeira
+            carteira.
+          </p>
+          <a href="artigos/Artigo-3.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 4 -->
+        <article class="article">
+          <h3>Como Sair das Dívidas e Recuperar o Controle Financeiro</h3>
+          <p class="category">Categoria: Dívidas</p>
+          <p class="publish-date">Publicado em: 07 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 13 min</p>
+          <p class="excerpt">
+            Estratégias práticas para quitar dívidas, negociar com credores e
+            evitar problemas futuros, retomando a saúde financeira de maneira
+            sustentável.
+          </p>
+          <a href="artigos/Artigo-4.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 5 -->
+        <article class="article">
+          <h3>Fundos Imobiliários: Como Investir e Lucrar</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 09 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 14 min</p>
+          <p class="excerpt">
+            Entenda como funcionam os fundos imobiliários, tipos disponíveis no
+            mercado e como obter renda passiva com investimentos imobiliários.
+          </p>
+          <a href="artigos/Artigo-5.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 6 -->
+        <article class="article">
+          <h3>Como Montar um Orçamento Mensal Eficiente</h3>
+          <p class="category">Categoria: Planejamento</p>
+          <p class="publish-date">Publicado em: 11 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Passo a passo para montar um orçamento mensal que funcione de
+            verdade, controlando despesas, poupando dinheiro e atingindo metas
+            financeiras.
+          </p>
+          <a href="artigos/Artigo-6.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 7 -->
+        <article class="article">
+          <h3>Investindo em Ações: Dicas para Iniciantes</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 13 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 16 min</p>
+          <p class="excerpt">
+            Guia prático para iniciantes investirem na bolsa de valores,
+            aprendendo análise de empresas, tipos de ações e estratégias de
+            longo prazo.
+          </p>
+          <a href="artigos/Artigo-7.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 8 -->
+        <article class="article">
+          <h3>Como Aposentar Mais Cedo: Planejamento e Investimentos</h3>
+          <p class="category">Categoria: Aposentadoria</p>
+          <p class="publish-date">Publicado em: 15 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 18 min</p>
+          <p class="excerpt">
+            Técnicas para planejar sua aposentadoria de forma antecipada,
+            incluindo investimentos, economia e estilo de vida sustentável.
+          </p>
+          <a href="artigos/Artigo-8.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 9 -->
+        <article class="article">
+          <h3>Criptomoedas: Como Investir com Segurança</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 17 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 15 min</p>
+          <p class="excerpt">
+            Descubra os fundamentos das criptomoedas, estratégias de
+            investimento e cuidados para evitar golpes e perdas financeiras.
+          </p>
+          <a href="artigos/Artigo-9.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 10 -->
+        <article class="article">
+          <h3>Educação Financeira para Jovens: Como Começar</h3>
+          <p class="category">Categoria: Educação Financeira</p>
+          <p class="publish-date">Publicado em: 19 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 11 min</p>
+          <p class="excerpt">
+            Aprenda a ensinar jovens sobre economia, investimentos e hábitos
+            financeiros saudáveis para garantir um futuro financeiro seguro.
+          </p>
+          <a href="artigos/Artigo-10.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 11 -->
+        <article class="article">
+          <h3>Como Evitar Gastos Impulsivos e Controlar suas Finanças</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 21 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Técnicas e hábitos para evitar compras por impulso, organizar gastos
+            e manter suas finanças sempre equilibradas.
+          </p>
+          <a href="artigos/Artigo-11.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 12 -->
+        <article class="article">
+          <h3>Como Investir em Renda Fixa: Tesouro, CDB e Mais</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 23 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 14 min</p>
+          <p class="excerpt">
+            Conheça os principais investimentos de renda fixa, seus riscos e
+            benefícios, e como incluí-los na sua carteira de investimentos.
+          </p>
+          <a href="artigos/Artigo-12.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 13 -->
+        <article class="article">
+          <h3>Como Fazer Planejamento Financeiro Familiar</h3>
+          <p class="category">Categoria: Planejamento</p>
+          <p class="publish-date">Publicado em: 25 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 13 min</p>
+          <p class="excerpt">
+            Estratégias para organizar as finanças de toda a família, incluindo
+            orçamento, investimentos e educação financeira para filhos.
+          </p>
+          <a href="artigos/Artigo-13.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 14 -->
+        <article class="article">
+          <h3>Como Criar uma Reserva de Emergência</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 27 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Guia completo para criar uma reserva financeira que proteja você e
+            sua família em situações inesperadas.
+          </p>
+          <a href="artigos/Artigo-14.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 15 -->
+        <article class="article">
+          <h3>Como Negociar Dívidas com Bancos e Credores</h3>
+          <p class="category">Categoria: Dívidas</p>
+          <p class="publish-date">Publicado em: 29 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 14 min</p>
+          <p class="excerpt">
+            Técnicas e estratégias para negociar dívidas de forma eficiente,
+            reduzindo juros e parcelas e evitando problemas futuros.
+          </p>
+          <a href="artigos/Artigo-15.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 16 -->
+        <article class="article">
+          <h3>Como Investir no Exterior: Guia Completo</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 31 de Janeiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 18 min</p>
+          <p class="excerpt">
+            Saiba como investir em ações, fundos e ETFs no exterior de maneira
+            segura, aproveitando oportunidades globais.
+          </p>
+          <a href="artigos/Artigo-16.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 17 -->
+        <article class="article">
+          <h3>Como Usar Cartão de Crédito de Forma Inteligente</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 02 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 11 min</p>
+          <p class="excerpt">
+            Dicas para usar cartões de crédito sem se endividar, aproveitando
+            benefícios, pontos e cashback de forma estratégica.
+          </p>
+          <a href="artigos/Artigo-17.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 18 -->
+        <article class="article">
+          <h3>Como Planejar Compras Grandes sem Comprometer suas Finanças</h3>
+          <p class="category">Categoria: Planejamento</p>
+          <p class="publish-date">Publicado em: 04 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Estratégias para planejar compras de alto valor, evitando dívidas e
+            mantendo o equilíbrio financeiro.
+          </p>
+          <a href="artigos/Artigo-18.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 19 -->
+        <article class="article">
+          <h3>Como Avaliar Riscos e Retornos nos Investimentos</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 06 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 15 min</p>
+          <p class="excerpt">
+            Aprenda a analisar riscos, retornos e perfis de investimento para
+            tomar decisões financeiras mais assertivas.
+          </p>
+          <a href="artigos/Artigo-19.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 20 -->
+        <article class="article">
+          <h3>Como Aumentar sua Renda com Negócios e Empreendedorismo</h3>
+          <p class="category">Categoria: Empreendedorismo</p>
+          <p class="publish-date">Publicado em: 08 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 16 min</p>
+          <p class="excerpt">
+            Ideias e estratégias para gerar renda extra, empreender e
+            multiplicar seus ganhos de maneira sustentável.
+          </p>
+          <a href="artigos/Artigo-20.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 21 -->
+        <article class="article">
+          <h3>Como Proteger seu Patrimônio e Planejar Sucessão</h3>
+          <p class="category">Categoria: Planejamento</p>
+          <p class="publish-date">Publicado em: 10 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 17 min</p>
+          <p class="excerpt">
+            Estratégias jurídicas e financeiras para proteger bens e planejar
+            sucessão familiar de forma eficiente.
+          </p>
+          <a href="artigos/Artigo-21.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 22 -->
+        <article class="article">
+          <h3>Como Construir Renda Passiva com Investimentos</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 12 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 16 min</p>
+          <p class="excerpt">
+            Passos práticos para criar fontes de renda passiva, garantindo
+            estabilidade financeira e independência.
+          </p>
+          <a href="artigos/Artigo-22.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 23 -->
+        <article class="article">
+          <h3>Como Reduzir Impostos Legalmente e Economizar</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 14 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 15 min</p>
+          <p class="excerpt">
+            Dicas de planejamento tributário para pagar menos impostos de forma
+            legal e eficiente.
+          </p>
+          <a href="artigos/Artigo-23.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 24 -->
+        <article class="article">
+          <h3>Como Analisar Relatórios Financeiros de Empresas</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 16 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 18 min</p>
+          <p class="excerpt">
+            Guia para interpretar balanços, demonstrações de resultados e
+            indicadores financeiros, auxiliando decisões de investimento.
+          </p>
+          <a href="artigos/Artigo-24.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 25 -->
+        <article class="article">
+          <h3>Como Fazer Planejamento Tributário Pessoal</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 18 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 14 min</p>
+          <p class="excerpt">
+            Estratégias legais para reduzir impostos, organizar finanças e
+            otimizar seus recursos pessoais.
+          </p>
+          <a href="artigos/Artigo-25.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 26 -->
+        <article class="article">
+          <h3>Como Evitar Fraudes e Golpes Financeiros</h3>
+          <p class="category">Categoria: Segurança Financeira</p>
+          <p class="publish-date">Publicado em: 20 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Dicas essenciais para proteger seu dinheiro de fraudes, golpes
+            online e riscos financeiros.
+          </p>
+          <a href="artigos/Artigo-26.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 27 -->
+        <article class="article">
+          <h3>Como Planejar Compras de Imóveis e Investir com Segurança</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 22 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 17 min</p>
+          <p class="excerpt">
+            Estratégias para comprar imóveis, avaliar riscos e obter retorno
+            sobre o investimento de maneira segura.
+          </p>
+          <a href="artigos/Artigo-27.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 28 -->
+        <article class="article">
+          <h3>Como Controlar Gastos com Cartão e Evitar Juros Altos</h3>
+          <p class="category">Categoria: Economia</p>
+          <p class="publish-date">Publicado em: 24 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 11 min</p>
+          <p class="excerpt">
+            Técnicas para gerenciar cartões de crédito e débito, evitando
+            dívidas e juros desnecessários.
+          </p>
+          <a href="artigos/Artigo-28.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 29 -->
+        <article class="article">
+          <h3>Como Montar um Fundo de Investimento Diversificado</h3>
+          <p class="category">Categoria: Investimentos</p>
+          <p class="publish-date">Publicado em: 26 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 16 min</p>
+          <p class="excerpt">
+            Estratégias para diversificar sua carteira de investimentos,
+            equilibrando riscos e oportunidades de lucro.
+          </p>
+          <a href="artigos/Artigo-29.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Artigo 30 -->
+        <article class="article">
+          <h3>Como Planejar Viagens Sem Prejudicar suas Finanças</h3>
+          <p class="category">Categoria: Planejamento</p>
+          <p class="publish-date">Publicado em: 28 de Fevereiro, 2025</p>
+          <p class="read-time">Tempo de leitura: 12 min</p>
+          <p class="excerpt">
+            Dicas práticas para viajar e aproveitar momentos de lazer sem
+            comprometer seu orçamento.
+          </p>
+          <a href="artigos/Artigo-30.html">
+            <button class="read-more">Ler Mais</button>
+          </a>
+        </article>
+
+        <!-- Aqui continue com os artigos 11 a 30, seguindo o mesmo padrão -->
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Finance365 — Todos os direitos reservados
+    </footer>
+
+    <script>
+      // EFEITO DE SCROLL - FADE IN DOS ARTIGOS
+      const articles = document.querySelectorAll(".article");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.animationDelay = `${
+                entry.target.dataset.delay || 0
+              }s`;
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      articles.forEach((article, index) => {
+        article.dataset.delay = index * 0.1;
+        observer.observe(article);
+      });
+    </script>
+  </body>
+</html>

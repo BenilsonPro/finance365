@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como Montar uma Carteira Diversificada: Guia Completo</title>
+  <meta name="description" content="Guia detalhado e prático para montar uma carteira de investimentos diversificada, alinhada ao seu perfil e objetivos. Passo a passo, exemplos e erros a evitar." />
+  <meta name="author" content="Seu Nome" />
+  <meta name="theme-color" content="#0d47a1" />
+
+  <style>
+    :root{
+      --azul: #0d47a1;
+      --azul-2: #1565c0;
+      --verde: #2e7d32;
+      --branco: #ffffff;
+      --cinza-bg: #f6f8fb;
+      --text: #0b1320;
+      --maxw: 1100px;
+      --radius: 14px;
+      --shadow-soft: 0 6px 20px rgba(13,71,161,0.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background: linear-gradient(180deg,var(--branco),var(--cinza-bg));
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* Header */
+    header.site-header{
+      position:sticky; top:0; z-index:60;
+      background:var(--branco); box-shadow:var(--shadow-soft);
+      border-bottom:3px solid rgba(13,71,161,0.06);
+    }
+    .header-inner{ max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; gap:16px; padding:12px 16px; }
+    .back-btn{
+      display:inline-flex; align-items:center; gap:10px;
+      background:transparent; color:var(--azul); border:2px solid rgba(13,71,161,0.16);
+      padding:10px 14px; border-radius:999px; font-weight:700; text-decoration:none; cursor:pointer;
+    }
+    .brand{ margin-left:auto; display:flex; align-items:center; gap:12px; }
+    .logo{ width:36px;height:36px;border-radius:10px; display:grid; place-items:center; color:white; font-weight:800; background:linear-gradient(135deg,var(--azul),var(--verde)); box-shadow:0 6px 18px rgba(13,71,161,0.12); }
+
+    /* Progress bar */
+    .progress{ position:fixed; left:0; top:0; height:4px; width:0; background:linear-gradient(90deg,var(--verde),var(--azul)); z-index:100; }
+
+    /* Hero */
+    .hero{ background:linear-gradient(135deg,#eaf2ff,#e8f5e9); border-bottom:1px solid rgba(13,71,161,0.06); }
+    .hero-inner{ max-width:var(--maxw); margin:0 auto; padding:40px 16px; display:grid; grid-template-columns:1.2fr 0.8fr; gap:24px; align-items:center; }
+    .hero h1{ margin:0; color:var(--azul); font-size:clamp(28px,4vw,40px); line-height:1.05; }
+    .hero p{ margin:12px 0 0; color:#334155; font-size:16px; }
+
+    .hero-card{ background:var(--branco); padding:16px; border-radius:12px; box-shadow:var(--shadow-soft); border:1px solid rgba(13,71,161,0.06); }
+    .stat{ display:flex; gap:12px; align-items:center; margin-bottom:8px; }
+    .stat .icon{ width:44px;height:44px;border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(13,71,161,0.08), rgba(46,125,50,0.06)); font-size:20px }
+
+    main{ max-width:var(--maxw); margin:28px auto; display:grid; grid-template-columns:280px 1fr; gap:28px; padding:0 16px 60px; }
+
+    /* TOC */
+    .toc{ position:sticky; top:88px; background:var(--branco); padding:18px; border-radius:var(--radius); box-shadow:var(--shadow-soft); border:1px solid rgba(13,71,161,0.06); }
+    .toc h3{ margin:0 0 8px; color:var(--azul); font-size:16px }
+    .toc a{ display:block; color:#475569; text-decoration:none; font-size:14px; padding:6px 4px; border-radius:8px }
+    .toc a[aria-current="true"], .toc a:hover{ color:var(--azul); background:rgba(13,71,161,0.06) }
+
+    article{ background:var(--branco); padding:26px; border-radius:var(--radius); box-shadow:var(--shadow-soft); border:1px solid rgba(13,71,161,0.06) }
+    article h2{ color:var(--azul); margin-top:28px }
+    article h3{ color:var(--verde); margin-top:18px }
+    p{ color:#0b1220; line-height:1.75 }
+    ul, ol{ margin:10px 0 16px 20px; color:#111827; }
+
+    .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:12px 0; }
+    .card{ background:#f8fafc; padding:14px; border-radius:10px; border:1px solid rgba(13,71,161,0.04) }
+
+    .quote{ border-left:6px solid var(--azul-2); padding:12px 14px; background:#f0f7ff; border-radius:8px; margin:16px 0 }
+
+    .cta{ display:flex; justify-content:space-between; gap:12px; align-items:center; background:linear-gradient(135deg, rgba(13,71,161,0.06), rgba(46,125,50,0.04)); padding:16px; border-radius:12px; margin-top:22px; }
+    .btn{ padding:10px 14px; border-radius:999px; font-weight:600; text-decoration:none; display:inline-flex; gap:8px; align-items:center }
+    .btn-primary{ background:linear-gradient(135deg,var(--azul),var(--azul-2)); color:white; border:0 }
+    .btn-outline{ background:white; border:2px solid rgba(46,125,50,0.14); color:var(--verde) }
+
+    footer{ margin-top:28px; padding:24px 16px; background:#0d2c66; color:#cfe1ff; text-align:center; border-radius:8px }
+
+    /* Fade-in animation */
+    .fade-in{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease }
+    .fade-in.visible{ opacity:1; transform:translateY(0) }
+
+    @media (max-width:1000px){
+      .hero-inner{ grid-template-columns:1fr }
+      main{ grid-template-columns:1fr }
+      .toc{ position:relative; top:unset; margin-bottom:16px }
+      .grid-2{ grid-template-columns:1fr }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" id="btnVoltar" class="back-btn" aria-label="Voltar para a página anterior">
+        <!-- ícone voltar -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M15 18l-6-6 6-6" stroke="#0d47a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Voltar</span>
+      </a>
+
+      <div class="brand" aria-hidden="false">
+        <div class="logo">CF</div>
+        <div>
+          <div style="font-weight:700; color:var(--azul)">Carteira Fácil</div>
+          <div style="font-size:12px; color:#64748b">Guia de Investimentos</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero fade-in">
+    <div class="hero-inner">
+      <div>
+        <h1>Como Montar uma Carteira Diversificada: Guia Completo</h1>
+        <p>Aprenda a montar uma carteira alinhada ao seu perfil e objetivos — passo a passo, com exemplos práticos, estratégias de risco e manutenção.</p>
+      </div>
+      <aside class="hero-card">
+        <div class="stat"><div class="icon">📊</div><div><strong>Passo a passo</strong> para montar sua carteira</div></div>
+        <div class="stat"><div class="icon">🛡️</div><div><strong>Gestão de risco</strong> e reequilíbrio</div></div>
+        <div class="stat"><div class="icon">⚙️</div><div><strong>Estratégias</strong> para todos os perfis</div></div>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+    <nav class="toc fade-in" aria-label="Sumário">
+      <h3>Sumário</h3>
+      <a href="#introducao">Introdução</a>
+      <a href="#por-que-diversificar">Por que diversificar?</a>
+      <a href="#classes">Classes de ativos</a>
+      <a href="#perfil">Defina seu perfil e objetivos</a>
+      <a href="#passos">Passo a passo para montar a carteira</a>
+      <a href="#rebalanceamento">Rebalanceamento e manutenção</a>
+      <a href="#riscos">Gestão de risco</a>
+      <a href="#erros">Erros comuns</a>
+      <a href="#conclusao">Conclusão</a>
+    </nav>
+
+    <article>
+      <section id="introducao" class="fade-in">
+        <h2>Introdução</h2>
+        <p>Montar uma carteira de investimentos diversificada é uma das decisões financeiras mais importantes que você pode tomar. Ao diversificar, você reduz a volatilidade do portfólio, melhora a relação risco-retorno e aumenta as chances de alcançar metas de curto, médio e longo prazo.</p>
+        <p>Este guia oferece um roteiro prático — sem jargões desnecessários — para que qualquer pessoa, iniciante ou já com alguma experiência, saiba como montar, monitorar e ajustar sua carteira ao longo do tempo.</p>
+      </section>
+
+      <section id="por-que-diversificar" class="fade-in">
+        <h2>Por que diversificar?</h2>
+        <p>Diversificação é a ideia de não colocar todos os ovos na mesma cesta. Embora alguns ativos possam ter excelente performance em um determinado período, outros podem cair — e é exatamente nisso que a diversificação ajuda: suavizar perdas e aproveitar diferentes ciclos econômicos.</p>
+        <p>Benefícios práticos:</p>
+        <ul>
+          <li>Redução da volatilidade do portfólio</li>
+          <li>Proteção contra riscos específicos (empresa, setor, país)</li>
+          <li>Melhor equilíbrio entre liquidez, renda e crescimento</li>
+          <li>Maior previsibilidade para atingir metas financeiras</li>
+        </ul>
+      </section>
+
+      <section id="classes" class="fade-in">
+        <h2>Classes de ativos (onde diversificar)</h2>
+        <p>Uma carteira diversificada normalmente combina várias classes de ativos. Aqui estão as principais e como elas funcionam:</p>
+
+        <h3>Renda fixa</h3>
+        <p>Inclui Tesouro Direto, CDBs, LCIs/LCAs, títulos privados e fundos de renda fixa. Geralmente oferecem mais previsibilidade e servem como colchão em momentos de crise.</p>
+
+        <h3>Renda variável</h3>
+        <p>Ações e ETFs (fundos negociados em bolsa) têm potencial de maior retorno, porém maior volatilidade. Ideal para objetivos de médio e longo prazo.</p>
+
+        <h3>Fundos imobiliários (FIIs)</h3>
+        <p>Permitem exposição ao mercado imobiliário com liquidez em bolsa — pagam rendimentos mensais e têm risco de vacância e valuation.</p>
+
+        <h3>Ativos internacionais</h3>
+        <p>Diversificar geograficamente reduz risco doméstico; pode incluir ETFs de ações globais, REITs, títulos globais e fundos internacionais.</p>
+
+        <h3>Alternativos</h3>
+        <p>Criptomoedas, private equity, commodities e hedge funds. Usados em pequena parcela por quem busca diversificação extracíclica, mas com maior risco.</p>
+      </section>
+
+      <section id="perfil" class="fade-in">
+        <h2>Defina seu perfil e objetivos</h2>
+        <p>Antes de alocar, responda duas perguntas essenciais:</p>
+        <ol>
+          <li><strong>Qual é seu horizonte temporal?</strong> Curto (até 2 anos), médio (2–5 anos) ou longo prazo (5+ anos)?</li>
+          <li><strong>Qual é seu apetite por risco?</strong> Conservador, moderado ou arrojado?</li>
+        </ol>
+        <p>Exemplos simplificados de alocação por perfil:</p>
+        <div class="grid-2">
+          <div class="card">
+            <strong>Conservador</strong>
+            <ul><li>Renda fixa: 80%</li><li>Renda variável: 10%</li><li>FIIs/Internacional: 10%</li></ul>
+          </div>
+          <div class="card">
+            <strong>Moderado</strong>
+            <ul><li>Renda fixa: 50%</li><li>Renda variável: 35%</li><li>Internacional/Alternativos: 15%</li></ul>
+          </div>
+        </div>
+        <p>Esses modelos são pontos de partida — adapte conforme metas (ex.: comprar imóvel, aposentadoria, formar patrimônio).</p>
+      </section>
+
+      <section id="passos" class="fade-in">
+        <h2>Passo a passo para montar sua carteira</h2>
+
+        <h3>Passo 1 — Reserve a emergência</h3>
+        <p>Antes de investir para ganhar, proteja-se para não perder: reserve 3–6 meses de despesas em produtos líquidos e seguros (ex.: Tesouro Selic, CDBs com liquidez diária).</p>
+
+        <h3>Passo 2 — Estabeleça objetivos claros</h3>
+        <p>Defina metas mensuráveis: prazo, valor necessário e prioridade. Exemplos: viagem em 2 anos (R$ 10.000), entrada de casa em 5 anos (R$ 80.000), aposentadoria em 30 anos.</p>
+
+        <h3>Passo 3 — Escolha a alocação estratégica</h3>
+        <p>Com base no perfil, defina percentuais por classe (renda fixa, renda variável, internacional, alternativos). Documente essa alocação para segui-la ao longo do tempo.</p>
+
+        <h3>Passo 4 — Selecione produtos dentro de cada classe</h3>
+        <p>Por exemplo, em renda fixa escolha Tesouro Selic para liquidez, Tesouro IPCA para proteção inflacionária e CDBs para rentabilidade. Em ações, prefira ETFs para começar (diversificação automática) ou ações blue-chips se souber avaliar empresas.</p>
+
+        <h3>Passo 5 — Comece pequeno e automatize</h3>
+        <p>Automatize aportes mensais por débito ou ordem na corretora — disciplina vence o timing do mercado. Mesmo aportes pequenos, feitos regularmente, geram efeito composto.</p>
+
+        <h3>Passo 6 — Revise e rebalanceie</h3>
+        <p>Periodicamente (trimestral/semestral) verifique se a alocação desviou dos percentuais desejados e execute rebalanceamento para voltar à estratégia.</p>
+      </section>
+
+      <section id="rebalanceamento" class="fade-in">
+        <h2>Rebalanceamento e manutenção</h2>
+        <p>Rebalancear é vender parte dos ativos que cresceram demais e comprar os que caíram para restaurar a alocação inicial. Métodos práticos:</p>
+        <ul>
+          <li>Rebalanceamento por período (a cada 6 ou 12 meses)</li>
+          <li>Rebalanceamento por limite (quando uma classe desvia X% do alvo)</li>
+        </ul>
+        <p>Evite rebalancear com frequência excessiva (custos e impostos). Use aportes novos para corrigir desvios quando possível.</p>
+      </section>
+
+      <section id="riscos" class="fade-in">
+        <h2>Gestão de risco</h2>
+        <p>Gerenciar risco envolve diversificação, escolha de prazos compatíveis e análise de liquidez. Dicas:</p>
+        <ul>
+          <li>Não concentre mais do que 5–10% do patrimônio em ativos muito arriscados.</li>
+          <li>Entenda os riscos específicos: crédito (em renda fixa), mercado (ações), liquidez (private equity).</li>
+          <li>Use instrumentos para proteção em cenários extremos (ex.: parte em títulos indexados à inflação).</li>
+        </ul>
+      </section>
+
+      <section id="erros" class="fade-in">
+        <h2>Erros comuns ao montar a carteira</h2>
+        <ol>
+          <li>Focar apenas em rentabilidade passada — sem considerar risco.</li>
+          <li>Não ter reserva de emergência.</li>
+          <li>Excesso de negociação (trading) e custos elevados.</li>
+          <li>Ignorar impostos e taxas (corretagem, administração).</li>
+        </ol>
+        <p>Consciência desses erros ajuda a evitá-los antes de comprometer o desempenho do portfólio.</p>
+      </section>
+
+      <section id="conclusao" class="fade-in">
+        <h2>Conclusão</h2>
+        <p>Montar uma carteira diversificada é um processo contínuo — começa com clareza de objetivos, passa pela definição de perfil e termina na disciplina de aportes e rebalanceamento. Simplicidade ganha no longo prazo: prefira estratégias fáceis de aplicar, documente sua alocação e revise com constância.</p>
+        <p>Se você seguir os passos desse guia e adaptar as sugestões à sua realidade, terá uma base sólida para crescer seu patrimônio com risco controlado.</p>
+
+        <div class="quote">
+          <strong>Dica prática:</strong> comece hoje com aportes automáticos pequenos. Consistência compensa mais que tentativas de acertar o “melhor momento”. 
+        </div>
+
+        <div class="cta">
+          <div>
+            <strong>Pronto para montar sua carteira?</strong>
+            <div style="color:#475569; font-size:14px">Use este guia como checklist e comece com um passo.</div>
+          </div>
+          <div>
+            <a href="#" class="btn btn-primary">⬆ Voltar ao topo</a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    © <span id="ano"></span> Carteira Fácil — Conteúdo educativo. Não é recomendação de investimento.
+  </footer>
+
+  <script>
+    // Botão voltar
+    document.getElementById('btnVoltar').addEventListener('click', function(e){
+      e.preventDefault();
+      if(window.history.length > 1){
+        window.history.back();
+      } else {
+        // fallback: redireciona para home (ajuste conforme seu site)
+        window.location.href = '/';
+      }
+    });
+
+    // Progress bar
+    const progress = document.querySelector('.progress');
+    function setProgress(){
+      const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      progress.style.width = Math.min(Math.max(scrolled, 0), 100) + '%';
+    }
+    document.addEventListener('scroll', setProgress, {passive:true});
+    window.addEventListener('resize', setProgress);
+    setProgress();
+
+    // Fade-in ao scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, {threshold:0.08});
+    fadeEls.forEach(el => obs.observe(el));
+
+    // TOC highlight
+    const tocLinks = Array.from(document.querySelectorAll('.toc a'));
+    const sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 120;
+      sections.forEach((sec, idx) => {
+        if(!sec) return;
+        if(sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop){
+          tocLinks.forEach(l => l.removeAttribute('aria-current'));
+          tocLinks[idx].setAttribute('aria-current','true');
+        }
+      });
+    }, {passive:true});
+
+    // Ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

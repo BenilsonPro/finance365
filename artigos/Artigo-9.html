@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criptomoedas: Como Investir com Segurança</title>
+    <meta
+      name="description"
+      content="Guia passo a passo para entender criptomoedas, investir com segurança e evitar golpes. Estratégias, fundamentos e práticas de proteção."
+    />
+    <meta
+      name="keywords"
+      content="criptomoedas, bitcoin, segurança, carteira, exchange, investimentos, como investir"
+    />
+    <meta name="author" content="Wanderley Cabelo" />
+    <style>
+      :root {
+        --bg-1: #f6fbff;
+        --bg-2: #ecfff4;
+        --blue: #0d6efd;
+        --green: #20c997;
+        --deep: #072033;
+        --card: rgba(255, 255, 255, 0.98);
+        --glass: rgba(255, 255, 255, 0.6);
+        --max-width: 1150px;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color: var(--deep);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 140;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.85),
+          rgba(255, 255, 255, 0.7)
+        );
+        backdrop-filter: blur(6px);
+        box-shadow: 0 6px 20px rgba(7, 32, 63, 0.06);
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem;
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 12px;
+        border: 1px solid rgba(13, 110, 253, 0.08);
+        background: linear-gradient(90deg, #ffffff, rgba(13, 110, 253, 0.04));
+        cursor: pointer;
+      }
+      .back svg {
+        width: 18px;
+        height: 18px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+      }
+      .title h1 {
+        margin: 0;
+        font-size: 1.05rem;
+        color: var(--deep);
+      }
+      .title p {
+        margin: 0;
+        font-size: 0.82rem;
+        color: rgba(7, 49, 75, 0.6);
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 1.6rem;
+        padding: 1.25rem 0;
+      }
+      @media (max-width: 980px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+        .toc {
+          order: 2;
+        }
+      }
+
+      article {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(9, 66, 136, 0.06);
+        overflow: hidden;
+      }
+      h2 {
+        color: var(--blue);
+        margin-top: 0;
+      }
+      h3 {
+        color: #114360;
+      }
+      p {
+        line-height: 1.75;
+        color: var(--deep);
+      }
+
+      .hero {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+      }
+      .hero .meta {
+        flex: 1;
+      }
+      .hero-ill {
+        width: 130px;
+        height: 100px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--blue), var(--green));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 28px;
+        box-shadow: 0 12px 30px rgba(13, 110, 253, 0.12);
+      }
+
+      .toc {
+        position: sticky;
+        top: 92px;
+        padding: 1rem;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(13, 110, 253, 0.03),
+          rgba(32, 201, 151, 0.02)
+        );
+        border: 1px solid rgba(13, 110, 253, 0.04);
+        height: calc(100vh - 110px);
+        overflow: auto;
+      }
+      .toc h4 {
+        margin: 0 0 0.6rem 0;
+        color: var(--blue);
+      }
+      .toc a {
+        display: block;
+        padding: 0.35rem 0;
+        color: rgba(7, 49, 75, 0.9);
+      }
+
+      .progress-wrap {
+        height: 8px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 999px;
+        margin-top: 0.8rem;
+      }
+      .progress {
+        height: 8px;
+        border-radius: 999px;
+        width: 0;
+        background: linear-gradient(90deg, var(--blue), var(--green));
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: all 0.7s cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+      .reveal.revealed {
+        opacity: 1;
+        transform: none;
+      }
+
+      .card-cta {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        padding: 0.9rem;
+        border-radius: 12px;
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.05),
+          rgba(32, 201, 151, 0.03)
+        );
+        border: 1px solid rgba(13, 110, 253, 0.04);
+        margin-top: 1rem;
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.28rem 0.6rem;
+        border-radius: 8px;
+        background: rgba(13, 110, 253, 0.08);
+        color: var(--blue);
+        font-weight: 700;
+      }
+
+      .section-hero {
+        padding: 1rem;
+        border-radius: 12px;
+        background: linear-gradient(180deg, #fff, rgba(255, 255, 255, 0.96));
+        box-shadow: 0 8px 24px rgba(9, 66, 136, 0.04);
+        margin-bottom: 1rem;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .callout {
+        padding: 1rem;
+        border-radius: 10px;
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.03),
+          rgba(32, 201, 151, 0.02)
+        );
+        border: 1px solid rgba(13, 110, 253, 0.03);
+      }
+
+      pre {
+        background: #081825;
+        color: #bfe7ff;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow: auto;
+      }
+
+      footer {
+        padding: 2rem 0;
+        text-align: center;
+        color: rgba(7, 49, 75, 0.6);
+      }
+
+      @media (max-width: 560px) {
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero-ill {
+          width: 100px;
+          height: 80px;
+        }
+      }
+
+      /* typography tweaks */
+      h4 {
+        color: #0b3b5b;
+      }
+      ul li,
+      ol li {
+        margin: 0.5rem 0;
+      }
+
+      /* small interactive highlight */
+      .highlight {
+        background: linear-gradient(
+          90deg,
+          rgba(13, 110, 253, 0.06),
+          rgba(32, 201, 151, 0.04)
+        );
+        padding: 0.6rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+
+      .btn-back {
+        display: inline-block;
+        /* margin-top: 2rem; */
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #0172c7, #02e63f);
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .btn-back:hover {
+        transform: scale(1.03);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container top">
+        <button class="back" id="backBtn" aria-label="Voltar">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="#0b5ed7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="btn-back" onclick="window.history.back()"> Voltar</span>
+        </button>
+        <div class="title">
+          <h1>Criptomoedas: Como Investir com Segurança</h1>
+          <p>
+            Fundamentos, estratégia e proteção — guia completo para começar com
+            confiança
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <article id="article">
+          <div class="hero">
+            <div class="meta">
+              <h2>Criptomoedas: Como Investir com Segurança</h2>
+              <p class="small">
+                Última atualização:
+                <time datetime="2025-09-08">08 de setembro de 2025</time> ·
+                <span id="readingTime">Leitura: 0 min</span>
+              </p>
+              <div class="progress-wrap" aria-hidden="true">
+                <div class="progress" id="progressBar"></div>
+              </div>
+            </div>
+            <div class="hero-ill">₿</div>
+          </div>
+
+          <section class="section-hero reveal">
+            <h3>Visão geral rápida</h3>
+            <p>
+              Este guia é para quem quer entender criptomoedas sem mistificação.
+              Aqui você encontrará explicações claras sobre o que são ativos
+              digitais, como funcionam as bases técnicas (blockchain, chaves
+              privadas, exchanges), e um passo a passo prático para começar a
+              investir com segurança, evitando erros comuns e golpes.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>Introdução</h3>
+            <p>
+              Nas últimas décadas, as criptomoedas passaram de um experimento
+              técnico para um mercado global com trilhões de dólares em valor. A
+              tecnologia por trás dessas moedas prometeu descentralização,
+              transferências rápidas e novas formas de propriedade digital.
+              Enquanto isso materializa oportunidades financeiros reais, também
+              expõe investidores a riscos que muitas vezes surgem da
+              desinformação, má custódia e fraudes.
+            </p>
+            <p>
+              Investir com segurança não é só escolher a moeda "certa" — é ter
+              processos: alocar uma parcela adequada do patrimônio, proteger
+              chaves privadas, usar plataformas confiáveis e planejar saídas e
+              obrigações fiscais. A seguir você verá um conteúdo aprofundado,
+              dividido em blocos práticos para execução imediata.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>1. Fundamentos: blockchain, chaves e tokens</h3>
+            <p>
+              Para investir com segurança é importante entender os conceitos
+              básicos. Blockchain é um banco de dados distribuído que registra
+              transações em blocos encadeados. Cada participante mantém uma
+              cópia atualizada do livro-razão. Isso torna a manipulação difícil
+              — o que aumenta a confiança, mas não elimina riscos operacionais.
+            </p>
+            <p>
+              As chaves privadas funcionam como a senha para mover seus ativos.
+              Quem tem a chave controla as moedas. Já as chaves públicas servem
+              como endereços para receber fundos. Tokens são unidades criadas
+              sobre uma blockchain: os mais conhecidos são Bitcoin (BTC) —
+              pensado como reserva de valor — e Ethereum (ETH) — que também roda
+              contratos inteligentes, permitindo que outros projetos criem
+              tokens e aplicações descentralizadas (dApps).
+            </p>
+            <p>
+              Entender esses elementos ajuda a distinguir entre uma moeda
+              legítima e um token sem utilidade ou com modelo econômico
+              duvidoso.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>2. Riscos principais que você deve aceitar</h3>
+            <p>
+              Existem riscos inerentes ao ecossistema cripto que todo investidor
+              precisa aceitar e gerenciar:
+            </p>
+            <ul>
+              <li>
+                <strong>Volatilidade extrema:</strong> oscilações de 10% ou mais
+                em um único dia são comuns.
+              </li>
+              <li>
+                <strong>Custódia:</strong> confiar suas moedas a terceiros
+                (exchanges) implica risco de perda por hack ou má gestão.
+              </li>
+              <li>
+                <strong>Fraudes e esquemas:</strong> projetos sem transparência,
+                times anônimos e promessas de retorno garantido.
+              </li>
+              <li>
+                <strong>Regulação:</strong> mudanças legais podem impactar
+                mercado e acesso a serviços.
+              </li>
+            </ul>
+            <p>
+              Com práticas corretas, esses riscos são gerenciáveis, não
+              elimináveis. A meta é reduzir a probabilidade e o impacto de
+              eventos negativos.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>3. Preparação financeira antes de investir</h3>
+            <p>
+              Antes de direcionar recursos a criptomoedas, certifique-se de que
+              sua base financeira está sólida: fundo de emergência (3–6 meses),
+              dívidas de juros altos sob controle e uma reserva para objetivos
+              de curto prazo. Cripto deve ser vista como parte do portfólio de
+              risco — não como substituto da poupança ou investimentos
+              essenciais.
+            </p>
+            <p>
+              Defina quanto do seu patrimônio você pode arriscar sem afetar sua
+              vida. Uma boa prática inicial para a maioria é começar com 1–5% do
+              capital total e ajustar conforme aprendizado e conforto com
+              volatilidade.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>4. Passo a passo prático para começar</h3>
+            <div class="steps">
+              <div class="callout">
+                <h4>Passo 1 — Educação</h4>
+                <p>
+                  Leia whitepapers e materiais confiáveis, entenda as diferenças
+                  entre Bitcoin, Ethereum e tokens. Separe pelo menos 3 fontes
+                  independentes antes de tomar sua primeira compra.
+                </p>
+              </div>
+
+              <div class="callout">
+                <h4>Passo 2 — Escolha de exchange</h4>
+                <p>
+                  Opte por exchanges consolidadas, com boa reputação e
+                  histórico. Verifique medidas de segurança (cold storage,
+                  auditorias), volumes e liquidez. No Brasil, verifique também
+                  se há integração com saques em reais e boas opções de
+                  atendimento e compliance.
+                </p>
+              </div>
+
+              <div class="callout">
+                <h4>Passo 3 — Segurança da conta</h4>
+                <p>
+                  Ative 2FA por aplicativo (Authy/Google Authenticator), use
+                  senhas fortes e únicas, e evite autenticação por SMS sempre
+                  que possível. Habilite notificações por e-mail para saques e
+                  mudanças de segurança.
+                </p>
+              </div>
+
+              <div class="callout">
+                <h4>Passo 4 — Comprar com DCA</h4>
+                <p>
+                  Use DCA (contribuições periódicas) para reduzir o risco de
+                  timing do mercado. Determine um valor fixo semanal ou mensal e
+                  automatize quando possível.
+                </p>
+              </div>
+
+              <div class="callout">
+                <h4>Passo 5 — Transferir para self-custody</h4>
+                <p>
+                  Para quantias significativas, transfira para uma carteira em
+                  que você controla a chave (hardware wallet para maiores
+                  valores). Mantenha quantias para operações diárias em
+                  carteiras de software bem protegidas.
+                </p>
+              </div>
+
+              <div class="callout">
+                <h4>Passo 6 — Registro e impostos</h4>
+                <p>
+                  Registre todas as operações — compras, vendas e
+                  transferências. Em muitos países, ganhos são tributáveis;
+                  mantenha extratos e notas para seu contador.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="reveal">
+            <h3>5. Como escolher ativos (critérios objetivos)</h3>
+            <p>
+              Evite decisões apenas por hype. Considere critérios objetivos:
+            </p>
+            <ul>
+              <li>
+                <strong>Propósito:</strong> qual problema o projeto resolve?
+              </li>
+              <li>
+                <strong>Equipe:</strong> histórico dos fundadores e
+                desenvolvedores.
+              </li>
+              <li>
+                <strong>Tokenomics:</strong> emissão, inflação, alocações e
+                cronograma de desbloqueio.
+              </li>
+              <li>
+                <strong>Liquidez:</strong> volume de negociação e facilidade de
+                saída.
+              </li>
+              <li>
+                <strong>Auditorias:</strong> contratos e códigos auditados por
+                terceiros.
+              </li>
+            </ul>
+            <p>
+              Projetos que falham nesses critérios têm maior probabilidade de
+              perder valor ou revelar fraudes.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>6. Segurança técnica — práticas avançadas</h3>
+            <p>Para aumentar proteção, considere:</p>
+            <ul>
+              <li>
+                <strong>Hardware wallets:</strong> Ledger, Trezor — compre
+                direto do fabricante e mantenha seed em segurança física.
+              </li>
+              <li>
+                <strong>Multisig:</strong> carteiras que exigem múltiplas
+                assinaturas para mover fundos, ideal para famílias e empresas.
+              </li>
+              <li>
+                <strong>Backups físicos:</strong> use placas metálicas ou cópias
+                em cofres diferentes para proteger contra incêndio e água.
+              </li>
+              <li>
+                <strong>Transações de teste:</strong> faça pequenas
+                transferências primeiro ao interagir com contratos ou bridges
+                desconhecidas.
+              </li>
+            </ul>
+          </section>
+
+          <section class="reveal">
+            <h3>7. DeFi, staking e yield: oportunidades e armadilhas</h3>
+            <p>
+              DeFi oferece retornos que chamam atenção, mas com riscos
+              específicos: contratos inteligentes podem ter bugs, e alguns
+              protocolos prometem yields insustentáveis. Antes de fornecer
+              liquidez ou dar permissões, verifique auditorias, reputação e
+              risco de impermanent loss. Use small caps com extremo cuidado e
+              prefira protocolos com histórico claro.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>8. Golpes comuns e sinais de alerta</h3>
+            <p>
+              Golpes em criptomoedas são variados. Sinais que devem acender o
+              alerta:
+            </p>
+            <ul>
+              <li>Promessa de retornos garantidos e muito altos.</li>
+              <li>Equipes anônimas sem histórico verificável.</li>
+              <li>Codebase inacessível ou sem auditoria.</li>
+              <li>Pressão para investir rápido (FOMO artificial).</li>
+              <li>Alta concentração de tokens em poucos endereços.</li>
+            </ul>
+            <p>
+              Ao desconfiar, faça uma pausa, compartilhe com comunidade técnica
+              e busque opiniões independentes antes de colocar capital.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>9. Gestão de risco e alocação</h3>
+            <p>
+              Uma abordagem prática: defina uma porcentagem máxima do portfólio
+              para cripto (por exemplo, 5–10%), subdivida em camadas — reserva
+              'core' em BTC/ETH e uma pequena parcela para experimentos
+              (altcoins/DeFi). Rebalanceie periodicamente para preservar a
+              exposição desejada.
+            </p>
+            <p>
+              Tenha sempre uma reserva em fiat ou ativos líquidos para
+              aproveitar oportunidades ou cobrir necessidades sem ter que vender
+              em baixa.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>10. Psicologia do investidor cripto</h3>
+            <p>
+              Mercados cripto testam a disciplina. Ruins decisões são
+              frequentemente emocionais: venda em pânico ou compra por hype.
+              Estabeleça regras — metas de preço, limites de perda, disciplina
+              DCA — e siga-as. Anote decisões importantes e revise a performance
+              periodicamente para aprender com erros.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>11. Checklist prático — o que fazer hoje</h3>
+            <ol>
+              <li>Estabeleça sua alocação máxima para cripto.</li>
+              <li>Abra conta em uma exchange confiável e ative 2FA.</li>
+              <li>Compre uma fração pequena (DCA) para aprender o fluxo.</li>
+              <li>
+                Compre uma hardware wallet se planeja guardar valores
+                relevantes.
+              </li>
+              <li>Registre todas as operações para fins fiscais.</li>
+              <li>
+                Mantenha backups físicos da seed phrase em locais separados.
+              </li>
+            </ol>
+          </section>
+
+          <section class="reveal">
+            <h3>12. Conclusão</h3>
+            <p>
+              Criptomoedas oferecem uma classe de ativos nova e poderosa, porém
+              exigem cuidado. Investir com segurança é mais sobre processos e
+              proteção do que sobre previsões de preço. Se você seguir práticas
+              de segurança, limitar exposição e manter disciplina, será capaz de
+              participar desse mercado reduzindo muita da sua superfície de
+              risco.
+            </p>
+            <p>
+              Comece pequeno, aprenda fazendo, e ajuste seu plano à medida que
+              ganha experiência. O conhecimento é sua melhor defesa — combine
+              estudo, ferramentas e bom senso para proteger seu capital.
+            </p>
+          </section>
+
+          <section class="reveal">
+            <h3>Recursos recomendados</h3>
+            <ul>
+              <li>
+                Documentação oficial de Bitcoin e Ethereum (whitepapers e FAQs).
+              </li>
+              <li>
+                Guias de segurança das fabricantes de hardware wallets (Ledger,
+                Trezor).
+              </li>
+              <li>
+                Academias de exchanges confiáveis (Coinbase, Kraken, Binance
+                Academy).
+              </li>
+              <li>
+                Leituras sobre regulação fiscal local e diretrizes da Receita
+                Federal.
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <aside class="toc">
+          <h4>Sumário</h4>
+          <nav>
+            <a href="#article">Introdução</a>
+            <a href="#article">Fundamentos</a>
+            <a href="#article">Passo a passo</a>
+            <a href="#article">Segurança</a>
+            <a href="#article">Golpes</a>
+            <a href="#article">Checklist</a>
+          </nav>
+          <div style="margin-top: 1rem">
+            <p class="small">
+              Tags: <span class="badge">criptomoedas</span>
+              <span class="badge">segurança</span>
+              <span class="badge">investimento</span>
+            </p>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="container">
+          <p class="small">
+            © 2025 • Conteúdo informativo — não é consultoria financeira.
+            Consulte um profissional antes de tomar decisões com impacto fiscal
+            ou patrimonial.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Back button
+      document.getElementById("backBtn").addEventListener("click", function () {
+        if (
+          document.referrer &&
+          document.referrer.indexOf(location.host) !== -1
+        )
+          window.history.back();
+        else if (document.referrer) window.location.href = document.referrer;
+        else window.location.href = "/";
+      });
+
+      // Reading time estimation
+      (function () {
+        const article = document.getElementById("article");
+        const text = article.innerText || article.textContent;
+        const words = text.trim().split(/\s+/).length;
+        const wpm = 200;
+        const minutes = Math.max(1, Math.round(words / wpm));
+        document.getElementById("readingTime").innerText =
+          "Leitura: " + minutes + " min";
+      })();
+
+      // Progress bar
+      const progress = document.getElementById("progressBar");
+      const articleEl = document.getElementById("article");
+      function updateProgress() {
+        const total = articleEl.offsetHeight - window.innerHeight;
+        const scrolled = Math.min(
+          Math.max(window.scrollY - (articleEl.offsetTop - 80), 0),
+          total
+        );
+        const pct = total > 0 ? (scrolled / total) * 100 : 0;
+        progress.style.width = pct + "%";
+      }
+      window.addEventListener("scroll", updateProgress);
+      window.addEventListener("resize", updateProgress);
+      updateProgress();
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("revealed");
+          });
+        },
+        { threshold: 0.12 }
+      );
+      reveals.forEach((r) => io.observe(r));
+
+      // Smooth scroll for TOC
+      document.querySelectorAll(".toc a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // o navegador faz a animação automática
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Como Criar uma Reserva de Emergência</title>
+  <meta name="description" content="Guia completo, prático e detalhado para aprender a construir sua reserva de emergência, proteger seu futuro e evitar dívidas em situações inesperadas." />
+  <meta name="author" content="Seu Nome" />
+  <meta name="theme-color" content="#1976d2" />
+
+  <style>
+    :root {
+      --azul: #1976d2;
+      --azul-escuro: #0d47a1;
+      --verde: #2e7d32;
+      --verde-2: #43a047;
+      --branco: #ffffff;
+      --cinza-bg: #f6f8fb;
+      --text: #0b1320;
+      --maxw: 1150px;
+      --radius: 14px;
+      --shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      color: var(--text);
+      background: var(--cinza-bg);
+    }
+    header {
+      background: linear-gradient(135deg, var(--azul), var(--verde));
+      color: white;
+      text-align: center;
+      padding: 30px 16px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 46px);
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    /* TOC horizontal */
+    .toc {
+      max-width: var(--maxw);
+      margin: 20px auto;
+      background: white;
+      padding: 14px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: var(--shadow);
+    }
+    .toc a {
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      color: var(--azul);
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid rgba(25,118,210,0.3);
+      transition: all .2s;
+    }
+    .toc a:hover, .toc a.active {
+      background: var(--azul);
+      color: white;
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
+    article {
+      background: white;
+      padding: 26px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    article h2 {
+      color: var(--verde);
+      margin-top: 32px;
+    }
+    article h3 {
+      color: var(--azul-escuro);
+      margin-top: 20px;
+    }
+    p {
+      line-height: 1.75;
+      margin: 14px 0;
+      font-size: 17px;
+    }
+    ul, ol {
+      margin: 14px 0 18px 22px;
+    }
+
+    /* Grid cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+    .card {
+      background: #f9fbfa;
+      border: 1px solid rgba(25,118,210,0.2);
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .quote {
+      border-left: 6px solid var(--azul);
+      background: #e3f2fd;
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    /* Botão voltar */
+    .voltar {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .voltar button {
+      background: var(--verde);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .3s;
+    }
+    .voltar button:hover {
+      background: var(--verde-2);
+    }
+
+    footer {
+      background: var(--azul-escuro);
+      color: #cfe1ff;
+      text-align: center;
+      padding: 22px;
+      margin-top: 40px;
+    }
+
+    /* Fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Como Criar uma Reserva de Emergência</h1>
+    <p>Um guia completo, com estratégias práticas, para proteger suas finanças contra imprevistos.</p>
+  </header>
+
+  <nav class="toc">
+    <a href="#introducao">Introdução</a>
+    <a href="#porque">Por que ter?</a>
+    <a href="#quanto">Quanto guardar?</a>
+    <a href="#onde">Onde investir?</a>
+    <a href="#passo">Passo a passo</a>
+    <a href="#erros">Erros comuns</a>
+    <a href="#dicas">Dicas extras</a>
+    <a href="#psicologia">Psicologia financeira</a>
+    <a href="#conclusao">Conclusão</a>
+  </nav>
+
+  <main>
+    <article>
+      <section id="introducao" class="fade-in">
+        <h2>Introdução</h2>
+        <p>Você já parou para pensar no que faria se, amanhã, perdesse sua principal fonte de renda? Ou se uma emergência de saúde custasse milhares de reais? Infelizmente, a maioria das pessoas só descobre a importância de uma reserva de emergência quando já está vivendo um problema. Este artigo existe justamente para que você não seja pego de surpresa.</p>
+        <p>Ao longo deste guia, vamos explorar detalhadamente cada aspecto da reserva de emergência: sua importância, cálculo do valor ideal, onde aplicar, estratégias para acumular mais rápido e, principalmente, como manter a disciplina para não utilizar esse dinheiro em momentos inadequados.</p>
+      </section>
+
+      <section id="porque" class="fade-in">
+        <h2>Por que ter uma reserva de emergência?</h2>
+        <p>A reserva de emergência é como um colete salva-vidas financeiro. Você pode até nunca precisar dela, mas se o imprevisto acontecer, ela será a diferença entre manter sua estabilidade ou entrar em dívidas caras. Vamos a alguns exemplos práticos:</p>
+        <div class="grid-3">
+          <div class="card"><strong>Saúde:</strong> uma cirurgia de última hora que não foi totalmente coberta pelo plano.</div>
+          <div class="card"><strong>Trabalho:</strong> demissão inesperada e necessidade de alguns meses até recolocação.</div>
+          <div class="card"><strong>Casa:</strong> reparo emergencial, como encanamento ou telhado danificado.</div>
+        </div>
+        <p>Sem uma reserva, qualquer um desses eventos pode levar ao uso do cheque especial ou cartão de crédito, que cobram juros altíssimos. Com a reserva, você mantém sua tranquilidade e evita a chamada “bola de neve financeira”.</p>
+      </section>
+
+      <section id="quanto" class="fade-in">
+        <h2>Quanto guardar?</h2>
+        <p>O valor ideal varia de pessoa para pessoa, mas há uma regra de ouro: sua reserva deve cobrir de <strong>3 a 6 meses de despesas fixas</strong>. Quem tem filhos, dependentes ou renda variável deve considerar 12 meses de despesas.</p>
+        <p>Por exemplo: se suas despesas fixas mensais são R$ 3.000, sua reserva deve ficar entre R$ 9.000 e R$ 18.000. Esse cálculo não inclui supérfluos — apenas gastos essenciais.</p>
+        <div class="quote">“A reserva de emergência não serve para te enriquecer, mas para impedir que você empobreça diante de crises.”</div>
+      </section>
+
+      <section id="onde" class="fade-in">
+        <h2>Onde investir a reserva?</h2>
+        <p>Ao contrário de outros investimentos, a reserva de emergência não deve buscar alta rentabilidade. O foco é liquidez e segurança. Algumas opções:</p>
+        <ul>
+          <li><strong>Tesouro Selic:</strong> seguro e de liquidez diária.</li>
+          <li><strong>CDB de liquidez diária:</strong> opção em bancos e corretoras.</li>
+          <li><strong>Fundos DI:</strong> atrelados à taxa Selic.</li>
+          <li><strong>Contas digitais remuneradas:</strong> boas para valores menores.</li>
+        </ul>
+      </section>
+
+      <section id="passo" class="fade-in">
+        <h2>Passo a passo para criar sua reserva</h2>
+        <h3>1. Descubra suas despesas fixas</h3>
+        <p>Liste moradia, alimentação, transporte, contas básicas. Essa será a base do cálculo.</p>
+        <h3>2. Estabeleça a meta</h3>
+        <p>Multiplique suas despesas por 6 ou 12. Esse é o valor que você deve atingir.</p>
+        <h3>3. Defina quanto pode poupar por mês</h3>
+        <p>Mesmo que seja pouco, a consistência é mais importante do que o valor inicial.</p>
+        <h3>4. Abra uma conta separada</h3>
+        <p>Isso evita confusões e gastos indevidos.</p>
+        <h3>5. Automatize aportes</h3>
+        <p>Configure transferências automáticas para não depender apenas da disciplina.</p>
+      </section>
+
+      <section id="erros" class="fade-in">
+        <h2>Erros comuns a evitar</h2>
+        <ul>
+          <li>Colocar a reserva em investimentos arriscados, como ações.</li>
+          <li>Usar a reserva para compras não emergenciais.</li>
+          <li>Não repor valores usados após uma emergência.</li>
+          <li>Deixar a reserva parada em conta corrente sem rendimento.</li>
+        </ul>
+      </section>
+
+      <section id="dicas" class="fade-in">
+        <h2>Dicas extras</h2>
+        <p>Algumas estratégias que ajudam no processo:</p>
+        <ul>
+          <li>Faça cortes inteligentes em gastos supérfluos.</li>
+          <li>Use ganhos extras (13º, bônus, restituição do IR) para turbinar a reserva.</li>
+          <li>Revise sua meta anualmente, ajustando para inflação e novas despesas.</li>
+        </ul>
+      </section>
+
+      <section id="psicologia" class="fade-in">
+        <h2>A psicologia da reserva de emergência</h2>
+        <p>Ter uma reserva não é apenas uma questão matemática, mas também emocional. O simples fato de saber que você possui dinheiro guardado reduz a ansiedade e aumenta sua confiança para enfrentar decisões difíceis.</p>
+        <p>Estudos mostram que pessoas com reservas financeiras lidam melhor com crises, negociam salários com mais segurança e até empreendem com menos medo de falhar.</p>
+      </section>
+
+      <section id="conclusao" class="fade-in">
+        <h2>Conclusão</h2>
+        <p>A reserva de emergência é a base do equilíbrio financeiro. Com ela, você protege sua família, evita dívidas caras e conquista liberdade para planejar o futuro. Quanto antes começar, mais rápido alcançará essa segurança.</p>
+        <div class="voltar">
+          <button onclick="window.history.back()">← Voltar para a página anterior</button>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    © <span id="ano"></span> Guia Financeiro • Educação para todos
+  </footer>
+
+  <script>
+    // Ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Fade-in
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, {threshold:0.15});
+    fadeEls.forEach(el => obs.observe(el));
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc a');
+    const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 120;
+      sections.forEach((sec, i) => {
+        if(sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop){
+          links.forEach(l => l.classList.remove('active'));
+          links[i].classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como Evitar Gastos Impulsivos e Controlar suas Finanças</title>
+    <meta
+      name="description"
+      content="Guia completo para evitar gastos impulsivos, organizar suas finanças, criar hábitos conscientes de consumo e investir de forma inteligente."
+    />
+    <meta name="author" content="Seu Nome" />
+    <meta name="theme-color" content="#0d47a1" />
+
+    <style>
+      :root {
+        --azul: #0d47a1;
+        --azul-2: #1565c0;
+        --verde: #2e7d32;
+        --verde-2: #43a047;
+        --branco: #ffffff;
+        --cinza-10: #0b1320;
+        --cinza-40: #5a6978;
+        --cinza-90: #f5f7fa;
+        --radius: 16px;
+        --shadow: 0 8px 24px rgba(13, 71, 161, 0.15);
+        --shadow-soft: 0 2px 10px rgba(13, 71, 161, 0.1);
+        --maxw: 1100px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+        color: var(--cinza-10);
+        background: linear-gradient(180deg, #fff, var(--cinza-90));
+      }
+
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--branco);
+        box-shadow: var(--shadow-soft);
+        border-bottom: 3px solid rgba(13, 71, 161, 0.06);
+      }
+      .header-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px 16px;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: var(--azul);
+        border: 2px solid rgba(13, 71, 161, 0.2);
+        border-radius: 999px;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.15s ease, background 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .back-btn:hover {
+        background: rgba(13, 71, 161, 0.08);
+        transform: translateX(-1px);
+        border-color: rgba(13, 71, 161, 0.35);
+      }
+      .back-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .brand {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand .logo {
+        color: white;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--azul), var(--verde));
+        box-shadow: var(--shadow);
+      }
+      .brand h1 {
+        font-size: 16px;
+        margin: 0;
+        color: var(--azul);
+        letter-spacing: 0.3px;
+      }
+
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background: linear-gradient(90deg, var(--verde), var(--azul));
+        z-index: 60;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+        border-bottom: 1px solid rgba(13, 71, 161, 0.08);
+      }
+      .hero-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 42px 16px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .hero h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        margin: 0 0 12px;
+        color: var(--azul);
+      }
+      .hero p {
+        margin: 0 0 16px;
+        color: var(--cinza-40);
+        line-height: 1.7;
+        font-size: 18px;
+      }
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .badge {
+        background: var(--branco);
+        color: var(--azul);
+        border: 1px solid rgba(13, 71, 161, 0.15);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .hero-card {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+      .stat {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 8px;
+        border-radius: 12px;
+      }
+      .stat + .stat {
+        border-top: 1px dashed rgba(13, 71, 161, 0.15);
+        padding-top: 16px;
+        margin-top: 16px;
+      }
+      .stat .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 71, 161, 0.15),
+          rgba(46, 125, 50, 0.15)
+        );
+      }
+      .stat strong {
+        color: var(--azul);
+        font-size: 18px;
+      }
+
+      main {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 24px 16px 60px;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 28px;
+      }
+      .toc {
+        position: sticky;
+        top: 78px;
+        align-self: start;
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+        padding: 18px;
+      }
+      .toc h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        color: var(--azul);
+      }
+      .toc a {
+        display: block;
+        text-decoration: none;
+        color: var(--cinza-40);
+        padding: 6px 4px;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      .toc a[aria-current="true"],
+      .toc a:hover {
+        color: var(--azul);
+        background: rgba(13, 71, 161, 0.08);
+      }
+
+      article {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 26px;
+      }
+      article h2 {
+        color: var(--azul);
+        margin-top: 32px;
+      }
+      article h3 {
+        color: var(--verde);
+        margin-top: 28px;
+      }
+      article p {
+        color: var(--cinza-10);
+        line-height: 1.85;
+      }
+      article ul,
+      article ol {
+        line-height: 1.85;
+        color: var(--cinza-10);
+      }
+      article .callout {
+        border-left: 6px solid var(--verde);
+        background: #f0f9f0;
+        padding: 14px 16px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .card {
+        background: var(--branco);
+        border: 1px solid rgba(13, 71, 161, 0.08);
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: var(--shadow-soft);
+      }
+      .checklist li {
+        list-style: none;
+        position: relative;
+        padding-left: 28px;
+        margin: 10px 0;
+      }
+      .checklist li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, var(--verde), var(--verde-2));
+        box-shadow: 0 2px 6px rgba(46, 125, 50, 0.35);
+      }
+      .checklist li::after {
+        content: "✓";
+        position: absolute;
+        left: 4px;
+        top: 0.1em;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+      }
+      .cta-box {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 71, 161, 0.07),
+          rgba(46, 125, 50, 0.07)
+        );
+        border: 1px solid rgba(13, 71, 161, 0.12);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .cta-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn-button {
+        background-color: blue;
+        width: 150px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        border: 2px solid transparent;
+        color: white;
+      }
+      .btn-button:hover {
+        color: white;
+        transform: scale(1.03);
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        padding: 24px 16px;
+        background: #0d2c66;
+        color: #cfe1ff;
+      }
+      footer .inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: center;
+      }
+      footer a {
+        color: #cfe1ff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 1000px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        main {
+          grid-template-columns: 1fr;
+        }
+        .toc {
+          position: static;
+        }
+        .cta-box {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="back-btn" id="btnVoltar" href="#">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Voltar</span>
+        </a>
+        <div class="brand">
+          <div class="logo">💳</div>
+          <h1>Finance365</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h2>Como Evitar Gastos Impulsivos e Controlar suas Finanças</h2>
+          <p>
+            Aprenda estratégias práticas para evitar compras por impulso,
+            organizar seu dinheiro e criar hábitos conscientes de consumo que
+            protegem seu bolso e futuro.
+          </p>
+          <div class="badge-row">
+            <span class="badge">Consumo Consciente</span>
+            <span class="badge">Economia</span>
+            <span class="badge">Planejamento Financeiro</span>
+            <span class="badge">Hábitos</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="stat">
+            <div class="icon">📈</div>
+            <div><strong>3.000+</strong> palavras detalhadas</div>
+          </div>
+          <div class="stat">
+            <div class="icon">⚡</div>
+            <div><strong>Passo a passo</strong> completo</div>
+          </div>
+          <div class="stat">
+            <div class="icon">💡</div>
+            <div><strong>Dicas práticas</strong> aplicáveis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <nav class="toc">
+        <h3>Sumário</h3>
+        <a href="#introducao">Introdução</a>
+        <a href="#passo1">Passo 1: Reconheça seus gatilhos de consumo</a>
+        <a href="#passo2">Passo 2: Planeje seus gastos</a>
+        <a href="#passo3">Passo 3: Crie hábitos conscientes</a>
+        <a href="#passo4">Passo 4: Use ferramentas de controle financeiro</a>
+        <a href="#passo5">Passo 5: Recompense-se de forma inteligente</a>
+        <a href="#conclusao">Conclusão</a>
+      </nav>
+
+      <article>
+        <h2 id="introducao">Introdução</h2>
+        <p>
+          Evitar gastos impulsivos é essencial para qualquer pessoa que queira
+          ter controle sobre sua vida financeira. Compras por impulso podem
+          parecer inofensivas no momento, mas acumulam-se rapidamente,
+          prejudicando a capacidade de poupar e investir.
+        </p>
+        <p>
+          Este guia ensina passo a passo como reconhecer seus gatilhos, planejar
+          seus gastos, criar hábitos conscientes e utilizar ferramentas práticas
+          para manter suas finanças sempre sob controle.
+        </p>
+        <h2 id="passo1">Passo 1: Reconheça seus gatilhos de consumo</h2>
+        <p>
+          Antes de controlar os gastos, é fundamental entender
+          <strong>o que desencadeia suas compras impulsivas</strong>. Muitas
+          vezes, não percebemos que determinados momentos ou emoções nos levam a
+          gastar sem planejamento. Aqui estão os gatilhos mais comuns:
+        </p>
+        <ul class="checklist">
+          <li>Estresse ou ansiedade</li>
+          <li>Promoções e ofertas irresistíveis</li>
+          <li>Influência de amigos ou redes sociais</li>
+          <li>Desejo de recompensas instantâneas</li>
+          <li>Falta de planejamento financeiro</li>
+        </ul>
+        <p>
+          Para identificar seus próprios gatilhos, mantenha um diário por pelo
+          menos duas semanas, anotando cada gasto impulsivo e a situação em que
+          ocorreu. Isso ajudará a compreender padrões e agir antes que o impulso
+          aconteça.
+        </p>
+
+        <h2 id="passo2">Passo 2: Planeje seus gastos</h2>
+        <p>
+          O planejamento é a base do controle financeiro. Um orçamento claro
+          permite que você saiba exatamente para onde seu dinheiro está indo e
+          evite gastos desnecessários.
+        </p>
+        <p>Confira as etapas para criar um planejamento eficiente:</p>
+        <ol>
+          <li>
+            <strong>Liste suas receitas</strong> – inclua salário, rendas extras
+            e investimentos.
+          </li>
+          <li>
+            <strong>Liste suas despesas fixas</strong> – aluguel, contas,
+            transporte e alimentação.
+          </li>
+          <li>
+            <strong>Determine o valor para poupança e investimentos</strong> –
+            sempre reserve uma porcentagem antes de gastar.
+          </li>
+          <li>
+            <strong>Estabeleça limites para gastos variáveis</strong> – defina
+            quanto pode gastar com lazer, compras ou hobbies.
+          </li>
+          <li>
+            <strong>Revise semanalmente</strong> – ajuste seu planejamento
+            conforme suas necessidades reais.
+          </li>
+        </ol>
+        <p>
+          Uma dica prática: evite carregar grandes quantias de dinheiro ou
+          cartões extras, isso reduz a tentação de compras por impulso.
+        </p>
+
+        <h2 id="passo3">Passo 3: Crie hábitos conscientes</h2>
+        <p>
+          Controlar o impulso de comprar requer prática e disciplina.
+          Desenvolver hábitos conscientes ajuda a manter a mente no controle do
+          dinheiro.
+        </p>
+        <p>Dicas para criar hábitos saudáveis:</p>
+        <ul class="checklist">
+          <li>
+            Faça uma pausa antes de cada compra: espere 24 horas antes de
+            decidir.
+          </li>
+          <li>
+            Evite lojas físicas ou aplicativos de compras quando estiver
+            estressado.
+          </li>
+          <li>Priorize necessidades sobre desejos.</li>
+          <li>Mantenha uma lista de compras e siga-a rigorosamente.</li>
+          <li>
+            Use técnicas de mindfulness para reduzir a ansiedade e o impulso.
+          </li>
+        </ul>
+        <p>
+          Pequenos ajustes no dia a dia podem gerar grandes mudanças: ao
+          resistir a compras impulsivas, você terá mais recursos para investir e
+          alcançar objetivos de longo prazo.
+        </p>
+
+        <h2 id="passo4">Passo 4: Use ferramentas de controle financeiro</h2>
+        <p>
+          A tecnologia pode ser sua aliada no controle financeiro. Existem
+          diversas ferramentas que ajudam a monitorar gastos, criar alertas e
+          visualizar seu progresso.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Aplicativos de orçamento</h3>
+            <p>
+              Aplicativos como Mobills, Guiabolso ou Organizze permitem
+              registrar despesas, acompanhar saldo e gerar relatórios
+              detalhados.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Alertas e notificações</h3>
+            <p>
+              Configure alertas no seu banco ou app financeiro para saber quando
+              está se aproximando do limite de gastos ou saindo do planejamento.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Planos de pagamento</h3>
+            <p>
+              Evite parcelamentos longos que geram juros e perda de controle;
+              prefira pagamentos à vista ou metas de economia antes de comprar.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Grupos de apoio e cursos</h3>
+            <p>
+              Participar de comunidades de finanças ajuda a manter disciplina e
+              aprender novas estratégias de controle de gastos.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="passo5">Passo 5: Recompense-se de forma inteligente</h2>
+        <p>
+          Controlar gastos não significa cortar tudo. Recompensar-se de forma
+          consciente é essencial para manter a motivação.
+        </p>
+        <ul class="checklist">
+          <li>
+            Defina metas financeiras e celebre conquistas pequenas, como
+            economizar 10% do salário.
+          </li>
+          <li>Escolha recompensas que não comprometam seu orçamento.</li>
+          <li>
+            Transforme recompensas em experiências, como um passeio ou jantar
+            com amigos.
+          </li>
+          <li>Aproveite promoções planejadas, não impulsivas.</li>
+        </ul>
+        <p>
+          Ao adotar esse método, você aprende a equilibrar prazer e
+          responsabilidade financeira, evitando frustrações e dívidas
+          desnecessárias.
+        </p>
+
+        <h2 id="conclusao">Conclusão</h2>
+        <p>
+          Evitar gastos impulsivos é uma habilidade que pode ser desenvolvida
+          com prática, planejamento e disciplina. Ao seguir este passo a passo:
+        </p>
+        <ul class="checklist">
+          <li>Você identifica seus gatilhos e age antes do impulso.</li>
+          <li>
+            Planeja gastos de forma eficiente, sem surpresas no final do mês.
+          </li>
+          <li>Cria hábitos conscientes de consumo e controla emoções.</li>
+          <li>Usa ferramentas que facilitam o acompanhamento das finanças.</li>
+          <li>
+            Recompensa-se de forma inteligente, mantendo motivação e equilíbrio.
+          </li>
+        </ul>
+        <p>
+          Com disciplina e atenção, é possível transformar hábitos financeiros e
+          conquistar liberdade e segurança para investir e realizar sonhos.
+        </p>
+
+        <div class="cta-box">
+          <div>
+            <h3>Quer aprender mais sobre finanças e investimento?</h3>
+            <p>
+              Então acompanhe nossos conteúdos e descubra como fazer seu
+              dinheiro trabalhar para você. Aqui você encontra dicas práticas,
+              estratégias seguras e conhecimento para investir melhor.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a class="btn-button" href="#">⬆ Voltar ao topo </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <p>&copy; 2025 Finance365. Todos os direitos reservados.</p>
+        <p></p>
+      </div>
+    </footer>
+
+    <script>
+      const btnVoltar = document.getElementById("btnVoltar");
+      btnVoltar.addEventListener("click", (e) => {
+        e.preventDefault();
+        history.back();
+      });
+
+      // Barra de progresso
+      const progress = document.querySelector(".progress");
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrolled = (scrollTop / docHeight) * 100;
+        progress.style.width = scrolled + "%";
+      });
+
+      // Atualizar sumário ativo
+      const tocLinks = document.querySelectorAll(".toc a");
+      window.addEventListener("scroll", () => {
+        let fromTop = window.scrollY + 100;
+        tocLinks.forEach((link) => {
+          const section = document.querySelector(link.getAttribute("href"));
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+          ) {
+            link.setAttribute("aria-current", "true");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

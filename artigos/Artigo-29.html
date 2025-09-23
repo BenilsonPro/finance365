@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Como Montar um Fundo de Investimento Diversificado</title>
+    <style>
+      :root{
+      --blue:#0b5dd7;
+      --green:#19a974;
+      --white:#ffffff;
+      --orange:#f39c12;
+      --purple:#8e44ad;
+      --red:#e74c3c;
+      --bg: #f7fbff;
+      --card: rgba(255,255,255,0.9);
+      --muted: #5b6b7a;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, var(--bg) 0%, #eef7f1 100%);
+      color:#123;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    .container{
+      max-width:var(--max-width);
+      margin:2.5rem auto;
+      padding:1rem;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      margin-bottom:1.5rem;
+    }
+    .brand{
+      display:flex;align-items:center;gap:.75rem;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--green));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1.1rem;box-shadow:0 6px 18px rgba(10,30,80,0.12);
+    }
+    h1{font-size:clamp(1.6rem,2.6vw,2.4rem);margin:0;color:var(--blue)}
+    p.lead{color:var(--muted);margin-top:.25rem}
+
+    .hero{
+      background:var(--card);
+      border-radius:16px;
+      padding:1.5rem;
+      box-shadow:0 8px 30px rgba(11,93,215,0.06);
+      display:grid;grid-template-columns:1fr;gap:1rem;align-items:center;
+    }
+    @media(min-width:880px){
+      .hero{grid-template-columns:1fr 380px}
+    }
+    .hero .summary{padding-right:1rem}
+    .badge{
+      display:inline-block;padding:.35rem .6rem;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--green));color:#fff;font-weight:600;font-size:.85rem;box-shadow:0 6px 18px rgba(10,30,80,0.08)
+    }
+
+    .card{
+      background:var(--card);padding:1.25rem;border-radius:12px;margin:1rem 0;box-shadow:0 8px 30px rgba(11,93,215,0.04)
+    }
+    nav.toc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+    nav.toc a{background:#fff;padding:.4rem .65rem;border-radius:8px;border:1px solid #e6eef6;color:#0b5dd7;text-decoration:none;font-weight:600;font-size:.85rem}
+
+    /* Sections */
+    section{margin:1.2rem 0;padding:1rem;border-radius:12px}
+    .content{display:grid;grid-template-columns:1fr;gap:1rem}
+    @media(min-width:900px){.content{grid-template-columns:2fr 380px}}
+
+    article{padding:1rem}
+    article h2{margin-top:0;font-size:1.6rem;}
+    article h3{font-size:1.2rem;}
+
+    /* Colorful titles */
+    article h2:nth-of-type(1){color:var(--blue)}
+    article h2:nth-of-type(2){color:var(--green)}
+    article h2:nth-of-type(3){color:var(--orange)}
+    article h2:nth-of-type(4){color:var(--purple)}
+    article h2:nth-of-type(5){color:var(--red)}
+    article h2:nth-of-type(6){color:var(--green)}
+    article h2:nth-of-type(7){color:var(--blue)}
+    article h2:nth-of-type(8){color:var(--purple)}
+
+    article h3{color:var(--green)}
+
+    .side{position:sticky;top:1.2rem}
+    .side .card{margin:0}
+
+    /* back button */
+    .back-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem .9rem;border-radius:999px;border:2px solid var(--blue);background:transparent;color:var(--blue);cursor:pointer;font-weight:700;text-decoration:none;transition:all .2s ease}
+    .back-btn:hover{background:linear-gradient(90deg,var(--blue),var(--green));color:var(--white);transform:translateY(-3px);box-shadow:0 10px 30px rgba(10,30,80,0.12)}
+
+    /* typography */
+    article p{margin:.75rem 0;color:#21313f}
+    .muted{color:var(--muted)}
+    .quote{border-left:4px solid var(--blue);padding:.6rem 1rem;background:linear-gradient(180deg,#ffffff, #f5fbff);border-radius:8px}
+
+    /* lists */
+    ul{margin:0 0 1rem 1.1rem}
+    li{margin:.45rem 0}
+
+    /* visual helpers */
+    .pill{display:inline-block;padding:.35rem .6rem;border-radius:999px;background:#eef6ff;border:1px solid #e1efff;color:var(--blue);font-weight:700}
+    .kpi{display:flex;gap:1rem;align-items:center}
+
+    /* scroll animation classes */
+    .scroll-animate{opacity:0;transform:translateY(2rem);transition:all .8s cubic-bezier(.2,.9,.3,1)}
+    .in-view{opacity:1;transform:none}
+
+    /* responsive tweaks */
+    @media(max-width:600px){
+      .side{position:relative;top:0}
+      .hero{grid-template-columns:1fr}
+      .logo{width:48px;height:48px}
+    }
+
+    /* footer */
+    footer{margin-top:2rem;color:var(--muted);text-align:center;padding:1.5rem}
+
+    /* small code block */
+    pre{background:#0b273a;color:#dff3ff;padding:1rem;border-radius:8px;overflow:auto}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">FI</div>
+          <div>
+            <h1>Como Montar um Fundo de Investimento Diversificado</h1>
+            <p class="lead">
+              Estratégias para diversificar sua carteira de investimentos,
+              equilibrando riscos e oportunidades de lucro.
+            </p>
+          </div>
+        </div>
+        <div>
+          <button class="back-btn" onclick="history.back()" aria-label="Voltar">
+            ← Voltar
+          </button>
+        </div>
+      </header>
+
+      <section class="hero card scroll-animate">
+        <div class="summary">
+          <div class="badge">Guia Completo</div>
+          <h2>Construa um fundo diversificado passo a passo</h2>
+          <p class="muted">
+            Este guia aborda desde princípios básicos até decisões práticas:
+            alocação de ativos, seleção de títulos, gestão de risco, custos,
+            reequilíbrio e monitoramento contínuo.
+          </p>
+          <nav class="toc" aria-label="Sumário rápido">
+            <a href="#por-que-diversificar">Por que diversificar</a>
+            <a href="#classes-ativos">Classes de ativos</a>
+            <a href="#construir-fundo">Como construir</a>
+            <a href="#alocacao">Alocação</a>
+            <a href="#riscos">Gestão de risco</a>
+            <a href="#rebalancing">Rebalanceamento</a>
+          </nav>
+        </div>
+        <div class="card side scroll-animate">
+          <h3>Resumo rápido</h3>
+          <p class="muted">
+            Um fundo diversificado combina diferentes ativos (renda fixa, renda
+            variável, imobiliário, alternativos) para reduzir risco específico e
+            capturar oportunidades em diferentes ciclos econômicos.
+          </p>
+          <div style="margin-top: 0.8rem">
+            <strong>Palavras-chave:</strong>
+            <div
+              style="
+                margin-top: 0.6rem;
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <span class="pill">Diversificação</span>
+              <span class="pill">Alocação</span>
+              <span class="pill">Rebalanceamento</span>
+              <span class="pill">Due Diligence</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="content">
+        <article class="scroll-animate" id="por-que-diversificar">
+          <h2>Por que diversificar sua carteira?</h2>
+          <p>
+            Diversificação é o princípio de não colocar todos os seus recursos
+            em um único ativo, setor ou estratégia. O objetivo é reduzir o risco
+            específico — o risco que afeta uma empresa ou ativo individual — e
+            preservar o potencial de retorno global. Ao distribuir o capital
+            entre vários ativos não perfeitamente correlacionados, o fundo tende
+            a apresentar menos volatilidade no longo prazo.
+          </p>
+          <p>
+            Imagine ter todo o seu dinheiro em uma única ação. Um evento
+            negativo — gestão ruim, escândalo, tecnologia concorrente — pode
+            levar à perda severa. Já um fundo que mistura ações, títulos e
+            imóveis absorverá choques localizados. Isso não elimina o risco de
+            mercado, mas diminui o impacto de eventos idiossincráticos.
+          </p>
+
+          <h3>Benefícios práticos</h3>
+          <ul>
+            <li>Redução da volatilidade do portfólio.</li>
+            <li>Melhor perfil risco-retorno ajustado ao longo do tempo.</li>
+            <li>
+              Exposição a diferentes fontes de retorno (juros, dividendos,
+              crescimento de capital, renda imobiliária).
+            </li>
+            <li>Maior previsibilidade para planejamento financeiro.</li>
+          </ul>
+
+          <p class="quote">
+            "Diversificar não é evitar risco — é gerir riscos de forma
+            inteligente."
+          </p>
+
+          <h3>Quando diversificar demais?</h3>
+          <p>
+            Existe um ponto de rendimentos decrescentes: diversificação
+            excessiva (overdiversification) pode diluir retornos e aumentar
+            complexidade sem ganhos relevantes de redução de risco. A meta é
+            equilibrar simplicidade e proteção — ter ativos suficientes para
+            reduzir risco idiossincrático sem perder foco na qualidade e
+            simulação da estratégia.
+          </p>
+        </article>
+
+        <aside class="side">
+          <div class="card scroll-animate">
+            <h4>Checklist rápido</h4>
+            <ul>
+              <li>Defina horizonte e objetivos.</li>
+              <li>Mapeie tolerância ao risco.</li>
+              <li>Escolha classes de ativos.</li>
+              <li>Determine alocação inicial.</li>
+              <li>Implemente e monitore.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <section class="card scroll-animate" id="classes-ativos">
+        <h2>Quais classes de ativos incluir</h2>
+        <p>
+          A seleção de classes de ativos é o alicerce do fundo. As principais
+          categorias são:
+        </p>
+        <ul>
+          <li>
+            <strong>Renda fixa</strong> — títulos públicos e privados,
+            debêntures, CDBs, LCIs/LCAs: oferecem previsibilidade de fluxo e
+            proteção parcial em crises.
+          </li>
+          <li>
+            <strong>Renda variável</strong> — ações nacionais e internacionais,
+            ETFs, fundos de ações: maior potencial de retorno, porém com
+            volatilidade.
+          </li>
+          <li>
+            <strong>Imobiliário</strong> — fundos imobiliários (FIIs), REITs,
+            propriedades diretas: renda por aluguéis e potencial de apreciação.
+          </li>
+          <li>
+            <strong>Alternativos</strong> — commodities, ouro, criptoativos,
+            private equity: diversificação adicional, porém com riscos e
+            estruturas diferentes.
+          </li>
+          <li>
+            <strong>Caixa e equivalentes</strong> — reserva para liquidez e
+            oportunidades.
+          </li>
+        </ul>
+
+        <p>
+          Cada classe desempenha papel específico: renda fixa reduz volatilidade
+          e protege capital; ações impulsionam crescimento; imóveis fornecem
+          renda; alternativos atuam como hedge contra inflação ou choques de
+          mercado.
+        </p>
+
+        <h3>Incluir mercados internacionais?</h3>
+        <p>
+          Sim — a exposição geográfica é outra camada essencial de
+          diversificação. Mercados emergentes e desenvolvidos reagem de formas
+          diferentes a choques econômicos. ETFs e fundos internacionais
+          facilitam acesso com custos relativamente baixos e sem a necessidade
+          de abrir conta no exterior (dependendo da jurisdição).
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="construir-fundo">
+        <h2>Passo a passo: como construir o fundo</h2>
+        <p>
+          1. Defina objetivos e horizonte: seu fundo é para aposentadoria,
+          geração de renda ou acumulação de capital? Horizonte de longo prazo
+          permite mais exposição a ações; curto prazo privilegia liquidez e
+          renda fixa.
+        </p>
+
+        <p>
+          2. Avalie tolerância ao risco: responda honestamente sobre sua reação
+          a quedas de 20% ou 40%. A alocação será construída em função disso.
+        </p>
+
+        <p>
+          3. Estabeleça política de investimento (mandato): aqui você define
+          limites (ex.: até 60% em ações, mínimo 10% em caixa), critérios de
+          seleção, restrições (não investir em setores específicos) e regras de
+          rebalanceamento.
+        </p>
+
+        <p>
+          4. Selecione instrumentos: prefira instrumentos líquidos e de custo
+          baixo. ETFs ou fundos indexados são ótimos para exposição ampla com
+          baixas taxas. Para renda fixa, priorize títulos com rating adequado e
+          prazo compatível ao objetivo.
+        </p>
+
+        <p>
+          5. Gestão de custos: taxas de administração, performance e impostos
+          corroem ganhos no longo prazo. Simule cenários com diferentes taxas e
+          prefira estruturas enxutas quando possível.
+        </p>
+
+        <h3>Exemplo prático de implementação</h3>
+        <p>
+          Suponha um investidor com horizonte de 10 anos e tolerância moderada.
+          Política inicial:
+        </p>
+        <ul>
+          <li>40% em ações (ETFs domésticos + ETF internacional)</li>
+          <li>
+            35% em renda fixa (títulos pós-fixados e indexados ao
+            IPCA/inflation-linked)
+          </li>
+          <li>15% em fundos imobiliários</li>
+          <li>5% em commodities/ouro</li>
+          <li>5% em caixa</li>
+        </ul>
+
+        <p>
+          Esse portfólio busca crescimento com amortecedores de renda fixa e
+          imóveis para gerar fluxo.
+        </p>
+
+        <h3>Critérios de escolha de ativos</h3>
+        <ul>
+          <li>
+            Liquidez: você precisa poder vender em prazos compatíveis com sua
+            estratégia.
+          </li>
+          <li>Custo: taxas menores aumentam retorno líquido.</li>
+          <li>
+            Transparência: prefira ativos com informações claras e auditoria.
+          </li>
+          <li>
+            Histórico de gestão (quando aplicável): consistência é mais
+            importante que performance pontual.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card scroll-animate" id="alocacao">
+        <h2>Estratégias de alocação</h2>
+        <p>
+          A alocação é a decisão mais importante — quanto alocar em cada classe
+          para atingir objetivos com risco adequado. Algumas abordagens comuns:
+        </p>
+
+        <h3>Alocação por perfil</h3>
+        <p>
+          <strong>Conservador:</strong> 10-20% ações, 60-80% renda fixa, 10-20%
+          imóveis/alternativos.
+        </p>
+        <p>
+          <strong>Moderado:</strong> 30-50% ações, 40-50% renda fixa, 10-20%
+          alternativos/imóveis.
+        </p>
+        <p>
+          <strong>Agressivo:</strong> 60-90% ações, 10-30% renda
+          fixa/alternativos.
+        </p>
+
+        <h3>Alocação baseada em metas</h3>
+        <p>
+          Vincule a alocação ao objetivo: por exemplo, um fundo para geração de
+          renda terá maior peso em ativos pagadores de dividendos e FIIs; para
+          acumulação agressiva, priorize ações e small caps.
+        </p>
+
+        <h3>Alocação dinâmica (tática)</h3>
+        <p>
+          Estratégia que ajusta porcentagens segundo previsões de mercado ou
+          indicadores (valuation, juros, ciclos). Pode melhorar retorno, mas
+          exige mais skill e pode aumentar custos e risco de timing.
+        </p>
+
+        <h3>Alocação por fatores</h3>
+        <p>
+          Busca exposição a fatores como value, momentum, low volatility e
+          quality. Muito usada por gestores quantitativos e ETFs smart-beta.
+        </p>
+
+        <h3>Diversificação interna</h3>
+        <p>
+          Dentro de uma classe, diversifique: em ações, combine setores,
+          tamanhos e geografias; em renda fixa, misture prazos e indexação
+          (prefixado, pós-fixado, indexado à inflação).
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="riscos">
+        <h2>Gestão de risco e proteção do capital</h2>
+        <p>
+          Risco não é o mesmo que perda — é a incerteza sobre resultados
+          futuros. Gestão eficiente envolve identificar, medir e mitigar riscos.
+        </p>
+
+        <h3>Riscos a considerar</h3>
+        <ul>
+          <li>
+            <strong>Risco de mercado:</strong> oscilações amplas que afetam
+            quase todos os ativos.
+          </li>
+          <li>
+            <strong>Risco de crédito:</strong> inadimplência em títulos de renda
+            fixa.
+          </li>
+          <li>
+            <strong>Risco de liquidez:</strong> dificuldade de vender ativo sem
+            grande desconto.
+          </li>
+          <li>
+            <strong>Risco de taxa de juros:</strong> especialmente relevante
+            para renda fixa.
+          </li>
+          <li>
+            <strong>Risco cambial:</strong> quando há exposição a moedas
+            estrangeiras.
+          </li>
+        </ul>
+
+        <h3>Ferramentas de mitigação</h3>
+        <ul>
+          <li>Rebalanceamento automático ou periódico.</li>
+          <li>Limites por ativo/emitente para evitar concentração.</li>
+          <li>
+            Uso de instrumentos de hedge (opções, swaps) quando adequado e
+            entendido.
+          </li>
+          <li>
+            Manter reserva de caixa para lidar com resgates ou oportunidades.
+          </li>
+        </ul>
+
+        <p>
+          Um plano de contingência define ações em cenários extremos — por
+          exemplo, corte de 30% do patrimônio: revisar alocação, analisar causas
+          e decidir se é oportunidade para aportar ou reduzir riscos.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="rebalancing">
+        <h2>Rebalanceamento: mantenha o risco sob controle</h2>
+        <p>
+          Rebalancear significa voltar à alocação alvo após oscilações. Ex.: se
+          ações subiram e passaram de 40% para 55% do fundo, rebalancear vende
+          parte das ações e compra renda fixa para voltar ao alvo.
+        </p>
+
+        <h3>Quando rebalancear?</h3>
+        <p>Opções comuns:</p>
+        <ul>
+          <li>Periódico (ex.: anual, semestral).</li>
+          <li>
+            Por tolerância (ex.: quando um ativo desvia mais de 5% do alvo).
+          </li>
+          <li>Híbrido: revisão periódica com gatilho de tolerância.</li>
+        </ul>
+
+        <h3>Custo do rebalanceamento</h3>
+        <p>
+          Considere impostos e taxas de corretagem. Em contas tax-deferred ou
+          dentro de um mesmo veículo (por exemplo, ETFs), custos podem ser
+          menores.
+        </p>
+
+        <h3>Efeito sobre retorno</h3>
+        <p>
+          Rebalancear força a venda de ativos que subiram e compra dos que
+          caíram — é uma forma disciplinada de "vender caro e comprar barato". A
+          frequência ideal equilibra custo e disciplina.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="custos-impostos">
+        <h2>Taxas, custos e impacto fiscal</h2>
+        <p>Taxas corroem retornos. Analise:</p>
+        <ul>
+          <li>Taxa de administração e performance de fundos.</li>
+          <li>Spreads e corretagem em negociações.</li>
+          <li>
+            IR e regras de tributação (curto vs longo prazo). Consulte sempre
+            fontes oficiais e um contador para detalhes aplicáveis à sua
+            residência fiscal.
+          </li>
+        </ul>
+
+        <p>
+          Um investimento que supera um concorrente por 1% ao ano pode, no longo
+          prazo, ter diferença substancial. Portanto, reduzir custos é parte da
+          estratégia.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="due-diligence">
+        <h2>Due diligence — análise e seleção rigorosa</h2>
+        <p>Antes de incluir um ativo no fundo, faça uma análise que cubra:</p>
+        <ul>
+          <li>Estrutura e liquidez do ativo.</li>
+          <li>Histórico de retorno e volatilidade.</li>
+          <li>Risco de contraparte e governance.</li>
+          <li>Alinhamento com o mandato do fundo.</li>
+        </ul>
+
+        <p>
+          Para fundos geridos externamente, avalie a experiência da equipe,
+          metodologia de investimento, histórico ajustado ao risco e política de
+          gestão de risco.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="operacional">
+        <h2>Aspectos operacionais e práticos</h2>
+        <p>
+          Escolha entre implementar o fundo por conta própria (carteira pessoal
+          ou clube de investimento) ou dentro de um veículo formal (fundo de
+          investimento registrado). Cada escolha tem implicações legais, de
+          governança e de impostos.
+        </p>
+
+        <h3>Implementação pessoal</h3>
+        <p>
+          Vantagens: controle total, flexibilidade. Desvantagens: necessidade de
+          disciplina, custo de execução e menor proteção regulatória.
+        </p>
+
+        <h3>Fundo formal</h3>
+        <p>
+          Vantagens: profissionalização, governança, possíveis tratamentos
+          fiscais. Desvantagens: custos de administração, complexidade
+          regulatória.
+        </p>
+
+        <h3>Registro e compliance</h3>
+        <p>
+          Se optar por fundo formal, observe requisitos locais (registro na CVM
+          no Brasil, por exemplo), relatórios periódicos, auditoria e divulgação
+          de políticas.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="monitoramento">
+        <h2>Monitoramento e KPIs</h2>
+        <p>Monitore métricas-chave:</p>
+        <ul>
+          <li>Rentabilidade (absoluta e relativa a benchmark).</li>
+          <li>Volatilidade histórica e drawdown máximo.</li>
+          <li>Correlação entre ativos.</li>
+          <li>Turnover (gira de carteira) e custos associados.</li>
+        </ul>
+
+        <p>
+          Dashboards simples podem ajudar: planilha com alocação, valor de
+          mercado por ativo, e gatilhos de rebalanceamento. Ferramentas de
+          mercado e plataformas de corretoras também oferecem relatórios
+          prontos.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="psicologia">
+        <h2>Comportamento e disciplina</h2>
+        <p>
+          O lado psicológico é crucial. Manter a estratégia a frio é muitas
+          vezes mais importante do que a escolha de ativos. Evite decisões
+          reativas baseadas em notícias sensacionalistas. Tenha um plano escrito
+          — sua 'política de investimento' — e siga-a, com revisões planejadas.
+        </p>
+
+        <h3>Evitar vieses comuns</h3>
+        <ul>
+          <li>
+            Overconfidence: acreditar que você sempre saberá o momento certo.
+          </li>
+          <li>Herding: seguir manada sem análise.</li>
+          <li>Loss aversion: vender no prejuízo tarde demais.</li>
+        </ul>
+      </section>
+
+      <section class="card scroll-animate" id="exemplos">
+        <h2>Exemplos e estudos de caso</h2>
+        <p>
+          Aqui listamos dois perfis hipotéticos para ilustrar decisões práticas.
+        </p>
+
+        <h3>Perfil A — Acumulador (30 anos, horizonte 30 anos)</h3>
+        <p>
+          Alta tolerância: 80% ações (diversificação doméstica + internacional),
+          10% renda fixa, 5% FIIs, 5% alternativos. A entrada é sistemática:
+          aportes mensais. Rebalanceamento semestral.
+        </p>
+
+        <h3>Perfil B — Renda (55 anos, aposentadoria em 8 anos)</h3>
+        <p>
+          Tolerância moderada: 40% ações defensivas e dividendos, 45% renda fixa
+          de menor duração, 10% FIIs para renda, 5% caixa. Objetivo: geração de
+          fluxo e preservação de capital.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="ferramentas">
+        <h2>Ferramentas úteis</h2>
+        <p>
+          Plataformas de investimento, calculadoras de alocação, planilhas de
+          rebalanceamento e serviços de custódia são aliados. Use simuladores
+          para testar cenários e ferramentas de backtest com prudência —
+          resultados passados não garantem retornos futuros.
+        </p>
+
+        <pre><code>// Exemplo simples de regra de rebalanceamento (pseudocódigo)
+// se |posição - alvo| &gt; tolerância então
+//   vender ativos que excederam o alvo
+//   comprar ativos abaixo do alvo
+// fim
+</code></pre>
+      </section>
+
+      <section class="card scroll-animate" id="faq">
+        <h2>Perguntas frequentes</h2>
+        <h3>Preciso de muito capital para começar?</h3>
+        <p>
+          Não — com ETFs e fundos com cotas acessíveis é possível começar com
+          valores baixos e ir aumentando com aportes regulares.
+        </p>
+
+        <h3>Como escolher entre ETF e fundo gerido?</h3>
+        <p>
+          ETFs têm em geral menores taxas e transparência; fundos geridos podem
+          oferecer gestão ativa e estratégias específicas. Avalie taxa versus
+          habilidade do gestor.
+        </p>
+
+        <h3>Com que frequência devo revisar a política?</h3>
+        <p>
+          Revisões anuais são comuns; revisões táticas podem ocorrer quando
+          mudanças macroeconômicas relevantes justificarem. Evite ajustes
+          frequentes por impulso.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="conclusao">
+        <h2>Conclusão</h2>
+        <p>
+          Montar um fundo de investimento diversificado é tanto arte quanto
+          ciência. Requer clareza de objetivos, disciplina na implementação e
+          atenção contínua ao custo e à gestão de risco. Uma política bem
+          definida, combinada com uma alocação consciente e rebalanceamento
+          periódico, oferece uma base robusta para perseguir retornos de forma
+          controlada.
+        </p>
+
+        <p>
+          Use este guia como ponto de partida: adapte cada recomendação à sua
+          realidade, respeitando horizonte, impostos e objetivos. Se desejar,
+          documente sua política em um arquivo e acompanhe a performance
+          regularmente.
+        </p>
+      </section>
+
+      <footer class="scroll-animate">
+        <p class="muted">
+          Este conteúdo é educacional e não substitui aconselhamento
+          profissional. Considere consultar um gestor ou assessor de
+          investimentos antes de implementar uma estratégia complexa.
+        </p>
+        <p style="margin-top: 0.6rem">
+          © Guia de Investimentos — Montando seu fundo diversificado
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Scroll animation using IntersectionObserver
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll(".scroll-animate").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth internal link scroll
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = a.getAttribute("href").slice(1);
+          const el = document.getElementById(id);
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de Privacidade — Finance365</title>
+    <meta
+      name="description"
+      content="Política de Privacidade do Finance365 — Como tratamos dados dos usuários."
+    />
+
+    <style>
+      :root {
+        --blue: #1e88e5;
+        --green: #2e7d32;
+        --white: #ffffff;
+        --bg: #f6fbff;
+        --text: #0b2540;
+        --muted: #51657a;
+        --radius: 12px;
+        --container-max: 1100px;
+        --gap: 1rem;
+        --glass: rgba(255, 255, 255, 0.7);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: linear-gradient(180deg, var(--bg), #eaf6ff 60%);
+        color: var(--text);
+        line-height: 1.55;
+        padding: 2rem 1rem;
+      }
+
+      .wrap {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      header {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        background: linear-gradient(90deg, var(--white), var(--glass));
+        padding: 0.8rem 1rem;
+        border-radius: var(--radius);
+        box-shadow: 0 6px 18px rgba(15, 40, 80, 0.06);
+        border: 1px solid rgba(30, 136, 229, 0.08);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .logo {
+        width: 54px;
+        height: 54px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--blue), var(--green));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 18px;
+        box-shadow: 0 6px 16px rgba(46, 125, 50, 0.08);
+      }
+      h1 {
+        font-size: 1.05rem;
+        margin: 0;
+      }
+      p.lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      nav.toc {
+        background: var(--white);
+        padding: 1rem;
+        border-radius: 12px;
+        position: sticky;
+        top: 1rem;
+        height: fit-content;
+        border: 1px solid rgba(15, 40, 80, 0.04);
+      }
+      nav.toc h2 {
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem 0;
+      }
+      nav.toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      nav.toc a {
+        text-decoration: none;
+        color: var(--blue);
+        font-weight: 600;
+        font-size: 0.92rem;
+        padding: 0.35rem 0.5rem;
+        border-radius: 8px;
+        display: inline-block;
+      }
+      nav.toc a.active {
+        background: rgba(30, 136, 229, 0.08);
+      }
+
+      main.card {
+        background: var(--white);
+        padding: 1.25rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(11, 37, 64, 0.04);
+        border: 1px solid rgba(15, 40, 80, 0.04);
+      }
+
+      .meta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .badge {
+        background: var(--green);
+        color: var(--white);
+        padding: 0.25rem 0.6rem;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.78rem;
+      }
+
+      h3.section-title {
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+        color: var(--text);
+      }
+      p {
+        color: var(--muted);
+        margin: 0 0 1rem 0;
+      }
+
+      .accordion {
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(15, 40, 80, 0.04);
+      }
+      .accordion-item + .accordion-item {
+        border-top: 1px solid rgba(15, 40, 80, 0.04);
+      }
+      .acc-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.9rem 1rem;
+        cursor: pointer;
+        background: linear-gradient(180deg, #ffffff, #fbfdff);
+      }
+      .acc-head strong {
+        font-size: 0.95rem;
+      }
+      .acc-body {
+        padding: 0 1rem 1rem 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.28s ease;
+      }
+      .acc-body.open {
+        max-height: 800px;
+      }
+
+      .row {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 0.6rem 0.9rem;
+        border-radius: 10px;
+        border: 0;
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .btn.primary {
+        background: var(--blue);
+        color: var(--white);
+      }
+
+      footer {
+        grid-column: 1/-1;
+        margin-top: 1rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 920px) {
+        .wrap {
+          grid-template-columns: 1fr;
+        }
+        nav.toc {
+          position: relative;
+          order: 2;
+        }
+        main.card {
+          order: 1;
+        }
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 420px) {
+        body {
+          padding: 1rem;
+        }
+        .logo {
+          width: 44px;
+          height: 44px;
+          font-size: 16px;
+        }
+        .acc-head {
+          padding: 0.7rem;
+        }
+        .acc-body {
+          padding: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="logo">F365</div>
+          <div>
+            <h1>Política de Privacidade — Finance365</h1>
+            <p class="lead">
+              Proprietário: Benilson Vieira • Atualizado:
+              <span id="updatedDate">25 de agosto de 2025</span>
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-left: auto;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+          "
+        >
+          <a href="index.html">
+            <button class="btn primary" id="btnBack">Voltar ao Início</button>
+          </a>
+        </div>
+      </header>
+
+      <nav class="toc" aria-label="Sumário">
+        <h2>Sumário</h2>
+        <ul>
+          <li><a href="#coleta">1. Coleta de Dados</a></li>
+          <li><a href="#uso">2. Uso dos Dados</a></li>
+          <li><a href="#compartilhamento">3. Compartilhamento</a></li>
+          <li><a href="#seguranca">4. Segurança</a></li>
+          <li><a href="#direitos">5. Seus Direitos</a></li>
+          <li><a href="#cookies">6. Cookies</a></li>
+          <li><a href="#contato">7. Contato</a></li>
+        </ul>
+      </nav>
+
+      <main class="card" id="main">
+        <div class="meta">
+          <div class="badge">Financeiro</div>
+          <div style="flex: 1"></div>
+        </div>
+
+        <section id="intro">
+          <h3 class="section-title">Apresentação</h3>
+          <p>
+            Esta Política de Privacidade descreve como o Finance365 coleta, usa,
+            divulga e protege as informações pessoais dos visitantes e usuários
+            do site. Ao acessar nossos serviços, você concorda com as práticas
+            descritas aqui.
+          </p>
+        </section>
+
+        <div class="accordion" id="accordion">
+          <article class="accordion-item" id="coleta">
+            <div class="acc-head" data-target="acc-coleta">
+              <strong>1. Coleta de Dados</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-coleta">
+              <p>Coletamos diferentes tipos de informações:</p>
+              <ul>
+                <li>
+                  <strong>Dados de navegação:</strong> IP, tipo de navegador,
+                  páginas visitadas e tempo no site.
+                </li>
+                <li>
+                  <strong>Dados fornecidos voluntariamente:</strong> nome,
+                  e-mail e outros ao se inscrever em newsletters ou comentar.
+                </li>
+                <li>
+                  <strong>Dados de pagamento:</strong> quando aplicável,
+                  tratados por provedores terceirizados (não armazenamos dados
+                  sensíveis de cartão).
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="uso">
+            <div class="acc-head" data-target="acc-uso">
+              <strong>2. Uso dos Dados</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-uso">
+              <p>Usamos os dados para:</p>
+              <ul>
+                <li>Oferecer e melhorar nossos serviços;</li>
+                <li>
+                  Enviar comunicações (newsletters, atualizações) com base no
+                  seu consentimento;
+                </li>
+                <li>Personalizar conteúdo e anúncios;</li>
+                <li>Atender solicitações de suporte.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="compartilhamento">
+            <div class="acc-head" data-target="acc-compartilhamento">
+              <strong>3. Compartilhamento</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-compartilhamento">
+              <p>Podemos compartilhar informações com:</p>
+              <ul>
+                <li>
+                  Prestadores de serviços (hospedagem, e-mail marketing,
+                  pagamento) para executar operações do site;
+                </li>
+                <li>Autoridades quando exigido por lei;</li>
+                <li>
+                  Em fusões, aquisições ou reorganizações, mediante aviso aos
+                  usuários.
+                </li>
+              </ul>
+              <p>
+                Exigimos que terceiros mantenham padrões de segurança e
+                privacidade adequados.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="seguranca">
+            <div class="acc-head" data-target="acc-seguranca">
+              <strong>4. Segurança</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-seguranca">
+              <p>
+                Implementamos medidas técnicas e organizacionais para proteger
+                os dados contra perda, uso indevido, acesso não autorizado e
+                divulgação. No entanto, nenhum método de transmissão ou
+                armazenamento eletrônico é 100% seguro.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="direitos">
+            <div class="acc-head" data-target="acc-direitos">
+              <strong>5. Seus Direitos</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-direitos">
+              <p>Dependendo da sua jurisdição, você pode ter direitos como:</p>
+              <ul>
+                <li>Acesso aos seus dados;</li>
+                <li>Retificação ou exclusão;</li>
+                <li>Restrição de processamento e portabilidade;</li>
+                <li>
+                  Oposição ao processamento e retirada do consentimento a
+                  qualquer momento.
+                </li>
+              </ul>
+              <p>
+                Para exercer qualquer direito, entre em contato conforme a seção
+                <strong>Contato</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="cookies">
+            <div class="acc-head" data-target="acc-cookies">
+              <strong>6. Cookies</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-cookies">
+              <p>
+                Utilizamos cookies e tecnologias similares para lembrar
+                preferências, analisar tráfego e melhorar a experiência do
+                usuário. Você pode controlar cookies através das configurações
+                do navegador ou de ferramentas de consentimento implementadas no
+                site.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="contato">
+            <div class="acc-head" data-target="acc-contato">
+              <strong>7. Contato</strong><span>+</span>
+            </div>
+            <div class="acc-body" id="acc-contato">
+              <p>
+                Se tiver dúvidas, solicitações ou reclamações sobre esta
+                Política de Privacidade, entre em contato:
+              </p>
+              <p><strong>E-mail:</strong> contato@finance365.com.br</p>
+              <p><strong>Proprietário:</strong> Benilson Vieira</p>
+            </div>
+          </article>
+        </div>
+
+        <section style="margin-top: 1rem">
+          <h3 class="section-title">Alterações nesta Política</h3>
+          <p>
+            Podemos atualizar esta Política periodicamente. Notificaremos os
+            usuários quando mudanças relevantes ocorrerem, indicando data de
+            atualização.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        © <span id="year"></span> Finance365 — Todos os direitos reservados
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      document.querySelectorAll(".acc-head").forEach((head) => {
+        head.addEventListener("click", () => {
+          const targetId = head.dataset.target;
+          const body = document.getElementById(targetId);
+          const wasOpen = body.classList.contains("open");
+          document
+            .querySelectorAll(".acc-body")
+            .forEach((b) => b.classList.remove("open"));
+          if (!wasOpen) {
+            body.classList.add("open");
+            head.querySelector("span").textContent = "−";
+          } else {
+            head.querySelector("span").textContent = "+";
+          }
+          document.querySelectorAll(".acc-head").forEach((h) => {
+            if (h.dataset.target !== targetId)
+              h.querySelector("span").textContent = "+";
+          });
+        });
+      });
+
+      document.querySelectorAll("nav.toc a").forEach((a) => {
+        a.addEventListener("click", (ev) => {
+          ev.preventDefault();
+          const id = a.getAttribute("href").slice(1);
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      const sections = Array.from(
+        document.querySelectorAll("main.card section[id], article[id]")
+      );
+      function onScroll() {
+        const top = window.scrollY + 120;
+        let current = sections[0];
+        for (const s of sections) {
+          if (s.offsetTop <= top) current = s;
+        }
+        document.querySelectorAll("nav.toc a").forEach((a) => {
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + current.id
+          );
+        });
+      }
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+
+      // Botão de voltar ao início do site
+      document.getElementById("btnBack").addEventListener("click", () => {
+        window.location.href = "/";
+      });
+
+      document.getElementById("acc-coleta").classList.add("open");
+      document
+        .querySelector('[data-target="acc-coleta"]')
+        .querySelector("span").textContent = "−";
+    </script>
+  </body>
+</html>

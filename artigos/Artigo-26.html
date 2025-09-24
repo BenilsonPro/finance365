@@ -1,324 +1,378 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Como Evitar Fraudes e Golpes Financeiros</title>
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aprenda a identificar e evitar fraudes financeiras, golpes e armadilhas do mercado para proteger seu dinheiro e seus investimentos."
+    />
+    <title>Como Evitar Fraudes e Golpes Financeiros</title>
+    <style>
+      /* RESET */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
 
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.7;
-      background-color: #f9f9f9;
-      color: #222;
-    }
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.7;
+        background-color: #f9f9f9;
+        color: #222;
+      }
 
-    header {
-      background: linear-gradient(90deg, #2e7d32, #43a047);
-      color: white;
-      padding: 30px 20px; /* reduzido */
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+      header {
+        background: linear-gradient(90deg, #2e7d32, #43a047);
+        color: white;
+        padding: 30px 20px; /* reduzido */
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
 
-    header h1 {
-      font-size: 2.2rem; /* reduzido */
-      margin-bottom: 10px;
-      animation: fadeInDown 1s ease forwards;
-    }
+      header h1 {
+        font-size: 2.2rem; /* reduzido */
+        margin-bottom: 10px;
+        animation: fadeInDown 1s ease forwards;
+      }
 
-    header p {
-      font-size: 1.1rem; /* reduzido */
-      animation: fadeInUp 1s ease forwards;
-    }
+      header p {
+        font-size: 1.1rem; /* reduzido */
+        animation: fadeInUp 1s ease forwards;
+      }
 
-    @keyframes fadeInDown {
-      0% {opacity: 0; transform: translateY(-20px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    @keyframes fadeInUp {
-      0% {opacity: 0; transform: translateY(20px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    /* Botão voltar à página anterior */
-    #backPage {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      /* background-color: #ffd700; */
-      color: #ffffff;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 1001;
-      transition: background 0.3s;
-      text-decoration: none;
-    }
+      /* Botão voltar à página anterior */
+      #backPage {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        /* background-color: #ffd700; */
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+        transition: background 0.3s;
+        text-decoration: none;
+      }
 
-    #backPage:hover {
-      background-color: #43a047;
-      color: white;
-    }
+      #backPage:hover {
+        background-color: #43a047;
+        color: white;
+      }
 
-    nav {
-      background: #43a047;
-      padding: 14px 20px;
-      text-align: center;
-    }
+      nav {
+        background: #43a047;
+        padding: 14px 20px;
+        text-align: center;
+      }
 
-    nav a {
-      color: white;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+      nav a {
+        color: white;
+        margin: 0 12px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
 
-    nav a:hover {
-      color: #ffd700;
-    }
+      nav a:hover {
+        color: #ffd700;
+      }
 
-    section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
+      section {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
 
-    section h2 {
-      color: #2e7d32;
-      margin-bottom: 20px;
-      border-left: 6px solid #ffd700;
-      padding-left: 12px;
-      animation: fadeIn 1s ease forwards;
-    }
+      section h2 {
+        color: #2e7d32;
+        margin-bottom: 20px;
+        border-left: 6px solid #ffd700;
+        padding-left: 12px;
+        animation: fadeIn 1s ease forwards;
+      }
 
-    section p {
-      margin-bottom: 20px;
-      font-size: 1.15rem;
-      text-align: justify;
-    }
+      section p {
+        margin-bottom: 20px;
+        font-size: 1.15rem;
+        text-align: justify;
+      }
 
-    ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
+      ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
 
-    li {
-      margin-bottom: 12px;
-    }
+      li {
+        margin-bottom: 12px;
+      }
 
-    .tip {
-      background-color: #e8f5e9;
-      padding: 22px;
-      margin: 20px 0;
-      border-left: 6px solid #ffd700;
-      transition: transform 0.3s, box-shadow 0.3s;
-      border-radius: 5px;
-    }
+      .tip {
+        background-color: #e8f5e9;
+        padding: 22px;
+        margin: 20px 0;
+        border-left: 6px solid #ffd700;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 5px;
+      }
 
-    .tip:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
+      .tip:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
 
-    .highlight {
-      color: #2e7d32;
-      font-weight: bold;
-    }
+      .highlight {
+        color: #2e7d32;
+        font-weight: bold;
+      }
 
-    footer {
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      margin-top: 50px;
-    }
+      footer {
+        background-color: #2e7d32;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        margin-top: 50px;
+      }
 
-    /* BOTÃO VOLTAR AO TOPO */
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #ffd700;
-      color: #2e7d32;
-      padding: 15px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      font-size: 18px;
-      transition: background 0.3s;
-      z-index: 1000;
-    }
+      /* BOTÃO VOLTAR AO TOPO */
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #ffd700;
+        color: #2e7d32;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        font-size: 18px;
+        transition: background 0.3s;
+        z-index: 1000;
+      }
 
-    #backToTop:hover {
-      background-color: #43a047;
-      color: white;
-    }
+      #backToTop:hover {
+        background-color: #43a047;
+        color: white;
+      }
 
-    /* RESPONSIVO */
-    @media(max-width:768px){
-      header h1 { font-size: 1.8rem; }
-      section h2 { font-size: 1.5rem; }
-    }
-  </style>
-</head>
-<body>
+      /* RESPONSIVO */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        section h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Botão voltar à página anterior -->
+    <a id="backPage" href="javascript:history.back()">&#8592; Voltar</a>
 
-  <!-- Botão voltar à página anterior -->
-  <a id="backPage" href="javascript:history.back()">&#8592; Voltar</a>
+    <header>
+      <h1>Como Evitar Fraudes e Golpes Financeiros</h1>
+      <p>
+        Guia completo para proteger seu dinheiro, identificar ameaças e tomar
+        decisões financeiras seguras.
+      </p>
+    </header>
 
-  <header>
-    <h1>Como Evitar Fraudes e Golpes Financeiros</h1>
-    <p>Guia completo para proteger seu dinheiro, identificar ameaças e tomar decisões financeiras seguras.</p>
-  </header>
+    <nav>
+      <a href="#tipos-fraudes">Tipos de Fraudes</a>
+      <a href="#identificacao">Como Identificar</a>
+      <a href="#prevencao">Prevenção</a>
+      <a href="#acao">O que Fazer</a>
+    </nav>
 
-  <nav>
-    <a href="#tipos-fraudes">Tipos de Fraudes</a>
-    <a href="#identificacao">Como Identificar</a>
-    <a href="#prevencao">Prevenção</a>
-    <a href="#acao">O que Fazer</a>
-  </nav>
+    <!-- Seção Tipos de Fraudes -->
+    <section id="tipos-fraudes">
+      <h2>Tipos de Fraudes e Golpes Financeiros</h2>
+      <p>
+        Conhecer os principais tipos de fraude é essencial para se proteger e
+        evitar perdas financeiras.
+      </p>
+      <div class="tip">
+        <h3>1. Phishing</h3>
+        <p>
+          Mensagens de e-mail ou SMS que tentam obter suas senhas e dados
+          bancários. Sempre verifique a autenticidade do remetente.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>2. Golpes de Investimento</h3>
+        <p>
+          Promessas de lucros garantidos ou pirâmides financeiras. Pesquise e
+          desconfie de retornos rápidos.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>3. Fraudes em Cartões de Crédito</h3>
+        <p>
+          Clonagem ou uso não autorizado. Monitore extratos e ative notificações
+          de transações.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>4. Golpes de Compras Online</h3>
+        <p>
+          Sites falsos que cobram por produtos inexistentes. Prefira gateways de
+          pagamento seguros.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>5. Fraudes Bancárias</h3>
+        <p>
+          Mensagens ou chamadas de falsos representantes solicitando dados
+          pessoais. Bancos nunca pedem senha por telefone.
+        </p>
+      </div>
+    </section>
 
-  <!-- Seção Tipos de Fraudes -->
-  <section id="tipos-fraudes">
-    <h2>Tipos de Fraudes e Golpes Financeiros</h2>
-    <p>Conhecer os principais tipos de fraude é essencial para se proteger e evitar perdas financeiras.</p>
-    <div class="tip">
-      <h3>1. Phishing</h3>
-      <p>Mensagens de e-mail ou SMS que tentam obter suas senhas e dados bancários. Sempre verifique a autenticidade do remetente.</p>
-    </div>
-    <div class="tip">
-      <h3>2. Golpes de Investimento</h3>
-      <p>Promessas de lucros garantidos ou pirâmides financeiras. Pesquise e desconfie de retornos rápidos.</p>
-    </div>
-    <div class="tip">
-      <h3>3. Fraudes em Cartões de Crédito</h3>
-      <p>Clonagem ou uso não autorizado. Monitore extratos e ative notificações de transações.</p>
-    </div>
-    <div class="tip">
-      <h3>4. Golpes de Compras Online</h3>
-      <p>Sites falsos que cobram por produtos inexistentes. Prefira gateways de pagamento seguros.</p>
-    </div>
-    <div class="tip">
-      <h3>5. Fraudes Bancárias</h3>
-      <p>Mensagens ou chamadas de falsos representantes solicitando dados pessoais. Bancos nunca pedem senha por telefone.</p>
-    </div>
-  </section>
+    <!-- Seção Como Identificar -->
+    <section id="identificacao">
+      <h2>Como Identificar Possíveis Fraudes</h2>
+      <div class="tip">
+        <h3>1. Desconfie de ofertas vantajosas</h3>
+        <p>Promessas de lucros altos sem risco são sempre suspeitas.</p>
+      </div>
+      <div class="tip">
+        <h3>2. Verifique contatos</h3>
+        <p>
+          E-mails, mensagens e sites devem ser conferidos antes de fornecer
+          dados.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>3. Analise comunicações suspeitas</h3>
+        <p>
+          Erros de português, links encurtados e urgência excessiva indicam
+          golpe.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>4. Pesquise antes de investir</h3>
+        <p>Consulte órgãos oficiais como CVM, Banco Central ou Procon.</p>
+      </div>
+    </section>
 
-  <!-- Seção Como Identificar -->
-  <section id="identificacao">
-    <h2>Como Identificar Possíveis Fraudes</h2>
-    <div class="tip">
-      <h3>1. Desconfie de ofertas vantajosas</h3>
-      <p>Promessas de lucros altos sem risco são sempre suspeitas.</p>
-    </div>
-    <div class="tip">
-      <h3>2. Verifique contatos</h3>
-      <p>E-mails, mensagens e sites devem ser conferidos antes de fornecer dados.</p>
-    </div>
-    <div class="tip">
-      <h3>3. Analise comunicações suspeitas</h3>
-      <p>Erros de português, links encurtados e urgência excessiva indicam golpe.</p>
-    </div>
-    <div class="tip">
-      <h3>4. Pesquise antes de investir</h3>
-      <p>Consulte órgãos oficiais como CVM, Banco Central ou Procon.</p>
-    </div>
-  </section>
+    <!-- Seção Prevenção -->
+    <section id="prevencao">
+      <h2>Como se Proteger e Prevenir Golpes</h2>
+      <div class="tip">
+        <h3>1. Senhas fortes e autenticação</h3>
+        <p>
+          Use combinações de letras, números e símbolos, e ative autenticação em
+          duas etapas.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>2. Atualize dispositivos</h3>
+        <p>Correções de segurança previnem exploração de vulnerabilidades.</p>
+      </div>
+      <div class="tip">
+        <h3>3. Monitore contas</h3>
+        <p>Verifique extratos e saldos regularmente.</p>
+      </div>
+      <div class="tip">
+        <h3>4. Proteja informações pessoais</h3>
+        <p>
+          Não compartilhe dados sensíveis em redes ou mensagens não seguras.
+        </p>
+      </div>
+      <div class="tip">
+        <h3>5. Educação financeira</h3>
+        <p>
+          Conhecimento ajuda a identificar fraudes e tomar decisões seguras.
+        </p>
+      </div>
+    </section>
 
-  <!-- Seção Prevenção -->
-  <section id="prevencao">
-    <h2>Como se Proteger e Prevenir Golpes</h2>
-    <div class="tip">
-      <h3>1. Senhas fortes e autenticação</h3>
-      <p>Use combinações de letras, números e símbolos, e ative autenticação em duas etapas.</p>
-    </div>
-    <div class="tip">
-      <h3>2. Atualize dispositivos</h3>
-      <p>Correções de segurança previnem exploração de vulnerabilidades.</p>
-    </div>
-    <div class="tip">
-      <h3>3. Monitore contas</h3>
-      <p>Verifique extratos e saldos regularmente.</p>
-    </div>
-    <div class="tip">
-      <h3>4. Proteja informações pessoais</h3>
-      <p>Não compartilhe dados sensíveis em redes ou mensagens não seguras.</p>
-    </div>
-    <div class="tip">
-      <h3>5. Educação financeira</h3>
-      <p>Conhecimento ajuda a identificar fraudes e tomar decisões seguras.</p>
-    </div>
-  </section>
+    <!-- Seção O que Fazer -->
+    <section id="acao">
+      <h2>O que Fazer em Caso de Fraude</h2>
+      <div class="tip">
+        <h3>1. Bloqueie cartões e contas</h3>
+        <p>Contate o banco imediatamente para evitar perdas.</p>
+      </div>
+      <div class="tip">
+        <h3>2. Registre boletim de ocorrência</h3>
+        <p>Formalizar ajuda a acionar autoridades e empresas.</p>
+      </div>
+      <div class="tip">
+        <h3>3. Alerta órgãos de defesa do consumidor</h3>
+        <p>Contate Procon, CVM ou Banco Central, conforme o caso.</p>
+      </div>
+      <div class="tip">
+        <h3>4. Altere senhas e monitore</h3>
+        <p>Troque senhas e acompanhe movimentações futuras.</p>
+      </div>
+      <div class="tip">
+        <h3>5. Eduque familiares e colegas</h3>
+        <p>Compartilhe informações para proteger pessoas próximas.</p>
+      </div>
+    </section>
 
-  <!-- Seção O que Fazer -->
-  <section id="acao">
-    <h2>O que Fazer em Caso de Fraude</h2>
-    <div class="tip">
-      <h3>1. Bloqueie cartões e contas</h3>
-      <p>Contate o banco imediatamente para evitar perdas.</p>
-    </div>
-    <div class="tip">
-      <h3>2. Registre boletim de ocorrência</h3>
-      <p>Formalizar ajuda a acionar autoridades e empresas.</p>
-    </div>
-    <div class="tip">
-      <h3>3. Alerta órgãos de defesa do consumidor</h3>
-      <p>Contate Procon, CVM ou Banco Central, conforme o caso.</p>
-    </div>
-    <div class="tip">
-      <h3>4. Altere senhas e monitore</h3>
-      <p>Troque senhas e acompanhe movimentações futuras.</p>
-    </div>
-    <div class="tip">
-      <h3>5. Eduque familiares e colegas</h3>
-      <p>Compartilhe informações para proteger pessoas próximas.</p>
-    </div>
-  </section>
+    <!-- Rodapé -->
+    <footer>
+      <p>
+        &copy; 2025 Guia de Segurança Financeira. Todos os direitos reservados.
+      </p>
+    </footer>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Guia de Segurança Financeira. Todos os direitos reservados.</p>
-  </footer>
+    <!-- Botão Voltar ao Topo -->
+    <div id="backToTop">&#8679;</div>
 
-  <!-- Botão Voltar ao Topo -->
-  <div id="backToTop">&#8679;</div>
+    <script>
+      // Botão voltar ao topo
+      const backToTop = document.getElementById("backToTop");
 
-  <script>
-    // Botão voltar ao topo
-    const backToTop = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Hover animado nos cards de dicas
-    const tips = document.querySelectorAll('.tip');
-    tips.forEach((card) => {
-      card.addEventListener('mouseenter', () => {
-        card.style.backgroundColor = '#d0f0c0';
+      window.addEventListener("scroll", () => {
+        backToTop.style.display = window.scrollY > 300 ? "block" : "none";
       });
-      card.addEventListener('mouseleave', () => {
-        card.style.backgroundColor = '#e8f5e9';
-      });
-    });
-  </script>
 
-</body>
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Hover animado nos cards de dicas
+      const tips = document.querySelectorAll(".tip");
+      tips.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.backgroundColor = "#d0f0c0";
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.backgroundColor = "#e8f5e9";
+        });
+      });
+    </script>
+  </body>
 </html>

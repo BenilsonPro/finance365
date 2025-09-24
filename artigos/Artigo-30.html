@@ -1,285 +1,676 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Como Planejar Viagens Sem Prejudicar suas Finanças</title>
-  <style>
-    :root{
-      --blue:#0b66d9;
-      --green:#16a36a;
-      --white:#ffffff;
-      --bg:#f5fbff;
-      --card: rgba(255,255,255,0.95);
-      --muted:#566774;
-      --accent-gradient: linear-gradient(135deg,var(--blue),var(--green));
-      --max-width:1120px;
-      --glass: rgba(255,255,255,0.7);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;line-height:1.7;color:#123; background:linear-gradient(180deg,var(--bg),#eef8f3);
-      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-    }
-    .container{max-width:var(--max-width);margin:2rem auto;padding:1rem}
-    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.25rem}
-    .brand{display:flex;align-items:center;gap:.75rem}
-    .logo{width:56px;height:56px;border-radius:12px;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:800;font-size:1.05rem;box-shadow:0 8px 30px rgba(10,30,80,0.08)}
-    h1{font-size:clamp(1.6rem,2.4vw,2.2rem);margin:0;color:var(--blue)}
-    p.lead{color:var(--muted);margin:0}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aprenda a planejar viagens sem comprometer seu orçamento, economizar em despesas e manter suas finanças pessoais organizadas e seguras."
+    />
+    <title>Como Planejar Viagens Sem Prejudicar suas Finanças</title>
+    <style>
+      :root {
+        --blue: #0b66d9;
+        --green: #16a36a;
+        --white: #ffffff;
+        --bg: #f5fbff;
+        --card: rgba(255, 255, 255, 0.95);
+        --muted: #566774;
+        --accent-gradient: linear-gradient(135deg, var(--blue), var(--green));
+        --max-width: 1120px;
+        --glass: rgba(255, 255, 255, 0.7);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.7;
+        color: #123;
+        background: linear-gradient(180deg, var(--bg), #eef8f3);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: var(--accent-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 800;
+        font-size: 1.05rem;
+        box-shadow: 0 8px 30px rgba(10, 30, 80, 0.08);
+      }
+      h1 {
+        font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+        margin: 0;
+        color: var(--blue);
+      }
+      p.lead {
+        color: var(--muted);
+        margin: 0;
+      }
 
-    .hero{display:grid;grid-template-columns:1fr;gap:1rem;padding:1.25rem;border-radius:14px;background:linear-gradient(180deg,var(--card),rgba(245,255,250,0.6));box-shadow:0 10px 40px rgba(8,66,120,0.06)}
-    @media(min-width:960px){.hero{grid-template-columns:1fr 360px}}
-    .hero h2{color:var(--green);margin:0}
-    .hero .summary{padding-right:1rem}
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.25rem;
+        border-radius: 14px;
+        background: linear-gradient(
+          180deg,
+          var(--card),
+          rgba(245, 255, 250, 0.6)
+        );
+        box-shadow: 0 10px 40px rgba(8, 66, 120, 0.06);
+      }
+      @media (min-width: 960px) {
+        .hero {
+          grid-template-columns: 1fr 360px;
+        }
+      }
+      .hero h2 {
+        color: var(--green);
+        margin: 0;
+      }
+      .hero .summary {
+        padding-right: 1rem;
+      }
 
-    .card{background:var(--card);padding:1.1rem;border-radius:12px;margin:1rem 0;box-shadow:0 6px 20px rgba(11,93,215,0.04)}
-    nav.toc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
-    nav.toc a{background:#fff;padding:.38rem .6rem;border-radius:9px;border:1px solid #e6f1f6;color:var(--blue);text-decoration:none;font-weight:600;font-size:.86rem}
+      .card {
+        background: var(--card);
+        padding: 1.1rem;
+        border-radius: 12px;
+        margin: 1rem 0;
+        box-shadow: 0 6px 20px rgba(11, 93, 215, 0.04);
+      }
+      nav.toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.6rem;
+      }
+      nav.toc a {
+        background: #fff;
+        padding: 0.38rem 0.6rem;
+        border-radius: 9px;
+        border: 1px solid #e6f1f6;
+        color: var(--blue);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.86rem;
+      }
 
-    .content{display:grid;grid-template-columns:1fr;gap:1rem}
-    @media(min-width:980px){.content{grid-template-columns:2fr 360px}}
-    article{padding:1rem}
+      .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      @media (min-width: 980px) {
+        .content {
+          grid-template-columns: 2fr 360px;
+        }
+      }
+      article {
+        padding: 1rem;
+      }
 
-    /* Titles with slightly different treatment than previous page */
-    article h2{font-size:1.45rem;margin-top:0;padding-bottom:.25rem;position:relative}
-    article h2::after{content:'';display:block;height:4px;width:90px;border-radius:6px;margin-top:.6rem;background:var(--accent-gradient);opacity:.9}
-    article h3{color:var(--blue);font-size:1.05rem;margin-bottom:.35rem}
+      /* Titles with slightly different treatment than previous page */
+      article h2 {
+        font-size: 1.45rem;
+        margin-top: 0;
+        padding-bottom: 0.25rem;
+        position: relative;
+      }
+      article h2::after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 90px;
+        border-radius: 6px;
+        margin-top: 0.6rem;
+        background: var(--accent-gradient);
+        opacity: 0.9;
+      }
+      article h3 {
+        color: var(--blue);
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+      }
 
-    .side{position:sticky;top:1.2rem}
-    .back-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.55rem .9rem;border-radius:999px;border:2px solid var(--green);background:transparent;color:var(--green);cursor:pointer;font-weight:800;text-decoration:none;transition:all .22s ease}
-    .back-btn:hover{background:var(--green);color:var(--white);transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,120,80,0.12)}
+      .side {
+        position: sticky;
+        top: 1.2rem;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.55rem 0.9rem;
+        border-radius: 999px;
+        border: 2px solid var(--green);
+        background: transparent;
+        color: var(--green);
+        cursor: pointer;
+        font-weight: 800;
+        text-decoration: none;
+        transition: all 0.22s ease;
+      }
+      .back-btn:hover {
+        background: var(--green);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(20, 120, 80, 0.12);
+      }
 
-    p{color:#213042;margin:.7rem 0}
-    .muted{color:var(--muted)}
-    .quote{border-left:4px solid var(--green);padding:.6rem 1rem;background:linear-gradient(180deg,#fff,#f7fff9);border-radius:8px}
+      p {
+        color: #213042;
+        margin: 0.7rem 0;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .quote {
+        border-left: 4px solid var(--green);
+        padding: 0.6rem 1rem;
+        background: linear-gradient(180deg, #fff, #f7fff9);
+        border-radius: 8px;
+      }
 
-    ul{margin:0 0 1rem 1.1rem}
-    li{margin:.45rem 0}
+      ul {
+        margin: 0 0 1rem 1.1rem;
+      }
+      li {
+        margin: 0.45rem 0;
+      }
 
-    .pill{display:inline-block;padding:.35rem .6rem;border-radius:999px;background:#eef9f4;border:1px solid #e6f3ee;color:var(--green);font-weight:700}
+      .pill {
+        display: inline-block;
+        padding: 0.35rem 0.6rem;
+        border-radius: 999px;
+        background: #eef9f4;
+        border: 1px solid #e6f3ee;
+        color: var(--green);
+        font-weight: 700;
+      }
 
-    /* scroll animation */
-    .scroll-animate{opacity:0;transform:translateY(2rem) scale(.98);transition:all .8s cubic-bezier(.2,.9,.3,1)}
-    .in-view{opacity:1;transform:none}
+      /* scroll animation */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(2rem) scale(0.98);
+        transition: all 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+      }
+      .in-view {
+        opacity: 1;
+        transform: none;
+      }
 
-    /* small visual variations */
-    .stat{display:flex;gap:.6rem;align-items:center}
-    .stat strong{font-size:1.2rem;color:var(--blue)}
+      /* small visual variations */
+      .stat {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+      }
+      .stat strong {
+        font-size: 1.2rem;
+        color: var(--blue);
+      }
 
-    @media(max-width:640px){.side{position:relative;top:0}.logo{width:48px;height:48px}}
+      @media (max-width: 640px) {
+        .side {
+          position: relative;
+          top: 0;
+        }
+        .logo {
+          width: 48px;
+          height: 48px;
+        }
+      }
 
-    footer{margin-top:2rem;color:var(--muted);text-align:center;padding:1.25rem}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">VT</div>
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        text-align: center;
+        padding: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">VT</div>
+          <div>
+            <h1>Como Planejar Viagens Sem Prejudicar suas Finanças</h1>
+            <p class="lead">
+              Dicas práticas para viajar mais e gastar menos — sem comprometer
+              objetivos financeiros.
+            </p>
+          </div>
+        </div>
         <div>
-          <h1>Como Planejar Viagens Sem Prejudicar suas Finanças</h1>
-          <p class="lead">Dicas práticas para viajar mais e gastar menos — sem comprometer objetivos financeiros.</p>
+          <button class="back-btn" onclick="history.back()" aria-label="Voltar">
+            ← Voltar
+          </button>
         </div>
-      </div>
-      <div>
-        <button class="back-btn" onclick="history.back()" aria-label="Voltar">← Voltar</button>
-      </div>
-    </header>
+      </header>
 
-    <section class="hero card scroll-animate">
-      <div class="summary">
-        <h2>Viaje inteligente, mantenha seu equilíbrio financeiro</h2>
-        <p class="muted">Este guia mostra como planejar, economizar, priorizar e aproveitar experiências sem sacrificar segurança financeira. Estratégias para orçamento, escolhas de transporte, hospedagem, seguros e como transformar viagens em oportunidade de economia e renda.</p>
-        <nav class="toc" aria-label="Sumário rápido">
-          <a href="#objetivos">Defina objetivos</a>
-          <a href="#orcamento">Faça um orçamento realista</a>
-          <a href="#poupanca">Crie o fundo de viagem</a>
-          <a href="#economias">Táticas de economia</a>
-          <a href="#riscos">Seguros e segurança</a>
-        </nav>
-      </div>
-      <div class="card side scroll-animate">
-        <h3>Resumo</h3>
-        <p class="muted">Organize metas, separe um fundo, pesquise, escolha bons momentos para comprar e mantenha disciplina nos gastos. A viagem perfeita não precisa ser a mais cara — precisa ser planejada.</p>
-      </div>
-    </section>
-
-    <div class="content">
-      <article id="objetivos" class="card scroll-animate">
-        <h2>1. Comece definindo objetivos claros</h2>
-        <p>Antes de qualquer reserva ou sonhar com fotos incríveis, responda perguntas simples: qual o propósito da viagem? lazer, aventura, visita a familiares, trabalho ou estudo? Quanto tempo pretende ficar? Qual o nível de conforto desejado? Essas respostas orientam orçamento, temporada e escolhas operacionais.</p>
-        <p>Viagens esporádicas e curtas exigem uma abordagem diferente de longos intercâmbios ou viagens de volta ao redor do mundo. Objetivos claros ajudam a priorizar gastos: talvez valha a pena gastar mais com uma experiência única, mas reduzir custos em outras áreas.</p>
-
-        <h3>Priorize objetivos x custo</h3>
-        <p>Defina três prioridades para sua próxima viagem — por exemplo: 1) experiências gastronômicas, 2) conforto no transporte, 3) economia na hospedagem. Essas prioridades orientam onde você aceita gastar mais e onde cortar.</p>
-
-        <p>Uma boa prática é escrever um pequeno plano de viagem com metas financeiras: quanto quer gastar no total, quanto será reservado para emergências, e quais gastos são não-negociáveis (por exemplo, visto ou vacinações).</p>
-      </article>
-
-      <aside class="side">
-        <div class="card scroll-animate">
-          <h4>Checklist inicial</h4>
-          <ul>
-            <li>Objetivo da viagem</li>
-            <li>Datas e duração</li>
-            <li>Estimativa inicial de custo</li>
-            <li>Reserva do fundo de viagem</li>
-          </ul>
+      <section class="hero card scroll-animate">
+        <div class="summary">
+          <h2>Viaje inteligente, mantenha seu equilíbrio financeiro</h2>
+          <p class="muted">
+            Este guia mostra como planejar, economizar, priorizar e aproveitar
+            experiências sem sacrificar segurança financeira. Estratégias para
+            orçamento, escolhas de transporte, hospedagem, seguros e como
+            transformar viagens em oportunidade de economia e renda.
+          </p>
+          <nav class="toc" aria-label="Sumário rápido">
+            <a href="#objetivos">Defina objetivos</a>
+            <a href="#orcamento">Faça um orçamento realista</a>
+            <a href="#poupanca">Crie o fundo de viagem</a>
+            <a href="#economias">Táticas de economia</a>
+            <a href="#riscos">Seguros e segurança</a>
+          </nav>
         </div>
-      </aside>
+        <div class="card side scroll-animate">
+          <h3>Resumo</h3>
+          <p class="muted">
+            Organize metas, separe um fundo, pesquise, escolha bons momentos
+            para comprar e mantenha disciplina nos gastos. A viagem perfeita não
+            precisa ser a mais cara — precisa ser planejada.
+          </p>
+        </div>
+      </section>
+
+      <div class="content">
+        <article id="objetivos" class="card scroll-animate">
+          <h2>1. Comece definindo objetivos claros</h2>
+          <p>
+            Antes de qualquer reserva ou sonhar com fotos incríveis, responda
+            perguntas simples: qual o propósito da viagem? lazer, aventura,
+            visita a familiares, trabalho ou estudo? Quanto tempo pretende
+            ficar? Qual o nível de conforto desejado? Essas respostas orientam
+            orçamento, temporada e escolhas operacionais.
+          </p>
+          <p>
+            Viagens esporádicas e curtas exigem uma abordagem diferente de
+            longos intercâmbios ou viagens de volta ao redor do mundo. Objetivos
+            claros ajudam a priorizar gastos: talvez valha a pena gastar mais
+            com uma experiência única, mas reduzir custos em outras áreas.
+          </p>
+
+          <h3>Priorize objetivos x custo</h3>
+          <p>
+            Defina três prioridades para sua próxima viagem — por exemplo: 1)
+            experiências gastronômicas, 2) conforto no transporte, 3) economia
+            na hospedagem. Essas prioridades orientam onde você aceita gastar
+            mais e onde cortar.
+          </p>
+
+          <p>
+            Uma boa prática é escrever um pequeno plano de viagem com metas
+            financeiras: quanto quer gastar no total, quanto será reservado para
+            emergências, e quais gastos são não-negociáveis (por exemplo, visto
+            ou vacinações).
+          </p>
+        </article>
+
+        <aside class="side">
+          <div class="card scroll-animate">
+            <h4>Checklist inicial</h4>
+            <ul>
+              <li>Objetivo da viagem</li>
+              <li>Datas e duração</li>
+              <li>Estimativa inicial de custo</li>
+              <li>Reserva do fundo de viagem</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <section id="orcamento" class="card scroll-animate">
+        <h2>2. Faça um orçamento realista — e fiel a ele</h2>
+        <p>
+          Orçamento é o mapa que evita surpresas. Divida o custo em blocos:
+          transporte (passagens, combustível), hospedagem, alimentação,
+          atividades, vistos/vacinas, seguros, taxas e extras (souvenirs,
+          transporte local). Não esqueça impostos, tarifas de cartão e taxas de
+          câmbio.
+        </p>
+
+        <h3>Estimativa por dia</h3>
+        <p>
+          Uma técnica eficiente é estimar custo por dia por categoria. Exemplo
+          simplificado para destino internacional de custo médio:
+        </p>
+        <ul>
+          <li>Transporte (ida e volta): 40% do total.</li>
+          <li>Hospedagem por dia: 20% do total.</li>
+          <li>Alimentação por dia: 15% do total.</li>
+          <li>Atividades e passeios: 15% do total.</li>
+          <li>Extras e emergência: 10% do total.</li>
+        </ul>
+
+        <p>
+          Esses percentuais servem como ponto de partida — ajuste conforme
+          prioridades. Para uma viagem barata, transporte e hospedagem podem ser
+          reduzidos; para uma viagem gastronômica, aumente o peso em alimentação
+          e experiências.
+        </p>
+
+        <h3>Inclua buffer de segurança</h3>
+        <p>
+          Adicione 10-20% ao orçamento como margem de segurança para flutuações
+          cambiais, imprevistos e oportunidades. Isso evita que uma pequena
+          surpresa comprometa todo o plano.
+        </p>
+      </section>
+
+      <section id="poupanca" class="card scroll-animate">
+        <h2>3. Crie um fundo de viagem separado</h2>
+        <p>
+          Separar o dinheiro evita a tentação de usar reserva de emergência ou
+          poupança para outros fins. Crie uma conta ou envelope específico para
+          viagens — em bancos digitais, contas de investimento de curto prazo ou
+          até mesmo uma carteira virtual. A ideia é visual: ver o saldo crescer
+          ajuda a manter disciplina.
+        </p>
+
+        <h3>Como calcular aportes</h3>
+        <p>
+          Determine quanto precisa e em quanto tempo quer acumular. Divida o
+          valor por meses para achar o aporte mensal. Exemplo: viagem de R$6.000
+          em 12 meses = R$500/mês. Se possível, automatize a transferência
+          mensal para não depender de força de vontade.
+        </p>
+
+        <h3>Reservas automáticas</h3>
+        <p>
+          Use débito automático para transferir parte do salário para o fundo de
+          viagem no dia do pagamento. Automatizar evita que o dinheiro seja
+          gasto em outras áreas e transforma o aporte em hábito.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="economias">
+        <h2>4. Táticas práticas para economizar sem perder qualidade</h2>
+        <p>
+          Existem dezenas de estratégias concretas que, combinadas, reduzem o
+          custo total da viagem sem prejudicar a experiência.
+        </p>
+
+        <h3>Pesquise preços com inteligência</h3>
+        <p>
+          Use comparadores, alertas de preço e calendários flexíveis para
+          encontrar voos mais baratos. Pequenas alterações na data ou horário
+          podem reduzir o custo drasticamente. Para hospedagem, filtre por
+          avaliações recentes e compare hotéis, hostels e apartamentos através
+          de diferentes plataformas.
+        </p>
+
+        <h3>Seja flexível com datas e aeroportos</h3>
+        <p>
+          Viajar fora de feriados e alta temporada reduz custos. Voos mid-week
+          (terça/quarta) tendem a ser mais baratos. Considere aeroportos
+          alternativos — às vezes voar para uma cidade próxima e pegar um
+          transporte local é mais econômico.
+        </p>
+
+        <h3>Combinações inteligentes</h3>
+        <p>
+          Combine meios: por exemplo, voos low-cost + um ou dois trechos por
+          trem ou ônibus podem reduzir o custo total e incrementar a experiência
+          local. Use passes regionais quando disponíveis (Eurail, Japan Rail
+          Pass).
+        </p>
+
+        <h3>Alimente-se como local</h3>
+        <p>
+          Restaurantes turísticos são caros. Comer em mercados, feiras e
+          restaurantes frequentados por moradores é mais barato e autêntico.
+          Cozinhar algumas refeições (quando possível) reduz gastos de forma
+          significativa.
+        </p>
+
+        <h3>Aproveite programas de milhas e cashback</h3>
+        <p>
+          Acumular pontos em cartões e programas de fidelidade reduz custos de
+          passagens e hospedagem. Use com planejamento: a melhor economia vem
+          quando os pontos são usados com sabedoria em reservas longas ou para
+          upgrades.
+        </p>
+
+        <h3>Escolhas de hospedagem</h3>
+        <p>
+          Considere alternativas: apartamentos por temporada, hostels premium,
+          pousadas familiares. Reservas com cancelamento gratuito oferecem
+          flexibilidade sem custo adicional (verifique políticas).
+        </p>
+
+        <h3>Negocie quando possível</h3>
+        <p>
+          Em muitos destinos, especialmente em mercados locais, negociar é
+          normal. Para hospedagem de longa duração ou passeios privados,
+          pergunte por desconto — especialmente fora de alta temporada.
+        </p>
+
+        <h3>Minimize taxas de câmbio</h3>
+        <p>
+          Pesquise o melhor momento e método para comprar moeda estrangeira.
+          Cartões sem taxa de conversão, saques econômicos e cartões pré-pagos
+          podem reduzir custos. Evite casas de câmbio em aeroportos, que
+          costumam oferecer piores cotações.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="riscos">
+        <h2>5. Seguros, documentos e segurança financeira</h2>
+        <p>
+          Seguro viagem é investimento — protege contra despesas médicas,
+          cancelamentos e perda de bens. Compare coberturas: algumas apólices
+          cobrem atividades radicais mediante adicional; outras cobrem apenas o
+          básico. Para viagens internacionais, verifique exigências de visto e
+          seguro do país destino.
+        </p>
+
+        <h3>Cartões e backup financeiro</h3>
+        <p>
+          Leve mais de uma forma de pagamento (dois cartões com bandeiras
+          diferentes e um pouco de dinheiro local). Registre números de
+          emergência e bloqueio junto à sua instituição. Informe o banco sobre a
+          viagem para evitar bloqueios por suspeita de fraude.
+        </p>
+
+        <h3>Reserva de emergência em viagem</h3>
+        <p>
+          Mantenha um montante separado (10-20% do orçamento total da viagem)
+          somente para emergências. Isso evita recorrer à linha de crédito com
+          juros altos caso aconteça algo inesperado.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="ganhar-dinheiro">
+        <h2>6. Como financiar viagens com renda extra e planejamento</h2>
+        <p>
+          Viagens podem ser parcialmente financiadas por renda extra. Ideias
+          práticas: freelancing, venda de itens usados, criação de conteúdo
+          (blogs, vídeos), ou trabalhar temporariamente em plataformas que pagam
+          em moeda forte.
+        </p>
+
+        <h3>Planeje por fases</h3>
+        <p>
+          Divida o objetivo em etapas com metas de arrecadação. Por exemplo:
+          meta 1 — R$1.500 em 3 meses (venda de objetos + freelancing); meta 2 —
+          R$3.000 adicionais em 6 meses (renda passiva + economia mensal). A
+          combinação de esforços facilita atingir a meta sem sacrificar
+          orçamento mensal.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="psicologia">
+        <h2>7. Comportamento: controle emocional e hábitos</h2>
+        <p>
+          Gastar por impulso em viagem é comum — e pode arruinar o orçamento.
+          Use técnicas simples: defina um limite diário de gastos, prefira pagar
+          em moeda local para avaliar o valor real e faça pequenas anotações de
+          cada gasto para manter consciência.
+        </p>
+
+        <h3>Evite comparar demais</h3>
+        <p>
+          Comparar sua viagem com a de influenciadores cria ansiedade de
+          consumo. Concentre-se no que é prioritário para você. Uma viagem
+          tranquila e bem planejada frequentemente é mais memorável do que uma
+          viagem cara e estressante.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="tecnologia">
+        <h2>8. Ferramentas digitais que economizam tempo e dinheiro</h2>
+        <p>
+          Apps e sites ajudam a encontrar promoções, acompanhar câmbio,
+          gerenciar orçamento e descobrir experiências locais. Use alertas de
+          preço para voos, apps de reservas com cancelamento gratuito, mapas
+          offline e listas de packing digitais para evitar compras de última
+          hora.
+        </p>
+
+        <h3>Planilha simples de controle</h3>
+        <p>
+          Uma planilha com categorias (transporte, hospedagem, alimentação,
+          atividades, extras) e colunas para orçamento, gasto real e diferença é
+          suficiente para 90% dos viajantes. Atualize diariamente e ajuste
+          comportamento quando ultrapassar categorias.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="exemplos">
+        <h2>9. Exemplos práticos e estudos de caso</h2>
+        <p>
+          Seguem três cenários hipotéticos que ilustram decisões e números reais
+          — adaptáveis à sua realidade.
+        </p>
+
+        <h3>Viagem curta Nacional (fim de semana prolongado)</h3>
+        <p>
+          Horizonte: 3 dias. Orçamento: transporte R$200, hospedagem R$300,
+          alimentação R$200, atividades R$150, extras R$50 — total R$900. Fundo
+          de viagem: aportar R$150/mês por 6 meses para acumular R$900 com
+          folga.
+        </p>
+
+        <h3>Viagem Internacional econômica (10 dias)</h3>
+        <p>
+          Planejamento: pesquisar voos com 2-4 meses de antecedência, escolher
+          hospedagem com cancelamento gratuito, usar passes regionais e cozinha
+          local para reduzir custos. Orçamento estimado: passagem R$2.200,
+          hospedagem R$1.800, alimentação R$1.000, atividades R$800, extras
+          R$300 — total R$6.100. Aporte mensal: R$508 em 12 meses.
+        </p>
+
+        <h3>Viagem longa com experiências premium (3 semanas)</h3>
+        <p>
+          Priorize onde gastar: por exemplo, gastar mais em 2 experiências
+          únicas (trek, passeio guiado) e economizar em transporte interno e
+          hospedagem. Orçamento e fontes de financiamento devem considerar renda
+          extra e reservas de emergência amplas.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="checklist">
+        <h2>10. Checklist final antes de embarcar</h2>
+        <ul>
+          <li>Confirme reservas e políticas de cancelamento.</li>
+          <li>Tenha seguro viagem ativo e cópias dos documentos.</li>
+          <li>Registre o roteiro com familiares ou amigos e deixe contatos.</li>
+          <li>Cheque câmbio e cartões habilitados no exterior.</li>
+          <li>Separe uma quantia em dinheiro local e um backup digital.</li>
+        </ul>
+
+        <p>
+          Com esses passos você reduz drasticamente o risco de sair do orçamento
+          e aumenta a chance de aproveitar a viagem sem preocupações
+          financeiras.
+        </p>
+      </section>
+
+      <section class="card scroll-animate" id="conclusao">
+        <h2>Conclusão</h2>
+        <p>
+          Planejar viagens sem prejudicar suas finanças é um exercício de
+          priorização, disciplina e criatividade. Separar um fundo, automatizar
+          aportes, usar ferramentas digitais, ser flexível nas escolhas e manter
+          uma margem de segurança são as práticas que mais impactam. Com
+          planejamento, é possível viajar regularmente sem comprometer objetivos
+          de médio e longo prazo.
+        </p>
+
+        <p>
+          Lembre-se: viajar enriquecendo a vida não precisa ser sinônimo de
+          dívida. Viajar é melhor quando chega no tempo certo e com recursos
+          previstos.
+        </p>
+      </section>
+
+      <footer class="scroll-animate">
+        <p class="muted">
+          Este conteúdo é educativo e não substitui consultoria financeira
+          personalizada. Ajuste cada recomendação à sua realidade.
+        </p>
+        <p style="margin-top: 0.6rem">
+          © Guia de Viagens Financeiras — Planeje com inteligência
+        </p>
+      </footer>
     </div>
 
-    <section id="orcamento" class="card scroll-animate">
-      <h2>2. Faça um orçamento realista — e fiel a ele</h2>
-      <p>Orçamento é o mapa que evita surpresas. Divida o custo em blocos: transporte (passagens, combustível), hospedagem, alimentação, atividades, vistos/vacinas, seguros, taxas e extras (souvenirs, transporte local). Não esqueça impostos, tarifas de cartão e taxas de câmbio.</p>
+    <script>
+      // Scroll animation
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document
+        .querySelectorAll(".scroll-animate")
+        .forEach((el) => observer.observe(el));
 
-      <h3>Estimativa por dia</h3>
-      <p>Uma técnica eficiente é estimar custo por dia por categoria. Exemplo simplificado para destino internacional de custo médio:</p>
-      <ul>
-        <li>Transporte (ida e volta): 40% do total.</li>
-        <li>Hospedagem por dia: 20% do total.</li>
-        <li>Alimentação por dia: 15% do total.</li>
-        <li>Atividades e passeios: 15% do total.</li>
-        <li>Extras e emergência: 10% do total.</li>
-      </ul>
-
-      <p>Esses percentuais servem como ponto de partida — ajuste conforme prioridades. Para uma viagem barata, transporte e hospedagem podem ser reduzidos; para uma viagem gastronômica, aumente o peso em alimentação e experiências.</p>
-
-      <h3>Inclua buffer de segurança</h3>
-      <p>Adicione 10-20% ao orçamento como margem de segurança para flutuações cambiais, imprevistos e oportunidades. Isso evita que uma pequena surpresa comprometa todo o plano.</p>
-    </section>
-
-    <section id="poupanca" class="card scroll-animate">
-      <h2>3. Crie um fundo de viagem separado</h2>
-      <p>Separar o dinheiro evita a tentação de usar reserva de emergência ou poupança para outros fins. Crie uma conta ou envelope específico para viagens — em bancos digitais, contas de investimento de curto prazo ou até mesmo uma carteira virtual. A ideia é visual: ver o saldo crescer ajuda a manter disciplina.</p>
-
-      <h3>Como calcular aportes</h3>
-      <p>Determine quanto precisa e em quanto tempo quer acumular. Divida o valor por meses para achar o aporte mensal. Exemplo: viagem de R$6.000 em 12 meses = R$500/mês. Se possível, automatize a transferência mensal para não depender de força de vontade.</p>
-
-      <h3>Reservas automáticas</h3>
-      <p>Use débito automático para transferir parte do salário para o fundo de viagem no dia do pagamento. Automatizar evita que o dinheiro seja gasto em outras áreas e transforma o aporte em hábito.</p>
-    </section>
-
-    <section class="card scroll-animate" id="economias">
-      <h2>4. Táticas práticas para economizar sem perder qualidade</h2>
-      <p>Existem dezenas de estratégias concretas que, combinadas, reduzem o custo total da viagem sem prejudicar a experiência.</p>
-
-      <h3>Pesquise preços com inteligência</h3>
-      <p>Use comparadores, alertas de preço e calendários flexíveis para encontrar voos mais baratos. Pequenas alterações na data ou horário podem reduzir o custo drasticamente. Para hospedagem, filtre por avaliações recentes e compare hotéis, hostels e apartamentos através de diferentes plataformas.</p>
-
-      <h3>Seja flexível com datas e aeroportos</h3>
-      <p>Viajar fora de feriados e alta temporada reduz custos. Voos mid-week (terça/quarta) tendem a ser mais baratos. Considere aeroportos alternativos — às vezes voar para uma cidade próxima e pegar um transporte local é mais econômico.</p>
-
-      <h3>Combinações inteligentes</h3>
-      <p>Combine meios: por exemplo, voos low-cost + um ou dois trechos por trem ou ônibus podem reduzir o custo total e incrementar a experiência local. Use passes regionais quando disponíveis (Eurail, Japan Rail Pass).</p>
-
-      <h3>Alimente-se como local</h3>
-      <p>Restaurantes turísticos são caros. Comer em mercados, feiras e restaurantes frequentados por moradores é mais barato e autêntico. Cozinhar algumas refeições (quando possível) reduz gastos de forma significativa.</p>
-
-      <h3>Aproveite programas de milhas e cashback</h3>
-      <p>Acumular pontos em cartões e programas de fidelidade reduz custos de passagens e hospedagem. Use com planejamento: a melhor economia vem quando os pontos são usados com sabedoria em reservas longas ou para upgrades.</p>
-
-      <h3>Escolhas de hospedagem</h3>
-      <p>Considere alternativas: apartamentos por temporada, hostels premium, pousadas familiares. Reservas com cancelamento gratuito oferecem flexibilidade sem custo adicional (verifique políticas).</p>
-
-      <h3>Negocie quando possível</h3>
-      <p>Em muitos destinos, especialmente em mercados locais, negociar é normal. Para hospedagem de longa duração ou passeios privados, pergunte por desconto — especialmente fora de alta temporada.</p>
-
-      <h3>Minimize taxas de câmbio</h3>
-      <p>Pesquise o melhor momento e método para comprar moeda estrangeira. Cartões sem taxa de conversão, saques econômicos e cartões pré-pagos podem reduzir custos. Evite casas de câmbio em aeroportos, que costumam oferecer piores cotações.</p>
-    </section>
-
-    <section class="card scroll-animate" id="riscos">
-      <h2>5. Seguros, documentos e segurança financeira</h2>
-      <p>Seguro viagem é investimento — protege contra despesas médicas, cancelamentos e perda de bens. Compare coberturas: algumas apólices cobrem atividades radicais mediante adicional; outras cobrem apenas o básico. Para viagens internacionais, verifique exigências de visto e seguro do país destino.</p>
-
-      <h3>Cartões e backup financeiro</h3>
-      <p>Leve mais de uma forma de pagamento (dois cartões com bandeiras diferentes e um pouco de dinheiro local). Registre números de emergência e bloqueio junto à sua instituição. Informe o banco sobre a viagem para evitar bloqueios por suspeita de fraude.</p>
-
-      <h3>Reserva de emergência em viagem</h3>
-      <p>Mantenha um montante separado (10-20% do orçamento total da viagem) somente para emergências. Isso evita recorrer à linha de crédito com juros altos caso aconteça algo inesperado.</p>
-    </section>
-
-    <section class="card scroll-animate" id="ganhar-dinheiro">
-      <h2>6. Como financiar viagens com renda extra e planejamento</h2>
-      <p>Viagens podem ser parcialmente financiadas por renda extra. Ideias práticas: freelancing, venda de itens usados, criação de conteúdo (blogs, vídeos), ou trabalhar temporariamente em plataformas que pagam em moeda forte.</p>
-
-      <h3>Planeje por fases</h3>
-      <p>Divida o objetivo em etapas com metas de arrecadação. Por exemplo: meta 1 — R$1.500 em 3 meses (venda de objetos + freelancing); meta 2 — R$3.000 adicionais em 6 meses (renda passiva + economia mensal). A combinação de esforços facilita atingir a meta sem sacrificar orçamento mensal.</p>
-    </section>
-
-    <section class="card scroll-animate" id="psicologia">
-      <h2>7. Comportamento: controle emocional e hábitos</h2>
-      <p>Gastar por impulso em viagem é comum — e pode arruinar o orçamento. Use técnicas simples: defina um limite diário de gastos, prefira pagar em moeda local para avaliar o valor real e faça pequenas anotações de cada gasto para manter consciência.</p>
-
-      <h3>Evite comparar demais</h3>
-      <p>Comparar sua viagem com a de influenciadores cria ansiedade de consumo. Concentre-se no que é prioritário para você. Uma viagem tranquila e bem planejada frequentemente é mais memorável do que uma viagem cara e estressante.</p>
-    </section>
-
-    <section class="card scroll-animate" id="tecnologia">
-      <h2>8. Ferramentas digitais que economizam tempo e dinheiro</h2>
-      <p>Apps e sites ajudam a encontrar promoções, acompanhar câmbio, gerenciar orçamento e descobrir experiências locais. Use alertas de preço para voos, apps de reservas com cancelamento gratuito, mapas offline e listas de packing digitais para evitar compras de última hora.</p>
-
-      <h3>Planilha simples de controle</h3>
-      <p>Uma planilha com categorias (transporte, hospedagem, alimentação, atividades, extras) e colunas para orçamento, gasto real e diferença é suficiente para 90% dos viajantes. Atualize diariamente e ajuste comportamento quando ultrapassar categorias.</p>
-    </section>
-
-    <section class="card scroll-animate" id="exemplos">
-      <h2>9. Exemplos práticos e estudos de caso</h2>
-      <p>Seguem três cenários hipotéticos que ilustram decisões e números reais — adaptáveis à sua realidade.</p>
-
-      <h3>Viagem curta Nacional (fim de semana prolongado)</h3>
-      <p>Horizonte: 3 dias. Orçamento: transporte R$200, hospedagem R$300, alimentação R$200, atividades R$150, extras R$50 — total R$900. Fundo de viagem: aportar R$150/mês por 6 meses para acumular R$900 com folga.</p>
-
-      <h3>Viagem Internacional econômica (10 dias)</h3>
-      <p>Planejamento: pesquisar voos com 2-4 meses de antecedência, escolher hospedagem com cancelamento gratuito, usar passes regionais e cozinha local para reduzir custos. Orçamento estimado: passagem R$2.200, hospedagem R$1.800, alimentação R$1.000, atividades R$800, extras R$300 — total R$6.100. Aporte mensal: R$508 em 12 meses.</p>
-
-      <h3>Viagem longa com experiências premium (3 semanas)</h3>
-      <p>Priorize onde gastar: por exemplo, gastar mais em 2 experiências únicas (trek, passeio guiado) e economizar em transporte interno e hospedagem. Orçamento e fontes de financiamento devem considerar renda extra e reservas de emergência amplas.</p>
-    </section>
-
-    <section class="card scroll-animate" id="checklist">
-      <h2>10. Checklist final antes de embarcar</h2>
-      <ul>
-        <li>Confirme reservas e políticas de cancelamento.</li>
-        <li>Tenha seguro viagem ativo e cópias dos documentos.</li>
-        <li>Registre o roteiro com familiares ou amigos e deixe contatos.</li>
-        <li>Cheque câmbio e cartões habilitados no exterior.</li>
-        <li>Separe uma quantia em dinheiro local e um backup digital.</li>
-      </ul>
-
-      <p>Com esses passos você reduz drasticamente o risco de sair do orçamento e aumenta a chance de aproveitar a viagem sem preocupações financeiras.</p>
-    </section>
-
-    <section class="card scroll-animate" id="conclusao">
-      <h2>Conclusão</h2>
-      <p>Planejar viagens sem prejudicar suas finanças é um exercício de priorização, disciplina e criatividade. Separar um fundo, automatizar aportes, usar ferramentas digitais, ser flexível nas escolhas e manter uma margem de segurança são as práticas que mais impactam. Com planejamento, é possível viajar regularmente sem comprometer objetivos de médio e longo prazo.</p>
-
-      <p>Lembre-se: viajar enriquecendo a vida não precisa ser sinônimo de dívida. Viajar é melhor quando chega no tempo certo e com recursos previstos.</p>
-    </section>
-
-    <footer class="scroll-animate">
-      <p class="muted">Este conteúdo é educativo e não substitui consultoria financeira personalizada. Ajuste cada recomendação à sua realidade.</p>
-      <p style="margin-top:.6rem">© Guia de Viagens Financeiras — Planeje com inteligência</p>
-    </footer>
-  </div>
-
-  <script>
-    // Scroll animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-        }
-      });
-    }, {threshold:0.12});
-    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
-
-    // Smooth links
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', (e) => {
-      e.preventDefault();const id=a.getAttribute('href').slice(1);const el=document.getElementById(id);if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-    }));
-  </script>
-</body>
+      // Smooth links
+      document.querySelectorAll('a[href^="#"]').forEach((a) =>
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = a.getAttribute("href").slice(1);
+          const el = document.getElementById(id);
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        })
+      );
+    </script>
+  </body>
 </html>
